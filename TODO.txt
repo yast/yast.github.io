@@ -1,0 +1,15 @@
+For developers
+
+* The "TODO" notes on the "contributing" section.
+* Turn architecture.asciidoc into something small and sane.
+* Improve the landing page of rubydoc for yast-yast2, yast-ruby-bindings,
+  yast-core and yast-instalation.
+* Dropping wiki pages that will become obsolete with this
+* There are still 5 links to the wiki. Do we want to move that information
+  elsewhere?
+* The list of yast modules. Do we have some?
+
+Others
+
+* More shiny front page
+* Style
