@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="./index.html"><img src="assets/images/suse-header-logo.png" /></a>
+          <ul class="nav">
+            <li class="{% if page.url == "/index.html" %}active{% endif %}">
+              <a href="/">Home</a>
+            </li>
+            <li class="{% if page.url == "/modules.html" %}active{% endif %}">
+              <a href="modules.html">Modules</a>
+            </li>
+            <li class="{% if page.url == "/contribute.html" %}active{% endif %}">
+              <a href="contribute.html">Get involved</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron masthead pageheader">
+      <div class="container">
+        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <p>{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
+      </div>
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# Site settings
+title: Yast
+description: the most comprehensive installation and configuration tool for Linux
+email: yast-devel@opensuse.org
+baseurl: "/"
+url: "http://0.0.0.0:4000"
+
+# Build settings
+markdown: kramdown
+#permalink: pretty

@@ -1,0 +1,183 @@
+@import url(bootstrap.min.css);
+
+a:hover {
+  cursor: pointer;
+}
+
+.page-header {
+  border-color: #888;
+}
+
+.navbar-fixed-top {
+  border-bottom: 1px solid #666;
+  margin-bottom: 0;
+  position: static
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    color: #fff;
+}
+
+.navbar .brand {
+  float: left;
+  padding: 7px 20px 0 0;
+  margin-left: 0;
+}
+
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus {
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-inner {
+  background-image: none;
+  background-color: #33373a;
+}
+
+.masthead {
+  color: #888;
+  margin-bottom: 0;
+  padding: 60px 0 50px;
+}
+.masthead h1 {
+  font-size: 69px;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: #7AC142;
+}
+.masthead p {
+  font-size: 23px;
+  font-weight: 200;
+  line-height: 1.25;
+  color: #aaa;
+}
+.masthead ul li a {
+  color: #bbb
+}
+.masthead ul li a:hover {
+  color: #f5f5f5;
+}
+.jumbotron {
+  background: rgb(68,71,73); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(68,71,73,1) 0%, rgba(51,55,58,1) 43%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(68,71,73,1)), color-stop(43%,rgba(51,55,58,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(68,71,73,1) 0%,rgba(51,55,58,1) 43%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(68,71,73,1) 0%,rgba(51,55,58,1) 43%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(68,71,73,1) 0%,rgba(51,55,58,1) 43%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(68,71,73,1) 0%,rgba(51,55,58,1) 43%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444749', endColorstr='#33373a',GradientType=0 ); /* IE6-9 */
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+.jumbotron p {
+  margin-bottom: 30px;
+}
+.jumbotron h1 {
+  font-weight: bold;
+}
+
+.jumbotron .btn-large {
+font-size: 18px;
+padding: 13px 23px 13px 22px;
+margin-right: 10px;
+text-align: left;
+}
+
+.pageheader {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.social-media {
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0 0;
+  text-align: center;
+  background-color: #444749;
+}
+.social-media a {
+  color: #bbb;
+  text-decoration: none;
+}
+.social-media a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.screenshot-slider {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid #888;
+  border-radius: 4px 4px 4px 4px;
+  margin: 15px 0;
+  width: 600px;
+}
+
+.carousel {
+  margin-bottom: 0;
+}
+
+.tab-content {
+  background-color: #444749;
+  color: #eee;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#contribute .nav {
+  margin-bottom: 0px;
+} 
+
+#contribute .tabbable {
+  margin-top: 30px;
+}
+
+.contribute_content {
+  padding:30px 40px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.055);
+}
+.contribute_content p {
+  padding-left: 20px
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #444749;
+  border-color: #444749;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
+  color: #fff;
+  cursor: default;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.055);
+}
+.nav-tabs > li > a {
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+.links-list a {
+  color: #7AC142;
+}
+.links-list a:hover {
+  color: #fff;
+}
+
+.module {
+  margin-top: 30px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px 0 10px;
+  font-size: 11px;
+  color: #888;
+}

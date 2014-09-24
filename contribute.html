@@ -1,0 +1,38 @@
+---
+layout: default
+title: Contribute
+description: Get involved, learn and have a lot of fun!
+---
+<div id="contribute" class="container module">
+  <div class="tabbable"> <!-- Only required for left/right tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#tab1" data-toggle="tab"><i class="icon icon-fighter-jet"></i>
+          Getting started</a>
+      </li>
+      <li><a href="#tab2" data-toggle="tab"><i class="icon icon-user-md"></i>
+          Development documentation</a>
+      </li>
+      <li><a href="#tab3" data-toggle="tab"><i class="icon icon-user"></i>
+          Processes &amp; guidelines</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="contribute_content">
+          {% include getting-started.html %}
+        </div>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <div class="contribute_content">
+          {% include documentation.html %}
+        </div>
+      </div>
+      <div class="tab-pane" id="tab3">
+        <div class="contribute_content">
+          {% include guidelines.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
