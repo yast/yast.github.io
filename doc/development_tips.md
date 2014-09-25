@@ -2,7 +2,7 @@
 
 ## Changing the root location for agents
 
-When testing the code, it's useful to chroot the agents so SCR operations take
+When testing the code, it's useful to _chroot_ the agents so SCR operations take
 place in a safe environment. This can be performed with the following code.
 
 ```ruby
@@ -59,3 +59,12 @@ information can be found in
 [this Kobliha's blog
 post](http://kobliha-suse.blogspot.cz/2009/10/easiest-way-how-to-modify-installation.html).
 
+## Add a new package to the installation system
+
+Sometimes you need to add a new RPM to the openSUSE installation system (called
+_inst-sys_) or to the rescue image. The overall procedure is relatively simple.
+Basically you need to modify the ```installation-images``` package and then
+remaster the installation medium (or update the boot server, depending how you boot
+the system). But there are some tricky parts that are explained in depth in
+[this Ladislav's blog
+post](http://lslezak.blogspot.cz/2013/10/adding-new-package-to-opensuse.html).
