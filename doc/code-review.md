@@ -9,8 +9,8 @@ a [Pull Request](https://help.github.com/articles/using-pull-requests)
 
 Why Code Review?
 ----------------
-Because we want to make sure that the new code fulfils our expectations. In
-general, all these question below should be answereds with 'yes':
+Because we want to make sure that the new code fulfills our expectations. In
+general, all these question below should be answered with 'yes':
 
 * Does the code make sense?
 * Does the change fix the given problem / implement the required functionality?
@@ -23,8 +23,8 @@ Code Review Workflow
    [bugzilla](https://bugzilla.suse.com) or GitHub issue reference)
 2. (optional) Ask someone to do a code review for you. If the reviewer doesn't
    have time for that or your reach a time-out, ask someone else.
-   If you can't find a reviewer, try to fish outside - for instance, ask experts
-   on the given field from outside.
+   If you can't find a reviewer, try to fish outside the Yast team - for
+   instance, ask experts on the given field.
 3. Reviewers use three levels of their comments: Required, Nice to Have,
    Nitpicking.
 4. Before merging the PR
@@ -38,7 +38,7 @@ items come from our experience with reviewing Yast code.
 
 Obviously, what is Required or Nice to Have can slightly change depending on
 the current phase of development. During global refactoring, we are more
-focussed on the code beauty and understandability. During a hot phase, we focus
+focused on the code beauty and understandability. During a hot phase, we focus
 on the code robustness.
 
 Reqired (REQ):
@@ -52,7 +52,7 @@ Reqired (REQ):
 Nice to Have (NTH):
 * All tests have to be green (`rake osc:build` before submitting)
 * No Builtins.* or Ops.* unless really necessary in new code
-* Function documentation (function description, argements, return values)
+* Function documentation (function description, arguments, return values)
 * Following the [Ruby style guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md)
 * Understandable variable names
 * Good test quality
