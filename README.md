@@ -12,11 +12,10 @@ later.
 
 Since the source code if spread over several repositories following an
 organization that (almost always) makes sense, there is no reason to centralize
-the documentation of that source code. So, unlike the (deprecated) yast-doc
-repository, the plan is not to offer a central source of information, but a
-starting point that aggregates links to the sources of information (whenever are
-they maintained by the developers) in a way that makes sense and is easy to
-digest for newcomers.
+the documentation of that source code. Therefore the goal is not to offer a
+central source of information, but a starting point that aggregates links
+to the sources of information (whenever are they maintained by the
+developers) in a way that makes sense and is easy to digest for newcomers.
 
 Beside the files of the landing page itself, there is also a ```doc``` directory
 with documentation targeted to developers and that are related to the project as
