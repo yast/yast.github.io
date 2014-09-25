@@ -6,9 +6,10 @@ For developers
 * Drop wiki pages that will become obsolete with this (and point here)
 * There are still 6 links to the wiki. Do we want to move that information
   elsewhere?
-* Description of the 86 (!) yast modules
+* Add a tab with yast modules that contain "libraries" like yast-ldap
 
 Others
 
 * More shiny front page
 * Style
+* Description of the yast modules
