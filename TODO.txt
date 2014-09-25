@@ -1,7 +1,6 @@
 For developers
 
 * Turn architecture.asciidoc into something small and sane.
-* Write development_tips.md
 * Improve the landing page of rubydoc for yast-yast2, yast-ruby-bindings,
   yast-core and yast-instalation.
 * Drop wiki pages that will become obsolete with this (and point here)
