@@ -35,7 +35,7 @@ The core system of Yast is implemented using a mixture of languages, but the
 whole functionality is easily accesible from Ruby, the language used to
 implement almost all modules. The
 <a href="http://rubydoc.info/github/yast/yast-ruby-bindings">documentation
-of Yast ruby bindings</a> contains comprehensive information not only about
+of Yast Ruby bindings</a> contains comprehensive information not only about
 the way to access SCR or WFM from Ruby, but also about the legacy modes used
 during the transition from the YCP language to Ruby, like Ops or Builtins.
 </p>
@@ -52,15 +52,20 @@ the SCR interface.
 <p>
 Yast interface relies on libYUI, an engine that provides abstraction from
 graphical user interfaces (Qt, Gtk) and text based user interfaces (ncurses).
-Even though it's used through the very convenient Ruby wrapper, the
-<a href="http://doc.opensuse.org/projects/libyui/HEAD/">documentation of the
-original C++ API</a> is still the best source of information to know how every
-class and method works.
+The Yast code interacts with the underlying libYUI system through the
+<a href="https://github.com/yast/yast-ycp-ui-bindings">UI bindings</a>. Some
+<a href="https://github.com/yast/yast-ruby-bindings/blob/master/src/ruby/yast/ui_shortcuts.rb">shortcuts
+</a> are provided by the abovementioned Ruby bindings in order to make the usage
+of UI bindings even more straigthforward.
 </p>
 
 <p>
-TODO: integrate
-<a href="http://en.opensuse.org/openSUSE:YaST:_UI,_User_Interface_Library">http://en.opensuse.org/openSUSE:YaST:_UI,_User_Interface_Library</a>
+Even if libYUI is used through the very convenient wrappers, the
+<a href="http://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/Book-UIReference.html">UI
+reference documentation</a> and the
+<a href="http://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/Book-YCPUIlayout.html">UI
+layouts and events guide</a> from the original C++ API are still the best
+sources of information to know how every class and method works under the hood.
 </p>
 
 <h2>The installation process</h2>
@@ -77,7 +82,16 @@ yast-installation module</a>.
 
 <h2>Tips &amp; tricks</h2>
 <p>
-TODO:
-I'm still not sure if we should keep the tips N' tricks in the openSUSe wiki or
-in a asciidoc/markdown document in the yast.github.io repository.
+When developing or debugging Yast, there are several gotchas that can be
+extremelly useful. Some of them are not only targeted to developers but also to
+users and are collected in the
+<a href="https://en.opensuse.org/SDB:YaST_tricks">Yast tricks page</a> at the
+openSUSE wiki.
+</p>
+
+<p>
+In addition to those tricks, you can find several bits of useful information in
+the
+<a href="https://github.com/yast/yast.github.io/blob/master/doc/development_tips.asciidoc">Yast
+development tips and tricks</a> document.
 </p>
