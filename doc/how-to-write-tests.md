@@ -26,7 +26,8 @@ projects should follow:
 * It's easy-to-maintain - no hacks, no magic
 * Needs to cover the whole code, otherwise you would feel a false sense of
   security
-* A test should be comprehensive but every individual test should be specific
+* A test suite should be comprehensive but every individual test on it should
+  be specific
 * Test all aspects of a method (depending on context, and input), see Examples
 * Uses "allow" for queries, but "expect" commands, see Examples
 * Expectation in "it" block - must be explicit, see Examples
