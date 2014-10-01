@@ -1,23 +1,23 @@
 Maintenance Branches
 ====================
 The goal of this document is to describe and explain work-flow for maintenance
-branches. It do not affect development in master except of merging of fixes from
+branches. It does not affect development in master except of merging of fixes from
 maintenance branch.
 
 Why Maintenance Branches?
 -------------------------
-We use maintenance branches, because it is easier to track patches for already
+YaST uses maintenance branches because it is easier to track patches for already
 released products in git then in Build Service. It gives ability to easy review
-fixes and also to merge fixes in master branch, to avoid forgotten ones.
+of fixes and also to merge fixes in master branch, to avoid forgotten ones.
 
 Maintenance Work-Flow
 ---------------------
-There is difference between older maintenance branches and new ones from
-SLE-12-GA.
+There is difference between older maintenance branches and new ones starting
+from SLE-12-GA.
 
-For older branches fix is separated commits. Command git cherry-pick can be
-used, but for apply fix in ycp to ruby code is recommended to write it from
-scratch.
+For older branches fix is created in separated commits. Command git cherry-pick
+can be used, but to apply fix from ycp to ruby code is recommended to write it
+from scratch.
 
 Example work-flow for older branch:
 ```
@@ -36,9 +36,10 @@ git push
 ```
 
 For new branches fix have to be done in the oldest affected branch and then
-merged to newer branches and master with git merge. Let me explain advantages.
+merged to newer branches and master with git merge. There are two reasons for
+such change.
 The first and main reason is that it allows easy tracking if fix in commit is
-also in newer branches and master. The second reason is that it produce nicer
+also in newer branches and master. The second reason is that it produces nicer
 git tree structure which allows to see which code stream is affected by which
 fix.
 
