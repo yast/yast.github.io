@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="31.992cm"
+   height="13.700cm"
+   viewBox="4.008 5.050 36.000 18.750"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="interaction.svg">
+  <metadata
+     id="metadata116">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs114" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1060"
+     id="namedview112"
+     showgrid="false"
+     inkscape:zoom="1.5896613"
+     inkscape:cx="566.78741"
+     inkscape:cy="242.71654"
+     inkscape:window-x="1078"
+     inkscape:window-y="291"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <rect
+     x="22.775"
+     y="15.330"
+     width="4.363"
+     height="1.545"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect4" />
+  <text
+     x="24.956"
+     y="15.925"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text6">
+use</text>
+  <text
+     x="24.956"
+     y="16.725"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text8">
+infrastructure</text>
+  <rect
+     x="4.058"
+     y="11.000"
+     width="6.093"
+     height="1.900"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect10" />
+  <rect
+     x="4.058"
+     y="11.000"
+     width="6.093"
+     height="1.900"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect12" />
+  <text
+     x="7.104"
+     y="12.145"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text14">
+Clients</text>
+  <rect
+     x="17.050"
+     y="5.100"
+     width="5.850"
+     height="1.900"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect16" />
+  <rect
+     x="17.050"
+     y="5.100"
+     width="5.850"
+     height="1.900"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect18" />
+  <text
+     x="19.975"
+     y="6.245"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text20">
+SCR</text>
+  <rect
+     x="17.007"
+     y="10.550"
+     width="5.842"
+     height="2.700"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect22" />
+  <rect
+     x="17.007"
+     y="10.550"
+     width="5.842"
+     height="2.700"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect24" />
+  <text
+     x="19.929"
+     y="11.695"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text26">
+Language</text>
+  <text
+     x="19.929"
+     y="12.495"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text28">
+bindings</text>
+  <rect
+     x="30.125"
+     y="10.900"
+     width="5.825"
+     height="1.900"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect30" />
+  <rect
+     x="30.125"
+     y="10.900"
+     width="5.825"
+     height="1.900"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect32" />
+  <text
+     x="33.037"
+     y="12.045"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text34">
+liby2</text>
+  <rect
+     x="30.100"
+     y="16.000"
+     width="5.800"
+     height="2.700"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect36" />
+  <rect
+     x="30.100"
+     y="16.000"
+     width="5.800"
+     height="2.700"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect38" />
+  <text
+     x="33.000"
+     y="17.145"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text40">
+modules</text>
+  <text
+     x="33.000"
+     y="17.945"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text42">
+(including UI)</text>
+  <rect
+     x="4.174"
+     y="5.100"
+     width="5.926"
+     height="1.900"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect44" />
+  <rect
+     x="4.174"
+     y="5.100"
+     width="5.926"
+     height="1.900"
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="rect46" />
+  <text
+     x="7.137"
+     y="6.245"
+     fill="#000000"
+     text-anchor="middle"
+     font-size="0.80"
+     font-family="sans"
+     font-style="normal"
+     font-weight="400"
+     id="text48">
+WFM</text>
+  <line
+     x1="7.137"
+     y1="7.000"
+     x2="7.108"
+     y2="10.450"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line50" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="6.858,10.448 7.104,10.950 7.358,10.452 "
+     id="polygon52" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="6.858,10.448 7.104,10.950 7.358,10.452 "
+     id="polygon54" />
+  <rect
+     x="6.650"
+     y="8.605"
+     width="1.100"
+     height="0.745"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect56" />
+  <text
+     x="6.4182487"
+     y="9.1999998"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text58"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">call</text>
+  <line
+     x1="10.100"
+     y1="6.050"
+     x2="16.500"
+     y2="6.050"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line60" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="16.500,6.300 17.000,6.050 16.500,5.800 "
+     id="polygon62" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="16.500,6.300 17.000,6.050 16.500,5.800 "
+     id="polygon64" />
+  <text
+     x="13.25"
+     y="5.7727494"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text66"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">set system</text>
+  <text
+     x="13.25"
+     y="6.8817515"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text68"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">instance</text>
+  <line
+     x1="10.150"
+     y1="11.950"
+     x2="16.458"
+     y2="11.904"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line70" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="16.459,12.154 16.958,11.900 16.456,11.654 "
+     id="polygon72" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="16.459,12.154 16.958,11.900 16.456,11.654 "
+     id="polygon74" />
+  <line
+     x1="19.929"
+     y1="10.550"
+     x2="19.968"
+     y2="7.550"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line76" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="20.218,7.553 19.974,7.050 19.718,7.547 "
+     id="polygon78" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="20.218,7.553 19.974,7.050 19.718,7.547 "
+     id="polygon80" />
+  <rect
+     x="17.700"
+     y="8.505"
+     width="4.672"
+     height="0.745"
+     fill="#FFFFFF"
+     stroke="none"
+     stroke-width="0"
+     id="rect82" />
+  <text
+     x="17.236492"
+     y="9.1000004"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text84"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">access system</text>
+  <line
+     x1="22.850"
+     y1="11.900"
+     x2="29.575"
+     y2="11.854"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line86" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="29.577,12.104 30.075,11.850 29.573,11.604 "
+     id="polygon88" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="29.577,12.104 30.075,11.850 29.573,11.604 "
+     id="polygon90" />
+  <line
+     x1="30.100"
+     y1="17.350"
+     x2="21.887"
+     y2="13.484"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line92" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="21.993,13.258 21.435,13.271 21.781,13.710 "
+     id="polygon94" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="21.993,13.258 21.435,13.271 21.781,13.710 "
+     id="polygon96" />
+  <line
+     x1="33.037"
+     y1="12.800"
+     x2="33.006"
+     y2="15.450"
+     stroke="#000000"
+     stroke-width="0.100"
+     id="line98" />
+  <polygon
+     fill="#000000"
+     stroke="none"
+     stroke-width="0.100"
+     points="32.756,15.447 33.001,15.950 33.256,15.453 "
+     id="polygon100" />
+  <polygon
+     fill="none"
+     stroke="#000000"
+     stroke-width="0.100"
+     points="32.756,15.447 33.001,15.950 33.256,15.453 "
+     id="polygon102" />
+  <text
+     x="26.450001"
+     y="11.572749"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text104"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">call</text>
+  <text
+     x="26.450001"
+     y="12.604501"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text106"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">modules</text>
+  <text
+     x="13.25"
+     y="11.622749"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text108"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">use</text>
+  <text
+     x="13.25"
+     y="12.73175"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text110"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">infrastructure</text>
+</svg>
