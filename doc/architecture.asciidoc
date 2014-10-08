@@ -2,26 +2,12 @@ Yast architecture
 =================
 :toc:
 
-We need a much sorter (and more visual, if possible) version of
-this document explaining just 2 things:
-
-* The basic architecture (anatomy) of Yast with the role of SCR, modules (and
-import), clients, WFM, etc.
-* How all that is distributed into components: yast-yast2 + yui + ruby bindings,
-etc.
-
-The rest of the documentation should be in its corresponding repository.
-
-And now the old TLDR document begins.
-
-To be able to create a Yast module it is necessary to have understood
-how the extensive Yast world is structured, which components there are,
-what they do and how they do it. Therefore prior to going into closer
-detail we'll step back from the blackboard and have a look at the big
-picture first. By doing so you will have the opportunity to get an
-overview of the ample terrain Yast is living on. While you don't have to
-understand each and every byte Yast consists of, having seen the whole
-issue will ease your understanding of the details we will come across.
+In order to be proficient with Yast development it's necessary to have a clear
+view on how the Yast world is structured. The goal of this document is to
+provide that view in a concise way, mentioning all the pieces and exposing how
+they fit together. For a more detailed view about any of the technologies or
+components, refer to the corresponding documentation linked from the central
+documentation page for Yast at http://yast.github.io/.
 
 Overview
 --------
@@ -34,375 +20,152 @@ main purposes:
 * Configuration of the installed system
 * Administration of the installed system
 
-To provide a solution to the resulting demands that has a lifetime
-extensible well into the future this solution had to be flexible and
-maintainable. Consequently some key concepts determined the design of
-Yast. In particular it was the strict separation of:
+From the point of view of software architecture, Yast is mainly a component
+system in which the different pieces, that can be implemented in several
+programming languages, interface with each other using a specific
+protocol called YCP (Yast Communication Protocol). There are mainly two kind
+of components: those providing functionality to others and the so-called
+clients. The former ones publish a YCP interface with useful functions and
+variables. On the other hand, a client always serves a concrete purpose and
+controls the execution work-flow. Clients rely on other components (including
+other clients) to get the job done. Therefore, executing Yast means actually
+calling a Yast client.
 
-* The user interface
-* The functional code doing the job
-* The data representing the current state of the system
+A the time of writing, Yast components can be written in C++ (using liby2 and
+libycp), in Ruby (using
+https://github.com/yast/yast-ruby-bindings[yast-ruby-bindings]) and in Perl
+(using https://github.com/yast/yast-perl-bindings[yast-perl-bindings]), with
+the exception of clients, that cannot be written in Perl. Ruby is the preferred
+and recommended way, since the bindings offer some unique features for both
+implementation and testing. In addition, many development tasks are automated
+using the Ruby toolchain.
 
-Furthermore Yast has some very specific attributes that make it unique
-for the user as well as for those people who are developing it or
-contributing to it. The following sections outline some of the features
-of the Yast installer that should be seen as a guiding line for module
-development.
+Main components
+---------------
 
-Access To The System
-~~~~~~~~~~~~~~~~~~~~
+There are several components that have a very relevant role in Yast and must be
+known in order to understand the "big picture". As already outlined in the
+previous section, there are mainly two kind of components:
 
-Managing a Linux system requires direct low-level access to the system
-which generally means reading and writing configuration data. Of course
-this could be done manually by a knowledgeable person using a
-conventional editor. A more comfortable and in most cases safer way is
-to use Yast. Consequently Yast must be able to handle this configuration
-data on the system level. By handling the _original_ data Yast
-activities take into account manual editing that might also occur. Thus
-nobody is _forced_ to use Yast exclusively for configuration tasks.
+* Components providing functionality to others
+  - <<system-configuration-repository-scr,SCR>>: system configuration repository
+  - <<work-flow-manager-wfm,WFM>>: work-flow manager
+  - <<user-interface,UI>>: user interface
+  - <<modules,Modules>>
+* Clients
 
-In Yast the access to system configuration data is realized by means of
-a special component (or layer if you prefer), the _System Configuration
-Repository_ (SCR) (see below and ?). The SCR component basically
-consists of a number of so-called _agents_ that have been created to
-accomplish a specific kind of access. For example there is an agent to
-run shell-commands and there is another one that reads and writes
-ASCII-files of a specific format. Additionally there are agents that
-provide access to the system hardware e.g. by taking hold on the
-proc-file-system.
+System Configuration repository (SCR)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All these agents are gathered together under a common hood, the SCR-API
-that can be used from within the Yast modules in a consistent way. In
-summary the SCR provides kind of a _view_ on all kinds of data, either
-YaST2 internal data, original system configuration files or hardware
-data.
+Most communication with the underlying system being installed or configured is
+handled by a component called SCR (for System Configuration Repository). Apart
+from some well-known exceptions, components are discouraged to access directly
+to system files (or any other system resources, for that matter) and encouraged
+to use SCR instead.
 
-Reasonable Suggestions
-~~~~~~~~~~~~~~~~~~~~~~
+SCR is composed of several subcomponents called agents. Each agent takes care of
+a very concrete type of system resource and implements a common interface with
+just four operations: read, write, dir and execute.
 
-Yast implies lots of artificial intelligence to provide reasonable
-suggestions for the various tasks. During installation the target system
-is thoroughly analyzed with respect to its hardware components and in
-most cases Yast succeeds in suggesting a proper configuration for them.
+Work-flow manager (WFM)
+~~~~~~~~~~~~~~~~~~~~~~~
 
-These suggestions are presented in an overview dialog that shows the
-main characteristics of the system to be installed and how Yast would
-handle them. If you are satisfied with these automatically generated
-settings you can simply accept them. If not, each of the system
-configuration categories can be ``activated'' to be changed manually.
-This is where the _workflows_ come into their own.
+The Yast work-flow manager (implemented in the WFM namespace) is a special
+component which takes care of executing clients and providing to them the
+interface with the other components. It's also responsible of handling one
+SCR instance per every system that is being managed by Yast.
 
-Workflows
-~~~~~~~~~
-
-If you decide to change a specific configuration category this is
-usually being done in a workflow. Workflows are used to lead you through
-the steps necessary to accomplish a specific task. The steps are
-generally small to avoid an information ``overflow''. At the end of the
-sequence the task has been accomplished and the changes are made
-permanent in the system.
-
-As was stated above, you are not _forced_ to do it this way. You could
-as well edit configuration files by hand but Yast can offer as much help
-as possible for this. Sometimes a workflow has multiple branches for
-``novice'' and ``expert'' modes. The novice mode fills in the default
-values and tries to determine as much as possible automatically. The
-expert mode offers full control and allows to enter even unreasonable
-values.
-
-By providing pre-configured workflows and configuration data, it is
-possible to automate almost arbitrary configuration tasks with Yast.
-From adding a user, to installing a completely configured Linux on specific
-hardware, nearly everything is possible.
-
-Modules And The YCP Language
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Every workflow is assembled from rather small steps, implemented by
-means of _Yast modules_ written in a Yast specific scripting language,
-the _Yast Control Language_ (LG). These Yast modules are then called
-in a predefined sequence to complete a specific task.
-
-In fact it is possible to even write modules in _bash_ and _Perl_ as
-long as the module need not have a user interface, i.e. it is not
-interactive. Such non-interactive modules typically handle specific
-problems like controlling a particular piece of hardware and can be
-called from within LG-modules. This building block approach makes
-constructing complex workflows easy and maintainable.
+To some extend, WFM can be considered as the "bootloader" of Yast, since
+every Yast execution starts with WFM handing the control over a client after
+having connected it to the user interface and a SCR instance.
 
 User Interface
 ~~~~~~~~~~~~~~
 
-The LG language is also used to control the user interface (UI)
-presented on screen. The UI displays the information already known by
-the system and retrieves the information entered by the user.
+Given the wide variety of machines and use cases that can possibly be
+handled with Yast, the UI component (actually just a module) provides a very
+convenient abstraction layer for the user interface.
 
-There are two modes of operation:
+The UI component is usually referred as "UI bindings" since it basically offers
+a YCP interface on top of https://github.com/libyui/libyui[libyui], the
+programming library actually implementing the different "widgets": user
+interface elements such as input fields, selection lists or buttons. It is
+transparent to the calling application if those widgets are part of a graphical
+toolkit such as Qt or Gtk+, a text based interface using the Ncurses library or
+even something else not implemented yet, as shown in the following diagram.
 
-* _Text mode for console-based service_
-+
-In text mode the user interface is presented in the NCurses environment
-that provides windowing capabilities and entry forms on a text-based
-console. Mouse support is neither possible nor necessary here because
-all dialogs can be operated using only the keyboard.
-* _Graphics mode for X11-based service_
-+
-In graphics mode the well-known Qt-system is used to present the dialogs
-in a graphical way using a running X11-server. Operating these dialogs
-follows the common habits of graphical user interfaces.
+image:images/ui.png["The UI component",align="center"]
 
-It is important to notice here that both methods principally use the
-same Yast specific LG-API to build the dialogs. While there are some
-(rare) cases where the LG-code has to distinguish these modes, the
-dialogs are usually programed for both worlds in in one single source
-with the same code.
-
-Summary
+Modules
 ~~~~~~~
 
-In summary Yast provides the following features, some of them having
-already been mentioned above:
+Apart from the already mentioned few components with very special roles and the
+clients, Yast also consists on a huge amount of other components called modules
+and used to encapsulate functionality related to different areas. Examples of
+available modules are Network, Service, FileSystem or PulseAudio.
 
-* _System access_
-+
-Yast provides thorough probing of the system hardware and presents the
-information gathered thereby via the SCR-API. The SCR is also the means
-for reading and writing configuration files.
-* _Reasonable Suggestions_
-+
-Based on the system analysis and predefined configuration data, Yast is
-able to provide reasonable suggestions for almost any configuration
-task.
-* _Workflows_
-+
-Management of particular configuration categories is usually realized in
-form of workflows that split up the whole task into small steps.
-* _Modules and YCP_
-+
-The steps constituting a workflow are usually realized as Yast modules
-that are written in the _Yast Control Language_ (LG)
-* _User interface_
-+
-The user interface of Yast is realized by means of a specific API from
-within the LG-modules. This API supports a text-based console-mode as
-well as a graphical X11-mode.
-* _Internationalization_
-+
-Yast provides support for various languages.
-* _Multi-platform support_
-+
-Yast provides support for various platforms like Intel (x86), Apple, IBM
-(s390) etc.
+Functional diagram
+------------------
 
+As already mentioned, the Yast execution starts with WFM setting up SCR and
+running a client. But that's only the start, the following diagram shows how
+the different pieces interact which each other in order to get the job done.
 
-Yast Architecture
------------------
+image:images/interaction.png["How the pieces fit",align="center"]
 
-YaST2 is a modular system for Linux installation and system
-administration. The design goals include:
-
-* Flexibility
-* Extensibility
-* Maintainability
-* Network transparency
-+
-support administration of remote hosts or virtual machines on
-mainframes, machines without CD/DVD drives, rack-mounted machines
-* User interface independence
-+
-must run in graphical and text-only environments and serial consoles
-* Cover the whole range from novice users to expert system
-administrators
-
-To achieve the above design goals, YaST2 is split up into a number of
-components for each individual task:
-
-image:images/yast2b-large.png[The Yast Architecture]
-
-There is the core engine and to run scripts written in YCP (YaST2's own
-scripting language), Perl or (in future releases) other scripting
-languages.
-
-The engine and scripts together form a YaST2 Module for the user.
-
-The SCR (System Configuration Repository)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Even though in most scenarios there is only one single machine, it is
-important to distinguish between the installation source machine and the
-installation target machine:
-
-* The installation source machine is the machine that holds the
-installation media - usually CDs or DVDs - and a mini-Linux called
-"inst-sys" that is copied from one of those installation media to that
-machine's RAM disk to have a basic operating system to work with on a
-"bare metal" machine (a machine that doesn't have an operating system
-installed yet). Most of that inst-sys is read-only, there is only
-limited disk space for temporary files, and since everything runs from a
-RAM disk the writable part of it is very volatile.
-* The installation target on the other hand is the machine that is to be
-installed or administered. That may be the same machine as the
-installation source machine (in fact, this is very common for PC
-installation or administration tasks), but it might as well be two
-distinct machines - a virtual machine on a mainframe computer or a
-remote rack-mounted machine without any display adapter or CD/DVD
-drives.
-
-All communication with the installation target is handled via the System
-Configuration Repository (SCR) to guarantee the network abstraction
-design goal. This is much easier said than done, however: YaST2 module
-developers always have to keep in mind that it is strictly forbidden to
-access system files (or any other system resources, for that matter)
-directly, even if there may be very convenient CPAN Perl modules to do
-that. Rather, SCR is to be used instead - always. Otherwise everything
-might run fine if installation source and target are the same machine,
-but break horribly if they are not.
-
-SCR in itself is also modularized: All calls are handled by "agents"
-that each know how to handle a particular configuration "path" like
-`"/etc/fstab"` or `"/etc/passwd"`. That may be a simple file, but it may
-also be a directory hierarchy like "probe" - this particular agent
-handles all kinds of hardware probing, from mouse and display adapters
-to storage device controllers (like SCSI or IDE controllers), disks
-attached to each individual controller or partitions on those disks.
-Paths are denoted like ".etc.fstab" for SCR. YCP even has a special data
-type "path" for just this case (a special kind of string with some
-special operations).
-
-SCR agents handle no more than three calls:
-
-* SCR::Read()
-* SCR::Write()
-* SCR::Execute()
-
-The first argument is always the path to handle, but there may be any
-number of additional parameters, depending on the agent.
-
-While Read() and Write() are obvious, Execute() may not be: This is
-intended for some kinds of agents that actually run a program on the
-installation target. In particular, the ".target.bash" agent does that -
-it runs a "bash" shell on the target machine and accepts a shell command
-as an argument. This is the tool of choice for tasks such as creating
-backup copies of configuration files or running any special command on
-the target machine - and again, the distinction between installation
-source and installation target machine becomes very important: You want
-run these commands on the (possibly remote) target machine, not on the
-machine that happens to hold the installation media.
-
-SCR agents can easily added when needed. There are frameworks available
-to write SCR agents in C++, in Perl, or as Bash shell scripts as well as
-several ready-made parsers for different file formats like the ".ini"
-file parser that can handle files with "key = value" pairs or the
-"anyagent" that generalizes that concept even more using regular
-expressions. Those parsers return YCP lists and maps ready for further
-processing.
-
-Typically, a YaST2 module for a specific installation or administration
-task includes a set of YCP or Perl scripts as well as some SCR agents to
-handle its particular configuration files.
-
-The UI (User Interface)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Given the wide variety of machines that can possibly be handled with
-YaST2, it is important to keep the user interface (UI) abstraction in
-mind - very much like the SCR, the UI does not necessarily run on the
-installation target machine. It doesn't even need to run on the same
-machine as the WFM.
-
-The UI provides dialogs with "widgets" - user interface elements such as
-input fields, selection lists or buttons. It is transparent to the
-calling application if those widgets are part of a graphical toolkit
-such as Qt, or text based (using the NCurses library) or something
-completely else. An input field for example only guarantees that the
-user can enter and edit some value with it. A button only provides means
-to notify the application when the user activated it - by mouse click
-(if the UI supports using pointing devices such as a mouse), by key
-press or however else.
-
-The UI has a small number of built-in functions - for example:
-
-* UI::OpenDialog() accepts a widget hierarchy as an argument and opens a
-dialog with those widgets
-* UI::CloseDialog() closes a dialog
-* UI::QueryWidget() returns a widget's property such as the current
-value of an input field or selection box
-* UI::ChangeWidget() changes a widget's property
-* UI::UserInput() waits until the user has taken some action such as
-activate a button - after which the application can call
-UI::QueryWidget() for each widget in the dialog to get the current
-values the user entered. The application does not have to handle every
-key press in each input field directly - the widgets are self-sufficient
-to a large degree.
-
-There is virtually no low-level control for the widgets - nor is it
-necessary or even desired to have that. You don't specify a button's
-width or height - you specify its label to be "Continue", for example,
-and it will adapt its dimensions accordingly. If desired, more specific
-layout constraints can be specified: For example, buttons can be
-arranged in a row with equal width each. The UI will resize them as
-needed, giving them additional margins if necessary.
-
-The existing UIs provide another layer of network abstraction: The
-graphical UI uses the Qt toolkit which is based on the X Window System's
-Xlib which in turn uses the X protocol (usually) running on top of
-TCP/IP. X Terminals can be used as well as a Linux console (that may be
-the installation source machine or the installation target machine or
-another machine connected via the network) running the X Window System
-or even X servers running on top of other operating systems.
-
-The NCurses (text based) UI requires no more than a shell session - on a
-text terminal (serial console or other), on a Linux console, in an XTerm
-session, via ssh or whatever.
-
-Currently, there is no web UI, but YaST2's concepts would easily allow
-for that if it proves useful or necessary.
-
-YaST Core Engine
-~~~~~~~~~~~~~~~~
-
-The component broker is the central piece of YaST. It acts as a
-dispatcher for all other components: When a (YCP, Perl or whatever)
-script calls a function, the broker determines what component handles
-that function call based on the respective namespace identifier. It is
-transparent to the caller what programming language a function is
-written in; the component broker handles that kind of dispatching. The
-caller only needs to know the function name, its namespace and (or
-course) the required parameters.
-
-For example, calls like UI::OpenDialog() go to the UI (the user
-interface), SCR::Read() to the SCR (the system configuration
-repository). Even scripts can provide namespaces via modules in YCP or
-Perl.
+Some notes about the Yast Communication Protocol (YCP)
+------------------------------------------------------
 
 All communication between the different parts of YaST core is done via a
-predefined set of YCP data types - simple data types like string,
-integer, boolean etc., but also compound data types like maps (key /
+https://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/id_ycp_data_types.html[predefined
+set of YCP data types]. This set includes simple data types like string,
+integer or boolean, but also compound data types like maps (key /
 value pairs, also known as "hashes" in other programming languages) or
 lists (like arrays or vectors in other programming languages). For
 complex data structures, maps, lists and simple data types can be nested
 to any degree.
 
-External Programs
-~~~~~~~~~~~~~~~~~
+But in addition to those common data types, YCP also
+defines two types that are not so common in other programming languages:
+terms and paths.
 
-The core-engine of Yast consists of some binary components (modules)
-that are interconnected via Yast specific protocols. There are _clients_
-as well as _servers_ that are responsible for specific tasks that may
-have to be accomplished during a Yast session. According to the
-well-known client-server-paradigm often used in software technology,
-Yast servers are program modules that _passively_ await connections from
-certain clients to process their requests. Clients on the other hand are
-_active_ components that send requests to the servers thereby initiating
-certain actions.
+A term is something you won't find in C, Perl, Pascal or Lisp but you will
+find it in functional programming languages like Prolog for example. It can be
+described as a symbol followed by a list (that plays a role similar to the
+list of arguments of a function call). It's mainly used in the UI code to define
+tree-like structures of function calls without actually calling them.
 
-For example the SCR and the UI act as server components that process
-client-requests on demand. An example for a client module is the
-_stdio-component_ that can be used to connect the Yast internal
-communication with a terminal.
+For example, the following ruby code defines a tree of terms that will be
+translated to the corresponding calls to libyui functions when needed. Every
+term is defined by a symbol followed by a list of zero or more elements
+(strings, symbols and other terms, in this case).
 
-Because this architectural specialty is meant to be used only by the
-Yast core developers to establish and maintain the low-level machinery
-we will not go into more detail here. Instead we will focus on the
-advocated method of extending Yast at the ``open end'' by creating
-LG-modules.
+[source,ruby]
+--------------------------------------------------------------
+Yast::Term.new(:VBox,
+               Yast::Term.new(:Label, "Say hello..."),
+               Yast::Term.new(:PushButton,
+                               Yast::Term.new(:Id, :hello),
+                               "now!"))
+--------------------------------------------------------------
+
+
+A path is something special to YCP and similar to paths in TCL. It's expressed
+as a sequence of path elements separated by dots. Paths are designed to denote
+data from complex tree-like structures and are mainly used by SCR. For example,
+since the SCR agent parsing the file +/etc/sysconfig/clock+ is attached to the
+path ".sysconfig.clock", the following Ruby code can be used to reference the
+value of the +TIMEZONE+ parameter in that file.
+
+[source,ruby]
+--------------------------------------------------------------
+Yast::Path.new(".sysconfig.clock.TIMEZONE")
+--------------------------------------------------------------
+
+Further documentation
+---------------------
+
+The goal of this document is just to provide a high level view of the Yast
+development ecosystem. More detailed documentation about the involved
+technologies, tools and procedures can always be found in the central
+documentation page for Yast, available at http://yast.github.io/.
