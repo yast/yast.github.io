@@ -153,10 +153,19 @@ Yast::Term.new(:VBox,
 A path is something special to YCP and similar to paths in TCL. It's expressed
 as a sequence of path elements separated by dots. Paths are designed to denote
 data from complex tree-like structures and are mainly used by SCR. For example,
-the following Ruby code references the +TIMEZONE+ value of the file
-+/etc/sysconfig/clock+.
+since the SCR agent parsing the file +/etc/sysconfig/clock+ is attached to the
+path ".sysconfig.clock", the following Ruby code can be used to reference the
+value of the +TIMEZONE+ parameter in that file.
 
 [source,ruby]
 --------------------------------------------------------------
-Yast::Path.new(".etc.sysconfig.clock.TIMEZONE")
+Yast::Path.new(".sysconfig.clock.TIMEZONE")
 --------------------------------------------------------------
+
+Further documentation
+---------------------
+
+The goal of this document is just to provide a high level view of the Yast
+development ecosystem. More detailed documentation about the involved
+technologies, tools and procedures can always be found in the central
+documentation page for Yast, available at http://yast.github.io/.
