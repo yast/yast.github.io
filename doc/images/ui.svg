@@ -17,8 +17,8 @@
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="ui.svg"
    inkscape:export-filename="/home/ags/projects/yast/yast.github.io/doc/images/ui.png"
-   inkscape:export-xdpi="62.976566"
-   inkscape:export-ydpi="62.976566">
+   inkscape:export-xdpi="63.065689"
+   inkscape:export-ydpi="63.065689">
   <defs
      id="defs4">
     <marker
@@ -154,14 +154,6 @@
          style="stop-color:#000000;stop-opacity:0"
          id="stop4360" />
     </linearGradient>
-    <filter
-       inkscape:collect="always"
-       id="filter4104">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.87663078"
-         id="feGaussianBlur4106" />
-    </filter>
     <marker
        inkscape:stockid="Arrow1Lstart"
        orient="auto"
@@ -190,15 +182,6 @@
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter4104-0">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.87663078"
-         id="feGaussianBlur4106-8" />
-    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -208,15 +191,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4842799"
-     inkscape:cx="190.73282"
+     inkscape:cx="361.03374"
      inkscape:cy="661.26343"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1060"
-     inkscape:window-x="1078"
-     inkscape:window-y="291"
+     inkscape:window-width="1080"
+     inkscape:window-height="1855"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -234,6 +217,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#a2daa2;fill-opacity:1;stroke:#000000;stroke-width:1.15820622;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect6187"
+       width="275.43356"
+       height="127.26379"
+       x="267.56802"
+       y="454.36124" />
     <g
        id="g3058"
        transform="matrix(1.7620128,0,0,1.5051655,278.8174,124.36103)">
@@ -404,59 +394,59 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1.39508891;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#a2c1da;fill-opacity:1;stroke:#000000;stroke-width:1.1355443;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3292"
        width="270.44684"
-       height="78.152374"
+       height="51.77816"
        x="270.05005"
        y="385.77451" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="351.38672"
-       y="438.0929"
+       y="424.0929"
        id="text6102"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6104"
          x="351.38672"
-         y="438.0929">libyui</tspan></text>
+         y="424.0929">libyui</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.60968173px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 405.27345,369.52721 0,11.51989"
+       d="m 317.27345,369.52721 0,11.51989"
        id="path6111"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.60968173px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 404.93659,369.27677 0.67373,12.02076"
+       d="m 474.93659,369.27677 0.67373,12.02076"
        id="path6113"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.60968173px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 404.93659,368.02461 0.67373,13.02249"
+       d="m 402.93659,368.02461 0.67373,13.02249"
        id="path6115"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;stroke:#000000;stroke-width:1.40391016;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:1.06394875;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3292-3"
        width="273.87778"
-       height="78.152374"
+       height="44.885391"
        x="268.33456"
-       y="469.76157" />
+       y="455.76157" />
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="302.72461"
-       y="522.0799"
+       y="494.0799"
        id="text6102-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6104-9"
          x="302.72461"
-         y="522.0799">UI module</tspan></text>
+         y="494.0799">UI module</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -468,23 +458,22 @@
          id="tspan6164"
          x="289.70279"
          y="602.65527" /></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1.24609053;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect6187"
-       width="287.702"
-       height="141.02827"
-       x="261.42245"
-       y="468.36124" />
     <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="357.85938"
-       y="605.7868"
+       y="575.7868"
        id="text6189"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6191"
          x="357.85938"
-         y="605.7868">Yast</tspan></text>
+         y="575.7868">Yast</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.79367745px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 404.23642,439.54564 0,12.30751"
+       id="path3060"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

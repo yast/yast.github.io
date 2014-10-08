@@ -48,10 +48,10 @@ known in order to understand the "big picture". As already outlined in the
 previous section, there are mainly two kind of components:
 
 * Components providing functionality to others
-  - SCR: system configuration repository
-  - WFM: work-flow manager
-  - UI: user interface
-  - Modules
+  - <<system-configuration-repository-scr,SCR>>: system configuration repository
+  - <<work-flow-manager-wfm,WFM>>: work-flow manager
+  - <<user-interface,UI>>: user interface
+  - <<modules,Modules>>
 * Clients
 
 System Configuration repository (SCR)
@@ -83,10 +83,8 @@ User Interface
 ~~~~~~~~~~~~~~
 
 Given the wide variety of machines and use cases that can possibly be
-handled with Yast, the UI component provides a very convenient abstraction layer
-for the user interface. Very much like the SCR, the UI does not necessarily run
-on the installation target machine. It doesn't even need to run on the same
-machine as the WFM.
+handled with Yast, the UI component (actually just a module) provides a very
+convenient abstraction layer for the user interface.
 
 The UI component is usually referred as "UI bindings" since it basically offers
 a YCP interface on top of https://github.com/libyui/libyui[libyui], the
@@ -119,16 +117,46 @@ Some notes about the Yast Communication Protocol (YCP)
 ------------------------------------------------------
 
 All communication between the different parts of YaST core is done via a
-predefined set of YCP data types - simple data types like string,
-integer, boolean etc., but also compound data types like maps (key /
+https://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/id_ycp_data_types.html[predefined
+set of YCP data types]. This set includes simple data types like string,
+integer or boolean, but also compound data types like maps (key /
 value pairs, also known as "hashes" in other programming languages) or
 lists (like arrays or vectors in other programming languages). For
 complex data structures, maps, lists and simple data types can be nested
 to any degree.
 
-TODO:
+But in addition to those common data types, YCP also
+defines two types that are not so common in other programming languages:
+terms and paths.
 
-* ycp terms
-* ycp paths
-* import and include (probably better explained in ruby-binding docs)
+A term is something you won't find in C, Perl, Pascal or Lisp but you will
+find it in functional programming languages like Prolog for example. It can be
+described as a symbol followed by a list (that plays a role similar to the
+list of arguments of a function call). It's mainly used in the UI code to define
+tree-like structures of function calls without actually calling them.
 
+For example, the following ruby code defines a tree of terms that will be
+translated to the corresponding calls to libyui functions when needed. Every
+term is defined by a symbol followed by a list of zero or more elements
+(strings, symbols and other terms, in this case).
+
+[source,ruby]
+--------------------------------------------------------------
+Yast::Term.new(:VBox,
+               Yast::Term.new(:Label, "Say hello..."),
+               Yast::Term.new(:PushButton,
+                               Yast::Term.new(:Id, :hello),
+                               "now!"))
+--------------------------------------------------------------
+
+
+A path is something special to YCP and similar to paths in TCL. It's expressed
+as a sequence of path elements separated by dots. Paths are designed to denote
+data from complex tree-like structures and are mainly used by SCR. For example,
+the following Ruby code references the +TIMEZONE+ value of the file
++/etc/sysconfig/clock+.
+
+[source,ruby]
+--------------------------------------------------------------
+Yast::Path.new(".etc.sysconfig.clock.TIMEZONE")
+--------------------------------------------------------------
