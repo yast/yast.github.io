@@ -2,7 +2,8 @@ Maintenance Branches
 ====================
 The goal of this document is to describe and explain work-flow for maintenance
 branches. It does not affect development in master except of merging of fixes from
-maintenance branch.
+maintenance branch. It is not goal of this document to discuss which way is better
+for pull requests or how to use the git in exact situations.
 
 Why Maintenance Branches?
 -------------------------
@@ -19,7 +20,7 @@ For older branches fix is created in separated commits. Command git cherry-pick
 can be used, but to apply fix from ycp to ruby code is recommended to write it
 from scratch.
 
-Example work-flow for older branch:
+Example work-flow for older branch (can vary depending on scenario):
 ```
 git checkout Code-11-SP4
 git pull
