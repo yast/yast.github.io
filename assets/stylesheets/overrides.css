@@ -38,7 +38,7 @@ a:hover {
 .masthead {
   color: #888;
   margin-bottom: 0;
-  padding: 60px 0 50px;
+  padding: 40px 0 40px;
 }
 .masthead h1 {
   font-size: 69px;
@@ -108,17 +108,36 @@ text-align: left;
   text-decoration: none;
 }
 
-.screenshot-slider {
+.jumbotron .screenshot-slider {
   position: relative;
   background-color: #FFFFFF;
   border: 1px solid #888;
   border-radius: 4px 4px 4px 4px;
-  margin: 15px 0;
-  width: 600px;
+  margin:0 auto 0 auto;;
+  width: 500px;
+
 }
 
-.carousel {
+.jumbotron .carousel {
   margin-bottom: 0;
+  line-height: 1;
+}
+
+.jumbotron .carousel-caption {
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.jumbotron .carousel-caption p {
+  margin-bottom: 0;
+  color: #ffffff;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.jumbotron .carousel-caption h4 {
+  line-height: 20px;
 }
 
 .tab-content {
@@ -180,4 +199,9 @@ text-align: left;
   padding: 20px 0 10px;
   font-size: 11px;
   color: #888;
+}
+
+h1 img {
+  margin-left: 25px;
+  vertical-align: bottom;
 }
