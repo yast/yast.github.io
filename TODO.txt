@@ -1,8 +1,10 @@
 For developers
 
-* Turn architecture.asciidoc into something small and sane.
-* Improve the landing page of rubydoc for yast-yast2, yast-ruby-bindings,
-  yast-core and yast-instalation.
+* Improve the landing page of rubydoc for
+  - yast-yast2
+  - yast-ruby-bindings
+  - yast-core
+  - yast-instalation.
 * Drop wiki pages that will become obsolete with this (and point here)
 * There are still 6 links to the wiki. Do we want to move that information
   elsewhere?
@@ -10,6 +12,5 @@ For developers
 
 Others
 
-* More shiny front page
 * Style
 * Description of the yast modules
