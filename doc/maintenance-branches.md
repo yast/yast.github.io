@@ -18,7 +18,8 @@ from SLE-12-GA.
 
 For older branches fix is created in separated commits. Command git cherry-pick
 can be used, but to apply fix from ycp to ruby code is recommended to write it
-from scratch.
+from scratch. Also when backporting fix from ruby to ycp it is recommended to
+write it from scratch as there is no ruby2ycp convertor.
 
 Example work-flow for older branch (can vary depending on scenario):
 ```
@@ -60,6 +61,28 @@ git merge SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
 ```
+
+When maintenance fix was not requested and made only in master and then mind
+changed, it is still needed to merge back cherry pick used for backporting fix.
+It is valid only for new branches.
+
+Example how to backport fix and then merge branch back
+```
+git checkout SLE-12-GA
+git pull
+git checkout -b my_fix_SLE12
+git cherry-pick <fix from master>
+...possible conflict resolution
+git commit
+git push
+# wait for review and merge
+git checkout master
+git pull
+git merge SLE-12-GA
+...fix possible conflicts and git commit if needed...
+git push
+```
+
 
 Example how to check what fixes are not merged:
 ```
