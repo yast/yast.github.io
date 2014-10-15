@@ -6,10 +6,11 @@
   <body>
     {% include navbar.html %}
 
-    <div class="jumbotron masthead pageheader">
+    <div class="jumbotron masthead">
       <div class="container">
-        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}<img src="assets/images/yast-logo.png" /></h1>
         <p>{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
+        {% include carousel.html %}
       </div>
     </div>
     <div class="content">
