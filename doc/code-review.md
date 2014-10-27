@@ -50,13 +50,13 @@ Reqired (REQ):
 * Do not break anything that works (implicit requirement)
 
 Nice to Have (NTH):
-* All tests have to be green (`rake osc:build` before submitting)
+* All tests have to be green (`rake test:unit` before submitting)
 * No Builtins.* or Ops.* unless really necessary in new code
 * Function documentation (function description, arguments, return values)
 * Following the [Ruby style guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md)
 * Understandable variable names
 * Good test quality
-* Build has to be green (`rake osc:build` before submitting)
+* Package build has to be green (`rake osc:build` before submitting)
 * Explanatory Class description
 
 Nitpicking (NP):
