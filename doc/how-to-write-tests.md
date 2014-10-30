@@ -1,5 +1,5 @@
-How-to Write Test
-=================
+How to Write Tests
+==================
 
 Why
 ---
@@ -41,8 +41,8 @@ Tips & Tricks
 
 Links
 -----
-[Better Specs](http://betterspecs.org/) - rspec guidelines with Ruby
-[The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
+- [Better Specs](http://betterspecs.org/) - rspec guidelines with Ruby
+- [The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
 
 Examples
 --------
