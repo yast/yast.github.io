@@ -1,5 +1,5 @@
 # Site settings
-title: Yast
+title: YaST
 description: the most comprehensive installation and configuration tool for Linux
 email: yast-devel@opensuse.org
 baseurl: "/"

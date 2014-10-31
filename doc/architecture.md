@@ -1,34 +1,34 @@
-# Yast architecture
+# YaST architecture
 
-In order to be proficient with Yast development it's necessary to have a clear
-view on how the Yast world is structured. The goal of this document is to
+In order to be proficient with YaST development it's necessary to have a clear
+view on how the YaST world is structured. The goal of this document is to
 provide that view in a concise way, mentioning all the pieces and exposing how
 they fit together. For a more detailed view about any of the technologies or
 components, refer to the corresponding documentation linked from the central
-documentation page for Yast at http://yast.github.io/.
+documentation page for YaST at http://yast.github.io/.
 
 ## Overview
 
-Yast has been invented to have an extensible and fairly standardized
-means to install and manage Linux on a system. Basically Yast serves three
+YaST has been invented to have an extensible and fairly standardized
+means to install and manage Linux on a system. Basically YaST serves three
 main purposes:
 
 * Installation of Linux on a system
 * Configuration of the installed system
 * Administration of the installed system
 
-From the point of view of software architecture, Yast is mainly a component
+From the point of view of software architecture, YaST is mainly a component
 system in which the different pieces, that can be implemented in several
 programming languages, interface with each other using a specific
-protocol called YCP (Yast Communication Protocol). There are mainly two kind
+protocol called YCP (YaST Communication Protocol). There are mainly two kind
 of components: those providing functionality to others and the so-called
 clients. The former ones publish a YCP interface with useful functions and
 variables. On the other hand, a client always serves a particular purpose and
 controls the execution work-flow. Clients rely on other components (including
-other clients) to get the job done. Therefore, executing Yast means actually
-calling a Yast client.
+other clients) to get the job done. Therefore, executing YaST means actually
+calling a YaST client.
 
-At the time of writing, Yast components can be written in C++ (using liby2 and
+At the time of writing, YaST components can be written in C++ (using liby2 and
 libycp), in Ruby (using
 [yast-ruby-bindings](https://github.com/yast/yast-ruby-bindings)) and in Perl
 (using [yast-perl-bindings](https://github.com/yast/yast-perl-bindings)), with
@@ -40,7 +40,7 @@ languages (wherever possible) and use only Ruby.
 
 ## Main components
 
-There are several components that have a very relevant role in Yast and must be
+There are several components that have a very relevant role in YaST and must be
 known in order to understand the "big picture". As already outlined in the
 previous section, there are mainly two kind of components:
 
@@ -65,19 +65,19 @@ just four operations: read, write, dir and execute.
 
 ### Work-flow manager (WFM)
 
-The Yast work-flow manager (implemented in the WFM namespace) is a special
+The YaST work-flow manager (implemented in the WFM namespace) is a special
 component which takes care of executing clients and providing to them the
 interface with the other components. It's also responsible of handling one
-SCR instance per every system that is being managed by Yast.
+SCR instance per every system that is being managed by YaST.
 
-To some extend, WFM can be considered as the "bootloader" of Yast, since
-every Yast execution starts with WFM handing the control over a client after
+To some extend, WFM can be considered as the "bootloader" of YaST, since
+every YaST execution starts with WFM handing the control over a client after
 having connected it to the user interface and a SCR instance.
 
 ### User Interface
 
 Given the wide variety of machines and use cases that can possibly be
-handled with Yast, the UI component (actually just a module) provides a very
+handled with YaST, the UI component (actually just a module) provides a very
 convenient abstraction layer for the user interface.
 
 The UI component is usually referred as "UI bindings" since it basically offers
@@ -93,19 +93,19 @@ even something else not implemented yet, as shown in the following diagram.
 ### Modules
 
 Apart from the already mentioned few components with very special roles and the
-clients, Yast also consists on a huge amount of other components called modules
+clients, YaST also consists on a huge amount of other components called modules
 and used to encapsulate functionality related to different areas. Examples of
 available modules are Network, Service, FileSystem or PulseAudio.
 
 ### Functional diagram
 
-As already mentioned, the Yast execution starts with WFM setting up SCR and
+As already mentioned, the YaST execution starts with WFM setting up SCR and
 running a client. But that's only the start, the following diagram shows how
 the different pieces interact which each other in order to get the job done.
 
 ![How the pieces fit](images/interaction.png)
 
-### Some notes about the Yast Communication Protocol (YCP)
+### Some notes about the YaST Communication Protocol (YCP)
 
 All communication between the different parts of YaST core is done via a
 [predefined set of YCP data
@@ -154,7 +154,7 @@ Yast::Path.new(".sysconfig.clock.TIMEZONE")
 Further documentation
 ---------------------
 
-The goal of this document is just to provide a high level view of the Yast
+The goal of this document is just to provide a high level view of the YaST
 development ecosystem. More detailed documentation about the involved
 technologies, tools and procedures can always be found in the central
-documentation page for Yast, available at http://yast.github.io/.
+documentation page for YaST, available at http://yast.github.io/.
