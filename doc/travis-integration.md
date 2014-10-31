@@ -77,10 +77,11 @@ existing package as a starting point.
 
 If you need some updated package (in a newer version than in Ubuntu 12.04) you should check
 the newer Ubuntu version, maybe the package will just work or it will need only small
-tweaking. See http://packages.ubuntu.com/ for Ubuntu package search.
+tweaking. See [http://packages.ubuntu.com/](http://packages.ubuntu.com/) for Ubuntu package
+search.
 
-Alternatively you can check https://launchpad.net/, it is a community platform for providing
-Ubuntu packages, similar to OBS for openSUSE.
+Alternatively you can check [https://launchpad.net/](https://launchpad.net/), it is a
+community platform for providing Ubuntu packages, similar to OBS for openSUSE.
 
 
 ### Links
@@ -88,10 +89,10 @@ Ubuntu packages, similar to OBS for openSUSE.
 Here are some useful links if you are interested in details or you need to do
 some specific Debian/Ubuntu packaging tweaks:
 
-- http://docs.travis-ci.com/user/installing-dependencies/
-- http://en.opensuse.org/openSUSE:Build_Service_Debian_builds
-- https://wiki.debian.org/HowToPackageForDebian
-- https://www.debian.org/doc/manuals/maint-guide/dreq.en.html
-- https://help.ubuntu.com/community/CompilingEasyHowTo
+- [http://docs.travis-ci.com/user/installing-dependencies/](http://docs.travis-ci.com/user/installing-dependencies/)
+- [http://en.opensuse.org/openSUSE:Build_Service_Debian_builds](http://en.opensuse.org/openSUSE:Build_Service_Debian_builds)
+- [https://wiki.debian.org/HowToPackageForDebian](https://wiki.debian.org/HowToPackageForDebian)
+- [https://www.debian.org/doc/manuals/maint-guide/dreq.en.html](https://www.debian.org/doc/manuals/maint-guide/dreq.en.html)
+- [https://help.ubuntu.com/community/CompilingEasyHowTo](https://help.ubuntu.com/community/CompilingEasyHowTo)
 
 
