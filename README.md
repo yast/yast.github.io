@@ -1,6 +1,9 @@
 yast.github.io
 ==============
 
+[![Documentation Status](https://readthedocs.org/projects/yastgithubio/badge/?version=latest)](https://readthedocs.org/projects/yastgithubio/?badge=latest)
+
+
 Repository to host the Yast landing page (http://yast.github.io) and some
 general Yast documentation. This is still in work in progress, so please
 take a look to the [TODO.txt](TODO.txt) file to see where your help is needed.
