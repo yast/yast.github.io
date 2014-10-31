@@ -6,7 +6,7 @@ among several packages and repositories. In order to be proficient in YaST
 development it's crucial to understand what is the role of every component,
 how do they relate to each other and where do they live in the Github
 infrastructure. That is explained in the
-<a href="https://github.com/yast/yast.github.io/blob/master/doc/architecture.asciidoc">YaST
+<a href="http://yastgithubio.readthedocs.org/en/latest/architecture/">YaST
 architecture</a> document.
 </p>
 
@@ -18,17 +18,6 @@ installed system, as detailed in the
 organization description</a>.
 </p>
 
-
-<h2>Basic libraries</h2>
-<p>
-YaST provides a basic API to access several aspects of a
-Linux system configuration, from network to packages management and from
-hardware status to systemd. YaST basic libraries provide access to that
-API and to several YaST specific mechanisms and concepts. Full documentation can
-be browsed <a href="http://rubydoc.info/github/yast/yast-yast2/">yast-yast2 page
-at Rubydoc</a>.
-</p>
-
 <h2>Accessing YaST subsystems from Ruby </h2>
 <p>
 The core system of YaST is implemented using a mixture of languages, but the
@@ -38,6 +27,16 @@ implement almost all modules. The
 of YaST Ruby bindings</a> contains comprehensive information not only about
 the way to access SCR or WFM from Ruby, but also about the legacy modes used
 during the transition from the YCP language to Ruby, like Ops or Builtins.
+</p>
+
+<h2>Basic libraries</h2>
+<p>
+YaST provides a basic API to access several aspects of a
+Linux system configuration, from network to packages management and from
+hardware status to systemd. YaST basic libraries provide access to that
+API and to several YaST specific mechanisms and concepts. Full documentation can
+be browsed <a href="http://rubydoc.info/github/yast/yast-yast2/">yast-yast2 page
+at Rubydoc</a>.
 </p>
 
 <h2>Agents</h2>
