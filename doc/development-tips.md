@@ -1,4 +1,4 @@
-# Yast development tips & tricks
+# YaST development tips & tricks
 
 ## Changing the root location for agents
 
@@ -19,10 +19,10 @@ The descriptor needs to be closed afterwards running
 Yast::WFM.SCRClose(descriptor)
 ```
 
-## Change Yast during installation
+## Change YaST during installation
 
 It's usually necessary to run the installation process with a modified version
-of the Yast code. Since Ruby is an interpreted language, Yast offers several
+of the YaST code. Since Ruby is an interpreted language, YaST offers several
 alternative ways to alter the running installer.
 
 ### Using driver updates
@@ -39,12 +39,12 @@ When using this method with many RPM packages, it's usually convenient to use a
 file](http://doc.opensuse.org/projects/autoyast/appendix.linuxrc.html)
 containing ```insecure=1``` and several ```dud``` options.
 
-### Using a Yast update medium
+### Using a YaST update medium
 
-A simpler alternative to driver updates are the Yast update mediums. They are
+A simpler alternative to driver updates are the YaST update mediums. They are
 also triggered by the ```dud``` Linuxrc option and they also
 allow to modify the system before the installation, but they only affect the
-files located under ```/usr/share/Yast2```. More information can be found
+files located under ```/usr/share/YaST2```. More information can be found
 in the [corresponding
 section](http://ftp.sunet.se/pub/Linux/distributions/suse/people/hvogel/Update-Media-HOWTO/html/id_yud.html)
 of the Update Media HOWTO.
@@ -53,7 +53,7 @@ of the Update Media HOWTO.
 
 It's also possible to use the ```startshell=1``` in Linuxrc to start a bash
 shell with full access to the installation system before running the installer
-itself. In this way it's not only possible to modify any Yast file in advance
+itself. In this way it's not only possible to modify any YaST file in advance
 but also to configure the network or any other aspect of the system. More
 information can be found in
 [this Kobliha's blog

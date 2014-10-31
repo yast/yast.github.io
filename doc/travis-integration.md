@@ -49,7 +49,7 @@ permissions for the respective GitHub repository.)
 
 ## Implementation
 
-Because Travis nodes runs on Ubuntu we need to be somehow able to compile/build Yast packages there.
+Because Travis nodes runs on Ubuntu we need to be somehow able to compile/build YaST packages there.
 
 
 ### Open Build Service
@@ -59,19 +59,19 @@ Luckily OBS beside building usual RPMS also supports building packages for Debia
 OBS project [YaST:Head:Travis](https://build.opensuse.org/project/monitor/YaST:Head:Travis)
 builds packages for Ubuntu 12.04 which can be used at Travis.
 
-To ensure that the Yast packages are up to date they link to the main packages at
+To ensure that the YaST packages are up to date they link to the main packages at
 [YaST:Head](https://build.opensuse.org/project/monitor/YaST:Head). The only difference
 is that the YaST:Head:Travis packages contain `debian.*` source files which contain
 metadata for building the Debian packages.
 
-There are also some more packages which are needed for Yast, some provide a new version
+There are also some more packages which are needed for YaST, some provide a new version
 for already present packages (newer GCC, Ruby, Swig, Boost) some are not available
 for Ubuntu at all (ldapcpplib, libstorage, snapper).
 
 
 ### Adding a New Dependent Package
 
-If you need to add a new Yast package to YaST:Head:Travis simply branch the package
+If you need to add a new YaST package to YaST:Head:Travis simply branch the package
 from YaST:Head and add Debian packaging files. You can reuse the files from some
 existing package as a starting point.
 

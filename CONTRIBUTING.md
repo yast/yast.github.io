@@ -1,13 +1,13 @@
-Yast landing page contribution guidelines
+YaST landing page contribution guidelines
 =========================================
 
 This file only refers to the contributions targeted at this repository (landing
-page and general developers documentation), for the general Yast contribution
+page and general developers documentation), for the general YaST contribution
 guidelines, please refer to
 [doc/contributing.md](doc/contributing.md).
 
 This repository works under a pull requests model very similar to the one used
-in the rest of the Yast project. So to change something you should:
+in the rest of the YaST project. So to change something you should:
 
   1. Fork the project.
 

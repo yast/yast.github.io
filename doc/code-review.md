@@ -1,6 +1,6 @@
 Code Review
 ===========
-First of all, thank you for contributing to Yast! Anyway, there are some rules
+First of all, thank you for contributing to YaST! Anyway, there are some rules
 that anyone needs to follow while doing so...
 
 Every single change in code (including bugfix, new feature, etc.) needs to go
@@ -23,7 +23,7 @@ Code Review Workflow
    [bugzilla](https://bugzilla.suse.com) or GitHub issue reference)
 2. (optional) Ask someone to do a code review for you. If the reviewer doesn't
    have time for that or your reach a time-out, ask someone else.
-   If you can't find a reviewer, try to fish outside the Yast team - for
+   If you can't find a reviewer, try to fish outside the YaST team - for
    instance, ask experts on the given field.
 3. Reviewers use three levels of their comments: Required, Nice to Have,
    Nitpicking.
@@ -34,7 +34,7 @@ Code Review Workflow
 Code Review Rules
 -----------------
 There are three levels of comments: Required, Nice to Have, Nitpicking. These
-items come from our experience with reviewing Yast code.
+items come from our experience with reviewing YaST code.
 
 Obviously, what is Required or Nice to Have can slightly change depending on
 the current phase of development. During global refactoring, we are more
