@@ -6,7 +6,7 @@ Enterprise distributions.
 
 The YaST landing page located at http://yast.github.io provides a clear view of
 the whole project for both users and developers, but with a stronger focus in
-the later.
+the latter.
 
 YaST is a complex project with several components and its source code is spread
 over several repositories at Github, with each repository containing the
