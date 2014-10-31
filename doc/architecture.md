@@ -5,7 +5,7 @@ view on how the YaST world is structured. The goal of this document is to
 provide that view in a concise way, mentioning all the pieces and exposing how
 they fit together. For a more detailed view about any of the technologies or
 components, refer to the corresponding documentation linked from the central
-documentation page for YaST at http://yast.github.io/.
+documentation page for YaST at [http://yast.github.io](http://yast.github.io).
 
 ## Overview
 
@@ -45,10 +45,10 @@ known in order to understand the "big picture". As already outlined in the
 previous section, there are mainly two kind of components:
 
 * Components providing functionality to others
-  * [SCR](#system-configuration-repository-scr): system configuration repository
-  * [WFM](#work-flow-manager-wfm): work-flow manager
-  * [UI](#user-interface): user interface
-  * [Modules](#modules)
+  * SCR: system configuration repository
+  * WFM: work-flow manager
+  * UI: user interface
+  * Modules
 * Clients
 
 ### System Configuration repository (SCR)
@@ -157,4 +157,5 @@ Further documentation
 The goal of this document is just to provide a high level view of the YaST
 development ecosystem. More detailed documentation about the involved
 technologies, tools and procedures can always be found in the central
-documentation page for YaST, available at http://yast.github.io/.
+documentation page for YaST, available at
+[http://yast.github.io](http://yast.github.io).
