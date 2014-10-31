@@ -48,6 +48,7 @@ Reqired (REQ):
 * Comments for "strange code"
 * Understandable method / function names (expressing what they do and how)
 * Do not break anything that works (implicit requirement)
+* Travis build is green
 
 Nice to Have (NTH):
 * All tests have to be green (`rake osc:build` before submitting)
