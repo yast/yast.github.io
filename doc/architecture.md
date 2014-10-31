@@ -45,10 +45,10 @@ known in order to understand the "big picture". As already outlined in the
 previous section, there are mainly two kind of components:
 
 * Components providing functionality to others
-  * SCR: system configuration repository
-  * WFM: work-flow manager
-  * UI: user interface
-  * Modules
+    - [SCR](architecture.md#system-configuration-repository-scr): system configuration repository
+    - [WFM](architecture.md#work-flow-manager-wfm): work-flow manager
+    - [UI](architecture.md#user-interface): user interface
+    - [Modules](architecture.md#modules)
 * Clients
 
 ### System Configuration repository (SCR)
