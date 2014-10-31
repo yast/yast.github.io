@@ -23,19 +23,20 @@ programming languages, interface with each other using a specific
 protocol called YCP (Yast Communication Protocol). There are mainly two kind
 of components: those providing functionality to others and the so-called
 clients. The former ones publish a YCP interface with useful functions and
-variables. On the other hand, a client always serves a concrete purpose and
+variables. On the other hand, a client always serves a particular purpose and
 controls the execution work-flow. Clients rely on other components (including
 other clients) to get the job done. Therefore, executing Yast means actually
 calling a Yast client.
 
-A the time of writing, Yast components can be written in C++ (using liby2 and
+At the time of writing, Yast components can be written in C++ (using liby2 and
 libycp), in Ruby (using
 [yast-ruby-bindings](https://github.com/yast/yast-ruby-bindings)) and in Perl
 (using [yast-perl-bindings](https://github.com/yast/yast-perl-bindings)), with
 the exception of clients, that cannot be written in Perl. Ruby is the preferred
 and recommended way, since the bindings offer some unique features for both
 implementation and testing. In addition, many development tasks are automated
-using the Ruby toolchain.
+using the Ruby toolchain. Moreover the long term plan is to get rid of all other
+languages (wherever possible) and use only Ruby.
 
 ## Main components
 
