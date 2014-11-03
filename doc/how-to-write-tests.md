@@ -34,20 +34,8 @@ projects should follow:
 * Description of a test should describe the behavior - you should get the idea
   just be reading the "it" / "context", see Examples
 
-Tips & Tricks
--------------
-* [SCR helper](https://github.com/yast/yast-country/blob/master/keyboard/test/SCRStub.rb)
-* Other helpers - TBD
-
 Links
 -----
-- [Better Specs](http://betterspecs.org/) - rspec guidelines with Ruby
-- [The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
-
-Examples
---------
-TBD:
-* "allow" vs "expect"
-* "expect" in "it"
-* descriptive "it" / "context"
-* "it" in different "context"s
+* [Better Specs](http://betterspecs.org/) - rspec guidelines with Ruby
+* [The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
+* [SCR helper (WIP)](https://github.com/yast/yast-country/blob/master/keyboard/test/SCRStub.rb)
