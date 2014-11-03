@@ -42,7 +42,7 @@ focused on the code beauty and understandability. During a hot phase, we focus
 on the code robustness.
 
 
-#### Reqired (REQ)
+### Reqired (REQ)
 
 * Code quality needs to be at least the same or even better
 * Changelog entry if applicable (describe change from user's POV)
@@ -53,7 +53,7 @@ on the code robustness.
 * Travis build is green
 
 
-#### Nice to Have (NTH)
+### Nice to Have (NTH)
 
 * All tests have to be green (`rake osc:build` before submitting)
 * No Builtins.* or Ops.* unless really necessary in new code
@@ -65,7 +65,7 @@ on the code robustness.
 * Explanatory Class description
 
 
-#### Nitpicking (NP)
+### Nitpicking (NP)
 
 * Adding code to already big method
 * Full coverage of test case (of the changes)
