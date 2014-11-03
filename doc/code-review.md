@@ -3,7 +3,7 @@ Code Review
 First of all, thank you for contributing to YaST! Anyway, there are some rules
 that anyone needs to follow while doing so...
 
-Every single change in code (including bugfix, new feature, etc.) needs to go
+Every single change in code (including bug fix, new feature, etc.) needs to go
 through a code [review](http://en.wikipedia.org/wiki/Code_review) using
 a [Pull Request](https://help.github.com/articles/using-pull-requests)
 
@@ -42,7 +42,7 @@ focused on the code beauty and understandability. During a hot phase, we focus
 on the code robustness.
 
 
-### Reqired (REQ)
+### Required (REQ)
 
 * Code quality needs to be at least the same or even better
 * Changelog entry if applicable (describe change from user's POV)
