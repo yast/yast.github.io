@@ -6,14 +6,24 @@
   <body>
     {% include navbar.html %}
 
-    <div class="jumbotron masthead pageheader">
+    <div id="masthead-row">
       <div class="container">
-        <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-        <p>{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
+        <div class="page-header">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="main-header">
+                <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                <p class="lead">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="content">
-      {{ content }}
+    <div id="content-row">
+      <div class="container">
+        {{ content }}
+      </div>
     </div>
     {% include footer.html %}
   </body>

@@ -1,0 +1,73 @@
+---
+layout: default
+title: Contributing
+description: Get involved, learn and have a lot of fun!
+---
+<div class="row">
+  <div class="col-sm-12">
+    <div class="main-article docs">
+      <h2>How to contribute to YaST</h2>
+
+      <h3>1. Meet others involved</h3>
+      <p>YaST is a global project with people working on it all around the world. The
+      fastest way to get in contact is to simply show up in the
+      <a href="irc://irc.opensuse.org/">#yast</a> IRC channel at irc.opensuse.org
+      (freenode). Most most YaST developers will be there willing to help and answer
+      any question.<p>
+
+      <p>You can also reach most developers and follow the development in the
+      <b>yast-devel@opensuse.org</b> mailing list. Just
+      <a rel="nofollow" href="mailto:yast-devel+subscribe@opensuse.org">subscribe</a>
+      to it, or take a look to the
+      <a rel="nofollow" href="http://lists.opensuse.org/yast-devel/">archives</a> or
+      request a mail with
+      <a rel="nofollow" href="mailto:yast-devel+help@opensuse.org">help about the mailinglist</a>.
+
+      <h3>2. Get the code</h3>
+
+      <p>YaST is a complex system consisting in several components and modules. You
+      can find them all in the <a href="http://github.com/yast">YaST organization</a>
+      at Github. Most components are written in Ruby with a high level of abstraction,
+      with some core components handling the graphical stack written in C.
+      There are still some small legacy parts written in Perl or YCP (YaST Control
+      Programming language), but they are being gradually ported to Ruby.
+      </p>
+
+      <p>
+      There are more than 100 YaST repositories at Github.
+      If locating the right one is a problem, let RPM tell you the source package:
+      </p>
+      <pre>
+$ rpm -qf --qf '%{SOURCERPM} (%{NVRA})\n' /usr/share/YaST2/scrconf/etc_idmapd_conf.scr
+yast2-nfs-server-3.0.0-6.2.src.rpm (yast2-nfs-common-3.0.0-6.2.noarch)</pre>
+      <p>
+      From that, <b>yast2</b>-nfs-server is found in the repository
+      <a href="https://github.com/yast/yast-nfs-server"><b>yast</b>-nfs-server</a>
+      (note the digit is not present).
+      </p>
+
+      <p>The only exceptions are the <code>yast2.rpm</code> package, with code is located in the
+      <a href="https://github.com/yast/yast-yast2">yast-yast2</a> repository and the
+      <code>autoyast2.rpm</code> package, which code can be found in the
+      <a href="https://github.com/yast/yast-autoinstallation">yast-autoinstallation</a> repository.
+      </p>
+
+      <h3>3. Take the first steps</h3>
+
+      <p>In order to start improving YaST, you need to setup a development
+      environment. Up-to-date instructions can be found in the
+      <a href="http://en.opensuse.org/openSUSE:YaST:_Preparing_the_Development_Environment">corresponding
+      page of the openSUSE wiki</a>.</p>
+
+      <p>After preparing the development environment and cloning the desired
+      yast module in git, all the rake tasks provided by
+      <a href="https://github.com/yast/yast-rake">yast-rake</a> will be
+      available from your working copy of the repository.</p>
+
+      <p>The first step to fix or improve any application is to understand how
+      it works and what is doing in every moment. In the openSUSE wiki you can
+      find a <a href="http://en.opensuse.org/openSUSE:YaST_debugging">comprehensive
+      guide</a> about YaST debugging.</p>
+    </div>
+  </div>
+</div>

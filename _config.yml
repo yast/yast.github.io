@@ -1,6 +1,6 @@
 # Site settings
 title: YaST
-description: the most comprehensive installation and configuration tool for Linux
+description: powerfull installation and configuration tool for Linux
 email: yast-devel@opensuse.org
 baseurl: "/"
 url: "http://0.0.0.0:4000"
