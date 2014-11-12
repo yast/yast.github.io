@@ -1,0 +1,109 @@
+---
+layout: default
+title: Documentation
+description: Discover the internals of YaST development
+---
+<div class="row">
+  <div class="col-sm-12">
+    <div class="main-article docs">
+
+      <h2>How the system works</h2>
+
+      <h3>The big picture</h3>
+      <p>
+      YaST consists on several pieces that work together despite being distributed
+      among several packages and repositories. In order to be proficient in YaST
+      development it's crucial to understand what is the role of every component,
+      how do they relate to each other and where do they live in the Github
+      infrastructure. That is explained in the
+      <a href="http://yastgithubio.readthedocs.org/en/latest/architecture/">YaST
+      architecture</a> document.
+      </p>
+
+      <p>
+      That complex system is translated into files and folders in a consistent way all
+      along the full set of yast repositories and therefore in the
+      installed system, as detailed in the
+      <a href="http://en.opensuse.org/openSUSE:YaST:_Code_Organization">YaST code
+      organization description</a>.
+      </p>
+
+      <h3>Accessing YaST subsystems from Ruby </h3>
+      <p>
+      The core system of YaST is implemented using a mixture of languages, but the
+      whole functionality is easily accesible from Ruby, the language used to
+      implement almost all modules. The
+      <a href="http://rubydoc.info/github/yast/yast-ruby-bindings/">documentation
+      of YaST Ruby bindings</a> contains comprehensive information not only about
+      the way to access SCR or WFM from Ruby, but also about the legacy modes used
+      during the transition from the YCP language to Ruby, like Ops or Builtins.
+      </p>
+
+      <h3>Basic libraries</h3>
+      <p>
+      YaST provides a basic API to access several aspects of a
+      Linux system configuration, from network to packages management and from
+      hardware status to systemd. YaST basic libraries provide access to that
+      API and to several YaST specific mechanisms and concepts. Full documentation can
+      be browsed <a href="http://rubydoc.info/github/yast/yast-yast2/">yast-yast2 page
+      at Rubydoc</a>.
+      </p>
+
+      <h3>Agents</h3>
+      <p>
+      At lowest layers, almost every operation in YaST relies on one or several
+      agents. The <a href="http://rubydoc.info/github/yast/yast-core/">Rubydoc page of
+      yast-core</a> documents the full range of agents that are available through
+      the SCR interface.
+      </p>
+
+      <h3>Graphical interface</h3>
+      <p>
+      YaST interface relies on libYUI, an engine that provides abstraction from
+      graphical user interfaces (Qt, Gtk) and text based user interfaces (ncurses).
+      The YaST code interacts with the underlying libYUI system through the
+      <a href="https://github.com/yast/yast-ycp-ui-bindings">UI bindings</a>. Some
+      <a href="https://github.com/yast/yast-ruby-bindings/blob/master/src/ruby/yast/ui_shortcuts.rb">shortcuts
+      </a> are provided by the abovementioned Ruby bindings in order to make the usage
+      of UI bindings even more straigthforward.
+      </p>
+
+      <p>
+      Even if libYUI is used through the very convenient wrappers, the
+      <a href="http://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/Book-UIReference.html">UI
+      reference documentation</a> and the
+      <a href="http://doc.opensuse.org/projects/YaST/openSUSE11.3/tdg/Book-YCPUIlayout.html">UI
+      layouts and events guide</a> from the original C++ API are still the best
+      sources of information to know how every class and method works under the hood.
+      </p>
+
+      <h3>The installation process</h3>
+      <p>
+      YaST is not only the Swiss Army knife of Linux configuration, it's also a very
+      flexible and configurable installer used in all versions of openSUSE and SUSE
+      Linux. In order to understand how the different pieces interact with each other
+      during the installation process, from Linuxrc to the final steps of
+      installation, including configuration proposals or partitioner, it's highly
+      recomended the reading of the
+      <a href="http://rubydoc.info/github/yast/yast-instalation/">documentation of the
+      yast-installation module</a>.
+      </p>
+
+      <h3>Tips &amp; tricks</h3>
+      <p>
+      When developing or debugging YaST, there are several gotchas that can be
+      extremelly useful. Some of them are not only targeted to developers but also to
+      users and are collected in the
+      <a href="https://en.opensuse.org/SDB:YaST_tricks">YaST tricks page</a> at the
+      openSUSE wiki.
+      </p>
+
+      <p>
+      In addition to those tricks, you can find several bits of useful information in
+      the
+      <a href="http://yastgithubio.readthedocs.org/en/latest/development-tips/">YaST
+      development tips and tricks</a> document.
+      </p>
+    </div>
+  </div>
+</div>

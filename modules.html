@@ -1,178 +1,277 @@
 ---
 layout: default
 title: Modules
-description: From netbooks to supercomputers, a tool to configure them all
+description: The functionality of YaST is extensible through a variety of modules.
+
+columns:
+- categories:
+  - title: "Network services"
+    modules:
+    - name: yast-auth-server
+      url: http://github.com/yast/yast-auth-server
+      desc: Configuration of server providing various authentication methods like Kerberos, LDAP or SSSD.
+    - name: yast-dhcp-server
+      url: http://github.com/yast/yast-dhcp-server
+      desc: Configuration of DHCP server, including LDAP-related settings.
+    - name: yast-dns-server
+      url: http://github.com/yast/yast-dns-server
+      desc: Comprehensive configuration of BIND DNS server.
+    - name: yast-ftp-server
+      url: http://github.com/yast/yast-ftp-server
+      desc: Configuration of Pure-FTPd and vsftpd.
+    - name: yast-http-server
+      url: http://github.com/yast/yast-http-server
+      desc: Comprehensive configuration of Apache2.
+    - name: yast-inetd
+      url: http://github.com/yast/yast-inetd
+      desc: Configuration of inetd and xinetd daemons.
+    - name: yast-instserver
+      url: http://github.com/yast/yast-instserver
+      desc: Configures installation server (NFS, HTTP or FTP) providing installation repositories.
+    - name: yast-mail
+      url: http://github.com/yast/yast-mail
+      desc: Mail configuration.
+    - name: yast-nfs-server
+      url: http://github.com/yast/yast-nfs-server
+      desc: Exports directories over NFS network protocol.
+    - name: yast-nis-server
+      url: http://github.com/yast/yast-nis-server
+      desc: Server configuration for network information services (<a href="http://en.wikipedia.org/wiki/Network_Information_Service">NIS, YP</a>).
+    - name: yast-samba-server
+      url: http://github.com/yast/yast-samba-server
+      desc: Server side of a file and printing services using <a href="http://en.wikipedia.org/wiki/Samba_(software)">Samba</a>.
+    - name: yast-slp-server
+      url: http://github.com/yast/yast-slp-server
+      desc: Configures Service Location Protocol server (<a href="http://www.openslp.org/">OpenSLP</a>).
+    - name: yast-squid
+      url: http://github.com/yast/yast-squid
+      desc: Configures Squid proxy service.
+    - name: yast-tftp-server
+      url: http://github.com/yast/yast-tftp-server
+      desc: Configures TFTP server (used for booting over network).
+  - title: "Infrastructure & deployment"
+    modules:
+    - name: yast-add-on
+      url: http://github.com/yast/yast-add-on
+      desc: Allows to add/remove add-ons for base system.
+    - name: yast-add-on-creator
+      url: http://github.com/yast/yast-add-on-creator
+      desc: This module can create custom add-on products from provided RPM packages.
+    - name: yast-cluster
+      url: http://github.com/yast/yast-cluster
+      desc: Management of settings for high availability clusters.
+    - name: yast-ca-management
+      url: http://github.com/yast/yast-ca-management
+      desc: Certificate authority management.
+    - name: yast-crowbar
+      url: http://github.com/yast/yast-crowbar
+      desc: Configuration of Crowbar, the orchestration tool used by SUSE Cloud.
+    - name: yast-docker
+      url: http://github.com/yast/yast-docker
+      desc: Management of Docker daemon, images, and containers.
+    - name: yast-drbd
+      url: http://github.com/yast/yast-drbd
+      desc: Configuration of Distributed Replicated Block Devices, a distributed storage system frequently used on high availability (HA) clusters.
+    - name: yast-firstboot
+      url: http://github.com/yast/yast-firstboot
+      desc: Allows system administrators to setup a wizard to execute on the first run of a system. Useful for image-based deployments.
+    - name: yast-geo-cluster
+      url: http://github.com/yast/yast-geo-cluster
+      desc: Management of Geo Clustering for high availability.
+    - name: yast-iplb
+      url: http://github.com/yast/yast-iplb
+      desc: Configures IP load balancing.
+    - name: yast-lxc
+      url: http://github.com/yast/yast-lxc
+      desc: Configures LXC Linux containers.
+    - name: yast-opensuse-mirror
+      url: http://github.com/yast/yast-opensuse-mirror
+      desc: Configures mirroring of openSUSE repositories locally.
+    - name: yast-pos-installation
+      url: http://github.com/yast/yast-pos-installation
+      desc: Takes care of <a href="https://www.suse.com/products/linuxpointofservice/">SUSE POS</a> installation and upgrade.
+    - name: yast-product-creator
+      url: http://github.com/yast/yast-product-creator
+      desc: Create your own product based on SUSE with this tool.
+    - name: yast-vm
+      url: http://github.com/yast/yast-vm
+      desc: Installs tools for using XEN or KVM virtualization.
+  - title: "Development & diagnosis"
+    modules:
+    - name: openwsman-yast
+      url: http://github.com/yast/yast-openwsman-yast
+      desc: Remote access to YaST capabilities via an openwsman plugin, enabling the creation of new interfaces.
+    - name: yast-cim
+      url: http://github.com/yast/yast-cim
+      desc: CIM API for YaST developers.
+    - name: yast-dbus-server
+      url: http://github.com/yast/yast-dbus-server
+      desc: YaST DBus service providing DBus access to YaST components.
+    - name: yast-kdump
+      url: http://github.com/yast/yast-kdump
+      desc: Configures kdump (kernel dump) tool.
+    - name: yast-ldap
+      url: http://github.com/yast/yast-ldap
+      desc: Allows YaST componentes to work with LDAP. It enables searching the LDAP tree and managing items on an LDAP server.
+    - name: yast-packager
+      url: http://github.com/yast/yast-packager
+      desc: Libraries and modules for software management.
+    - name: yast-support
+      url: http://github.com/yast/yast-support
+      desc: Allows you to collect system information for installation support in a standardized format.
+    - name: yast-transfer
+      url: http://github.com/yast/yast-transfer
+      desc: A YaST agent for various transfer protocols like FTP, HTTP and TFTP.
+    - name: yast-x11
+      url: http://github.com/yast/yast-x11
+      desc: Contains the programs and files for YaST2 X11 support.
+    - name: yast-xml
+      url: http://github.com/yast/yast-xml
+      desc: The YaST XML agent.
+- categories:
+  - title: "System configuration"
+    modules:
+    - name: yast-apparmor
+      url: http://github.com/yast/yast-apparmor
+      desc: Apparmor profile management.
+    - name: yast-auth-client
+      url: http://github.com/yast/yast-auth-client
+      desc: Configuration of various authentication methods for system like Kerberos, LDAP or SSSD.
+    - name: yast-bootloader
+      url: http://github.com/yast/yast-bootloader
+      desc: Bootloader installation and configuration.
+    - name: yast-cio
+      url: http://github.com/yast/yast-cio
+      desc: Management of blacklisting channels for Input/Output for s390x.
+    - name: yast-country
+      url: http://github.com/yast/yast-country
+      desc: Configuration of localization specific settings like language, keyboard layout, timezone, etc.
+    - name: yast-fcoe-client
+      url: http://github.com/yast/yast-fcoe-client
+      desc: Settings to connect to a Fibre Channel over Ethernet (FCoE) network.
+    - name: yast-firewall
+      url: http://github.com/yast/yast-firewall
+      desc: Management of SUSE Firewall.
+    - name: yast-fonts
+      url: http://github.com/yast/yast-fonts
+      desc: Management of fontconfig settings to control font appearance, including font rendering algorithm and font family preference.
+    - name: yast-iscsi-client
+      url: http://github.com/yast/yast-iscsi-client
+      desc: Configures iSCSI client.
+    - name: yast-iscsi-lio-server
+      url: http://github.com/yast/yast-iscsi-lio-server
+      desc: Configures iSCSI LIO target.
+    - name: yast-isns
+      url: http://github.com/yast/yast-isns
+      desc: Configures iSNS.
+    - name: yast-multipath
+      url: http://github.com/yast/yast-multipath
+      desc: Configures multipath devices.
+    - name: yast-network
+      url: http://github.com/yast/yast-network
+      desc: Configures network devices.
+    - name: yast-nfs-client
+      url: http://github.com/yast/yast-nfs-client
+      desc: Configures mounts NFS directories from NFS servers.
+    - name: yast-nis-client
+      url: http://github.com/yast/yast-nis-client
+      desc: Client side of network information services (<a href="http://en.wikipedia.org/wiki/Network_Information_Service">NIS, YP</a>), such as user and group information, and hostnames.
+    - name: yast-ntp-client
+      url: http://github.com/yast/yast-ntp-client
+      desc: Time synchronization over network (<a href="http://en.wikipedia.org/wiki/Network_Time_Protocol">NTP</a>).
+    - name: yast-online-update
+      url: http://github.com/yast/yast-online-update
+      desc: Updates your SUSE with the latest patches from online repositories.
+    - name: yast-pam
+      url: http://github.com/yast/yast-pam
+      desc: User authentication plug-ins configuration (<a href="http://en.wikipedia.org/wiki/Linux_PAM">PAM</a>).
+    - name: yast-printer
+      url: http://github.com/yast/yast-printer
+      desc: Local and remote printing configuration.
+    - name: yast-proxy
+      url: http://github.com/yast/yast-proxy
+      desc: Configures your system to use HTTP and FTP proxy.
+    - name: yast-rdp
+      url: http://github.com/yast/yast-rdp
+      desc: Configure your graphical interface to allow remote connection via <a href="http://en.wikipedia.org/wiki/Remote_Desktop_Protocol">RDP</a>.
+    - name: yast-rear
+      url: http://github.com/yast/yast-rear
+      desc: Configure backup using Relax and Recover (<a href="http://relax-and-recover.org/">ReaR</a>).
+    - name: yast-registration
+      url: http://github.com/yast/yast-registration
+      desc: Allows registering the system to the <a href="https://scc.suse.com">SUSE Customer Center (SCC)</a> or Subscription Management Tool (SMT) server to receive security updates, extra software and customer support (SUSE Linux Enterprise only).
+    - name: yast-reipl
+      url: http://github.com/yast/yast-reipl
+      desc: <a href="http://en.wikipedia.org/wiki/IBM_System_z">IBM zSeries</a> specific configuration (loading IPL (initial program loader) from a running system.
+    - name: yast-s390
+      url: http://github.com/yast/yast-s390
+      desc: <a href="http://en.wikipedia.org/wiki/IBM_System_z">IBM zSeries</a> specific configuration (DASD disks, ZFCP disks, IUCV terminal, ...).
+    - name: yast-samba-client
+      url: http://github.com/yast/yast-samba-client
+      desc: Client configuration for using file and printing services over SMB/CIFS networking protocol provided by Windows or <a href="http://en.wikipedia.org/wiki/Samba_(software)">Samba server</a>.
+    - name: yast-scanner
+      url: http://github.com/yast/yast-scanner
+      desc: Configures local (SCSI, USB) or network scanners.
+    - name: yast-security
+      url: http://github.com/yast/yast-security
+      desc: Security settings (password and login settings, kernel options...)
+    - name: yast-services-manager
+      url: http://github.com/yast/yast-services-manager
+      desc: Configures system services started at boot (systemd services).
+    - name: yast-snapper
+      url: http://github.com/yast/yast-snapper
+      desc: Configures <a href="http://snapper.io/">snapper</a> (the Btrfs snapshotting tool), can browse snapshots.
+    - name: yast-sound
+      url: http://github.com/yast/yast-sound
+      desc: Configures sound cards (usually needed just in some special cases, autoconfiguration should work out-of-box).
+    - name: yast-storage
+      url: http://github.com/yast/yast-storage
+      desc: Disk and partition management.
+    - name: yast-sudo
+      url: http://github.com/yast/yast-sudo
+      desc: Configures the sudo tool (to execute commands as another user or as root).
+    - name: yast-sysconfig
+      url: http://github.com/yast/yast-sysconfig
+      desc: Editor for /etc/sysconfig files.
+    - name: yast-tune
+      url: http://github.com/yast/yast-tune
+      desc: Hardware detection and expert system tuning.
+    - name: yast-users
+      url: http://github.com/yast/yast-users
+      desc: Tool for managing system users and groups.
 ---
-<div id="modules" class="container module">
-  <h2 class="page-header">
-    <i class="icon icon-list"></i>
-    What can you configure with YaST?
-  </h2>
-
-  <p>
-  YaST offers a vast catalog of modules to configure almost every single piece
-  of a Linux system.
-  </p>
-
-  <div class="row">
-    <div class="span6">
-      <dl>
-        <dt><a href="http://github.com/yast/yast-add-on">yast-add-on</a></dt>
-        <dd>Allows to add/remove add-ons for base system.</dd>
-        <dt><a href="http://github.com/yast/yast-add-on-creator">yast-add-on-creator</a></dt>
-        <dd>This module can create custom add-on products from provided RPM packages.</dd>
-        <dt><a href="http://github.com/yast/yast-apparmor">yast-apparmor</a></dt>
-        <dd>Apparmor profile management.</dd>
-        <dt><a href="http://github.com/yast/yast-auth-client ">yast-auth-client </a></dt>
-        <dd>Configuration of various authentication methods for system like Kerberos, LDAP or SSSD.</dd>
-        <dt><a href="http://github.com/yast/yast-auth-server">yast-auth-server</a></dt>
-        <dd>Configuration of server providing various authentication methods like Kerberos, LDAP or SSSD.</dd>
-        <dt><a href="http://github.com/yast/yast-bootloader">yast-bootloader</a></dt>
-        <dd>Bootloader installation and configuration.</dd>
-        <dt><a href="http://github.com/yast/yast-ca-management">yast-ca-management</a></dt>
-        <dd>Certificate authority management.</dd>
-        <dt><a href="http://github.com/yast/yast-cio ">yast-cio </a></dt>
-        <dd>Management of blacklisting channels for Input/Output for s390x.</dd>
-        <dt><a href="http://github.com/yast/yast-cluster">yast-cluster</a></dt>
-        <dd>Management of settings for high availability clusters.</dd>
-        <dt><a href="http://github.com/yast/yast-country">yast-country</a></dt>
-        <dd>Configuration of localization specific settings like language, keyboard layout, timezone, etc.</dd>
-        <dt><a href="http://github.com/yast/yast-crowbar">yast-crowbar</a></dt>
-        <dd>Configuration of Crowbar, the orchestration tool used by SUSE Cloud.</dd>
-        <dt><a href="http://github.com/yast/yast-dbus-server ">yast-dbus-server </a></dt>
-        <dd>YaST DBus service providing DBus access to YaST components.</dd>
-        <dt><a href="http://github.com/yast/yast-dhcp-server">yast-dhcp-server</a></dt>
-        <dd>Configuration of DHCP server, including LDAP-related settings.</dd>
-        <dt><a href="http://github.com/yast/yast-dns-server">yast-dns-server</a></dt>
-        <dd>Comprehensive configuration of BIND DNS server.</dd>
-        <dt><a href="http://github.com/yast/yast-docker">yast-docker</a></dt>
-        <dd>Management of Docker daemon, images, and containers.</dd>
-        <dt><a href="http://github.com/yast/yast-drbd">yast-drbd</a></dt>
-        <dd>Configuration of Distributed Replicated Block Devices, a distributed storage system frequently used on high availability (HA) clusters.</dd>
-        <dt><a href="http://github.com/yast/yast-fcoe-client">yast-fcoe-client</a></dt>
-        <dd>Settings to connect to a Fibre Channel over Ethernet (FCoE) network.</dd>
-        <dt><a href="http://github.com/yast/yast-firewall">yast-firewall</a></dt>
-        <dd>Management of SUSE Firewall.</dd>
-        <dt><a href="http://github.com/yast/yast-firstboot ">yast-firstboot </a></dt>
-        <dd>Allows system administrators to setup a wizard to execute on the first run of a system. Useful for image-based deployments.</dd>
-        <dt><a href="http://github.com/yast/yast-fonts">yast-fonts</a></dt>
-        <dd>Management of fontconfig settings to control font appearance, including font rendering algorithm and font family preference.</dd>
-        <dt><a href="http://github.com/yast/yast-ftp-server">yast-ftp-server</a></dt>
-        <dd>Configuration of Pure-FTPd and vsftpd.</dd>
-        <dt><a href="http://github.com/yast/yast-geo-cluster">yast-geo-cluster</a></dt>
-        <dd>Management of Geo Clustering for high availability.</dd>
-        <dt><a href="http://github.com/yast/yast-http-server">yast-http-server</a></dt>
-        <dd>Comprehensive configuration of Apache2.</dd>
-        <dt><a href="http://github.com/yast/yast-inetd">yast-inetd</a></dt>
-        <dd>Configuration of inetd and xinetd daemons.</dd>
-        <dt><a href="http://github.com/yast/yast-instserver">yast-instserver</a></dt>
-        <dd>Configures installation server (NFS, HTTP or FTP) providing installation repositories.</dd>
-        <dt><a href="http://github.com/yast/yast-iplb">yast-iplb</a></dt>
-        <dd>Configures IP load balancing.</dd>
-        <dt><a href="http://github.com/yast/yast-iscsi-client">yast-iscsi-client</a></dt>
-        <dd>Configures iSCSI client.</dd>
-        <dt><a href="http://github.com/yast/yast-iscsi-lio-server">yast-iscsi-lio-server</a></dt>
-        <dd>Configures iSCSI LIO target.</dd>
-        <dt><a href="http://github.com/yast/yast-isns ">yast-isns </a></dt>
-        <dd>Configures iSNS.</dd>
-        <dt><a href="http://github.com/yast/yast-kdump">yast-kdump</a></dt>
-        <dd>Configures kdump (kernel dump) tool.</dd>
-        <dt><a href="http://github.com/yast/yast-lxc ">yast-lxc </a></dt>
-        <dd>Configures LXC Linux containers.</dd>
-        <dt><a href="http://github.com/yast/yast-mail">yast-mail</a></dt>
-        <dd>Mail configuration.</dd>
-        <dt><a href="http://github.com/yast/yast-multipath">yast-multipath</a></dt>
-        <dd>Configures multipath devices.</dd>
-        <dt><a href="http://github.com/yast/yast-network">yast-network</a></dt>
-        <dd>Configures network devices.</dd>
-        <dt><a href="http://github.com/yast/yast-nfs-client">yast-nfs-client</a></dt>
-        <dd>Configures mounts NFS directories from NFS servers.</dd>
-        <dt><a href="http://github.com/yast/yast-nfs-server ">yast-nfs-server </a></dt>
-        <dd>Exports directories over NFS network protocol.</dd>
-      </dl>
-    </div>
-    <div class="span6">
-      <dl>
-        <dt><a href="http://github.com/yast/yast-nis-client">yast-nis-client</a></dt>
-        <dd>Client side of network information services
-          (<a href="http://en.wikipedia.org/wiki/Network_Information_Service">NIS, YP</a>),
-          such as user and group information, and hostnames.</dd>
-        <dt><a href="http://github.com/yast/yast-nis-server">yast-nis-server</a></dt>
-        <dd>Server configuration for network information services
-          (<a href="http://en.wikipedia.org/wiki/Network_Information_Service">NIS, YP</a>).</dd>
-        <dt><a href="http://github.com/yast/yast-ntp-client">yast-ntp-client</a></dt>
-        <dd>Time synchronization over network
-          (<a href="http://en.wikipedia.org/wiki/Network_Time_Protocol">NTP</a>).</dd>
-        <dt><a href="http://github.com/yast/yast-online-update">yast-online-update</a></dt>
-        <dd>Updates your SUSE with the latest patches from online repositories.</dd>
-        <dt><a href="http://github.com/yast/yast-opensuse-mirror">yast-opensuse-mirror</a></dt>
-        <dd>Configures mirroring of openSUSE repositories locally.</dd>
-        <dt><a href="http://github.com/yast/yast-pam">yast-pam</a></dt>
-        <dd>User authentication plug-ins configuration
-          (<a href="http://en.wikipedia.org/wiki/Linux_PAM">PAM</a>).</dd>
-        <dt><a href="http://github.com/yast/yast-pos-installation ">yast-pos-installation </a></dt>
-        <dd>Takes care of
-          <a href="https://www.suse.com/products/linuxpointofservice/">SUSE POS</a>
-          installation and upgrade.</dd>
-        <dt><a href="http://github.com/yast/yast-printer">yast-printer</a></dt>
-        <dd>Local and remote printing configuration.</dd>
-        <dt><a href="http://github.com/yast/yast-product-creator">yast-product-creator</a></dt>
-        <dd>Create your own product based on SUSE with this tool.</dd>
-        <dt><a href="http://github.com/yast/yast-proxy">yast-proxy</a></dt>
-        <dd>Configures your system to use HTTP and FTP proxy.</dd>
-        <dt><a href="http://github.com/yast/yast-rdp">yast-rdp</a></dt>
-        <dd>Configure your graphical interface to allow remote connection via
-          <a href="http://en.wikipedia.org/wiki/Remote_Desktop_Protocol">RDP</a>.</dd>
-        <dt><a href="http://github.com/yast/yast-rear ">yast-rear </a></dt>
-        <dd>Configure backup using Relax and Recover
-          (<a href="http://relax-and-recover.org/">ReaR</a>).</dd>
-        <dt><a href="http://github.com/yast/yast-registration">yast-registration</a></dt>
-        <dd>Allows registering the system to the <a href="https://scc.suse.com">SUSE Customer Center (SCC)</a>
-         or Subscription Management Tool (SMT) server to receive security updates,
-         extra software and customer support (SUSE Linux Enterprise only).</dd>
-        <dt><a href="http://github.com/yast/yast-reipl">yast-reipl</a></dt>
-        <dd><a href="http://en.wikipedia.org/wiki/IBM_System_z">IBM zSeries</a>
-        specific configuration (loading IPL (initial program loader) from a running system.</dd>
-        <dt><a href="http://github.com/yast/yast-s390">yast-s390</a></dt>
-        <dd><a href="http://en.wikipedia.org/wiki/IBM_System_z">IBM zSeries</a>
-        specific configuration (DASD disks, ZFCP disks, IUCV terminal, ...).</dd>
-        <dt><a href="http://github.com/yast/yast-samba-client">yast-samba-client</a></dt>
-        <dd>Client configuration for using file and printing services over SMB/CIFS
-          networking protocol provided by Windows or
-          <a href="http://en.wikipedia.org/wiki/Samba_(software)">Samba server</a>.</dd>
-        <dt><a href="http://github.com/yast/yast-samba-server">yast-samba-server</a></dt>
-        <dd>Server side of a file and printing services using
-          <a href="http://en.wikipedia.org/wiki/Samba_(software)">Samba</a>.</dd>
-        <dt><a href="http://github.com/yast/yast-scanner ">yast-scanner </a></dt>
-        <dd>Configures local (SCSI, USB) or network scanners.</dd>
-        <dt><a href="http://github.com/yast/yast-security">yast-security</a></dt>
-        <dd>Security settings (password and login settings, kernel options...)</dd>
-        <dt><a href="http://github.com/yast/yast-services-manager">yast-services-manager</a></dt>
-        <dd>Configures system services started at boot (systemd services).</dd>
-        <dt><a href="http://github.com/yast/yast-slp-server ">yast-slp-server </a></dt>
-        <dd>Configures Service Location Protocol server (<a href="http://www.openslp.org/">OpenSLP</a>).</dd>
-        <dt><a href="http://github.com/yast/yast-snapper">yast-snapper</a></dt>
-        <dd>Configures <a href="http://snapper.io/">snapper</a> (the Btrfs snapshotting tool), can browse snapshots.</dd>
-        <dt><a href="http://github.com/yast/yast-sound">yast-sound</a></dt>
-        <dd>Configures sound cards (usually needed just in some special cases,
-        autoconfiguration should work out-of-box).</dd>
-        <dt><a href="http://github.com/yast/yast-squid">yast-squid</a></dt>
-        <dd>Configures Squid proxy service.</dd>
-        <dt><a href="http://github.com/yast/yast-storage ">yast-storage </a></dt>
-        <dd>Disk and partition management.</dd>
-        <dt><a href="http://github.com/yast/yast-sudo">yast-sudo</a></dt>
-        <dd>Configures the sudo tool (to execute commands as another user or as root).</dd>
-        <dt><a href="http://github.com/yast/yast-sysconfig">yast-sysconfig</a></dt>
-        <dd>Editor for /etc/sysconfig files.</dd>
-        <dt><a href="http://github.com/yast/yast-tftp-server">yast-tftp-server</a></dt>
-        <dd>Configures TFTP server (used for booting over network).</dd>
-        <dt><a href="http://github.com/yast/yast-tune">yast-tune</a></dt>
-        <dd>Hardware detection and expert system tuning.</dd>
-        <dt><a href="http://github.com/yast/yast-users">yast-users</a></dt>
-        <dd>Tool for managing system users and groups.</dd>
-        <dt><a href="http://github.com/yast/yast-vm">yast-vm</a></dt>
-        <dd>Installs tools for using XEN or KVM virtualization.</dd>
-      </dl>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="main-article">
+      <h2>Available modules</h2>
     </div>
   </div>
+</div>
+
+<div class="row">
+  {% for column in page.columns %}
+    <div class="col-md-6">
+      {% for category in column.categories %}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><strong>{{ category.title }}</strong></h3>
+          </div>
+          <div class="panel-body">
+            <dl>
+              {% for module in category.modules %}
+                <dt>
+                  <h4>
+                    <span class="label label-success">
+                      <a href="{{ module.url }}">{{ module.name }}</a>
+                    </span>
+                  </h4>
+                </dt>
+                <dd>{{ module.desc }}</dd>
+              {% endfor %}
+            </dl>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
