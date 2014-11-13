@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Documentation
-description: Discover the internals of YaST development
+description: Discover YaST development
 ---
 <div class="row">
   <div class="col-sm-12">
@@ -11,10 +11,10 @@ description: Discover the internals of YaST development
 
       <h3>The big picture</h3>
       <p>
-      YaST consists on several pieces that work together despite being distributed
+      YaST consists of several pieces that work together despite being distributed
       among several packages and repositories. In order to be proficient in YaST
-      development it's crucial to understand what is the role of every component,
-      how do they relate to each other and where do they live in the Github
+      development, it's crucial to understand what is the role of every component,
+      how they relate to each other and where they live in the Github
       infrastructure. That is explained in the
       <a href="http://yastgithubio.readthedocs.org/en/latest/architecture/">YaST
       architecture</a> document.
@@ -22,7 +22,7 @@ description: Discover the internals of YaST development
 
       <p>
       That complex system is translated into files and folders in a consistent way all
-      along the full set of yast repositories and therefore in the
+      along the full set of YaST repositories and therefore in the
       installed system, as detailed in the
       <a href="http://en.opensuse.org/openSUSE:YaST:_Code_Organization">YaST code
       organization description</a>.
@@ -31,7 +31,7 @@ description: Discover the internals of YaST development
       <h3>Accessing YaST subsystems from Ruby </h3>
       <p>
       The core system of YaST is implemented using a mixture of languages, but the
-      whole functionality is easily accesible from Ruby, the language used to
+      whole functionality is easily accessible from Ruby, the language used to
       implement almost all modules. The
       <a href="http://rubydoc.info/github/yast/yast-ruby-bindings/">documentation
       of YaST Ruby bindings</a> contains comprehensive information not only about
@@ -45,8 +45,8 @@ description: Discover the internals of YaST development
       Linux system configuration, from network to packages management and from
       hardware status to systemd. YaST basic libraries provide access to that
       API and to several YaST specific mechanisms and concepts. Full documentation can
-      be browsed <a href="http://rubydoc.info/github/yast/yast-yast2/">yast-yast2 page
-      at Rubydoc</a>.
+      be found on the <a href="http://rubydoc.info/github/yast/yast-yast2/">yast-yast2 page
+      on Rubydoc</a>.
       </p>
 
       <h3>Agents</h3>
@@ -65,7 +65,7 @@ description: Discover the internals of YaST development
       <a href="https://github.com/yast/yast-ycp-ui-bindings">UI bindings</a>. Some
       <a href="https://github.com/yast/yast-ruby-bindings/blob/master/src/ruby/yast/ui_shortcuts.rb">shortcuts
       </a> are provided by the abovementioned Ruby bindings in order to make the usage
-      of UI bindings even more straigthforward.
+      of UI bindings even more straightforward.
       </p>
 
       <p>
@@ -81,10 +81,10 @@ description: Discover the internals of YaST development
       <p>
       YaST is not only the Swiss Army knife of Linux configuration, it's also a very
       flexible and configurable installer used in all versions of openSUSE and SUSE
-      Linux. In order to understand how the different pieces interact with each other
+      Linux. In order to understand how the different pieces interact
       during the installation process, from Linuxrc to the final steps of
       installation, including configuration proposals or partitioner, it's highly
-      recomended the reading of the
+      recommended to read the
       <a href="http://rubydoc.info/github/yast/yast-instalation/">documentation of the
       yast-installation module</a>.
       </p>
@@ -92,7 +92,7 @@ description: Discover the internals of YaST development
       <h3>Tips &amp; tricks</h3>
       <p>
       When developing or debugging YaST, there are several gotchas that can be
-      extremelly useful. Some of them are not only targeted to developers but also to
+      extremely useful. Some of them are not only targeted to developers but also to
       users and are collected in the
       <a href="https://en.opensuse.org/SDB:YaST_tricks">YaST tricks page</a> at the
       openSUSE wiki.
