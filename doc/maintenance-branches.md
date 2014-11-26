@@ -49,14 +49,14 @@ Example work-flow for newer branch:
 ```
 git checkout SLE-12-GA
 git pull
-git checkout -b my_fix_SLE12
+git checkout -b my_fix_SLE12 # branch based on SLE-12-GA
 ..hacking...
 git commit
 git push
 # wait for review and merge
 git checkout master
 git pull
-git checkout -b my_fix_master
+git checkout -b my_fix_master # branch based on master
 git merge SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
@@ -81,6 +81,7 @@ git pull
 git merge SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
+# wait for review and merge to master
 ```
 
 
@@ -102,3 +103,13 @@ To get all benefits described above, there are few easy rules.
 * no cherry-pick for new maintenance branches
 * merge new maintenance branches to master regularly
 * create fix for the oldest applicable branch first
+
+How to Submit Maintenance Request
+---------------------------------
+
+For master it is handled by jenkins and not work is needed.
+
+For branches that contain Rakefile, then when maintenance request should be created,
+ensure that version is increased and call `rake osc:sr`.
+
+For branches without Rakefile, create source tarball and follow [upstream guide](https://en.opensuse.org/openSUSE:Package_maintenance).
