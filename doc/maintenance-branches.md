@@ -117,3 +117,12 @@ ensure that the version has been increased and call `rake osc:sr`.
 
 For branches without a `Rakefile`, create the source tarball and follow the
 [openSUSE guide](https://en.opensuse.org/openSUSE:Package_maintenance).
+
+How to Create a Maintenance Branch
+----------------------------------
+When a maintenance branch need to be created, then there is available in devtools
+[helper tool](https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch).
+For creation of new branch is needed to set properly constants on top of file.
+Optional argument passed to script can be used when the maintenance branch need
+to be created from specific commit or branch. By default it creates the branch from
+the latest master.
