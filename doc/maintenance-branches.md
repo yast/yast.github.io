@@ -1,5 +1,6 @@
 Maintenance Branches
 ====================
+
 The goal of this document is to describe and explain work-flow for maintenance
 branches. It does not affect development in master except of merging of fixes from
 maintenance branch. It is not goal of this document to discuss which way is better
@@ -7,12 +8,14 @@ for pull requests or how to use the git in exact situations.
 
 Why Maintenance Branches?
 -------------------------
+
 YaST uses maintenance branches because it is easier to track patches for already
 released products in git then in Build Service. It gives ability to easy review
 of fixes and also to merge fixes in master branch, to avoid forgotten ones.
 
 Maintenance Work-Flow
 ---------------------
+
 There is difference between older maintenance branches and new ones starting
 from SLE-12-GA.
 
@@ -49,14 +52,14 @@ Example work-flow for newer branch:
 ```
 git checkout SLE-12-GA
 git pull
-git checkout -b my_fix_SLE12
+git checkout -b my_fix_SLE12 # branch based on SLE-12-GA
 ..hacking...
 git commit
 git push
 # wait for review and merge
 git checkout master
 git pull
-git checkout -b my_fix_master
+git checkout -b my_fix_master # branch based on master
 git merge SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
@@ -81,8 +84,8 @@ git pull
 git merge SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
+# wait until a review passes, then merge to master
 ```
-
 
 Example how to check what fixes are not merged:
 ```
@@ -98,7 +101,19 @@ git log --graph --pretty=oneline --abbrev-commit --decorate --all
 
 Maintenance Fixes Rules
 -----------------------
+
 To get all benefits described above, there are few easy rules.
 * no cherry-pick for new maintenance branches
 * merge new maintenance branches to master regularly
 * create fix for the oldest applicable branch first
+
+How to Submit a Maintenance Request
+-----------------------------------
+
+For *master* it is handled by Jenkins and no work is needed.
+
+For branches that contain a `Rakefile`,
+ensure that the version has been increased and call `rake osc:sr`.
+
+For branches without a `Rakefile`, create the source tarball and follow the
+[openSUSE guide](https://en.opensuse.org/openSUSE:Package_maintenance).
