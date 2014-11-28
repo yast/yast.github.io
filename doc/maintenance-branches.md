@@ -120,9 +120,9 @@ For branches without a `Rakefile`, create the source tarball and follow the
 
 How to Create a Maintenance Branch
 ----------------------------------
-When a maintenance branch need to be created, then there is available in devtools
+When a maintenance branch needs to be created, there is a
 [helper tool](https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch).
-For creation of new branch is needed to set properly constants on top of file.
-Optional argument passed to script can be used when the maintenance branch need
-to be created from specific commit or branch. By default it creates the branch from
-the latest master.
+available in devtools. The constants at the top of the file must be properly
+set before the execution. An optional argument can be passed to the script when
+the maintenance branch needs to be created from a specific commit or branch. By
+default it creates the branch from the latest master.
