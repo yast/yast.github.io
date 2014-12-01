@@ -60,8 +60,10 @@ git push
 git checkout master
 git pull
 git checkout -b my_fix_master # branch based on master
-git merge SLE-12-GA
-...fix possible conflicts and git commit if needed...
+git merge origin/SLE-12-GA # to ensure that we use recent branch on remote
+# fix possible conflicts and git commit if needed...
+# if maintenance branch contain its specific commit,
+# then use git revert <commit number> and next time it won't appear
 git push
 ```
 
@@ -81,7 +83,7 @@ git push
 # wait for review and merge
 git checkout master
 git pull
-git merge SLE-12-GA
+git merge origin/SLE-12-GA
 ...fix possible conflicts and git commit if needed...
 git push
 # wait until a review passes, then merge to master
