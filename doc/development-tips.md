@@ -62,9 +62,19 @@ post](http://kobliha-suse.blogspot.cz/2009/10/easiest-way-how-to-modify-installa
 ## Add a new package to the installation system
 
 Sometimes you need to add a new RPM to the openSUSE installation system (called
-_inst-sys_) or to the rescue image. The overall procedure is relatively simple.
-Basically you need to modify the ```installation-images``` package and then
-remaster the installation medium (or update the boot server, depending how you boot
-the system). But there are some tricky parts that are explained in depth in
-[this Ladislav's blog
+_inst-sys_). The ```installation-images``` package, which builds the
+installation system, evaluates the package dependencies and automatically adds
+the required packages. Simply add the needed packages as a ```Requires``` dependecy
+to the respective package and that's it.
+
+If you need to add a completely new YaST package to the installer then add it
+as a dependency to the ```skelcd-control-<product>``` package. See [the
+openSUSE example](
+https://github.com/yast/skelcd-control-openSUSE/blob/master/package/skelcd-control-openSUSE.spec#L43).
+
+Note: This works since openSUSE-13.1 and SLE12, if you need to update older
+systems, already released product or the rescue image then you need to modify
+the ```installation-images``` package and then remaster the installation medium
+(or update the boot server, depending how you boot the system). But there are
+some tricky parts that are explained in depth in [this Ladislav's blog
 post](http://lslezak.blogspot.cz/2013/10/adding-new-package-to-opensuse.html).
