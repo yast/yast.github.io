@@ -35,12 +35,15 @@ description: How we collaborate
       <h3>From the repository to the distribution</h3>
       <p>
       YaST honors the &quot;release early, release often&quot; principle with a
-      continuous integration infrastructure. The contribution process does not end
-      when the code enters the repository. The full development workflow also includes
-      the automatic creation of packages and integration in the distributions; its
-      described in depth in
+      continuous integration(known as CI) infrastructure. For master branch CI server
+      after merge of branch handle all packaging stuff and ensure that package is send
+      to the openSUSE factory. Its described in depth in
       <a href="http://en.opensuse.org/openSUSE:YaST:_Development_Workflow">this page
-      of the openSUSE wiki</a>.
+      of the openSUSE wiki</a>.</p>
+      <p>The development of a new version of a Linux distribution does not stop when the distribution is published.
+      For creation of maintenance update there is need to do additional steps beside merge to right branch.
+      These steps are described at <a href="http://yastgithubio.readthedocs.org/en/latest/maintenance-branches/">The
+      &quot;Maintenance Branches&quot; document</a>.
       </p>
 
       <h3>Continuous testing with Travis CI</h3>
@@ -51,17 +54,6 @@ description: How we collaborate
       More details can be found on
       <a href="http://yastgithubio.readthedocs.org/en/latest/travis-integration/">
       the Travis Integration documentation.</a>.
-      </p>
-
-      <h3>Maintenance branches</h3>
-      <p>
-      The development of a new version of a Linux distribution does not stop when the
-      distribution is published. It's crucial to provide maintenance updates for bugs
-      and security threats.
-      <a href="http://yastgithubio.readthedocs.org/en/latest/maintenance-branches/">The
-      &quot;Maintenance Branches&quot; document</a> details the relationship between the
-      maintenance channels for the Linux distributions using YaST and the
-      corresponding branches in the YaST repositories in Github.
       </p>
     </div>
   </div>
