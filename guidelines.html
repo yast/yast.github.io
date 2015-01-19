@@ -35,14 +35,18 @@ description: How we collaborate
       <h3>From the repository to the distribution</h3>
       <p>
       YaST honors the &quot;release early, release often&quot; principle with a
-      continuous integration(known as CI) infrastructure. For master branch CI server
-      after merge of branch handle all packaging stuff and ensure that package is send
-      to the openSUSE factory. Its described in depth in
+      continuous integration (known as CI) infrastructure. Every time new
+      code is merged into the master branch of a YaST repository, the CI server
+      automatically handles all the packaging tasks and ensures that the package
+      is sent to openSUSE Factory. The process is described in depth in
       <a href="http://en.opensuse.org/openSUSE:YaST:_Development_Workflow">this page
       of the openSUSE wiki</a>.</p>
-      <p>The development of a new version of a Linux distribution does not stop when the distribution is published.
-      For creation of maintenance update there is need to do additional steps beside merge to right branch.
-      These steps are described at <a href="http://yastgithubio.readthedocs.org/en/latest/maintenance-branches/">The
+
+      <p>The development of a new version of a Linux distribution does not stop when
+      the distribution is published. In order to create a maintenance update,
+      some steps are required in addition to merging the fix into the right branch.
+      These steps are described at
+      <a href="http://yastgithubio.readthedocs.org/en/latest/maintenance-branches/">The
       &quot;Maintenance Branches&quot; document</a>.
       </p>
 
