@@ -64,7 +64,7 @@ post](http://kobliha-suse.blogspot.cz/2009/10/easiest-way-how-to-modify-installa
 Sometimes you need to add a new RPM to the openSUSE installation system (called
 _inst-sys_). The ```installation-images``` package, which builds the
 installation system, evaluates the package dependencies and automatically adds
-the required packages. Simply add the needed packages as a ```Requires``` dependecy
+the required packages. Simply add the needed packages as a ```Requires``` dependency
 to the respective package and that's it.
 
 If you need to add a completely new YaST package to the installer then add it

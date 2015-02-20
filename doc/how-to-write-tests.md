@@ -18,7 +18,7 @@ of the reasons here:
 
 How
 ---
-YaST team uses RSpec for ther tests. Here are some basic rules that all YaST
+YaST team uses RSpec for the tests. Here are some basic rules that all YaST
 projects should follow:
 
 * Test must be readable - everyone has to easily understand what the test
