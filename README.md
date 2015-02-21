@@ -9,7 +9,7 @@ Repository to host the YaST landing page (http://yast.github.io) and some
 general YaST documentation. This is still in work in progress, so please
 take a look to the [TODO.txt](TODO.txt) file to see where your help is needed.
 
-YaST is a complex project spread over a big amount of repositories in Github.
+YaST is a complex project spread over a big amount of repositories in GitHub.
 The main goal of the page is to provide a clear view of the whole project at a
 central point for both users and developers, but with a stronger focus in the
 later.

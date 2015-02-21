@@ -22,7 +22,7 @@ from SLE-12-GA.
 For older branches fix is created in separated commits. Command git cherry-pick
 can be used, but to apply fix from ycp to ruby code is recommended to write it
 from scratch. Also when backporting fix from ruby to ycp it is recommended to
-write it from scratch as there is no ruby2ycp convertor.
+write it from scratch as there is no ruby2ycp converter.
 
 Example work-flow for older branch (can vary depending on scenario):
 ```
