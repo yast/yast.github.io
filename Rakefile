@@ -11,6 +11,7 @@ end
 
 require "raspell"
 
+desc "Run spell checker"
 task :spellcheck do
   speller = Aspell.new("en_US")
   speller.suggestion_mode = Aspell::NORMAL
@@ -40,7 +41,9 @@ task :spellcheck do
     end
   end
 
-  if !success
+  if success
+    puts "Spelling OK."
+  else
     raise "Spellcheck failed! (Fix it or add the words to '.spell.dict'" \
       " file if it is OK.)"
   end
