@@ -22,7 +22,7 @@ task :spellcheck do
   success = true
 
   Dir["**/*.{md,html}"].each do |file|
-    lines = File.read(file).split("\n")
+    lines = File.readlines(file).map!(&:chomp)
 
     lines.each_with_index do |text, index|
       misspelled = speller.list_misspelled([text]) - custom
