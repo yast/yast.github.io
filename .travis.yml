@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.1
+before_install:
+  - sudo apt-get update -qq
+  # install aspell headers and the English dictionary
+  - sudo apt-get install --no-install-recommends libaspell-dev aspell-en
+script:
+  - bundle exec rake

@@ -9,7 +9,7 @@ provides a clear view of the whole project for both users and developers, but
 with a stronger focus in the latter.
 
 YaST is a complex project with several components and its source code is spread
-over several repositories at Github, with each repository containing the
+over several repositories at GitHub, with each repository containing the
 corresponding development documentation. In addition to that specific
 documentation, this directory contains some documents targeted to developers and
 related to the project as a whole. All the documentation is referenced from the
