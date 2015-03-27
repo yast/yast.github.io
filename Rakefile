@@ -9,45 +9,12 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-require "raspell"
+require "yast/rake"
 
-desc "Run spell checker"
-task :spellcheck do
-  speller = Aspell.new("en_US")
-  speller.suggestion_mode = Aspell::NORMAL
-  speller.set_option("mode", "html")
-
-  # read the custom dictionary
-  custom = File.read(".spell.dict").split("\n")
-  success = true
-
-  Dir["**/*.{md,html}"].each do |file|
-    lines = File.readlines(file).map!(&:chomp)
-
-    lines.each_with_index do |text, index|
-      misspelled = speller.list_misspelled([text]) - custom
-      
-      if !misspelled.empty?
-        success = false
-
-        puts "#{file}:#{index + 1}: #{text.inspect}"
-
-        misspelled.each do |word|
-          puts "    #{word.inspect} => #{speller.suggest(word)}"
-        end
-
-        puts
-      end
-    end
-  end
-
-  if success
-    puts "Spelling OK."
-  else
-    raise "Spellcheck failed! (Fix it or add the words to '.spell.dict'" \
-      " file if it is OK.)"
-  end
+Yast::Tasks.configuration do |conf|
+  # lets ignore license check for now
+  conf.skip_license_check << /.*/
 end
 
-task default: [:spellcheck]
+task default: [:"check:spelling"]
 
