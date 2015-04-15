@@ -60,6 +60,7 @@ Changelog
 cheatsheet
 chroot
 chrooted
+IBS
 idmapd
 inetd
 instserver
@@ -145,6 +146,7 @@ renderer
 REQ
 RPMS
 rspec
+RuboCop
 Rubydoc
 rubygem
 rubygems
