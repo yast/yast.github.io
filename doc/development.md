@@ -43,20 +43,21 @@ version present in the last openSUSE release might be too old):
     make
     sudo make install
 
-### New Project ###
+### Shared YaST Infrastructure ###
 
-While creating a new YaST project, you might need to take care of these steps
-or ask YaST developers to help you with them. Internal infrastructure is usually
-not available from outside:
+While creating a new YaST project and you wanted to use the YaST team
+infrastructure, you might consider taking care of these steps or ask YaST
+developers to help you with them. Internal infrastructure is usually not
+available from outside.
 
 * Creating new repository under the [yast](https://github.com/yast/) path
   at GitHub
 * Adjusting [RuboCop rules](http://lslezak.blogspot.cz/2014/11/using-rubocop.html)
 * Creating the package in OBS at [YaST:Head](https://build.opensuse.org/project/show/YaST:Head)
-  and in IBS at [Devel:YaST:Head](https://build.suse.de/project/show/Devel:YaST:Head)
-  projects
+  project and in IBS at [Devel:YaST:Head](https://build.suse.de/project/show/Devel:YaST:Head)
+  project (if you plan to have it in SLE)
 * Adding the project to [external](https://ci.opensuse.org/view/Yast/)
-  and [internal](http://river.suse.de/view/YaST/)
+  and [internal](http://river.suse.de/view/YaST/) (if you plan to have it in SLE)
   [Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Building+a+software+project)
   instance for continuous testing, building and package automatic submission
   (see below)
