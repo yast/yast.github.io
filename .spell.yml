@@ -18,6 +18,7 @@ dictionary:
 - FileSystem
 - GCC
 - Gtk
+- GPL
 - HOWTO
 - IBS
 - IP
@@ -26,6 +27,7 @@ dictionary:
 - KVM
 - Kerberos
 - Kobliha's
+- LGPL
 - LGTM
 - LIO
 - LTS
@@ -71,6 +73,7 @@ dictionary:
 - TFTP
 - USB
 - VBox
+- Wiki
 - WIP
 - Workflow
 - XEN
