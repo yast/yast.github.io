@@ -7,8 +7,8 @@ licenses (usually GPL or LGPL).
 But the license is just a small part of a real open source project. What can
 actually YaST offer to the community? Here is the summary:
 
-- [Public YaST portal](https://en.opensuse.org/Portal:YaST) - the perfect
-  starting point for YaST users.
+- [The YaST portal](https://en.opensuse.org/Portal:YaST) at openSUSE Wiki - the
+  perfect starting point for users, with lots of information and documentation.
 
 - [The YaST home page](http://yast.github.io/) - the starting point for YaST
   developers and contributors.
