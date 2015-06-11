@@ -23,8 +23,10 @@ of that bug.
 * If it's bigger and deadly urgent, the developer will submit the bug to the
   product backlog as a _fast-track_ item and, hopefully, it will be handled (and fixed)
   during the current sprint.
-* If the bug is bigger but not that urgent, the developer will add the bug to the
-  product backlog so it could be fixed in upcoming sprints.
+* If the bug is bigger but not that urgent, the developer will add the bug to
+  the product backlog so it could be fixed in upcoming sprints. At this point,
+  the bug should be assigned to *TBD-mailing-list* until a some developer
+  starts working on it.
 
 Finally, there are some bugs that won't be fixed by YaST team (not so important
 ones). Those bugs are assigned to *TBD-mailing-list* so any community member
