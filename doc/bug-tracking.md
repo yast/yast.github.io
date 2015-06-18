@@ -29,6 +29,6 @@ of that bug.
   starts working on it.
 
 Finally, there are some bugs that won't be fixed by YaST team (not so important
-ones). Those bugs are assigned to *TBD-mailing-list* so any community member
+ones). Those bugs are assigned to *yast-community* so any community member
 interested in YaST development could take care of them. After all, [YaST is
 Open](http://yastgithubio.readthedocs.org/en/latest/yast_is_open/).
