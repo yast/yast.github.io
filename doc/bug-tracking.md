@@ -2,9 +2,9 @@ Bug Tracking
 ============
 
 YaST team is quite busy delivering new features and, of course, fixing bugs.
-The main development process is driven by SCRUM and sometimes bugs don't fit in
-that process. So this document is intended to describe how bugs should be
-handled.
+The main development process is driven by
+[SCRUM](https://www.scrumalliance.org/) and sometimes bugs don't fit in that
+process. So this document is intended to describe how bugs should be handled.
 
 Basically, YaST team receives bug reports through [SUSE's
 bugzilla](http://bugzilla.suse.com). When a new YaST bug is registered, it is
@@ -20,11 +20,11 @@ how to handle the resolution of that issue.
   assigned to themselves and will work on it outside of the main YaST development
   process. The main reason to do that is to work-around the overhead imposed by
   SCRUM for such small bugs.
-* If it's deadly urgent, the developer will submit the bug to the product
-  backlog as a _fast-track_ item and, hopefully, it will be handled (and fixed)
+* If it's deadly urgent, the developer will submit the bug to the *product
+  backlog* as a _fast-track_ item and, hopefully, it will be handled (and fixed)
   during the current sprint.
 * If the bug is bigger but not that urgent, the developer will add the bug to
-  the incoming board so it could be fixed in upcoming sprints. At this point,
+  the *incoming board* so it could be fixed in upcoming sprints. At this point,
   the bug should be assigned to *yast-internal* until some developer
   starts working on it.
 
