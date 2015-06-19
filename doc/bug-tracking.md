@@ -28,7 +28,7 @@ how to handle the resolution of that issue.
   the bug should be assigned to *yast-internal* until some developer
   starts working on it.
 
-Finally, openSUSE could be affected for some issues that won't be fixed by YaST
+Finally, openSUSE could be affected by some issues that won't be fixed by YaST
 team (not so critical ones). Those bugs will be assigned to *yast-community*
 so any community member interested in YaST development could take care of them.
 After all, [YaST is Open](http://yastgithubio.readthedocs.org/en/latest/yast_is_open/).
