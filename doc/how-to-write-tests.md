@@ -42,7 +42,7 @@ tests:
 ### Integration tests with openQA
 
 Integration tests for all the openSUSE distributions are performed by
-[the openSUSE's openQA instance](https://openqa.opensuse.org). When possible, is
+[the openSUSE openQA instance](https://openqa.opensuse.org). When possible, is
 desirable to add tests for new features or bug fixes in YaST to the
 [opensuse distri](https://github.com/os-autoinst/os-autoinst-distri-opensuse),
 so they can be integrated in the continuous testing process of the distribution.
