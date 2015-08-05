@@ -8,6 +8,7 @@ dictionary:
 - Builtins
 - CIFS
 - CIM
+- CLI
 - Changelog
 - DASD
 - DBus
@@ -19,6 +20,7 @@ dictionary:
 - GCC
 - Gtk
 - GPL
+- Github
 - HOWTO
 - IBS
 - IP
@@ -73,6 +75,7 @@ dictionary:
 - TFTP
 - USB
 - VBox
+- Veewee
 - Wiki
 - WIP
 - Workflow
@@ -102,6 +105,7 @@ dictionary:
 - chrooted
 - cim
 - cio
+- cmdline
 - conf
 - cvs
 - dbus
@@ -159,6 +163,7 @@ dictionary:
 - oneline
 - online
 - ons
+- openQA
 - opensuse
 - openwsman
 - operatingSystem
