@@ -128,3 +128,16 @@ available in devtools. The constants at the top of the file must be properly
 set before the execution. An optional argument can be passed to the script when
 the maintenance branch needs to be created from a specific commit or branch. By
 default it creates the branch from the latest master.
+
+Maintenance Branch Naming
+-------------------------
+Already known names for branches:
+
+- `SLE-10`: SLE 10 GA
+- `SLE-10-SP*`: SLE 10 Service packs
+- `Code-11`: SLE 11 GA
+- `Code-11-SP*`: SLE 11 Service packs
+- `SLE-12-GA`: SLE 12 GA
+- `SLE-12-SP*`: SLE 12 Service packs
+- `openSUSE-*`: respective openSUSE release
+- `openSUSE-42_1`: openSUSE leap release
