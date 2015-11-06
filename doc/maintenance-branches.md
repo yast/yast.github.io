@@ -124,14 +124,7 @@ How to Create a Maintenance Branch
 ----------------------------------
 When a maintenance branch needs to be created, there is a
 [helper tool](https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch)
-available in devtools. It receives two arguments - the first one is the name of
-the new branch to create and the second is the target used by
-[yast-rake](https://github.com/yast/yast-rake) for that branch (see the
-yast-rake README for more information about targets).
-
-An optional third argument can be passed to the script when
-the maintenance branch needs to be created from a specific commit or branch. By
-default it creates the branch from the latest master.
+available in devtools. Execute it without arguments to see usage instructions.
 
 Maintenance Branch Naming
 -------------------------
