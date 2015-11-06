@@ -123,9 +123,13 @@ For branches without a `Rakefile`, create the source tarball and follow the
 How to Create a Maintenance Branch
 ----------------------------------
 When a maintenance branch needs to be created, there is a
-[helper tool](https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch).
-available in devtools. The constants at the top of the file must be properly
-set before the execution. An optional argument can be passed to the script when
+[helper tool](https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch)
+available in devtools. It receives two arguments - the first one is the name of
+the new branch to create and the second is the target used by
+[yast-rake](https://github.com/yast/yast-rake) for that branch (see the
+yast-rake README for more information about targets).
+
+An optional third argument can be passed to the script when
 the maintenance branch needs to be created from a specific commit or branch. By
 default it creates the branch from the latest master.
 
@@ -139,5 +143,12 @@ Already known names for branches:
 - `Code-11-SP*`: SLE 11 Service packs
 - `SLE-12-GA`: SLE 12 GA
 - `SLE-12-SP*`: SLE 12 Service packs
-- `openSUSE-*`: respective openSUSE release
-- `openSUSE-42_1`: openSUSE leap release
+- `openSUSE-1*`: respective openSUSE release
+- `openSUSE-4*`: openSUSE leap releases (see below)
+
+Maintenance branches for Leap only make sense for a few repositories.
+For most YaST packages, openSUSE Leap and SLE share the same code and
+maintenance updates and, thus, only the corresponding `SLE-*` maintenance
+branch is used. Leap maintenance branches will be created manually in a case by
+case basis, only when needed and only for repositories that affect openSUSE but
+not SLE.
