@@ -120,6 +120,8 @@ ensure that the version has been increased and call `rake osc:sr`.
 For branches without a `Rakefile`, create the source tarball and follow the
 [openSUSE guide](https://en.opensuse.org/openSUSE:Package_maintenance).
 
+You can find more details in the [submit requests section](doc/submit-requests.md).
+
 How to Create a Maintenance Branch
 ----------------------------------
 When a maintenance branch needs to be created, there is a
