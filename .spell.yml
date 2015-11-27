@@ -156,6 +156,8 @@ dictionary:
 - namespace
 - navbar
 - ncurses
+- NEEDINFO
+- needinfo
 - nfs
 - nis
 - ntp
@@ -199,6 +201,7 @@ dictionary:
 - tmp
 - toolchain
 - travis
+- Trello
 - ui
 - understandability
 - url
@@ -213,4 +216,5 @@ dictionary:
 - xinetd
 - xml
 - xsl
+- ytrello
 - zSeries
