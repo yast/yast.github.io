@@ -12,8 +12,8 @@ assigned to the *yast-maintainers* mailing list. Inside the YaST team, there is
 a person who is responsible for taking a look at those reports and assigning
 them to the right developer in order to solve them. Just as a side note, the
 person in charge of this mailing list changes periodically in a rotating way.
-(The [list of assigned people](https://wiki.microfocus.net/index.php/YaST/yast2-maintainers_Round_Robin)
-is available internally.)
+The [list of assigned people](https://wiki.microfocus.net/index.php/YaST/yast2-maintainers_Round_Robin)
+is available internally.
 
 When a bug is assigned to a developer, he/she will be the responsible for deciding
 how to handle the resolution of that issue.
