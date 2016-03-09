@@ -3,7 +3,7 @@
 ## Description
 
 Currently we use both [Travis](https://travis-ci.org/) and
-[Jenkins](http://jenkins-ci.org/() for CI.Travis builds the pushed
+[Jenkins](http://jenkins-ci.org/) for CI.Travis builds the pushed
 commits and Pull Requests at GitHub, Jenkins builds `master` packages and
 submits them to YaST:Head OBS project (and optionally creates SR to Factory).
 
