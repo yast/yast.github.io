@@ -48,7 +48,8 @@ on the code robustness.
 ### Required (REQ)
 
 * Code quality needs to be at least the same or even better
-* Changelog entry if applicable (describe change from user's POV)
+* Changelog entry if applicable (describe change from user's POV), include
+  a bug number, FATE number or a CVE number (for security issues)
 * Test case (if possible)
 * Comments for "strange code"
 * Understandable method / function names (expressing what they do and how)
