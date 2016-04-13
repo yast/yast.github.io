@@ -37,6 +37,35 @@ team (not so critical ones). Those bugs will be assigned to *yast-community*
 so any community member interested in YaST development could take care of them.
 After all, [YaST is Open](http://yastgithubio.readthedocs.org/en/latest/yast_is_open/).
 
+## Security issues
+
+There are very few security issues in YaST (you need to be already `root` when
+running it and can be used only locally), but they can happen from time to time.
+
+In that case handle the issue with high care, especially if the issue is not publicly
+announced and fixed by a released maintenance update yet.
+
+If you are not sure about something just ask the other team members or the security team.
+
+### Code Review for Security Fixes
+
+Code review for unpublished security issues is a bit more complicated as opening
+a usual pull request would actually announce the possible attack to public without
+a fix available for the customers.
+
+*Do not use GitHub for discussing security issues or proposing a fix!*
+
+#### How to Discuss or Fix Security Issues
+
+- Attach the proposed fix (a diff) to bugzilla, mark it as private (just to be sure,
+  the bug should already be hidden for public). After the fix is published
+  commit the fix to GitHub.
+
+- Use the internal Git instance at https://gitlab.suse.de/, it supports
+  *merge requests* which work the same way as pull requests at GitHub. After the
+  fix is released just push it to the GitHub remote.
+
+
 ## Bugzilla Links and Tools
 
 ### Shared Bug Queries

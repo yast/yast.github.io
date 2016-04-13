@@ -10,6 +10,7 @@ dictionary:
 - CIM
 - CLI
 - Changelog
+- CVE
 - DASD
 - DBus
 - DNS

@@ -5,7 +5,10 @@ that anyone needs to follow while doing so...
 
 Every single change in code (including bug fix, new feature, etc.) needs to go
 through a code [review](http://en.wikipedia.org/wiki/Code_review) using
-a [Pull Request](https://help.github.com/articles/using-pull-requests)
+a [Pull Request](https://help.github.com/articles/using-pull-requests).
+
+*Note: The security issues need be to handled a bit differently, see [how to handle
+them](bug-tracking.md#security-issues).*
 
 Why Code Review?
 ----------------
@@ -45,7 +48,8 @@ on the code robustness.
 ### Required (REQ)
 
 * Code quality needs to be at least the same or even better
-* Changelog entry if applicable (describe change from user's POV)
+* Changelog entry if applicable (describe change from user's POV), include
+  a bug number, FATE number or a CVE number (for security issues)
 * Test case (if possible)
 * Comments for "strange code"
 * Understandable method / function names (expressing what they do and how)
