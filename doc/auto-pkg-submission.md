@@ -15,9 +15,8 @@ When a new Git checkin is detected, Jenkins executes
     rake osc:sr
 
 (in the typical configuration; different YaST packages might have slightly
-different commands) which is a "rake" target from
-
-    https://github.com/openSUSE/packaging_rake_tasks
+different commands) which is a "rake" target from the
+[packaging_rake_tasks package](https://github.com/openSUSE/packaging_rake_tasks)
 
 "osc" is the underlying openSUSE build service command line tool, "sr" is short
 for "submit request".
@@ -48,9 +47,7 @@ which depends on
 
 This is the starting point for most YaST packages. The default "tarball" target
 from
-
-    https://github.com/openSUSE/packaging_rake_tasks/blob/master/lib/tasks/tarball.rake
-
+[tarball.rake](https://github.com/openSUSE/packaging_rake_tasks/blob/master/lib/tasks/tarball.rake)
 simply collects all the files from the source directory tree and creates a
 .tar.bz2 file from them. This is mostly useful for Ruby packages.
 
