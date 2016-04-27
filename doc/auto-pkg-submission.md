@@ -16,9 +16,9 @@ When a new Git checkin is detected, Jenkins executes
 
 (in the typical configuration; different YaST packages might have slightly
 different commands) which is a "rake" target from the
-[packaging_rake_tasks package](https://github.com/openSUSE/packaging_rake_tasks)
+[packaging_rake_tasks package](https://github.com/openSUSE/packaging_rake_tasks).
 
-"osc" is the underlying openSUSE build service command line tool, "sr" is short
+_osc_ is the underlying openSUSE build service command line tool, _sr_ is short
 for "submit request".
 
 
