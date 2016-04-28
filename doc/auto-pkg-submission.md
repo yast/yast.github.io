@@ -60,10 +60,12 @@ AutoTools or CMake build system).
 
 Snapper for example does this in its toplevel Rakefile:
 
-    desc 'Build a tarball for OBS'
-    task :tarball do
-      sh "make -f Makefile.ci package"
-    end
+```ruby
+desc 'Build a tarball for OBS'
+task :tarball do
+  sh "make -f Makefile.ci package"
+end
+```
 
 This in turn calls the
 

@@ -169,6 +169,16 @@ different tools for building (e.g. newer RuboCop for `master`, but older for
 SLE12-SP1).
 
 
+## Automatic Package Submission
+
+When a commit is checked in to one of the YaST Git repositories on GitHub
+(usually via a pull request on GitHub), in most cases a package is
+automatically submitted to the openSUSE Build Service (OBS).
+
+For more details, see [automatic package submission](auto-pkg-submission.md).
+
+
+
 # Missing Parts
 
 - Coveralls integration (it's quite tricky to send the coverage report from a
