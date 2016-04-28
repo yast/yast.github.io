@@ -87,7 +87,7 @@ The rest should be handled automatically by the RPM macros and the rake-ci gem.
 
 ## Adding a New Jenkins Job
 
-The easies way is to base the new job on any existing `yast-*-github-push` job.
+The easiest way is to base the new job on any existing `yast-*-github-push` job.
 Just update the repository URL and the repository name in the job configuration.
 
 *Note: see [this internal wiki
@@ -167,6 +167,16 @@ These repositories contain the extra packages needed for the specific Jenkins
 checks. Because we use a different project for SLE12-SP1 we can also use
 different tools for building (e.g. newer RuboCop for `master`, but older for
 SLE12-SP1).
+
+
+## Automatic Package Submission
+
+When a commit is checked in to one of the YaST Git repositories on GitHub
+(usually via a pull request on GitHub), in most cases a package is
+automatically submitted to the openSUSE Build Service (OBS).
+
+For more details, see [automatic package submission](auto-pkg-submission.md).
+
 
 
 # Missing Parts

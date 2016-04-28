@@ -215,6 +215,9 @@ package version is changed then a submit request to
 [openSUSE:Factory](https://build.opensuse.org/project/show/openSUSE:Factory) is
 created automatically.
 
+For more details, see [automatic YaST package submission](auto-pkg-submission.md).
+
+
 Manual Submission
 -----------------
 
