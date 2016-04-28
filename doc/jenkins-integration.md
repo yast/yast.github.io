@@ -87,7 +87,7 @@ The rest should be handled automatically by the RPM macros and the rake-ci gem.
 
 ## Adding a New Jenkins Job
 
-The easies way is to base the new job on any existing `yast-*-github-push` job.
+The easiest way is to base the new job on any existing `yast-*-github-push` job.
 Just update the repository URL and the repository name in the job configuration.
 
 *Note: see [this internal wiki

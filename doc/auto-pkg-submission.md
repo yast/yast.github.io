@@ -53,7 +53,7 @@ simply collects all the files from the source directory tree and creates a
 
 Compiled (i.e. C/C++) YaST packages typically override the "tarball" target in
 their toplevel Rakefile (yes, they use "rake" in addition to their usual
-AutoTools or CMake build system).
+Autotools or CMake build system).
 
 
 ## Compiled Packages
@@ -80,7 +80,7 @@ one built from the last Git checkin (which triggered the whole scenario).
 
 That version is now built with the RPM build command.
 
-So, to reiterate, this is basically an interrrupted "osc build" that just
+So, to reiterate, this is basically an interrupted "osc build" that just
 replaced the sources (the tarball) from the last OBS version with the latest
 one just generated from the latest Git checkin. The last OBS version was just
 used to install the correct BuildRequires RPMs.
@@ -89,7 +89,7 @@ used to install the correct BuildRequires RPMs.
 
 ## Going Back Up the Build Dependency Chain
 
-When building the package succeded, the test suite ran successfully, and other
+When building the package succeeded, the test suite ran successfully, and other
 checks (change log sanity check etc.) were also successful and the package
 version number was increased, the created RPMs are simply deleted (the purpose
 was just to check if building and tests were successful), and the tarball,
