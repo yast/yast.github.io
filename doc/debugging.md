@@ -2,9 +2,9 @@
 # Debugging YaST
 
 YaST is written in many programming languages. That means you will need a
-specific debugger for each language. (In theory you could use `gdb` for
-debugging any language but for interpreted languages it would be really
-difficult.)
+specific debugger for each language. In theory you could use `gdb` for
+debugging any language but for interpreted ones it would be really
+difficult.
 
 ## Debugging Ruby Code
 
@@ -105,9 +105,9 @@ debugger port effectively becomes the `root` user!*
 
 ## Starting the Debugger in Installation
 
-Using the debugger during installation is more difficult. You cannot easily
-install packages or edit the source files as the root file system is located
-in a read only RAM disk image.
+Starting the debugger during installation is more difficult than in installed
+system. You cannot easily install packages or edit the source files as the root
+file system is located in a read only RAM disk image.
 
 Fortunately YaST has integrated support for running the debugger in the
 installer.
