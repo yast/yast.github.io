@@ -40,7 +40,9 @@ Y2DEBUGGER=1 yast2 <client>
 
 and the debugger will be started automatically.
 
-:warning: *Warning: The debugger port (3344) is accessible to anyone on the
+<img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png"
+width="32"></img>
+*Warning: The debugger port (3344) is accessible to anyone on the
 local machine and byebug does not use any sort of authentication. That means it
 is a potential security issue, enable the debugger only if you really need it!*
 
@@ -90,16 +92,22 @@ byebug
 Then start the YaST module and connect to the debugger from a different console
 using the `byebug -R 3344` command.
 
-:warning: *Warning: The debugger port (3344) is accessible to anyone on the
+<img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png"
+width="32"></img>
+ *Warning: The debugger port (3344) is accessible to anyone on the
 local machine and byebug does not use any sort of authentication. That means it
 is a potential security issue, use this feature with caution!*
 
-:information_source: Note: For a real remote debugging replace `localhost` by
+<img src="https://assets-cdn.github.com/images/icons/emoji/unicode/2139.png"
+width="32"></img>
+Note: For a real remote debugging replace `localhost` by
 `0.0.0.0`, the debugger will be accessible from the network (if not blocked
 by the firewall). Then run `byebug -R <host>:3344` from another machine to
 connect to the debugger.
 
-:warning: *Warning: In this case anyone from the network who connects to the
+<img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png"
+width="32"></img>
+*Warning: In this case anyone from the network who connects to the
 debugger port effectively becomes the `root` user!*
 
 
@@ -153,8 +161,10 @@ There are two possibilities how to run a remote debugging:
 
 - Run the debugger front-end on a different machine. Use this option if for
   whatever reason you cannot run a SSH installation.  
-    
-  :warning: *Warning: In this case anyone from the network who connects to the
+
+  <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png"
+  width="32"></img>
+  *Warning: In this case anyone from the network who connects to the
   debugger port first can watch or modify the installation. This is a security
   risk, use this option only in a trusted network!*
   - Boot the installation with `Y2DEBUGGER=remote`, the debugger will be
