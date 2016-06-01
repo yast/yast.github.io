@@ -7,6 +7,7 @@ dictionary:
 - Btrfs
 - BuildRequires
 - Builtins
+- Byebug
 - CIFS
 - CIM
 - CLI
@@ -17,11 +18,14 @@ dictionary:
 - DBus
 - DNS
 - Devel
+- Eval
 - FCoE
+- FIXME
 - FTPd
 - Fibre
 - FileSystem
 - GCC
+- GDB
 - GPL
 - Github
 - Gtk
@@ -58,6 +62,7 @@ dictionary:
 - PyYAML
 - RDP
 - README
+- REPL
 - REQ
 - RPMS
 - RPMs
@@ -105,8 +110,15 @@ dictionary:
 - autoyast
 - backport
 - backporting
+- backtrace
+- bcond
 - bootloader
+- br
+- break
+- breakpoint
+- bt
 - bugzilla
+- byebug
 - bz
 - cd
 - cheatsheet
@@ -131,13 +143,16 @@ dictionary:
 - drbd
 - endfor
 - endif
+- eval
 - fcoe
 - firstboot
 - fontconfig
 - gcc
+- gdb
 - geo
 - github
 - gitk
+- gui
 - hostnames
 - http
 - iSCSI
@@ -146,6 +161,7 @@ dictionary:
 - inetd
 - instserver
 - iplb
+- irb
 - iscsi
 - isns
 - journalctl
@@ -159,6 +175,7 @@ dictionary:
 - libycp
 - libyui
 - lio
+- localhost
 - login
 - lxc
 - mailinglist
@@ -215,6 +232,7 @@ dictionary:
 - toolchain
 - toplevel
 - travis
+- tui
 - ui
 - understandability
 - url
