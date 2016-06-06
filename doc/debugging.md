@@ -122,7 +122,7 @@ installer.
 
 #### <a name="supported_systems"></a> Supported systems
 
-- openSUSE Tumbleweed (since 201606xx version **FIXME: set the version**)
+- openSUSE Tumbleweed 20160602 or newer
 - openSUSE Leap 42.2 or newer
 - SUSE Linux Enterprise Server/Desktop 12 SP2 or newer
 
