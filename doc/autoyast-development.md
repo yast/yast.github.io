@@ -503,7 +503,7 @@ In addition to the keywords from the last example, AutoYaST also evaluates the f
 
 The AutoYaST Configuration Module uses the AutoYaST Control File and Desktop Configuration File described above.
 
-So all the dialogues will be handled by AutoYaST to simplify the interface and to provide a common user interface for all modules appearing in the Autoyast Configuration Module.
+So all the dialogs will be handled by AutoYaST to simplify the interface and to provide a common user interface for all modules appearing in the Autoyast Configuration Module.
 
 AutoYaST Configuration Module has the following components:
 
