@@ -9,7 +9,7 @@ two files:
 
   This file is located in the \<YaST module name\>/src/desktop directory.
   
-  It contains addtional information how AutoYaST should handle this module.
+  It contains additional information how AutoYaST should handle this module.
   E.g. if an entry  will be created when the AutoYaST configuration file
   will be generated (system clone).
 
@@ -32,7 +32,7 @@ two files:
 
 The interface of <YaST module name\>_auto.rb is similar to the proposal structure and consists of functions that can be accessed using arguments.
 
-Currently there are two implementation ways. For newer AutoYaST control files we are prefering a <YaST module name\>_auto.rb file which is based on the *::Installation::AutoClient* class (second suggestion).
+Currently there are two implementation ways. For newer AutoYaST control files we are preferring a <YaST module name\>_auto.rb file which is based on the *::Installation::AutoClient* class (second suggestion).
 
 The return values are in both cases the same.
 
@@ -66,7 +66,7 @@ The following functions are needed to make any module work in AutoYaST:
 
 * *Write*:
 
-  Writes the configuration without displaying any widgets and popups and without restarting any services etc. Calls \<Module\>::Write (and sets \<Module\>::write_only true)
+  Writes the configuration without displaying any widgets and pop-ups and without restarting any services etc. Calls \<Module\>::Write (and sets \<Module\>::write_only true)
 
 * *Export*:
 
@@ -177,7 +177,7 @@ module Yast
         @ret = Nfs.Export
       elsif @func == "Read"
         @ret = Nfs.Read
-      # Write givven settings
+      # Write given settings
       elsif @func == "Write"
         Yast.import "Progress"
         @progress_orig = Progress.set(false)
@@ -301,7 +301,7 @@ end
 
   Modules should only export data which is normally selected or entered by the user in normal module operation. No computed or automatically probed data should be exported.
 
-* Use Namespaces
+* Use Name-spaces
 
   Exported variables should have a unique name when possible and when general terminology is being used. To avoid conflicts and confusion, use a name space identifier with common words. For example, if a module should export the variable name options, it is better to export \<module name\>.options to avoid confusion with other modules using options, which is very common in configurations.
 
@@ -309,11 +309,11 @@ end
 
   To have a common and unified look of the control file, please use lower case variables when exporting the configuration data.
 
-* The structure of the exported data should be readable and not unnecessarly complex.
+* The structure of the exported data should be readable and not unnecessary complex.
 
 * Avoid using configuration data as the key in a hash key/value pair. The key of the pair must always contain the variable name, rather than it's contents.
 
-#### Module behaviour
+#### Module behavior
 
 In configuration mode for auto-installation, modules should not(configuration system is the machine where the control file is being created):
 
@@ -484,7 +484,7 @@ In addition to the keywords from the last example, AutoYaST also evaluates the f
       true
      
 
-* X-SuSE-YaST-AutoLogResource - is the resource of your modul allowed to be logged (since SLES10SP1/10.2)
+* X-SuSE-YaST-AutoLogResource - is the resource of your module allowed to be logged (since SLES10SP1/10.2)
 
   Values
 
@@ -501,11 +501,11 @@ In addition to the keywords from the last example, AutoYaST also evaluates the f
 
 ![The UI component](images/autoyast.jpeg)
 
-The AutoYaST Configuration Module uses the AutoYaST Control File and Desktop Configuration File descripbed above.
+The AutoYaST Configuration Module uses the AutoYaST Control File and Desktop Configuration File described above.
 
-So all the dialogs will be handled by AutoYaST to simplify the interface and to provide a common user interface for all modules appearing in the Autoyast Configuration Module.
+So all the dialogues will be handled by AutoYaST to simplify the interface and to provide a common user interface for all modules appearing in the Autoyast Configuration Module.
 
-AutoYaST Configuration Module has the follwoing components:
+AutoYaST Configuration Module has the following components:
 
 * **Details** Area,: Contains a summary of the configuration with the values if available. If values where not configured, the phrase 'Not configured yet' is used, which is available from the summary module. (function *summary* in \<module name\>_auto.rb)
 
