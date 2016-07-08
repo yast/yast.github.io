@@ -315,7 +315,9 @@ end
 
 #### Module behavior
 
-In configuration mode for auto-installation, modules should not(configuration system is the machine where the control file is being created):
+The configuration system is the machine where the control file is being created.
+
+In configuration mode for auto-installation, modules should not:
 
 * Read any data from the configuration system.
 
