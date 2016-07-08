@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Each YaST module can be supported by AutoYaST by adapting/adding following
+Each YaST module can be supported by AutoYaST by adapting/adding the following
 two files:
 
-* Desktop file
+* [Desktop file](https://github.com/yast/yast-yast2/blob/master/doc/desktop_file.md)
 
   This file is located in the \<YaST module name\>/src/desktop directory.
   
-  It contains additional information how AutoYaST should handle this module.
-  E.g. if an entry  will be created when the AutoYaST configuration file
+  It contains additional information about how AutoYaST should handle this module.
+  E.g. if an entry will be created when the AutoYaST configuration file
   will be generated (system clone).
 
 * AutoYaST control file <YaST module name\>_auto.rb
@@ -510,6 +510,11 @@ AutoYaST Configuration Module has the following components:
 * **Details** Area,: Contains a summary of the configuration with the values if available. If values where not configured, the phrase 'Not configured yet' is used, which is available from the summary module. (function *summary* in \<module name\>_auto.rb)
 
 * **Edit** Button: A button which starts the module UI. (function *change* in \<module name\>_auto.rb)
+
+  <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" width="32"></img>
+  During starting the module you have to provide valid default entries as you can edit entries which are
+  completely independent from the running system. One possiblility would be to call the *read*
+  function in \<module name\>_auto.rb during module initialization.
 
 * **Clear** Button: A button for resetting the configuration data. This will delete only data in the running module. (function *reset* in \<module name\>_auto.rb)
 
