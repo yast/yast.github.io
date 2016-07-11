@@ -7,28 +7,27 @@ two files:
 
 * [Desktop file](https://github.com/yast/yast-yast2/blob/master/doc/desktop_file.md)
 
-  This file is located in the \<YaST module name\>/src/desktop directory.
+    This file is located in the <YaST module name\>/src/desktop directory.
   
-  It contains additional information about how AutoYaST should handle this module.
-  E.g. if an entry will be created when the AutoYaST configuration file
-  will be generated (system clone).
+    It contains additional information about how AutoYaST should handle this module.
+    E.g. if an entry will be created when the AutoYaST configuration file will be generated (system clone).
 
 * AutoYaST control file <YaST module name\>_auto.rb
 
-  This file is located in \<YaST module name\>/src/\<YaST module name\>_auto.rb and will be used in following cases:
+    This file is located in <YaST module name\>/src/<YaST module name\>_auto.rb and will be used in following cases:
 
     * AutoYaST installation workflow.
 
-      AutoYaST will call all *_auto.rb files in the Installation Second Stage. 
-      AutoYaST reads all module setting from the AutoYaST configuration file, initialize the module and writes the settings to the system.
+        AutoYaST will call all *_auto.rb files in the Installation Second Stage.
+        AutoYaST reads all module setting from the AutoYaST configuration file, initialize the module and writes the settings to the system.
 
     * AutoYaST configuration interface
 
-      AutoYaST has an own module with which the user can configure an installation workflow. For that the <YaST module name\>_auto.rb is needed for.
+        AutoYaST has an own module with which the user can configure an installation workflow. For that the <YaST module name\>_auto.rb is needed for.
 
 
 
-## AutoYaST Control File \<YaST module name\>_auto.rb
+## AutoYaST Control File <YaST module name\>_auto.rb
 
 The interface of <YaST module name\>_auto.rb is similar to the proposal structure and consists of functions that can be accessed using arguments.
 
@@ -38,7 +37,7 @@ The return values are in both cases the same.
 
 ### AutoYaST Control Files Old Style
 
- The \<module name\>_auto.rb client accepts 2 arguments:
+ The <module name\>_auto.rb client accepts 2 arguments:
 
 * Function
 
@@ -48,60 +47,59 @@ The following functions are needed to make any module work in AutoYaST:
 
 * *Import*:
 
-  Import existing data into the module, usually done only once at the beginning.
+    Import existing data into the module, usually done only once at the beginning.
 
 * *Summary*:
 
-  To provide a brief summary of the configuration. Calls \<Module\>::Summary()
+    To provide a brief summary of the configuration. Calls <Module\>::Summary()
 
 * *Reset*:
 
-  Resets the configuration. It returns empty values but it also can return default values, depending on the module.
+    Resets the configuration. It returns empty values but it also can return default values, depending on the module.
 
 * *Change*:
 
-  This function starts the widget sequence.
+    This function starts the widget sequence.
 
-  Returns: *:ok*, *:next*, *:abort*,...
+    Returns: *:ok*, *:next*, *:abort*,...
 
 * *Write*:
 
-  Writes the configuration without displaying any widgets and pop-ups and without restarting any services etc. Calls \<Module\>::Write (and sets \<Module\>::write_only true)
+    Writes the configuration without displaying any widgets and pop-ups and without restarting any services etc. Calls <Module\>::Write (and sets <Module\>::write_only true)
 
 * *Export*:
 
-  Returns the current configuration. Calls \<Module\>::Export
+    Returns the current configuration. Calls <Module\>::Export
 
-  E.G.: In order to generate following AutoYaST configuration file entry:
-  ```ruby
-  <ssh_import>
-     <import config:type="boolean">true</import>
-     <copy_config config:type="boolean">true</copy_config>
-     <device>/dev/sda4</device>
-  </ssh_import>
-  ```
+    E.G.: In order to generate following AutoYaST configuration file entry:
 
-  this function has to return:
-  ```ruby
-  {"import" => true, "copy_config" => true, "device" => "/dev/sda4"}
-  ```
+        <ssh_import>
+          <import config:type="boolean">true</import>
+          <copy_config config:type="boolean">true</copy_config>
+          <device>/dev/sda4</device>
+        </ssh_import>
+
+
+    this function has to return:
+
+        {"import" => true, "copy_config" => true, "device" => "/dev/sda4"}
+
   
 
 * *GetModified*:
 
-  Returns true if the current settings have been changed and have to be written to system.
+    Returns true if the current settings have been changed and have to be written to system.
 
 * *Packages*:
 
-  Returns a hash with two key/value pairs. First key is *install* which has a list as the value. The list contains packages that are needed for the service configured by the module to work. This can be a static list of packages or a dynamic list depending on the configuration. The second key is *remove* which contains packages that should be removed to avoid conflicts with other packages. the packages in *remove* are normally determined dynamically, depending on the configuration.
+    Returns a hash with two key/value pairs. First key is *install* which has a list as the value. The list contains packages that are needed for the service configured by the module to work. This can be a static list of packages or a dynamic list depending on the configuration. The second key is *remove* which contains packages that should be removed to avoid conflicts with other packages. the packages in *remove* are normally determined dynamically, depending on the configuration.
 
-  The function can either return a hash directly or it can call a module function \<Module\>::AutoPackages().
+    The function can either return a hash directly or it can call a module function \<Module\>::AutoPackages().
 
-  For example, the function can return the following structure:
+    For example, the function can return the following structure:
 
-  ```ruby
-  {"install"=> ["pkg1", "pkg2"], "remove" => ["pkg3"]}
-  ```
+        {"install"=> ["pkg1", "pkg2"], "remove" => ["pkg3"]}
+
 
 The following example shows *nfs_auto.rb*:
 
@@ -299,15 +297,15 @@ end
 
 * Type of exported data:
 
-  Modules should only export data which is normally selected or entered by the user in normal module operation. No computed or automatically probed data should be exported.
+    Modules should only export data which is normally selected or entered by the user in normal module operation. No computed or automatically probed data should be exported.
 
 * Use Name-spaces
 
-  Exported variables should have a unique name when possible and when general terminology is being used. To avoid conflicts and confusion, use a name space identifier with common words. For example, if a module should export the variable name options, it is better to export \<module name\>.options to avoid confusion with other modules using options, which is very common in configurations.
+    Exported variables should have a unique name when possible and when general terminology is being used. To avoid conflicts and confusion, use a name space identifier with common words. For example, if a module should export the variable name options, it is better to export <module name\>.options to avoid confusion with other modules using options, which is very common in configurations.
 
 * Lower case variables
 
-  To have a common and unified look of the control file, please use lower case variables when exporting the configuration data.
+    To have a common and unified look of the control file, please use lower case variables when exporting the configuration data.
 
 * The structure of the exported data should be readable and not unnecessary complex.
 
@@ -367,7 +365,7 @@ In addition to the keywords from the last example, AutoYaST also evaluates the f
 
 * X-SuSE-YaST-AutoInst - Is the module compatible with the AutoYaST and can Import/Export configurations?
 
-  Values
+    Values
 
     * *all*: Full auto-installation support, including the AutoYaST configuration interface and writing configurations during auto installation.
 
@@ -378,125 +376,125 @@ In addition to the keywords from the last example, AutoYaST also evaluates the f
      
 * X-SuSE-YaST-AutoInstPath - Path in the control file
 
-  Values
+    Values
 
     * *configure* or *install*: All run-time configuration modules are contained in the configure resource. Only configuration data directly touching the installation of a system are contained in the install resource.
 
 
 * X-SuSE-YaST-AutoInstClient - Name of the client to call
 
-  Values
+    Values
 
     * Name of the client to be called by AutoYaST
 
     * Default Value
 
-      \<module name\>_auto
+        <module name\>_auto
 
 * X-SuSE-YaST-AutoInstDataType - Data type of configuration section
 
-  Values
+    Values
 
     * map or list
 
     * Default Value
 
-      map
+        map
 
      
 * X-SuSE-YaST-AutoInstResource - Name of the resource in the Profile
 
-  Values
+    Values
 
     * string
 
     * Default Value
 
-      (empty)
+        (empty)
 
 
 * X-SuSE-YaST-AutoInstRequires - What modules are required before this module is run.
 
-  Values
+    Values
 
     * comma delimited list of required modules
 
     * Default Value
 
-      (empty list)
+        (empty list)
 
 * X-SuSE-YaST-AutoInstMerge - Multiple sections in the profile can be handled by one module
 
-  Values
+    Values
 
     * comma delimited list of sections to merge (see also X-SuSE-YaST-AutoInstMergeTypes)
 
-      The Users module for example handles also groups and user_defaults.
+        The Users module for example handles also groups and user_defaults.
 
     * Default Value
 
-      (empty)
+        (empty)
 
      
 * X-SuSE-YaST-AutoInstMergeTypes - Which datatypes are the section of that will be merged to be handled by one module
 
-  Values
+    Values
 
     * comma delimited list of datatypes (list or map) for the sections from X-SuSE-YaST-AutoInstMerge
 
     * Default Value
 
-      (empty)
+        (empty)
 
 
 * X-SuSE-YaST-AutoInstClonable - is this module able to clone the actual system
 
-  Values
+    Values
 
     * boolean (true,false)
 
-      If this is true, the module will appear in the list of modules you can choose from during the cloning of the actual system. Your module will Read() and Export() it's data from the actual system then.
+        If this is true, the module will appear in the list of modules you can choose from during the cloning of the actual system. Your module will Read() and Export() it's data from the actual system then.
 
     * Default Value
 
-      false
+        false
 
 
 * X-SuSE-YaST-AutoInstSchema - base name of schema file, including the rnc extension (Relax NG compact syntax)
 
-  Values
+    Values
 
     * string
 
     * Default Value
 
-      (empty)
+        (empty)
 
 
 * X-SuSE-YaST-AutoInstOptional - is the element optional in the schema
 
-  Values
+    Values
 
     * boolean (true,false)
 
-      Does this element has to appear in the profile? Unless you have a very basic module, this is always true.
+        Does this element has to appear in the profile? Unless you have a very basic module, this is always true.
 
     * Default Value
 
-      true
+        true
      
 
 * X-SuSE-YaST-AutoLogResource - is the resource of your module allowed to be logged (since SLES10SP1/10.2)
 
-  Values
+    Values
 
     * boolean (true,false)
 
-      Do you allow autoyast to log the data of your resource into the logfile? The default is true but if you have sensible data like passwords, you might want to set this to false. That can always be overridden by Y2DEBUG=1
+        Do you allow autoyast to log the data of your resource into the logfile? The default is true but if you have sensible data like passwords, you might want to set this to false. That can always be overridden by Y2DEBUG=1
 
     * Default Value
 
-      true
+        true
 
 
 ## AutoYaST Configuration Interface
@@ -509,17 +507,27 @@ So all the dialogs will be handled by AutoYaST to simplify the interface and to 
 
 AutoYaST Configuration Module has the following components:
 
-* **Details** Area,: Contains a summary of the configuration with the values if available. If values where not configured, the phrase 'Not configured yet' is used, which is available from the summary module. (function *summary* in \<module name\>_auto.rb)
+* **Details** Area:
 
-* **Edit** Button: A button which starts the module UI. (function *change* in \<module name\>_auto.rb)
+      Contains a summary of the configuration with the values if available. If values where not configured, the phrase 'Not configured yet' is used, which is available from the summary module. (function *summary* in <module name\>_auto.rb)
 
-  <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" width="32"></img>
+* **Edit** Button:
+
+      A button which starts the module UI. (function *change* in <module name\>_auto.rb)
+
+      <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" width="32"></img>
   During starting the module you have to provide valid default entries as you can edit entries which are
   completely independent from the running system. One possibility would be to call the *read*
-  function in \<module name\>_auto.rb during module initialization.
+  function in <module name\>_auto.rb during module initialization.
 
-* **Clear** Button: A button for resetting the configuration data. This will delete only data in the running module. (function *reset* in \<module name\>_auto.rb)
+* **Clear** Button:
 
-* **Clone** Button: A button which reads the setting from installed system. (function *read* in \<module name\>_auto.rb)
+      A button for resetting the configuration data. This will delete only data in the running module. (function *reset* in <module name\>_auto.rb)
 
-* **Apply** to System Button: A button which writes the settings to the installed system. (function *write* in \<module name\>_auto.rb)
+* **Clone** Button:
+
+      A button which reads the setting from installed system. (function *read* in <module name\>_auto.rb)
+
+* **Apply** to System Button:
+
+      A button which writes the settings to the installed system. (function *write* in <module name\>_auto.rb)
