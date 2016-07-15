@@ -200,9 +200,9 @@ end
 Yast::NfsAutoClient.new.main
 ```
 
-### AutoYaST Control Files Based On *::Installation::AutoClient* Class
+### AutoYaST Control Files Based On [*::Installation::AutoClient* Class](http://www.rubydoc.info/github/yast/yast-yast2/master/Installation/AutoClient)
 
-Much more comfortable would be to use the *Installation::AutoClient* class.
+Much more comfortable would be to use the [*Installation::AutoClient* class](http://www.rubydoc.info/github/yast/yast-yast2/master/Installation/AutoClient).
 
 Here is an example of the *bootloader* module:
 
