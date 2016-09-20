@@ -73,6 +73,7 @@ dictionary:
 - CONF
 - config
 - CreateDialog
+- Ctrl
 - CVE
 - cvs
 - DASD
@@ -88,6 +89,7 @@ dictionary:
 - Devel
 - devtools
 - dhcp
+- dialogs
 - dir
 - DISABLELANGUAGEPLUGINS
 - dns
@@ -120,6 +122,7 @@ dictionary:
 - GenericName
 - geo
 - GetModified
+- gif
 - github
 - Github
 - gitk
@@ -127,6 +130,7 @@ dictionary:
 - Gtk
 - gui
 - HasReadOnlyMode
+- HBox
 - hostnames
 - HOWTO
 - http
@@ -295,6 +299,7 @@ dictionary:
 - textdomain
 - tftp
 - TFTP
+- TimezoneSelector
 - tmp
 - toolchain
 - toplevel
