@@ -273,6 +273,7 @@ dictionary:
 - SetDesktopIcon
 - SetModified
 - SHA
+- SHAs
 - simplecov
 - skelcd
 - SLE
