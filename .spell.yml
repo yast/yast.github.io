@@ -272,6 +272,8 @@ dictionary:
 - sda
 - SetDesktopIcon
 - SetModified
+- SHA
+- SHAs
 - simplecov
 - skelcd
 - SLE

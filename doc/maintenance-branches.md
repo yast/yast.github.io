@@ -63,12 +63,13 @@ git checkout -b my_fix_master # branch based on master
 git merge origin/SLE-12-GA # to ensure that we use recent branch on remote
 # fix possible conflicts and git commit if needed...
 # if maintenance branch contain its specific commit,
-# then use git revert <commit number> and next time it won't appear
+# then use git revert <commit number> and next time it will not appear
 git push
 ```
 
-When maintenance fix was not requested and made only in master and then mind
-changed, it is still needed to merge back cherry pick used for backporting fix.
+When maintenance fix was not requested and made only in master and then
+requested to backport to a maintenance branch, it is still needed to `merge` back
+the `cherry-pick` used for backporting the fix.
 It is valid only for new branches.
 
 Example how to backport fix and then merge branch back
@@ -105,7 +106,12 @@ Maintenance Fixes Rules
 -----------------------
 
 To get all benefits described above, there are few easy rules.
-* no cherry-pick for new maintenance branches
+
+* no `cherry-pick` as part of common work-flow. In a nutshell, cherry-picking
+  changes the SHA because the commit will get a new parent commit. And with
+  different SHAs, it is difficult to find out if all desired commits from the
+  branch are now also in master. For deeper explanation see these articles
+  [1](http://dan.bravender.net/2011/10/20/Why_cherry-picking_should_not_be_part_of_a_normal_git_workflow.html), [2](http://www.draconianoverlord.com/2013/09/07/no-cherry-picking.html) or [reddit](https://www.reddit.com/r/git/comments/3ubuel/merge_vs_rebase_why_not_cherrypick/))
 * merge new maintenance branches to master regularly
 * create fix for the oldest applicable branch first
 
