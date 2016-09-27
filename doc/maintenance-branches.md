@@ -110,7 +110,7 @@ To get all benefits described above, there are few easy rules.
 * no `cherry-pick` as part of common work-flow. In a nutshell, cherry-picking
   changes the SHA because the commit will get a new parent commit. And with
   different SHAs, it is difficult to find out if all desired commits from the
-  branch are now also in master. For deeper exaplanation see these articles
+  branch are now also in master. For deeper explanation see these articles
   [1](http://dan.bravender.net/2011/10/20/Why_cherry-picking_should_not_be_part_of_a_normal_git_workflow.html), [2](http://www.draconianoverlord.com/2013/09/07/no-cherry-picking.html) or [reddit](https://www.reddit.com/r/git/comments/3ubuel/merge_vs_rebase_why_not_cherrypick/))
 * merge new maintenance branches to master regularly
 * create fix for the oldest applicable branch first
