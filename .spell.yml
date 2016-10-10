@@ -36,6 +36,7 @@ dictionary:
 - autoyast
 - Autoyast
 - AutoYaST
+- backend
 - backport
 - backporting
 - backtrace
@@ -122,6 +123,7 @@ dictionary:
 - GenericName
 - geo
 - GetModified
+- gettext
 - gif
 - github
 - Github
@@ -258,6 +260,7 @@ dictionary:
 - Rubydoc
 - rubygem
 - rubygems
+- runtime
 - sbin
 - SCC
 - scr
