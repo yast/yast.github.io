@@ -218,6 +218,7 @@ dictionary:
 - opensuse
 - openwsman
 - operatingSystem
+- oscrc
 - PackagesProposal
 - pam
 - param
@@ -297,6 +298,7 @@ dictionary:
 - subcomponents
 - supportconfig
 - SuSE
+- SUSE
 - SUSE's
 - sys
 - sysconfig
