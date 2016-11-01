@@ -151,3 +151,10 @@ maintenance updates and, thus, only the corresponding `SLE-*` maintenance
 branch is used. Leap maintenance branches will be created manually in a case by
 case basis, only when needed and only for repositories that affect openSUSE but
 not SLE.
+
+How to find if maintenance branch is still actively maintained
+--------------------------------------------------------------
+NOTE: It uses suse internal tools, as it contain non public data about long term support.
+
+Connect to DE network and run `/work/src/bin/is_maintained <pkg_name>`. If it failed, then to show
+why osc failed, use `-r` which can indicate e.g. missing .oscrc file with credentials.
