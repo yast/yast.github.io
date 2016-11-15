@@ -28,11 +28,11 @@ repositories.
 Make sure the Ruby debugger is installed in the system, see the [installation
 instructions](#installation) above.
 
-### Using a Keyboard Shortcut
+### <a name="debugger_shortcut"> Using a Keyboard Shortcut
 
 Package `yast2-ruby-bindings-3.2.2` (and newer) include a keyboard shortcut
 for starting the debugger directly from running YaST. Simply press the
-`Shift`+`Ctrl`+`Alt`+`D` magic combination in the Qt UI and the Ruby debugger
+`Shift`+`Ctrl`+`Alt`+`D` keyboard combination in the Qt UI and the Ruby debugger
 will be started automatically. The text mode (Ncurses UI) is currently not
 supported, use the other solution below.
 
@@ -129,12 +129,11 @@ installer.
 
 ### Using a Keyboard Shortcut
 
-The latest systems include hot key support for starting the debugger directly
-from running YaST. Simply press the `Shift`+`Ctrl`+`Alt`+`D` magic combination
-in the Qt UI and the Ruby debugger will be started automatically. The text mode
-(Ncurses UI) is currently not supported, use the other solution below.
+The latest systems include support for starting the debugger directly
+after pressing the `Shift`+`Ctrl`+`Alt`+`D` keyboard combination.
+See [more details](#debugger_shortcut) in the section above.
 
-#### <a name="magic_key_systems"></a> Supported Systems
+#### <a name="debugger_shortcut_systems"></a> Supported Systems
 
 <!-- FIXME: update the version when the yast2-ruby-bindings package is released -->
 - openSUSE Tumbleweed 201611XX or newer
