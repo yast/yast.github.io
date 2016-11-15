@@ -23,11 +23,18 @@ If the package is not available in your repositories you can install it from
 http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/)
 repositories.
 
-
-## Starting the Debugger in Installed system
+## Starting the Debugger in Installed System
 
 Make sure the Ruby debugger is installed in the system, see the [installation
 instructions](#installation) above.
+
+### Using a Keyboard Shortcut
+
+Package `yast2-ruby-bindings-3.2.2` (and newer) include a keyboard shortcut
+for starting the debugger directly from running YaST. Simply press the
+`Shift`+`Ctrl`+`Alt`+`D` magic combination in the Qt UI and the Ruby debugger
+will be started automatically. The text mode (Ncurses UI) is currently not
+supported, use the other solution below.
 
 ### Starting the Debugger Automatically
 
@@ -120,7 +127,21 @@ file system is located in a read only RAM disk image.
 Fortunately YaST has integrated support for running the debugger in the
 installer.
 
-#### <a name="supported_systems"></a> Supported systems
+### Using a Keyboard Shortcut
+
+The latest systems include hot key support for starting the debugger directly
+from running YaST. Simply press the `Shift`+`Ctrl`+`Alt`+`D` magic combination
+in the Qt UI and the Ruby debugger will be started automatically. The text mode
+(Ncurses UI) is currently not supported, use the other solution below.
+
+#### <a name="magic_key_systems"></a> Supported Systems
+
+<!-- FIXME: update the version when the yast2-ruby-bindings package is released -->
+- openSUSE Tumbleweed 201611XX or newer
+
+### Using the Integrated Debugger
+
+#### <a name="supported_systems"></a> Supported Systems
 
 - openSUSE Tumbleweed 20160602 or newer
 - openSUSE Leap 42.2 or newer
