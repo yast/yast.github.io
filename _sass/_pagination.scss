@@ -1,0 +1,37 @@
+.pagination-box {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.pagination-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.page-num-current, .page-num-active {
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  font-size:15px;
+  color:#fff;
+  line-height:30px;
+  text-align:center;
+  background:#000;
+  display: inline-block;
+}
+
+.page-num-current {
+  // border-style: solid;
+  border-color: $brand-color;
+}
+
+.page-num-active {
+  text-decoration: none;
+  background-color: $brand-color;
+  color: white;
+  &:hover {
+    background-color: lighten($brand-color, 10%);
+  }
+}
