@@ -2,9 +2,41 @@
 title: YaST
 description: powerful installation and configuration tool for Linux
 email: yast-devel@opensuse.org
-baseurl: "/"
-url: "http://0.0.0.0:4000"
+baseurl: ""
+url: "http://yast.github.io"
 
-# Build settings
-markdown: kramdown
-#permalink: pretty
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: post
+      # use the /blog prefix for the blog posts
+      permalink: /blog/:year/:month/:day/:title/
+
+# see http://kramdown.gettalong.org/syntax.html for the format specification
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # no hard line endings, allow reformatting paragraphs
+  hard_wrap: false
+
+# pagination config for the blog index page
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+# generate sitemap.xml and feed.xml automatically by plugins, enable GFM emoji
+# and pagination
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+# exclude some files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
