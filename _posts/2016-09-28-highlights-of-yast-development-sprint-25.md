@@ -113,7 +113,7 @@ the installer steps to use the new stack (what will enable us to use
 openQA) before refining every screen to add all options there.
 
 [![The new partitioning
-proposal](../../../../images/2016-09-28/sp-300x244.png)](../../../../images/2016-09-28/sp.png)
+proposal](../../../../../assets/images/blog/2016-09-28/sp-300x244.png)](../../../../../assets/images/blog/2016-09-28/sp.png)
 
 Right now the system works only in disks containing a MS-DOS style
 partition table and will always propose a partition-based (no LVM)
@@ -146,7 +146,7 @@ upcoming post including interesting technical stuff and crazy graphs
 like this one.
 
 [![YaST dependencies
-graph](../../../../images/2016-09-28/yast_deps_after-184x300.png)](../../../../images/2016-09-28/yast_deps_after.png)
+graph](../../../../../assets/images/blog/2016-09-28/yast_deps_after-184x300.png)](../../../../../assets/images/blog/2016-09-28/yast_deps_after.png)
 
 ### Some adjustment for the installer in the LiveCDs
 
@@ -202,7 +202,7 @@ As usual, it was harder than expected… but we made it and here is a
 short demo showing how it works and what you can do there:
 
 ![The new UI designer in
-action](../../../../images/2016-09-28/ui-designer.gif)
+action](../../../../../assets/images/blog/2016-09-28/ui-designer.gif)
 
 The new tool is still far from being perfect. The most obvious missing
 feature is that the dialog is changed in place and you cannot save or
@@ -228,7 +228,7 @@ see the sequence of actions performed by the library when creating an
 encrypted home volume.
 
 [![Creation of an encrypted home with
-libstorage-ng](../../../../images/2016-09-28/create-293x300.png)](../../../../images/2016-09-28/create.png)
+libstorage-ng](../../../../../assets/images/blog/2016-09-28/create-293x300.png)](../../../../../assets/images/blog/2016-09-28/create.png)
 
 ### Syncing keyboard layouts and console fonts in Leap and Tumbleweed
 

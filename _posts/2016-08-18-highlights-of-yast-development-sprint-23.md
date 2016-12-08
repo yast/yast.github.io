@@ -53,7 +53,7 @@ the counter, specially we added a new “stop” button displaying the
 remaining seconds. You can see an example of the result below.
 
 [![New layout for dialogs with
-timeout](../../../../images/2016-08-18/06449188-55a9-11e6-9461-dfc352fff8d8-300x199.png)](../../../../images/2016-08-18/06449188-55a9-11e6-9461-dfc352fff8d8.png)
+timeout](../../../../../assets/images/blog/2016-08-18/06449188-55a9-11e6-9461-dfc352fff8d8-300x199.png)](../../../../../assets/images/blog/2016-08-18/06449188-55a9-11e6-9461-dfc352fff8d8.png)
 
 Following, as usual, the Boy Scout Rule we also took the opportunity to
 add automated tests to make that part of YaST more robust for the

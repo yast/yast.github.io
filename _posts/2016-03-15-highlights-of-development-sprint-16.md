@@ -34,7 +34,7 @@ operators.
 We got a feature request to make encryption more visible in this dialog.
 
 [![Old partitioning proposal
-dialog](../../../../images/2016-03-15/28ea0408-e22b-11e5-8290-9ad25dd65776-225x300.png)](../../../../images/2016-03-15/28ea0408-e22b-11e5-8290-9ad25dd65776.png)
+dialog](../../../../../assets/images/blog/2016-03-15/28ea0408-e22b-11e5-8290-9ad25dd65776-225x300.png)](../../../../../assets/images/blog/2016-03-15/28ea0408-e22b-11e5-8290-9ad25dd65776.png)
 
 Being software developers used to tools like Vim and Git, we have to
 admit that the YaST team found the dialog perfectly usable and was
@@ -43,7 +43,7 @@ have a UI/UX expert able to bring better alternatives like this one we
 finally implemented.
 
 [![New dialog for partitioning
-proposal](../../../../images/2016-03-15/93288588-e22b-11e5-8d9e-d6190a2ad13b-219x300.png)](../../../../images/2016-03-15/93288588-e22b-11e5-8d9e-d6190a2ad13b.png)
+proposal](../../../../../assets/images/blog/2016-03-15/93288588-e22b-11e5-8d9e-d6190a2ad13b-219x300.png)](../../../../../assets/images/blog/2016-03-15/93288588-e22b-11e5-8d9e-d6190a2ad13b.png)
 
 This kind of visual changes in the installer used to cause delays in
 openQA, because adapting the tests while keeping the openQA machinery
@@ -63,7 +63,7 @@ of yast2-installation. And yes, for the impatient we also have a
 glorious screenshot!
 
 [![System Role
-dialog](../../../../images/2016-03-15/460729c4-ea98-11e5-95e7-1a8d90729ff1-300x231.png)](../../../../images/2016-03-15/460729c4-ea98-11e5-95e7-1a8d90729ff1.png)
+dialog](../../../../../assets/images/blog/2016-03-15/460729c4-ea98-11e5-95e7-1a8d90729ff1-300x231.png)](../../../../../assets/images/blog/2016-03-15/460729c4-ea98-11e5-95e7-1a8d90729ff1.png)
 
 ### Storage reimplementation: resizing partitions
 
@@ -75,9 +75,9 @@ that is going to hit the users in the short term but at least we have a
 couple of screenshots to see the premiere working (yes, we know that
 screenshots of terminals are not the most fancy stuff).
 
-[![shrink-vfat](../../../../images/2016-03-15/shrink-vfat-300x195.png)](../../../../images/2016-03-15/shrink-vfat.png)
+[![shrink-vfat](../../../../../assets/images/blog/2016-03-15/shrink-vfat-300x195.png)](../../../../../assets/images/blog/2016-03-15/shrink-vfat.png)
 
-[![grow-ntfs](../../../../images/2016-03-15/grow-ntfs-300x195.png)](../../../../images/2016-03-15/grow-ntfs.png)
+[![grow-ntfs](../../../../../assets/images/blog/2016-03-15/grow-ntfs-300x195.png)](../../../../../assets/images/blog/2016-03-15/grow-ntfs.png)
 
 ### Installer self-update
 

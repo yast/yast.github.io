@@ -35,7 +35,7 @@ be started from the installer and therefore their configuration is kept
 at the default initial state.
 
 [![Software and firewall proposals as
-read-only](../../../../images/2016-11-10/readonly-300x225.png)](../../../../images/2016-11-10/readonly.png)
+read-only](../../../../../assets/images/blog/2016-11-10/readonly-300x225.png)](../../../../../assets/images/blog/2016-11-10/readonly.png)
 
 In this sprint we have implemented a basic support in the proposal
 framework, in the future we could improve the respective proposal
@@ -131,7 +131,7 @@ succeeded and the installer can already propose a valid grub2 setup to
 boot an EFI system.
 
 [![EFI proposal with the storage-ng
-ISO](../../../../images/2016-11-10/grub2efi-300x225.png)](../../../../images/2016-11-10/grub2efi.png)
+ISO](../../../../../assets/images/blog/2016-11-10/grub2efi-300x225.png)](../../../../../assets/images/blog/2016-11-10/grub2efi.png)
 
 Does that mean that the testing ISO for the new storage stack is already
 fully installable? Unfortunately not. Why not, you ask? The reason is,
@@ -188,7 +188,7 @@ be realistic about releases that are already out of support and the
 limited human resources we have. We closed around 80 of those ancient
 bugs.
 
-[![no\_country\_for\_old\_bugs](../../../../images/2016-11-10/no_country_for_old_bugs-300x169.jpg)](../../../../images/2016-11-10/no_country_for_old_bugs.jpg)
+[![no\_country\_for\_old\_bugs](../../../../../assets/images/blog/2016-11-10/no_country_for_old_bugs-300x169.jpg)](../../../../../assets/images/blog/2016-11-10/no_country_for_old_bugs.jpg)
 
 So overall, we cleaned up around one hundred bugs from our queue. Still
 a long way to have a bug-free YaST, but undoubtedly a step in the right

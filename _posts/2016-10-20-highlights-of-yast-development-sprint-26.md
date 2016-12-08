@@ -56,7 +56,7 @@ the changes are now committed to the disk, meaning the system is
 actually partitioned, formatted and installed.
 
 ![Installation with the new storage
-stack](../../../../images/2016-10-20/demo_commit_to_disk.gif)
+stack](../../../../../assets/images/blog/2016-10-20/demo_commit_to_disk.gif)
 
 The process is interrupted after installing the software, when trying to
 configure and install the bootloader. That was expected because
@@ -115,7 +115,7 @@ as you can see in the screenshot below. We still allow the users to
 shoot their own feet if they insist, but now we warn them very clearly.
 
 [![Warning about de-selected Grub2
-package](../../../../images/2016-10-20/softw-300x226.png)](../../../../images/2016-10-20/softw.png)
+package](../../../../../assets/images/blog/2016-10-20/softw-300x226.png)](../../../../../assets/images/blog/2016-10-20/softw.png)
 
 ### Progress in the low-vision accessibility of the installer
 
@@ -124,7 +124,7 @@ installer accessible to people with low-vision impairment. We already
 [blogged about it][1] looking for feedback.
 
 [![One of the new color modes available in the
-installer](../../../../images/2016-10-20/highc-300x225.png)](../../../../images/2016-10-20/highc.png)
+installer](../../../../../assets/images/blog/2016-10-20/highc-300x225.png)](../../../../../assets/images/blog/2016-10-20/highc.png)
 
 In a few days, some changes will land in Tumbleweed:
 
@@ -137,7 +137,7 @@ In a few days, some changes will land in Tumbleweed:
   mode during installation (shift+F4), has been fixed.
 
 [![Style selection at the beginning of
-installation](../../../../images/2016-10-20/linuxrc-300x225.png)](../../../../images/2016-10-20/linuxrc.png)
+installation](../../../../../assets/images/blog/2016-10-20/linuxrc-300x225.png)](../../../../../assets/images/blog/2016-10-20/linuxrc.png)
 
  Although we have made some progress, it is still an ongoing effort and
 we hope to release more improvements during the upcoming weeks.
@@ -152,7 +152,7 @@ Now YaST correctly detects the situation and offers the option to
 propose a new configuration with correct devices.
 
 [![YaST bootloader fixing a broken
-configuration](../../../../images/2016-10-20/bootl-300x170.png)](../../../../images/2016-10-20/bootl.png)
+configuration](../../../../../assets/images/blog/2016-10-20/bootl-300x170.png)](../../../../../assets/images/blog/2016-10-20/bootl.png)
 
 ### Disable autorefresh by default in local media
 
@@ -190,7 +190,7 @@ adapting old configuration files to the new conventions or unifying the
 UI to make it consistent with the one for managing bonding.
 
 [![Revamped YaST interface for handling
-bridges](../../../../images/2016-10-20/bridge-300x225.png)](../../../../images/2016-10-20/bridge.png)
+bridges](../../../../../assets/images/blog/2016-10-20/bridge-300x225.png)](../../../../../assets/images/blog/2016-10-20/bridge.png)
 
 This revamp includes also quite some usability improvements:
 

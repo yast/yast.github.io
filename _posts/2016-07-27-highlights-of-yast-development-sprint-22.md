@@ -66,7 +66,7 @@ the screen looked before the fix – checkbox widgets and their labels do
 not fit so their bottoms are cropped.
 
 [![Old interface with cropped
-extensions](../../../../images/2016-07-27/bcropped-300x225.png)](../../../../images/2016-07-27/bcropped.png)
+extensions](../../../../../assets/images/blog/2016-07-27/bcropped-300x225.png)](../../../../../assets/images/blog/2016-07-27/bcropped.png)
 
 We have to make sure YaST works across different interfaces, including
 text-based ncurses. That limits the set of widgets we can use when
@@ -75,14 +75,14 @@ not always easy. We also took the opportunity to add a filter for beta
 extensions, as you can see in the following screenshot.
 
 [![The beta extensions filter in
-action](../../../../images/2016-07-27/bfiltered-300x225.png)](../../../../images/2016-07-27/bfiltered.png)
+action](../../../../../assets/images/blog/2016-07-27/bfiltered-300x225.png)](../../../../../assets/images/blog/2016-07-27/bfiltered.png)
 
 And finally you can see how it looks like with all the extensions,
 including beta ones. Instead of cropping elements we now have a
 scroll-bar in the right.
 
 [![The new extensions UI in all its
-glory](../../../../images/2016-07-27/bmodules-300x225.png)](../../../../images/2016-07-27/bmodules.png)
+glory](../../../../../assets/images/blog/2016-07-27/bmodules-300x225.png)](../../../../../assets/images/blog/2016-07-27/bmodules.png)
 
 ### Storage reimplementation: LVM unit testing
 
@@ -104,14 +104,14 @@ related patterns were included for a [KVM server role][2] and, thus, the
 systemd target was graphical.
 
 [![The KVM Server role before the
-fix](../../../../images/2016-07-27/bbadrole-300x234.png)](../../../../images/2016-07-27/bbadrole.png)
+fix](../../../../../assets/images/blog/2016-07-27/bbadrole-300x234.png)](../../../../../assets/images/blog/2016-07-27/bbadrole.png)
 
 Now, only the 3 patterns explicitly intended for the KVM role are
 selected, with no desktop related patterns. Accordingly, the system
 boots to text mode.
 
 [![Fixed KVM Server
-role](../../../../images/2016-07-27/bgoodrole-300x234.png)](../../../../images/2016-07-27/bgoodrole.png)
+role](../../../../../assets/images/blog/2016-07-27/bgoodrole-300x234.png)](../../../../../assets/images/blog/2016-07-27/bgoodrole.png)
 
 ### Storage reimplementation: the future of booting
 

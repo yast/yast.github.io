@@ -34,7 +34,7 @@ The following screenshot shows the newly introduced confirmation dialog,
 presented before proceeding with installation.
 
 [![Preventing users to shoot their
-feet](../../../../images/2016-12-02/warn-300x227.png)](../../../../images/2016-12-02/warn.png)
+feet](../../../../../assets/images/blog/2016-12-02/warn-300x227.png)](../../../../../assets/images/blog/2016-12-02/warn.png)
 
 ### Make DHCLIENT\_SET\_HOSTNAME configurable on a per-interface basis
 
@@ -49,7 +49,7 @@ used to be in the network configuration screen. See “Change Hostname via
 DHCP” below.
 
 [![The old network settings
-screen](../../../../images/2016-12-02/old-network-300x225.png)](../../../../images/2016-12-02/old-network.png)
+screen](../../../../../assets/images/blog/2016-12-02/old-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/old-network.png)
 
 That checkbox used to modify the system-wide variable
 `DHCLIENT_SET_HOSTNAME`, which was fine in scenarios in which only one
@@ -71,7 +71,7 @@ the possibility of choosing which DHCP interface will be used to decide
 the hostname.
 
 [![The new network settings
-screen](../../../../images/2016-12-02/new-network-300x225.png)](../../../../images/2016-12-02/new-network.png)
+screen](../../../../../assets/images/blog/2016-12-02/new-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/new-network.png)
 
 Apart from choosing one of the existing interfaces, the new setting can
 also be set to ‘no’ or to ‘any’. In any case, YaST will always configure
@@ -84,7 +84,7 @@ potentially problematic scenarios will be detected by YaST and reported
 to the user.
 
 [![Detecting dangerous scenarios in network
-settings](../../../../images/2016-12-02/any-network-300x225.png)](../../../../images/2016-12-02/any-network.png)
+settings](../../../../../assets/images/blog/2016-12-02/any-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/any-network.png)
 
 ### Partitioning in CASP
 
@@ -107,7 +107,7 @@ calculated proposal will be simply displayed in the installation
 summary.
 
 [![The new CASP installation
-summary](../../../../images/2016-12-02/casp-installation-summary-300x186.png)](../../../../images/2016-12-02/casp-installation-summary.png)
+summary](../../../../../assets/images/blog/2016-12-02/casp-installation-summary-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-installation-summary.png)
 
 Clicking on the proposal will allow to re-target the installation to a
 different disk (or disks) in a similar way than the regular installer,
@@ -115,14 +115,14 @@ but the options will be more limited. Again, no easy way to use LVM,
 encryption, separate home or any file system type other than Btrfs.
 
 [![Selecting the partitions in CASP, no proposal settings
-button](../../../../images/2016-12-02/casp-select-partitions-300x186.png)](../../../../images/2016-12-02/casp-select-partitions.png)
+button](../../../../../assets/images/blog/2016-12-02/casp-select-partitions-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-select-partitions.png)
 
 The expert partitioner is still available during CASP installation, but
 using it will show an extra warning, since it implies a much bigger risk
 than using it in a regular SUSE or openSUSE system.
 
 [![Expert partitioner warning in
-CASP](../../../../images/2016-12-02/casp-expert-partitioner-warning-300x186.png)](../../../../images/2016-12-02/casp-expert-partitioner-warning.png)
+CASP](../../../../../assets/images/blog/2016-12-02/casp-expert-partitioner-warning-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-expert-partitioner-warning.png)
 
 ### Improved debugger integration
 
@@ -141,7 +141,7 @@ shortcut at all).
 
 After pressing the keyboard shortcut the debugger window will pop up:
 
-![New debugger integration](../../../../images/2016-12-02/debugger.gif)
+![New debugger integration](../../../../../assets/images/blog/2016-12-02/debugger.gif)
 
 ### Storage reimplementation: it’s alive!
 
@@ -195,7 +195,7 @@ already use that combination, `ctrl+D F1` can also be used in the
 ncurses interface as an alternative.
 
 [![Advanced Hotkeys help
-dialog](../../../../images/2016-12-02/hotkey-help-qt-300x268.png)](../../../../images/2016-12-02/hotkey-help-qt.png)
+dialog](../../../../../assets/images/blog/2016-12-02/hotkey-help-qt-300x268.png)](../../../../../assets/images/blog/2016-12-02/hotkey-help-qt.png)
 
 ### Contributions keep coming!
 
@@ -213,7 +213,7 @@ For cloud guys out there retrieving logs of a failed installation
 a running a rsyslog server and you’ll be able to easily access your
 installation logs from there.
 
-![A drawing is worth a thousand words](../../../../images/2016-12-02/dvw.png)
+![A drawing is worth a thousand words](../../../../../assets/images/blog/2016-12-02/dvw.png)
 
 As a matter of fact, the newest Tumbleweed release allows us to specify
 the IP address of a remote server from the bootloader through the

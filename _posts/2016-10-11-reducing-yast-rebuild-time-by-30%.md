@@ -122,12 +122,12 @@ our scenario… and we had to stop the analysis at some point.
 The build dependency graph before our fixes:
 
 [![YaST dependencies graph
-(before)](../../../../images/2016-10-11/yast_deps_before-248x300.png)](../../../../images/2016-10-11/yast_deps_before.png)
+(before)](../../../../../assets/images/blog/2016-10-11/yast_deps_before-248x300.png)](../../../../../assets/images/blog/2016-10-11/yast_deps_before.png)
 
 The build dependency graph after our fixes:
 
 [![YaST dependencies graph
-(after)](../../../../images/2016-10-11/yast_deps_after-184x300.png)](../../../../images/2016-10-11/yast_deps_after.png)
+(after)](../../../../../assets/images/blog/2016-10-11/yast_deps_after-184x300.png)](../../../../../assets/images/blog/2016-10-11/yast_deps_after.png)
 
 ### Build statistics
 

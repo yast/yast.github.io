@@ -34,7 +34,7 @@ Tumbleweed regarding password encryption methods. To take part in that
 discussion, read the mentioned description and reply to [this thread][4]
 in the openSUSE Factory mailing list.
 
-[![b12a8f90-c51b-11e5-9ceb-659b6c77bac4](../../../../images/2016-02-03/b12a8f90-c51b-11e5-9ceb-659b6c77bac4-300x225.png)](../../../../images/2016-02-03/b12a8f90-c51b-11e5-9ceb-659b6c77bac4.png)
+[![b12a8f90-c51b-11e5-9ceb-659b6c77bac4](../../../../../assets/images/blog/2016-02-03/b12a8f90-c51b-11e5-9ceb-659b6c77bac4-300x225.png)](../../../../../assets/images/blog/2016-02-03/b12a8f90-c51b-11e5-9ceb-659b6c77bac4.png)
 
 Beyond the obvious changes for the final user, the implementation of the
 new dialogs resulted in a much cleaner and more tested code base,
@@ -57,7 +57,7 @@ task. Is still not part of the installation process and will take quite
 some time until it gets there, but it’s already a nice showcase of the
 capabilities of the new library.
 
-[![new-storage-proposal-2016-01-27-1900](../../../../images/2016-02-03/new-storage-proposal-2016-01-27-1900-1.png)](../../../../images/2016-02-03/new-storage-proposal-2016-01-27-1900-1.png)
+[![new-storage-proposal-2016-01-27-1900](../../../../../assets/images/blog/2016-02-03/new-storage-proposal-2016-01-27-1900-1.png)](../../../../../assets/images/blog/2016-02-03/new-storage-proposal-2016-01-27-1900-1.png)
 
 ### Fixed a crash when EULA download fails
 
@@ -65,12 +65,12 @@ If a download error occurred during the installation of any module or
 extension requiring an EULA, YaST simply exited after displaying a
 pop-up error, as you can see here.
 
-[![0c444926-bb75-11e5-8e6e-029d018c14d3](../../../../images/2016-02-03/0c444926-bb75-11e5-8e6e-029d018c14d3.gif)](../../../../images/2016-02-03/0c444926-bb75-11e5-8e6e-029d018c14d3.gif)
+[![0c444926-bb75-11e5-8e6e-029d018c14d3](../../../../../assets/images/blog/2016-02-03/0c444926-bb75-11e5-8e6e-029d018c14d3.gif)](../../../../../assets/images/blog/2016-02-03/0c444926-bb75-11e5-8e6e-029d018c14d3.gif)
 
 Now the workflow goes back to the extension selection, to retry or to
 deselect the problematic extension. Just like this.
 
-[![46fb22a6-bb75-11e5-9830-aff1d516e77e](../../../../images/2016-02-03/46fb22a6-bb75-11e5-9830-aff1d516e77e.gif)](../../../../images/2016-02-03/46fb22a6-bb75-11e5-9830-aff1d516e77e.gif)
+[![46fb22a6-bb75-11e5-9830-aff1d516e77e](../../../../../assets/images/blog/2016-02-03/46fb22a6-bb75-11e5-9830-aff1d516e77e.gif)](../../../../../assets/images/blog/2016-02-03/46fb22a6-bb75-11e5-9830-aff1d516e77e.gif)
 
 
 ### Continuous integration for Snapper and (the current) libstorage
@@ -97,7 +97,7 @@ subvolumes feature, the separation between a physical disk and its mount
 point is not that clear anymore. That resulted in wrong reports in YaST,
 like the one displayed in the left bottom corner of this screen.
 
-[![broken-disk-usage](../../../../images/2016-02-03/broken-disk-usage.png)](../../../../images/2016-02-03/broken-disk-usage.png)
+[![broken-disk-usage](../../../../../assets/images/blog/2016-02-03/broken-disk-usage.png)](../../../../../assets/images/blog/2016-02-03/broken-disk-usage.png)
 
 The actual calculation of free space is performed by libzypp (the Zypper
 library), YaST only takes care of rendering the result of that
@@ -107,7 +107,7 @@ subvolumes. Thanks to his work, with any version of libzypp &gt;= 15.21
 (already available in Tumbleweed), you can enjoy an error-free disk
 usage report.
 
-[![fixed-disk-usage](../../../../images/2016-02-03/fixed-disk-usage.png)](../../../../images/2016-02-03/fixed-disk-usage.png)
+[![fixed-disk-usage](../../../../../assets/images/blog/2016-02-03/fixed-disk-usage.png)](../../../../../assets/images/blog/2016-02-03/fixed-disk-usage.png)
 
 To ensure we have no regressions, the YaST team also contributed a new
 test to openQA. See it [in action][22].

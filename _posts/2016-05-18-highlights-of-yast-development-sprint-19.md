@@ -35,7 +35,7 @@ example). Then you can enable the new YaST Bootloader option that will
 install TrustedGRUB2.
 
 [![Trusted boot in YaST
-Bootloader](../../../../images/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9-300x234.png)](../../../../images/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9.png)
+Bootloader](../../../../../assets/images/blog/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9-300x234.png)](../../../../../assets/images/blog/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9.png)
 
 In the description of [this pull request][2] you can find a more
 detailed explanation including some commands and hexadecimal dumps to
@@ -84,12 +84,12 @@ have several distributions installed), it has now become a part of the
 installation proposal dialog:
 
 ![SSH host keys
-proposal](../../../../images/2016-05-18/f93f82cc-1c19-11e6-95ae-0e7e82c22eb4.png)
+proposal](../../../../../assets/images/blog/2016-05-18/f93f82cc-1c19-11e6-95ae-0e7e82c22eb4.png)
 
 And from there you can change it:
 
 ![SSH host keys
-selection](../../../../images/2016-05-18/08b01bfe-1c1a-11e6-84f8-ee8d5cd8c3ab.png)
+selection](../../../../../assets/images/blog/2016-05-18/08b01bfe-1c1a-11e6-84f8-ee8d5cd8c3ab.png)
 
 Notice that one of the options is “none”, so copying of previous keys is
 not longer enforced. In addition, now is also possible to import the
@@ -130,15 +130,15 @@ relevant dialogs for all devices supporting it, like it’s shown in the
 following screenshots.
 
 [![Physical
-ports](../../../../images/2016-05-18/bonding1-1-300x232.png)](../../../../images/2016-05-18/bonding1-1.png)
+ports](../../../../../assets/images/blog/2016-05-18/bonding1-1-300x232.png)](../../../../../assets/images/blog/2016-05-18/bonding1-1.png)
 
 [![More physical
-ports](../../../../images/2016-05-18/bonding2-300x185.png)](../../../../images/2016-05-18/bonding2.png)
+ports](../../../../../assets/images/blog/2016-05-18/bonding2-300x185.png)](../../../../../assets/images/blog/2016-05-18/bonding2.png)
 
 Additionally, the user will be alerted when trying to bond devices
 sharing the same physical port.
 
-![Bonding warning](../../../../images/2016-05-18/warning-1.png)
+![Bonding warning](../../../../../assets/images/blog/2016-05-18/warning-1.png)
 
 Last but not least, following the Boy Scout Rule (also known as
 [opportunistic refactoring][5]), we took the opportunity to fix some

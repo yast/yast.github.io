@@ -42,7 +42,7 @@ we moved the self-update step after the initial automatic network setup
 (DHCP) and added package initialization to the self-update step.
 
 ![The self-update in
-action](../../../../images/2016-09-07/c9d6beac-6e93-11e6-853b-62063269b7dd.gif)
+action](../../../../../assets/images/blog/2016-09-07/c9d6beac-6e93-11e6-853b-62063269b7dd.gif)
 
 As you can see the self-update step is the very first step in the
 installation workflow, the language selection and the EULA dialog is
@@ -135,7 +135,7 @@ The good thing about our automated test-cases is that they generate nice
 graph that are quite useful to illustrate blog posts. :simple_smile:
 
 [![One of the several added
-test-cases](../../../../images/2016-09-07/complex1-action-300x48.png)](../../../../images/2016-09-07/complex1-action.png)
+test-cases](../../../../../assets/images/blog/2016-09-07/complex1-action-300x48.png)](../../../../../assets/images/blog/2016-09-07/complex1-action.png)
 
 ### Gem two: enjoy Google Summer of Code result
 
@@ -173,7 +173,7 @@ description of [this pull request][5], which includes many images (too
 many for this blog post).
 
 [![The new AutoYaST license
-screen](../../../../images/2016-09-07/1c218406-693c-11e6-9c81-578b7ce30864-300x230.png)](../../../../images/2016-09-07/1c218406-693c-11e6-9c81-578b7ce30864.png)
+screen](../../../../../assets/images/blog/2016-09-07/1c218406-693c-11e6-9c81-578b7ce30864-300x230.png)](../../../../../assets/images/blog/2016-09-07/1c218406-693c-11e6-9c81-578b7ce30864.png)
 
 ### Smarter check to avoid duplicated repositories
 
