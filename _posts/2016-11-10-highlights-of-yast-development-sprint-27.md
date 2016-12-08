@@ -47,7 +47,7 @@ The ability to have read-only proposals is not the only improvement we
 have introduced in YaST to make SUSE CASP possible.
 
 When Btrfs is used during the installation, YaST2 proposes a list of
-subvolumes to create. Unfortunatelly, that list is hard-coded and it’s
+subvolumes to create. Unfortunately, that list is hard-coded and it’s
 the same for every (open)SUSE product… until now.
 
 Starting on yast2-storage 3.1.103.1, a list of subvolumes can be defined

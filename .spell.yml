@@ -1,4 +1,13 @@
 ---
+check:
+  - '**/*.html'
+ignore:
+  # it checks also the embedded JS :-(
+  - 'blog/index.html'
+  - '_includes/paging.html'
+  - '_includes/head.html'
+  - '_layouts/post.html'
+  - '_site/**/*'
 dictionary:
 - abovementioned
 - accessor

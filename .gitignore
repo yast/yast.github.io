@@ -3,3 +3,4 @@
 /vendor/
 /.vendor/
 Gemfile.lock
+/.sass-cache/
