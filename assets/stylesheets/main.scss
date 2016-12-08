@@ -51,11 +51,11 @@ $footer-height:     130px;
     margin-bottom: $spacing-unit / 2;
 }
 
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "layout",
         "pagination",
-        "sharing",
-        "syntax-highlighting"
+        "sharing"
+        // FIXME: disabled for now
+        //"syntax-highlighting"
 ;

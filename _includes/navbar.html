@@ -11,21 +11,21 @@
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav" id="main-menu">
         <li class="{% if page.url == "/modules/" %}active{% endif %}">
-          <a href="{{ site.baseurl }}/modules">Modules</a>
+          <a href="{{ "/modules" | relative_url }}">Modules</a>
         </li>
         <li class="{% if page.url == "/contributing/" %}active{% endif %}">
-          <a href="{{ site.baseurl }}/contributing">Contributing</a>
+          <a href="{{ "/contributing" | relative_url }}">Contributing</a>
         </li>
         <li class="{% if page.url == "/documentation/" %}active{% endif %}">
-          <a href="{{ site.baseurl }}/documentation">Documentation</a>
+          <a href="{{ "/documentation" | relative_url }}">Documentation</a>
         </li>
         <li class="{% if page.url == "/guidelines/" %}active{% endif %}">
-          <a href="{{ site.baseurl }}/guidelines">Guidelines</a>
+          <a href="{{ "/guidelines" | relative_url }}">Guidelines</a>
         </li>
         <!-- FIXME: temporarily disabled, enable when the blog is fully working -->
         {% if page.url == "/blog/" %}
         <li class="{% if page.url == "/blog/" %}active{% endif %}">
-          <a href="{{ site.baseurl }}/blog">Blog</a>
+          <a href="{{ "/blog" | relative_url }}">Blog</a>
         </li>
         {% endif %}
       </ul>
