@@ -11,19 +11,19 @@
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav" id="main-menu">
         <li class="{% if page.url == "/modules/" %}active{% endif %}">
-          <a href="/modules">Modules</a>
+          <a href="{{ site.baseurl }}/modules">Modules</a>
         </li>
         <li class="{% if page.url == "/contributing/" %}active{% endif %}">
-          <a href="/contributing">Contributing</a>
+          <a href="{{ site.baseurl }}/contributing">Contributing</a>
         </li>
         <li class="{% if page.url == "/documentation/" %}active{% endif %}">
-          <a href="/documentation">Documentation</a>
+          <a href="{{ site.baseurl }}/documentation">Documentation</a>
         </li>
         <li class="{% if page.url == "/guidelines/" %}active{% endif %}">
-          <a href="/guidelines">Guidelines</a>
+          <a href="{{ site.baseurl }}/guidelines">Guidelines</a>
         </li>
         <li class="{% if page.url == "/blog/" %}active{% endif %}">
-          <a href="/blog">Blog</a>
+          <a href="{{ site.baseurl }}/blog">Blog</a>
         </li>
       </ul>
     </div>
