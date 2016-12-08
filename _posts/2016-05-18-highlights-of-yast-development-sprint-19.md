@@ -34,8 +34,9 @@ First you need to make sure Trusted Boot is enabled in the BIOS setup
 example). Then you can enable the new YaST Bootloader option that will
 install TrustedGRUB2.
 
-[![Trusted boot in YaST
-Bootloader](../../../../../assets/images/blog/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9-300x234.png)](../../../../../assets/images/blog/2016-05-18/42c4377c-1b88-11e6-8287-236106b6f4d9.png)
+{% include blog_img.md alt="Trusted boot in YaST Bootloader"
+src="42c4377c-1b88-11e6-8287-236106b6f4d9-300x234.png"
+full_img="42c4377c-1b88-11e6-8287-236106b6f4d9.png" %}
 
 In the description of [this pull request][2] you can find a more
 detailed explanation including some commands and hexadecimal dumps to
@@ -83,13 +84,13 @@ from the most recent Linux installation on the disk (remember, you might
 have several distributions installed), it has now become a part of the
 installation proposal dialog:
 
-![SSH host keys
-proposal](../../../../../assets/images/blog/2016-05-18/f93f82cc-1c19-11e6-95ae-0e7e82c22eb4.png)
+{% include blog_img.md alt="SSH host keys proposal"
+src="f93f82cc-1c19-11e6-95ae-0e7e82c22eb4.png" %}
 
 And from there you can change it:
 
-![SSH host keys
-selection](../../../../../assets/images/blog/2016-05-18/08b01bfe-1c1a-11e6-84f8-ee8d5cd8c3ab.png)
+{% include blog_img.md alt="SSH host keys selection"
+src="08b01bfe-1c1a-11e6-84f8-ee8d5cd8c3ab.png" %}
 
 Notice that one of the options is “none”, so copying of previous keys is
 not longer enforced. In addition, now is also possible to import the
@@ -129,16 +130,16 @@ Information about the physical port ID has been added to all the
 relevant dialogs for all devices supporting it, like it’s shown in the
 following screenshots.
 
-[![Physical
-ports](../../../../../assets/images/blog/2016-05-18/bonding1-1-300x232.png)](../../../../../assets/images/blog/2016-05-18/bonding1-1.png)
+{% include blog_img.md alt="Physical ports" src="bonding1-1-300x232.png"
+full_img="bonding1-1.png" %}
 
-[![More physical
-ports](../../../../../assets/images/blog/2016-05-18/bonding2-300x185.png)](../../../../../assets/images/blog/2016-05-18/bonding2.png)
+{% include blog_img.md alt="More physical ports" src="bonding2-300x185.png"
+full_img="bonding2.png" %}
 
 Additionally, the user will be alerted when trying to bond devices
 sharing the same physical port.
 
-![Bonding warning](../../../../../assets/images/blog/2016-05-18/warning-1.png)
+{% include blog_img.md alt="Bonding warning" src="warning-1.png" %}
 
 Last but not least, following the Boy Scout Rule (also known as
 [opportunistic refactoring][5]), we took the opportunity to fix some

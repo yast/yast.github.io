@@ -33,8 +33,8 @@ highlight them a little bit more, making them harder to overlook.
 The following screenshot shows the newly introduced confirmation dialog,
 presented before proceeding with installation.
 
-[![Preventing users to shoot their
-feet](../../../../../assets/images/blog/2016-12-02/warn-300x227.png)](../../../../../assets/images/blog/2016-12-02/warn.png)
+{% include blog_img.md alt="Preventing users to shoot their feet"
+src="warn-300x227.png" full_img="warn.png" %}
 
 ### Make DHCLIENT\_SET\_HOSTNAME configurable on a per-interface basis
 
@@ -48,8 +48,8 @@ something YaST has always allowed to do by just ticking a checkbox that
 used to be in the network configuration screen. See “Change Hostname via
 DHCP” below.
 
-[![The old network settings
-screen](../../../../../assets/images/blog/2016-12-02/old-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/old-network.png)
+{% include blog_img.md alt="The old network settings screen"
+src="old-network-300x225.png" full_img="old-network.png" %}
 
 That checkbox used to modify the system-wide variable
 `DHCLIENT_SET_HOSTNAME`, which was fine in scenarios in which only one
@@ -70,8 +70,8 @@ During this sprint we have fixed that and now the user interface offers
 the possibility of choosing which DHCP interface will be used to decide
 the hostname.
 
-[![The new network settings
-screen](../../../../../assets/images/blog/2016-12-02/new-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/new-network.png)
+{% include blog_img.md alt="The new network settings screen"
+src="new-network-300x225.png" full_img="new-network.png" %}
 
 Apart from choosing one of the existing interfaces, the new setting can
 also be set to ‘no’ or to ‘any’. In any case, YaST will always configure
@@ -83,8 +83,8 @@ possible to have an unpredictable configuration. Fortunately, those
 potentially problematic scenarios will be detected by YaST and reported
 to the user.
 
-[![Detecting dangerous scenarios in network
-settings](../../../../../assets/images/blog/2016-12-02/any-network-300x225.png)](../../../../../assets/images/blog/2016-12-02/any-network.png)
+{% include blog_img.md alt="Detecting dangerous scenarios in network settings"
+src="any-network-300x225.png" full_img="any-network.png" %}
 
 ### Partitioning in CASP
 
@@ -106,23 +106,23 @@ CASP the partitioning step will be skipped and the automatically
 calculated proposal will be simply displayed in the installation
 summary.
 
-[![The new CASP installation
-summary](../../../../../assets/images/blog/2016-12-02/casp-installation-summary-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-installation-summary.png)
+{% include blog_img.md alt="The new CASP installation summary"
+src="casp-installation-summary-300x186.png" full_img="casp-installation-summary.png" %}
 
 Clicking on the proposal will allow to re-target the installation to a
 different disk (or disks) in a similar way than the regular installer,
 but the options will be more limited. Again, no easy way to use LVM,
 encryption, separate home or any file system type other than Btrfs.
 
-[![Selecting the partitions in CASP, no proposal settings
-button](../../../../../assets/images/blog/2016-12-02/casp-select-partitions-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-select-partitions.png)
+{% include blog_img.md alt="Selecting the partitions in CASP, no proposal settings button"
+src="casp-select-partitions-300x186.png" full_img="casp-select-partitions.png" %}
 
 The expert partitioner is still available during CASP installation, but
 using it will show an extra warning, since it implies a much bigger risk
 than using it in a regular SUSE or openSUSE system.
 
-[![Expert partitioner warning in
-CASP](../../../../../assets/images/blog/2016-12-02/casp-expert-partitioner-warning-300x186.png)](../../../../../assets/images/blog/2016-12-02/casp-expert-partitioner-warning.png)
+{% include blog_img.md alt="Expert partitioner warning in CASP"
+src="casp-expert-partitioner-warning-300x186.png" full_img="casp-expert-partitioner-warning.png" %}
 
 ### Improved debugger integration
 
@@ -141,7 +141,7 @@ shortcut at all).
 
 After pressing the keyboard shortcut the debugger window will pop up:
 
-![New debugger integration](../../../../../assets/images/blog/2016-12-02/debugger.gif)
+{% include blog_img.md alt="New debugger integration" src="debugger.gif" %}
 
 ### Storage reimplementation: it’s alive!
 
@@ -194,8 +194,8 @@ advanced help displayed below. Since some terminal emulators could
 already use that combination, `ctrl+D F1` can also be used in the
 ncurses interface as an alternative.
 
-[![Advanced Hotkeys help
-dialog](../../../../../assets/images/blog/2016-12-02/hotkey-help-qt-300x268.png)](../../../../../assets/images/blog/2016-12-02/hotkey-help-qt.png)
+{% include blog_img.md alt="Advanced Hotkeys help dialog"
+src="hotkey-help-qt-300x268.png" full_img="hotkey-help-qt.png" %}
 
 ### Contributions keep coming!
 
@@ -213,7 +213,7 @@ For cloud guys out there retrieving logs of a failed installation
 a running a rsyslog server and you’ll be able to easily access your
 installation logs from there.
 
-![A drawing is worth a thousand words](../../../../../assets/images/blog/2016-12-02/dvw.png)
+{% include blog_img.md alt="A drawing is worth a thousand words" src="dvw.png" %}
 
 As a matter of fact, the newest Tumbleweed release allows us to specify
 the IP address of a remote server from the bootloader through the

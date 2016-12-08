@@ -37,8 +37,8 @@ From now on, you can access those unbeatable debugging capabilities
 during the installation. All you have to do is boot the installer with
 `Y2DEBUGGER=1`.
 
-[![Debugger during
-installation](../../../../../assets/images/blog/2016-06-07/debugger_session-300x225.png)](../../../../../assets/images/blog/2016-06-07/debugger_session.png)
+{% include blog_img.md alt="Debugger during installation"
+src="debugger_session-300x225.png" full_img="debugger_session.png" %}
 
 Moreover the same mechanism is also available when running YaST in a
 installed system. Just make sure the rubygem-byebug package is installed
@@ -69,8 +69,8 @@ In the description of [this pull request][4] you can see several
 screenshots of the new interface in several situations, with the new
 main dialog looking like this.
 
-[![New dialog for SSH keys
-importing](../../../../../assets/images/blog/2016-06-07/sshimport2-300x225.png)](../../../../../assets/images/blog/2016-06-07/sshimport2.png)
+{% include blog_img.md alt="New dialog for SSH keys importing"
+src="sshimport2-300x225.png" full_img="sshimport2.png" %}
 
 Iterative development rocks when you have involved users. Keep the
 constructive criticism!
@@ -131,8 +131,8 @@ was not obvious at first sight, it offered three options:
     registration code are used).
 3.  Skip the registration step.
 
-[![Old registration
-UI](../../../../../assets/images/blog/2016-06-07/reg-old-300x225.png)](../../../../../assets/images/blog/2016-06-07/reg-old.png)
+{% include blog_img.md alt="Old registration UI" src="reg-old-300x225.png"
+full_img="reg-old.png" %}
 
 Options 1 and 2 are mutually exclusive but, if you look at the
 interface, that fact is not clear. Moreover, we wanted this dialog to be
@@ -141,16 +141,15 @@ consistent with the new “Local User” one.
 The new dialog looks like this, with the three mutually exclusive
 options being directly presented to the user.
 
-[![New Registration
-UI](../../../../../assets/images/blog/2016-06-07/reg-new-300x225.png)](../../../../../assets/images/blog/2016-06-07/reg-new.png)
+{% include blog_img.md alt="New Registration UI" src="reg-new-300x225.png"
+full_img="reg-new.png" %}
 
 As always, redesigning a UI in YaST implies making sure it works nicely
 in the NCurses interface with screens with a resolution of 80 columns
 and 25 lines of text. Doesn’t it look nice (provided the reader has a
 geeky aesthetic sense)?
 
-![Text-based Registration
-UI](../../../../../assets/images/blog/2016-06-07/reg-curses.png)
+{% include blog_img.md alt="Text-based Registration UI" src="reg-curses.png" %}
 
 ### Progress in the new storage layer
 

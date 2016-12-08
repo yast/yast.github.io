@@ -45,8 +45,8 @@ For the time being we’re already working on some improvements:
 * Improving the high-contrast mode appearance. Below you can see a
   screenshot of the work in progress.
 
-[![First prototype of the new high contrast
-mode](../../../../../assets/images/blog/2016-10-07/lowvision-300x225.png)](../../../../../assets/images/blog/2016-10-07/lowvision.png)
+{% include blog_img.md alt="First prototype of the new high contrast mode"
+src="lowvision-300x225.png" full_img="lowvision.png" %}
 
 But we would like to hear from you. You can raise your voice in the
 already mentioned [thread at the opensuse-factory mailing list][3] or

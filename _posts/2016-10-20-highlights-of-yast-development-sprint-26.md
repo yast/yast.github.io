@@ -55,8 +55,8 @@ the installer can go one step further. As you can see on this animation,
 the changes are now committed to the disk, meaning the system is
 actually partitioned, formatted and installed.
 
-![Installation with the new storage
-stack](../../../../../assets/images/blog/2016-10-20/demo_commit_to_disk.gif)
+{% include blog_img.md alt="Installation with the new storage stack"
+src="demo_commit_to_disk.gif" %}
 
 The process is interrupted after installing the software, when trying to
 configure and install the bootloader. That was expected because
@@ -114,8 +114,8 @@ proceeding to installation) if some of the required packages is missing,
 as you can see in the screenshot below. We still allow the users to
 shoot their own feet if they insist, but now we warn them very clearly.
 
-[![Warning about de-selected Grub2
-package](../../../../../assets/images/blog/2016-10-20/softw-300x226.png)](../../../../../assets/images/blog/2016-10-20/softw.png)
+{% include blog_img.md alt="Warning about de-selected Grub2 package"
+src="softw-300x226.png" full_img="softw.png" %}
 
 ### Progress in the low-vision accessibility of the installer
 
@@ -123,8 +123,8 @@ During this sprint, we have been working to make the (open)SUSE
 installer accessible to people with low-vision impairment. We already
 [blogged about it][1] looking for feedback.
 
-[![One of the new color modes available in the
-installer](../../../../../assets/images/blog/2016-10-20/highc-300x225.png)](../../../../../assets/images/blog/2016-10-20/highc.png)
+{% include blog_img.md alt="One of the new color modes available in the installer"
+src="highc-300x225.png" full_img="highc.png" %}
 
 In a few days, some changes will land in Tumbleweed:
 
@@ -136,8 +136,8 @@ In a few days, some changes will land in Tumbleweed:
 * A [long-standing issue][9], which prevented to switch to high-contrast
   mode during installation (shift+F4), has been fixed.
 
-[![Style selection at the beginning of
-installation](../../../../../assets/images/blog/2016-10-20/linuxrc-300x225.png)](../../../../../assets/images/blog/2016-10-20/linuxrc.png)
+{% include blog_img.md alt="Style selection at the beginning of installation"
+src="linuxrc-300x225.png" full_img="linuxrc.png" %}
 
  Although we have made some progress, it is still an ongoing effort and
 we hope to release more improvements during the upcoming weeks.
@@ -151,8 +151,8 @@ crashes, requiring a manual fix of the bootloader configuration files.
 Now YaST correctly detects the situation and offers the option to
 propose a new configuration with correct devices.
 
-[![YaST bootloader fixing a broken
-configuration](../../../../../assets/images/blog/2016-10-20/bootl-300x170.png)](../../../../../assets/images/blog/2016-10-20/bootl.png)
+{% include blog_img.md alt="YaST bootloader fixing a broken configuration"
+src="bootl-300x170.png" full_img="bootl.png" %}
 
 ### Disable autorefresh by default in local media
 
@@ -189,8 +189,8 @@ summarize all the changes that have been done during this sprint. Like
 adapting old configuration files to the new conventions or unifying the
 UI to make it consistent with the one for managing bonding.
 
-[![Revamped YaST interface for handling
-bridges](../../../../../assets/images/blog/2016-10-20/bridge-300x225.png)](../../../../../assets/images/blog/2016-10-20/bridge.png)
+{% include blog_img.md alt="Revamped YaST interface for handling bridges"
+src="bridge-300x225.png" full_img="bridge.png" %}
 
 This revamp includes also quite some usability improvements:
 

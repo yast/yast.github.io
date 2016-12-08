@@ -34,8 +34,8 @@ installation proposal as read-only. These read-only modules then cannot
 be started from the installer and therefore their configuration is kept
 at the default initial state.
 
-[![Software and firewall proposals as
-read-only](../../../../../assets/images/blog/2016-11-10/readonly-300x225.png)](../../../../../assets/images/blog/2016-11-10/readonly.png)
+{% include blog_img.md alt="Software and firewall proposals as read-only"
+src="readonly-300x225.png" full_img="readonly.png" %}
 
 In this sprint we have implemented a basic support in the proposal
 framework, in the future we could improve the respective proposal
@@ -130,8 +130,8 @@ new storage layer. As you can see in the following screenshot, we
 succeeded and the installer can already propose a valid grub2 setup to
 boot an EFI system.
 
-[![EFI proposal with the storage-ng
-ISO](../../../../../assets/images/blog/2016-11-10/grub2efi-300x225.png)](../../../../../assets/images/blog/2016-11-10/grub2efi.png)
+{% include blog_img.md alt="EFI proposal with the storage-ng ISO"
+src="grub2efi-300x225.png" full_img="grub2efi.png" %}
 
 Does that mean that the testing ISO for the new storage stack is already
 fully installable? Unfortunately not. Why not, you ask? The reason is,
@@ -188,7 +188,8 @@ be realistic about releases that are already out of support and the
 limited human resources we have. We closed around 80 of those ancient
 bugs.
 
-[![no\_country\_for\_old\_bugs](../../../../../assets/images/blog/2016-11-10/no_country_for_old_bugs-300x169.jpg)](../../../../../assets/images/blog/2016-11-10/no_country_for_old_bugs.jpg)
+{% include blog_img.md alt="no\_country\_for\_old\_bugs"
+src="no_country_for_old_bugs-300x169.jpg" full_img="no_country_for_old_bugs.jpg" %}
 
 So overall, we cleaned up around one hundred bugs from our queue. Still
 a long way to have a bug-free YaST, but undoubtedly a step in the right

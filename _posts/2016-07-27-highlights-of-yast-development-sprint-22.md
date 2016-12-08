@@ -65,8 +65,8 @@ listing did not fit on lower resolution screens. Below you can see how
 the screen looked before the fix – checkbox widgets and their labels do
 not fit so their bottoms are cropped.
 
-[![Old interface with cropped
-extensions](../../../../../assets/images/blog/2016-07-27/bcropped-300x225.png)](../../../../../assets/images/blog/2016-07-27/bcropped.png)
+{% include blog_img.md alt="Old interface with cropped extensions"
+src="bcropped-300x225.png" full_img="bcropped.png" %}
 
 We have to make sure YaST works across different interfaces, including
 text-based ncurses. That limits the set of widgets we can use when
@@ -74,15 +74,15 @@ designing interfaces, so finding a solution to that kind of problems is
 not always easy. We also took the opportunity to add a filter for beta
 extensions, as you can see in the following screenshot.
 
-[![The beta extensions filter in
-action](../../../../../assets/images/blog/2016-07-27/bfiltered-300x225.png)](../../../../../assets/images/blog/2016-07-27/bfiltered.png)
+{% include blog_img.md alt="The beta extensions filter in action"
+src="bfiltered-300x225.png" full_img="bfiltered.png" %}
 
 And finally you can see how it looks like with all the extensions,
 including beta ones. Instead of cropping elements we now have a
 scroll-bar in the right.
 
-[![The new extensions UI in all its
-glory](../../../../../assets/images/blog/2016-07-27/bmodules-300x225.png)](../../../../../assets/images/blog/2016-07-27/bmodules.png)
+{% include blog_img.md alt="The new extensions UI in all its glory"
+src="bmodules-300x225.png" full_img="bmodules.png" %}
 
 ### Storage reimplementation: LVM unit testing
 
@@ -103,15 +103,15 @@ selection of packages. Before the fix introduced in this sprint, desktop
 related patterns were included for a [KVM server role][2] and, thus, the
 systemd target was graphical.
 
-[![The KVM Server role before the
-fix](../../../../../assets/images/blog/2016-07-27/bbadrole-300x234.png)](../../../../../assets/images/blog/2016-07-27/bbadrole.png)
+{% include blog_img.md alt="The KVM Server role before the fix"
+src="bbadrole-300x234.png" full_img="bbadrole.png" %}
 
 Now, only the 3 patterns explicitly intended for the KVM role are
 selected, with no desktop related patterns. Accordingly, the system
 boots to text mode.
 
-[![Fixed KVM Server
-role](../../../../../assets/images/blog/2016-07-27/bgoodrole-300x234.png)](../../../../../assets/images/blog/2016-07-27/bgoodrole.png)
+{% include blog_img.md alt="Fixed KVM Server role"
+src="bgoodrole-300x234.png" full_img="bgoodrole.png" %}
 
 ### Storage reimplementation: the future of booting
 

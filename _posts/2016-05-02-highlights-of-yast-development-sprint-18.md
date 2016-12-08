@@ -45,8 +45,8 @@ in every AutoYaST installation.
 There is not much to show in the UI, the log proves that the self update
 was really loaded.
 
-[![AutoYaST
-self-update](../../../../../assets/images/blog/2016-05-02/autoyast-self-update-300x225.png)](../../../../../assets/images/blog/2016-05-02/autoyast-self-update.png)
+{% include blog_img.md alt="AutoYaST self-update"
+src="autoyast-self-update-300x225.png" full_img="autoyast-self-update.png" %}
 
 You can find more details about specifying the URL in the profile and
 evaluating the self-update repository URL at the [documentation][4].
@@ -136,15 +136,15 @@ fixing some typos in the process. :wink:
 Two pictures are worth a thousand words, so here you can see how the
 dialog looked before the change
 
-[![BEFORE: boot password
-dialog](../../../../../assets/images/blog/2016-05-02/boot-password-old-300x202.png)](../../../../../assets/images/blog/2016-05-02/boot-password-old.png)
+{% include blog_img.md alt="BEFORE: boot password dialog"
+src="boot-password-old-300x202.png" full_img="boot-password-old.png" %}
 
 and below the new appearance, which adds more explanation to the
 password specification. Of course, the help text (not displayed in the
 screenshots) was also improved to reflect the changes.
 
-[![AFTER: boot password
-dialog](../../../../../assets/images/blog/2016-05-02/boot-password-new-300x203.png)](../../../../../assets/images/blog/2016-05-02/boot-password-new.png)
+{% include blog_img.md alt="AFTER: boot password dialog"
+src="boot-password-new-300x203.png" full_img="boot-password-new.png" %}
 
 ### Handling of default product patterns
 
@@ -229,7 +229,7 @@ situation, we improved the expert partitioner to detect those
 unsupported S/390 configurations and alert the user, like it’s shown in
 the screenshot below.
 
-![LDL DADS popup](../../../../../assets/images/blog/2016-05-02/ldl_popup.png)
+{% include blog_img.md alt="LDL DADS popup" src="ldl_popup.png" %}
 
 ### AutoYaST: moving network device renaming to first stage of installation
 

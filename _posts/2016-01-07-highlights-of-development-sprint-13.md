@@ -76,8 +76,8 @@ some things that are impossible with the current partitioner and even
 shows some nice graphs really useful for debugging and verifying the
 behavior of the library.
 
-[![Libstorage Tech Preview: action
-graph](../../../../../assets/images/blog/2016-01-07/action-graph-300x219.png)](../../../../../assets/images/blog/2016-01-07/action-graph.png)
+{% include blog_img.md alt="Libstorage Tech Preview: action graph"
+src="action-graph-300x219.png" full_img="action-graph.png" %}
 
 If you don’t mind to break your system using unsupported software, you
 can always fetch [the code][11] or [the packages][12].
@@ -99,7 +99,8 @@ Both goals were achieved, now you can install AutoYaST Integration Tests
 the repository and there is already an openQA instance directly running
 [the separately available tests][14].
 
-[![aytests-help](../../../../../assets/images/blog/2016-01-07/aytests-help-300x78.png)](../../../../../assets/images/blog/2016-01-07/aytests-help.png)
+{% include blog_img.md alt="aytests-help" src="aytests-help-300x78.png"
+full_img="aytests-help.png" %}
 
 ### Snapper development documentation
 

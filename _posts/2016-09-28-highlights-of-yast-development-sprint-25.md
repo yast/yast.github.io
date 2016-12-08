@@ -112,8 +112,8 @@ not there, it’s simply that we prefer to focus first on modifying all
 the installer steps to use the new stack (what will enable us to use
 openQA) before refining every screen to add all options there.
 
-[![The new partitioning
-proposal](../../../../../assets/images/blog/2016-09-28/sp-300x244.png)](../../../../../assets/images/blog/2016-09-28/sp.png)
+{% include blog_img.md alt="The new partitioning proposal"
+src="sp-300x244.png" full_img="sp.png" %}
 
 Right now the system works only in disks containing a MS-DOS style
 partition table and will always propose a partition-based (no LVM)
@@ -145,8 +145,8 @@ which gives us just another opportunity for blogging. So expect an
 upcoming post including interesting technical stuff and crazy graphs
 like this one.
 
-[![YaST dependencies
-graph](../../../../../assets/images/blog/2016-09-28/yast_deps_after-184x300.png)](../../../../../assets/images/blog/2016-09-28/yast_deps_after.png)
+{% include blog_img.md alt="YaST dependencies graph"
+src="yast_deps_after-184x300.png" full_img="yast_deps_after.png" %}
 
 ### Some adjustment for the installer in the LiveCDs
 
@@ -201,8 +201,7 @@ finish it in this sprint.
 As usual, it was harder than expected… but we made it and here is a
 short demo showing how it works and what you can do there:
 
-![The new UI designer in
-action](../../../../../assets/images/blog/2016-09-28/ui-designer.gif)
+{% include blog_img.md alt="The new UI designer in action" src="ui-designer.gif" %}
 
 The new tool is still far from being perfect. The most obvious missing
 feature is that the dialog is changed in place and you cannot save or
@@ -227,8 +226,8 @@ accept the action diagrams as screenshots. In that case, here you can
 see the sequence of actions performed by the library when creating an
 encrypted home volume.
 
-[![Creation of an encrypted home with
-libstorage-ng](../../../../../assets/images/blog/2016-09-28/create-293x300.png)](../../../../../assets/images/blog/2016-09-28/create.png)
+{% include blog_img.md alt="Creation of an encrypted home with libstorage-ng"
+src="create-293x300.png" full_img="create.png" %}
 
 ### Syncing keyboard layouts and console fonts in Leap and Tumbleweed
 

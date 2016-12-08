@@ -71,8 +71,8 @@ kind of stuff. Obviously, it also means that installer updates will be
 distributed using regular RPM repositories (instead of Driver Update
 Disks).
 
-![Self-Update installer - Unknown
-GPG](../../../../../assets/images/blog/2016-04-06/c7f519fc-fbda-11e5-9367-2e08dd186c1d.png)
+{% include blog_img.md alt="Self-Update installer - Unknown GPG"
+src="c7f519fc-fbda-11e5-9367-2e08dd186c1d.png" %}
 
 On the other hand, user’s driver updates (specified through [dud][2]
 option) will take precedence over installer updates. They will be
@@ -105,19 +105,20 @@ A button was added to “Add On Product” to avoid going back and forth
 just to setup some special configuration for some of our network
 interfaces.
 
-[![Add On
-Product](../../../../../assets/images/blog/2016-04-06/addon-300x225.png)](../../../../../assets/images/blog/2016-04-06/addon.png)
+{% include blog_img.md alt="Add On Product" src="addon-300x225.png"
+full_img="addon.png" %}
 
 In the “Disk Activation” step, the button was moved to the top-right
 corner to be consistent with other steps.
 
-[![Disk
-Activation](../../../../../assets/images/blog/2016-04-06/disk_activation-300x225.png)](../../../../../assets/images/blog/2016-04-06/disk_activation.png)
+{% include blog_img.md alt="Disk Activation" src="disk_activation-300x225.png"
+full_img="disk_activation.png" %}
 
 And to round off consistency we also adjusted the keyboard shortcut in
 the registration screen.
 
-[![Registration](../../../../../assets/images/blog/2016-04-06/registration-300x225.png)](../../../../../assets/images/blog/2016-04-06/registration.png)
+{% include blog_img.md alt="Registration" src="registration-300x225.png"
+full_img="registration.png" %}
 
 ### New storage library keeps evolving
 
