@@ -3,7 +3,7 @@ title: YaST
 description: powerful installation and configuration tool for Linux
 email: yast-devel@opensuse.org
 baseurl: ""
-url: "http://yast.github.io"
+url: "https://yast.github.io"
 
 defaults:
   -
