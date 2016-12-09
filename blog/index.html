@@ -1,0 +1,52 @@
+---
+layout: default
+title: The YaST Blog
+description: Here you can read the latest news in the YaST world!
+---
+
+<div class="home">
+  <div class="search">
+    <script>
+    (function() {
+        var cx = '017568272869505646892:we_v5ieohbg';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">
+          <span class="fa fa-calendar fa-fw"></span>
+          {{ post.date | date: "%b %-d, %Y" }}
+          {% if post.category %}
+            — <span class="category" title="Category"> <a href="{{ "/blog/categories/#" | append: post.category | slugize | relative_url }}">{{ post.category }}</a></span>
+          {% endif %}
+        </span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+
+        {% if post.description %}
+        <div class="post-description post-meta">
+          {{ post.description }}
+          <a href="{{ post.url | relative_url }}">Read&nbsp;more...</a>
+        </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include paging.html %}
+
+</div>

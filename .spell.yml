@@ -1,4 +1,16 @@
 ---
+check:
+  - '**/*.html'
+ignore:
+  # FIXME: we need to improve the HTML check, although aspell supports HTML
+  # it's not perfect and in some cases it checks also the embedded JS :-(
+  - 'blog/index.html'
+  - '_includes/paging.html'
+  - '_includes/head.html'
+  - '_layouts/post.html'
+  - '_site/**/*'
+  - 'blog/categories.html'
+  - 'blog/tags.html'
 dictionary:
 - abovementioned
 - accessor

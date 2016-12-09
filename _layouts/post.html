@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="meta-item">
+        <span class="fa fa-calendar fa-fw"></span>
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </span>
+
+      {% if page.author %}
+        <span class="meta-item">
+          <span class="fa fa-user fa-fw"></span>
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        </span>
+      {% endif %}
+
+      {% if page.category %}
+        <span class="meta-item">
+          <span class="fa fa-bookmark fa-fw"></span>
+          <span class="category" title="Category"><a href="{{site.baseurl}}/blog/categories/#{{ page.category|slugize }}">{{ page.category }}</a></span>
+        </span>
+      {% endif %}
+
+      {% if page.tags.size > 0 %}
+        <span class="meta-item">
+          <span class="fa fa-tags fa-fw"></span>
+          {% for tag in page.tags %}
+            <span class="tag"><a href="{{site.baseurl}}/blog/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %},{% endunless %}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.comments %}
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        // unique ID for Disqus to display the correct thread
+        this.page.url = "http://yast.opensuse.org{{ page.url | relative_url }}";
+      };
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = '//yast.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', + new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% endif %}
+
+</article>

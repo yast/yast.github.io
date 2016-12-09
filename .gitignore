@@ -1,4 +1,6 @@
-/site/
+/_site/
 /.bundle/
 /vendor/
+/.vendor/
 Gemfile.lock
+/.sass-cache/

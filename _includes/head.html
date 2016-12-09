@@ -2,24 +2,31 @@
     <meta charset="utf-8">
     <meta name="description" content="{{ site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/bootswatch.min.css">
+    <meta name="google-site-verification" content="jE8Y9nxigQtWGzV5FTI4tz3LwkMD2sHL87EISIxkw4E" />
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/bootstrap.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/font-awesome.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/bootswatch.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/stylesheets/main.css" | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    {% if page.layout == "post" %}
+      <!-- blog post specific metadata format -->
+      {% seo %}
+    {% else %}
     <script type="application/ld+json"> 
     {
       "@context" : "http://schema.org",
       "@type" : "SoftwareApplication",
       "name" : "YaST",
-      "image" : "http://yast.github.io/assets/images/yast-logo.png",
+      "image" : "{{ "/assets/images/yast-logo.png" | absolute_url }}",
       "publisher" : {
         "@type" : "Organization",
         "name" : "openSUSE"
       },
       "operatingSystem" : "Linux",
-      "screenshot" : "http://yast.github.io/assets/images/screenshots/YaST-Screenshot.png"
+      "screenshot" : "{{ "/assets/images/screenshots/YaST-Screenshot.png" | absolute_url }}"
     }
     </script>
+    {% endif %}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="assets/javascripts/html5shiv.js"></script>

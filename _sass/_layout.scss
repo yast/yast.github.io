@@ -1,0 +1,105 @@
+/**
+ * Page content
+ */
+
+.page-content {
+  padding: $spacing-unit 0;
+}
+
+.post-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  > li {
+    margin-bottom: $spacing-unit;
+    > h2 {
+      margin: 5px 0;
+    }
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color-dark;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+/**
+ * Posts
+ */
+
+.post-header {
+  margin-bottom: $spacing-unit;
+}
+
+// .post-title {
+//   font-size: 42px;
+//   line-height: 1;
+//   @include media-query($on-laptop) {
+//     font-size: 32px;
+//   }
+// }
+
+.post-content {
+  margin-bottom: $spacing-unit;
+  h2 {
+    font-size: 32px;
+    @include media-query($on-laptop) {
+      font-size: 28px;
+    }
+  }
+  h3 {
+    font-size: 26px;
+    @include media-query($on-laptop) {
+      font-size: 22px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    @include media-query($on-laptop) {
+      font-size: 18px;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+.post-description {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.meta-item {
+  margin-right: 10px;
+}
+
+/* tag/category cloud */
+.tag-cloud {
+  line-height: normal;
+  margin-bottom: 50px;
+  li {
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+  }
+}
+
+.tag-group {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.tag-link {
+  margin-left: 40px;
+}
+
+/* search */
+.search {
+  float: right;
+  max-width: 40%;
+}
