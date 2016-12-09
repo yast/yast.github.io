@@ -8,22 +8,25 @@ $facebook-button-color: #3b5999;
 // https://business.pinterest.com/en/brand-guidelines
 $pinterest-button-color: #bd081c;
 
+#content-row {
+
 .sharing {
   text-align: center;
-  margin: 4em 0 1em 0;
+  margin: 3em 0 1em;
 }
 
 .sharing-header {
   font-style: italic;
-  font-size: 13px;
-  margin: 10px;
+  font-size: $small-font-size;
+  margin-bottom: 1em;
 }
 
 .sharing-list {
-  margin: 0;
+  padding: 0;
   li {
-    display: inline;
+    display: inline-block;
     list-style: none;
+    line-height: 3em;
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -31,54 +34,39 @@ $pinterest-button-color: #bd081c;
 }
 
 .sharing-button {
-  font-size: 13px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  &:hover {
-    text-decoration: none;
-  }
+  font-size: $small-font-size;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
 }
 
 .google-button {
   background-color: $google-button;
-  color: white;
   &:hover {
     background-color: lighten($google-button, 10%);
-  }
-  &:visited {
-    color: white;
   }
 }
 
 .twitter-button {
   background-color: $twitter-button-color;
-  color: white;
   &:hover {
     background-color: lighten($twitter-button-color, 10%);
-  }
-  &:visited {
-    color: white;
   }
 }
 
 .facebook-button {
   background-color: $facebook-button-color;
-  color: white;
   &:hover {
     background-color: lighten($facebook-button-color, 10%);
-  }
-  &:visited {
-    color: white;
   }
 }
 
 .pinterest-button {
   background-color: $pinterest-button-color;
-  color: white;
   &:hover {
     background-color: lighten($pinterest-button-color, 10%);
   }
-  &:visited {
-    color: white;
-  }
+}
+
 }
