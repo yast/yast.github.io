@@ -7,6 +7,7 @@ ignore:
   - 'blog/index.html'
   - '_includes/paging.html'
   - '_includes/head.html'
+  - '_includes/sharing.html'
   - '_layouts/post.html'
   - '_site/**/*'
   - 'blog/categories.html'
