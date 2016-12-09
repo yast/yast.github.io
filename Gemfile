@@ -5,5 +5,4 @@ gem "yast-rake", ">= 0.2.1"
 gem "raspell"
 # coloring misspelled words
 gem "rainbow"
-gem "github-pages", ">=106"
-
+gem "github-pages"

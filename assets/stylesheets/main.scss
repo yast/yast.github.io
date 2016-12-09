@@ -3,31 +3,20 @@
 ---
 @charset "utf-8";
 
-$base-font-size:   16px;
-// normal
-$base-font-weight: 400;
+$base-font-size:   15px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$title-color:      white;
-
-$base-color:       #8CD4FF;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$brand-color:      #35b9ab;
+$brand-color2:     #173f4f;
 
-$brand-color:      #0085C7;
-$brand-color-light1:  lighten($brand-color, 40%);
-$brand-color-light2:  lighten($brand-color, 50%);
+$content-link-color: #0085C7;
+$content-link-color-light: lighten($content-link-color, 10%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 20%);
-
-// Width of the content area
-$content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -47,15 +36,12 @@ $footer-height:     130px;
     }
 }
 
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
-}
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "layout",
         "pagination",
-        "sharing"
-        // FIXME: disabled for now
-        //"syntax-highlighting"
+        "sharing",
+        "search",
+        "disqus",
+        "syntax-highlighting"
 ;

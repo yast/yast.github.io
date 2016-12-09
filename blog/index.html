@@ -29,7 +29,7 @@ description: Here you can read the latest news in the YaST world!
           <span class="fa fa-calendar fa-fw"></span>
           {{ post.date | date: "%b %-d, %Y" }}
           {% if post.category %}
-            — <span class="category" title="Category"> <a href="{{ "/blog/categories/#" | append: post.category | slugize | relative_url }}">{{ post.category }}</a></span>
+            — <span class="category" title="Category"> <a href="{{ "/blog/categories#" | append: post.category | slugize | relative_url }}">{{ post.category }}</a></span>
           {% endif %}
         </span>
 
