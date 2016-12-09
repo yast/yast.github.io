@@ -1,0 +1,8 @@
+
+#disqus_thread {
+  margin-top: $spacing-unit;
+  padding: $spacing-unit $spacing-unit*2 0;
+  @include media-query($on-palm) {
+    padding: $spacing-unit 0;
+  }
+}

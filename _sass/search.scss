@@ -1,0 +1,20 @@
+// custom search
+.search {
+  float: right;
+  width: 40%;
+  @include media-query($on-laptop) {
+    width: 50%;
+  }
+  @include media-query($on-palm) {
+    width: 100%;
+  }
+}
+
+// override the values from bootstrap.min.css, they break the
+// Google custom search form
+.gsc-input {
+  line-height: normal;
+}
+.gsc-search-button {
+  box-sizing: content-box;
+}

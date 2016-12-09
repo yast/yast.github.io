@@ -1,37 +1,39 @@
-.pagination-box {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
 
-.pagination-item {
-  &:not(:last-child) {
-    margin-right: 10px;
+// needed to override the defaults...
+#content-row {
+  .pagination-box {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
-}
 
-.page-num-current, .page-num-active {
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  font-size:15px;
-  color:#fff;
-  line-height:30px;
-  text-align:center;
-  background:#000;
-  display: inline-block;
-}
+  .pagination-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 
-.page-num-current {
-  // border-style: solid;
-  border-color: $brand-color;
-}
+  .page-num-current, .page-num-active {
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    font-size:20px;
+    font-weight: bold;
+    line-height:30px;
+    text-align:center;
+    display: inline-block;
+    color: white;
+  }
 
-.page-num-active {
-  text-decoration: none;
-  background-color: $brand-color;
-  color: white;
-  &:hover {
-    background-color: lighten($brand-color, 10%);
+  .page-num-current {
+    background-color: $brand-color2;
+  }
+
+  .page-num-active {
+    text-decoration: none;
+    background-color: $content-link-color;
+    &:hover {
+      background-color: $content-link-color-light;
+    }
   }
 }

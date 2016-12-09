@@ -2,13 +2,6 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: $brand-color-light2;
-    // @extend %vertical-rhythm;
-
-    .highlighter-rouge & {
-      background: $brand-color-light2;
-      border-color: lighten($brand-color, 10%);
-    }
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error

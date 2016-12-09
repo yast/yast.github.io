@@ -22,6 +22,10 @@ kramdown:
   # no hard line endings, allow reformatting paragraphs
   hard_wrap: false
 
+sass:
+  # minify the CSS file
+  style: compressed
+
 # pagination config for the blog index page
 paginate: 8
 paginate_path: "/blog/page:num/"
