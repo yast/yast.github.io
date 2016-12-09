@@ -122,7 +122,7 @@ long, so expect more news during the first days of February.
 [7]: https://github.com/config-files-api/config_files_api
 [8]: https://github.com/config-files-api/config_files_api_grub2
 [9]: https://github.com/openSUSE/libstorage-bgl-eval
-[10]: https://build.opensuse.org/package/show/home:aschnell:storage-redesign/libstorage
+[10]: https://build.opensuse.org/project/show/home:aschnell:storage-redesign
 [11]: https://github.com/aschnell/yast-storage-ng
 [12]: https://build.opensuse.org/package/show/home:aschnell:storage-redesign/yast2-storage-ng
 [13]: https://github.com/yast/autoyast-integration-test

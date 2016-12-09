@@ -284,7 +284,7 @@ about three weeks. See you then!
 [11]: https://en.wikipedia.org/wiki/BIOS_boot_partition
 [12]: http://snapper.io/
 [13]: https://github.com/yast/yast-packager/wiki/Selecting-the-default-product-patterns
-[14]: https://github.com/yast/yast-storage-ng/tree/master/src/lib/storage/boot_requirements_strategies
+[14]: https://github.com/yast/yast-storage-ng/tree/master/src/lib/y2storage/boot_requirements_strategies
 [15]: https://github.com/yast/yast-storage-ng/blob/master/doc/boot-partition.md
 [16]: http://paste.opensuse.org/78272293
 [17]: http://rhinstaller.github.io/blivet/blog/2015/06/s390/

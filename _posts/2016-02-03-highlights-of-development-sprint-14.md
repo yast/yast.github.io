@@ -120,7 +120,7 @@ usage report.
 full_img="fixed-disk-usage.png" %}
 
 To ensure we have no regressions, the YaST team also contributed a new
-test to openQA. See it [in action][22].
+test to openQA.
 
 ### Cleanup dependencies in YaST systemd services
 
@@ -171,5 +171,4 @@ three weeks!
 [19]: https://build.suse.de/package/show/Devel:YaST:Head/libstorage
 [20]: https://build.suse.de/package/show/SUSE:SLE-12-SP2:GA/snapper
 [21]: https://build.suse.de/package/show/SUSE:SLE-12-SP2:GA/libstorage
-[22]: https://openqa.opensuse.org/tests/117876/modules/yast2_i/steps/7
 [23]: https://github.com/yast/yast-installation/pull/332/files
