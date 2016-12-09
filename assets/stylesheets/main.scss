@@ -21,7 +21,7 @@ $grey-color-dark:  darken($grey-color, 20%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-$footer-height:     130px;
+$footer-height:     70px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -38,6 +38,7 @@ $footer-height:     130px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "sticky_footer",
         "layout",
         "pagination",
         "sharing",
