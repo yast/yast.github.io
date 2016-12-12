@@ -37,7 +37,6 @@ gems:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-coffeescript
   - jemoji
 
 # exclude some files
