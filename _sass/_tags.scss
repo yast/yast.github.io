@@ -1,0 +1,26 @@
+/* tag/category cloud */
+.tag-cloud {
+  line-height: normal;
+  margin-bottom: 50px;
+  padding-left: 0;
+  margin-left: 20%;
+  width: 60%;
+  @include media-query($on-laptop) {
+    width: 100%;
+    margin-left: 0;
+  }
+  li {
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+  }
+}
+
+.tag-group {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.tag-link {
+  margin-left: 40px;
+}
