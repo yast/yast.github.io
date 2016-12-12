@@ -20,7 +20,7 @@ layout: default
       {% if page.category %}
         <span class="meta-item">
           <span class="fa fa-bookmark fa-fw"></span>
-          <span class="category" title="Category"><a href="{{site.baseurl}}/blog/categories#{{ page.category|slugize }}">{{ page.category }}</a></span>
+          <span class="category" title="Category"><a href="{{site.baseurl}}/blog/categories#{{ page.category | slugize | uri_escape }}">{{ page.category }}</a></span>
         </span>
       {% endif %}
 
@@ -28,7 +28,7 @@ layout: default
         <span class="meta-item">
           <span class="fa fa-tags fa-fw"></span>
           {% for tag in page.tags %}
-            <span class="tag"><a href="{{site.baseurl}}/blog/tags#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %},{% endunless %}</span>
+            <span class="tag"><a href="{{site.baseurl}}/blog/tags#{{ tag | slugize | uri_escape }}">{{tag}}</a>{% unless forloop.last %},{% endunless %}</span>
           {% endfor %}
         </span>
       {% endif %}
