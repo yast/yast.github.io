@@ -81,3 +81,9 @@
   margin-right: 10px;
 }
 
+// mark required form fields
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+  padding-left: 2px;
+}
