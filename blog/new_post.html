@@ -1,0 +1,71 @@
+---
+layout: default
+title: New Blog Post
+description: Create template for a new blog post
+sitemap: false
+---
+
+<h2>New Post</h2>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <p>Here you can generate a template for a new blog post.
+      You can change all values or add new ones later in the generated template
+      if needed.
+    </p>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-6 col-xs-12">
+    <form>
+      <div class="form-group required" id="post_title_group">
+        <label class="control-label" for="post_title">Post Title</label>
+        <input type="text" class="form-control" id="post_title"
+          placeholder="e.g. Highlights of YaST development sprint X">
+      </div>
+
+      <div class="form-group">
+        <label for="post_description">Description</label>
+        <textarea placeholder="Short description displayed at the blog index page"
+          id="post_description" class="form-control" rows="4"></textarea>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <label for="post_category">Category</label>
+          <input list="categories_list" class="form-control" id="post_category">
+          <datalist id="categories_list">
+            {% for tag in site.categories %}
+              {% capture tag_name %}{{ tag | first }}{% endcapture %}
+              <option value="{{ tag_name }}">
+            {% endfor %}
+          </datalist>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <label for="post_tags">Tags</label>
+          <select multiple class="form-control" id="post_tags" size="8">
+            {% for tag in site.tags %}
+              {% capture tag_name %}{{ tag | first }}{% endcapture %}
+              <option>{{ tag_name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input id="comments" type="checkbox" checked="checked">
+          Enable comments via Disqus
+        </label>
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-default" id="create_button">Generate Template</button>
+    </form>
+  </div>
+</div>
+
+<script defer src="{{ "/assets/javascripts/new_post.js" | relative_url }}"></script>
+

@@ -7,6 +7,9 @@
           <li><a href="http://build.opensuse.org" target="_blank">Built by OBS</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">License</a></li>
+          {% if page.layout == "post" or page.url == "/blog/" %}
+          <li><a href="{{ "/blog/new_post" | relative_url }}">New Blog Post</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>
