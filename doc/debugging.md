@@ -135,8 +135,7 @@ See [more details](#debugger_shortcut) in the section above.
 
 #### <a name="debugger_shortcut_systems"></a> Supported Systems
 
-<!-- FIXME: update the version when the yast2-ruby-bindings package is released -->
-- openSUSE Tumbleweed 201611XX or newer
+- openSUSE Tumbleweed 20161117 or newer
 
 ### Using the Integrated Debugger
 
