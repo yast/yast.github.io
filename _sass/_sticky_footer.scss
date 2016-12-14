@@ -2,12 +2,11 @@
 
 html, body {
   height: 100%;
-  line-height: normal;
 }
 
 .page-wrap {
   min-height: 100%;
-  margin-bottom: -$footer-height; 
+  margin-bottom: -$footer-height;
 }
 
 .page-wrap:after {
@@ -16,7 +15,7 @@ html, body {
 }
 
 .site-footer, .page-wrap:after {
-  height: $footer-height; 
+  height: $footer-height;
 }
 
 // override the defaults

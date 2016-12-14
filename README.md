@@ -36,7 +36,7 @@ you need to install ```aspell``` first:
 
 Then install the ruby bindings for aspell:
 
-    $ bundle install --path vendor/bundle
+    $ bundle install --path .vendor/bundle
 
 To run the spell checker run:
 
