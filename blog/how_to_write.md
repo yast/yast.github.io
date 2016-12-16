@@ -24,7 +24,12 @@ There are basically two ways how to write a new blog post:
 - Clone the [Git repository](https://github.com/yast/yast.github.io) locally
   and create a new branch
 - Create a new Markdown file in the `_posts` directory - follow the same file
-  naming schema and use a similar YAML header like in the other posts
+  naming schema and use a similar YAML header like in the other posts. (It
+  is recommened to generate the post template online, see the previous section.)
+  The YAML front matter values are partially documented
+  [here](https://jekyllrb.com/docs/frontmatter/) and
+  [here](http://jekyll.tips/jekyll-casts/front-matter/) and even
+  [here](https://github.com/jekyll/jekyll-sitemap#exclusions).
 - Add images to the `/assets/images/blog/<YYYY>-<MM>-<DD>` subdirectory
 - Hint: If you use the [Atom](https://atom.io/) editor you can use the
   [live preview feature](https://www.youtube.com/watch?v=5fZ9SlUoOqQ) or
@@ -48,8 +53,10 @@ There are basically two ways how to write a new blog post:
 
 ## Documentation
 
-The site uses Jekyll framework for generating the pages and Kramdown (a Markdown
-flavor) for the blog posts.
+The site uses the Jekyll framework for generating the pages and Kramdown
+syntax (a Markdown flavor) for the blog posts.
+
+Here you can find the relevant documentation:
 
 - The [Kramdown quick reference](https://kramdown.gettalong.org/quickref.html)
 - The [Kramdown documentation](https://kramdown.gettalong.org/syntax.html)
@@ -58,9 +65,9 @@ flavor) for the blog posts.
 
 ## Images
 
-There is a `blog_img.md` include file which contains a helper for rendering
-local images. For external images use the usual Markdown syntax, see
-[below](#external-images).
+There is a [`blog_img.md`](https://github.com/yast/yast.github.io/blob/master/_includes/blog_img.md)
+include file which contains a helper for rendering the local images. For the
+external images use the usual Markdown syntax, see [below](#external-images).
 
 ### Internal Images
 
@@ -71,20 +78,20 @@ should be the same as in the post file name.
 The helper supports several use cases:
 
 - Simple image with an alt text, the CSS style sets maximum width to 100%
-  so the image does not overflow the text column
+  so the image does not overflow the text column:
 
 ```liquid
 {% raw %}{% include blog_img.md alt="Alt text" src="file.png" %}{% endraw %}
 ```
 
-- Scaled down image (thumbnail size), on click displays the original image
-  in full size
+- Scaled down image (thumbnail size), clicking the small image displays
+the original full size image:
 
 ```liquid
 {% raw %}{% include blog_img.md alt="Alt text" src="file.png" attr=".thumbnail" %}{% endraw %}
 ```
 
-- Image with a separate thumbnail version which is displayed on click
+- Image with a separate thumbnail version which is displayed on click:
 
 ```liquid
 {% raw %}{% include blog_img.md alt="Alt text" src="file_small.png" full_img="file.png" %}{% endraw %}
@@ -100,7 +107,9 @@ Kramdown attribute extension:
 ![Alt](http://example.com/img.jpg){: .thumbnail}
 ```
 
-## Links to the Older posts
+See more details in the [documentation](https://kramdown.gettalong.org/syntax.html#images).
+
+## Links to the Older Posts
 
 Build the link URL using the `post_url` helper followed by post file name
 without the `.md` suffix.
@@ -109,7 +118,7 @@ without the `.md` suffix.
 {% raw %}[old post link]({{ site.baseurl }}{% post_url 2015-12-15-let-s-blog-about-yast %}){% endraw %}
 ```
 
-## Syntax highlighting
+## Syntax Highlighting
 
 Use the usual fenced code blocks just like at GitHub:
 
@@ -123,7 +132,7 @@ is rendered as
 puts "Hello world!"
 ```
 
-or another example
+or this example
 
     ```xml
     <foo bar="yes">baz</foo>
@@ -145,7 +154,7 @@ page for the complete list.
 
 # Rendering the Pages Locally
 
-Install Jekyl and the needed libraries using `bundler`:
+Install Jekyll and the needed libraries using `bundler`:
 
     bundle install --path .vendor/bundle
 
