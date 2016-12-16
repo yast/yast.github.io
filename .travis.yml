@@ -1,9 +1,27 @@
+
+# no need for sudo, use the container based build for faster boot
+sudo: false
+
 language: ruby
 rvm:
   - 2.1
+
+addons:
+  apt:
+    packages:
+    - libaspell-dev
+    - aspell-en
+    - npm
+
+env:
+  # nokogiri speed up: use the system libxml2, do not compile the bundled version
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=1
+
 before_install:
-  - sudo apt-get update -qq
-  # install aspell headers and the English dictionary
-  - sudo apt-get install --no-install-recommends libaspell-dev aspell-en
+  - npm install surge
+
 script:
   - bundle exec rake
+  - bundle exec jekyll build
+  - bundle exec ./.travis_deploy.rb
+

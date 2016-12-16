@@ -14,6 +14,8 @@ ignore:
   - 'blog/categories.html'
   - 'blog/tags.html'
   - 'blog/new_post.html'
+  - 'vendor/**/*.html'
+  - 'node_modules/**/*.html'
 dictionary:
 - abovementioned
 - accessor
