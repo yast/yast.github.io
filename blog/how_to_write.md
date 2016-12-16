@@ -91,7 +91,7 @@ the original full size image:
 {% raw %}{% include blog_img.md alt="Alt text" src="file.png" attr=".thumbnail" %}{% endraw %}
 ```
 
-- Image with a separate thumbnail version which is displayed on click:
+- Image that will be displayed when clicking on a explicitly provided thumbnail:
 
 ```liquid
 {% raw %}{% include blog_img.md alt="Alt text" src="file_small.png" full_img="file.png" %}{% endraw %}
