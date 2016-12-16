@@ -25,7 +25,7 @@ There are basically two ways how to write a new blog post:
   and create a new branch
 - Create a new Markdown file in the `_posts` directory - follow the same file
   naming schema and use a similar YAML header like in the other posts. (It
-  is recommened to generate the post template online, see the previous section.)
+  is recommended to generate the post template online, see the previous section.)
   The YAML front matter values are partially documented
   [here](https://jekyllrb.com/docs/frontmatter/) and
   [here](http://jekyll.tips/jekyll-casts/front-matter/) and even
