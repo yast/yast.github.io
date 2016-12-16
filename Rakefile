@@ -17,4 +17,3 @@ Yast::Tasks.configuration do |conf|
 end
 
 task default: [:"check:spelling"]
-
