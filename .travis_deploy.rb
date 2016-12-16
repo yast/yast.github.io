@@ -19,9 +19,10 @@ end
 
 # create an Octokit client for communication with GitHub
 def client
-  client = Octokit::Client.new(:access_token => ENV["GITHUB_ACCESS_TOKEN"])
-  client.user.login
-  client
+  return @client if @client
+  @client = Octokit::Client.new(:access_token => ENV["GITHUB_ACCESS_TOKEN"])
+  @client.user.login
+  @client
 end
 
 def pull_request?
@@ -31,7 +32,7 @@ end
 # make an unique domain name for the preview, based on the branch name or
 # the pull request number
 def domain
-  return @target_domain if @target_domain
+  return @domain if @domain
 
   repo_user = ENV["TRAVIS_REPO_SLUG"].split("/", 2).first
 
@@ -41,8 +42,6 @@ def domain
   else
     repo_user << "-"
   end
-
-
 
   if pull_request?
     domain_id = "pull-#{ENV["TRAVIS_PULL_REQUEST"]}"
@@ -55,7 +54,7 @@ def domain
   domain_id.gsub!(/[^a-z0-9]/, "-")
   domain_id.gsub!(/\.\//, "-")
 
-  @target_domain = "yast-#{domain_id}.surge.sh"
+  @domain = "yast-#{domain_id}.surge.sh"
 end
 
 # full target preview URL
