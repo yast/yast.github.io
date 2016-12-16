@@ -1,3 +1,5 @@
+---
+---
 
 // create a template for a new post at GitHub
 function create_new_post()
@@ -33,12 +35,8 @@ function create_new_post()
       '',
       'Your new post here. Adapt the YAML header as needed.',
       '',
-      '## Images',
-      '',
-      'Upload the post images to the /assets/images/blog/' + date_str + ' subdirectory.',
-      '',
-      'Include them using this helper:',
-      '{% include blog_img.md alt="Alt text" src="file.png" %}',
+      'See the documentation at {{ site.url }}{{ site.baseurl }}/blog/how_to_write',
+      'for more details.',
       ''
     ].join('\n');
 
