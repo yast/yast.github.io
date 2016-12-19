@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contacts
+title: Contact
 description: Contacting the YaST Team
 ---
 
