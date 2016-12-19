@@ -1,5 +1,8 @@
-YaST Contribution Guidelines
-============================
+---
+layout: default
+title: YaST Contribution Guidelines
+description: How to Contribute
+---
 
 YaST is an open source project and as such it welcomes all kinds of
 contributions. If you decide to contribute, please follow these guidelines to
