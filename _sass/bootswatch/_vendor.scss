@@ -1,5 +1,13 @@
 /* Begin Vendor Additions*/
 
+body {
+    padding-top: 50px;
+}
+
+.page-header h1 {
+    font-size: 4em
+}
+
 .navbar-fixed-top { 
   border-bottom: 1px solid #001f2c !important;
 }
