@@ -52,7 +52,7 @@
 #content-row {
   padding: 20px 0px 60px;
   border-top: 1px solid #fff;
-  //.box-shadow( 0 -1px 3px rgba(0,0,0,.25))
+  @include box-shadow( 0 -1px 3px rgba(0,0,0,.25))
 }
 
 .main-article {
@@ -75,7 +75,7 @@
   max-width: 100%;
   height: auto;
   border: 1px solid $gray;
-  //.box-shadow( 0 1px 3px rgba(0,0,0,.25))
+  @include box-shadow( 0 1px 3px rgba(0,0,0,.25))
 }
 
 .main-article h2 {
@@ -96,6 +96,8 @@ footer {
 .navbar-brand {
   font-family: "Doppio One";
   font-size: 24px;
+  line-height: 21px;
+  padding: 18.5px 15px 20.5px;
 }
 
 h1, h2, h3 {
