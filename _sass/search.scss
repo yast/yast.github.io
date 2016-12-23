@@ -2,10 +2,10 @@
 .search {
   float: right;
   width: 40%;
-  @include media-query($on-laptop) {
+  @media (min-width: $screen-md-min) {
     width: 50%;
   }
-  @include media-query($on-palm) {
+  @media (min-width: $screen-sm-min) {
     width: 100%;
   }
 }

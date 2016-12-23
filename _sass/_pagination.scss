@@ -22,18 +22,15 @@
     line-height:30px;
     text-align:center;
     display: inline-block;
-    color: white;
+    color: $btn-info-color;
   }
 
   .page-num-current {
-    background-color: $brand-color2;
+    background-color: $brand-primary;
   }
 
   .page-num-active {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
     text-decoration: none;
-    background-color: $content-link-color;
-    &:hover {
-      background-color: $content-link-color-light;
-    }
   }
 }

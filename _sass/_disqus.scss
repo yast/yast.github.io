@@ -2,7 +2,7 @@
 #disqus_thread {
   margin-top: $spacing-unit;
   padding: $spacing-unit $spacing-unit*2 0;
-  @include media-query($on-palm) {
+  @media(min-width: $screen-sm-min) {
     padding: $spacing-unit 0;
   }
 }
