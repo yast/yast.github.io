@@ -2,10 +2,10 @@
 .search {
   float: right;
   width: 40%;
-  @media (min-width: $screen-md-min) {
+  @media (max-width: $screen-sm-min) {
     width: 50%;
   }
-  @media (min-width: $screen-sm-min) {
+  @media (max-width: $screen-xs-min) {
     width: 100%;
   }
 }

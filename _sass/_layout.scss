@@ -1,7 +1,7 @@
 
 // smaller page header on mobiles
 .main-header h1 {
-  @media (min-width: $screen-sm-min) {
+  @media (max-width: $screen-sm-min) {
     font-size: 2em;
     letter-spacing: 0 !important;
   }
@@ -52,19 +52,19 @@
   margin-bottom: $spacing-unit;
   h2 {
     font-size: 32px;
-    @media (min-width: $screen-md-min) {
+    @media (max-width: $screen-md-min) {
       font-size: 28px;
     }
   }
   h3 {
     font-size: 26px;
-    @media (min-width: $screen-md-min) {
+    @media (max-width: $screen-md-min) {
       font-size: 22px;
     }
   }
   h4 {
     font-size: 20px;
-    @media (min-width: $screen-md-min) {
+    @media (max-width: $screen-md-min) {
       font-size: 18px;
     }
   }
