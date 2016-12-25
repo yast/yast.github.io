@@ -5,7 +5,10 @@ body {
 }
 
 .page-header h1 {
-    font-size: 4em
+    font-size: 4em;
+    @media (max-width: $screen-sm-max) {
+      font-size: 3em;
+    }
 }
 
 footer {
@@ -24,7 +27,7 @@ footer p {
 }
 
 
-.navbar-fixed-top { 
+.navbar-fixed-top {
   border-bottom: 1px solid #001f2c !important;
 }
 
@@ -39,13 +42,19 @@ footer p {
 
 .masthead h1  {
   letter-spacing: -4px !important;
+  @media (max-width: $screen-sm-max) {
+    letter-spacing: normal;
+  }
   margin-top: 15px;
   color: white !important;
   text-shadow: $brand-primary 1px 1px 3px;
 }
 
-.masthead p { 
-  margin: 15px 80px 25px; 
+.masthead p {
+  margin: 15px 80px 25px;
+  @media (max-width: $screen-sm-max) {
+    margin: 10px 30px 20px;
+  }
   color: white;
   line-height: 1.2;
   text-shadow: $brand-primary 1px 1px 3px;
@@ -62,11 +71,14 @@ footer p {
   text-shadow: $brand-primary 1px 1px 3px;
 }
 
-.main-header p { 
+.main-header p {
   color: white;
   text-shadow: $brand-primary 1px 1px 3px;
 }
-.lead { margin-bottom: 0px;}
+
+.lead {
+  margin-bottom: 0px;
+}
 
 #masthead-row {
   background-color: $brand-success;
@@ -89,8 +101,8 @@ footer p {
 }
 
 .main-article p {
-  line-height: 1.2; 
-  margin-top: 20px; 
+  line-height: 1.2;
+  margin-top: 20px;
   margin-right: 40px
 }
 
@@ -105,7 +117,6 @@ footer p {
 .main-article h2 {
   margin-bottom: 40px;
 }
-
 
 .docs h3  {
   margin-top: 40px;
@@ -125,7 +136,7 @@ footer {
 }
 
 h1, h2, h3 {
-  font-family: "Doppio One" ; 
+  font-family: "Doppio One" ;
 }
 
 h3 .glyphicon {
