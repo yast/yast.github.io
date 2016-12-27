@@ -20,7 +20,5 @@ html, body {
 
 // override the defaults
 #content-row {
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  @include box-shadow(none);
 }
-
