@@ -1,21 +1,24 @@
 
 <script defer src="{{ "/assets/javascripts/tags.js" | relative_url }}"></script>
 
-<div class="tag-list">
 <h1 id="all_tags"><span class="fa fa-{{ include.fa_icon_header }} fa-fw"></span> {{ include.title }}</h1>
-<ul class="tag-cloud">
-{% assign tags = include.tags | sort %}
-{% for tag in tags %}
-  <li class="tag-cloud-item" style="font-size: {{ tag | last | size | times: 100 | divided_by: include.tags.size | plus: 80  }}%">
-    <a href="#{{ tag | first | uri_escape }}" class="tag-filter-link">{{ tag | first }}</a>
-  </li>
-{% endfor %}
-</ul>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <ul class="tag-cloud">
+    {% assign tags = include.tags | sort %}
+    {% for tag in tags %}
+      <li class="tag-cloud-item" style="font-size: {{ tag | last | size | times: 100 | divided_by: include.tags.size | plus: 80  }}%">
+        <a href="#{{ tag | first | uri_escape }}" class="tag-filter-link">{{ tag | first }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
 </div>
 
-<h1>{{ include.label }}</h1>
-
-<div class="tag-list">
+<div class="row">
+<div class="col-xs-12">
+  <h1>{{ include.label }}</h1>
 {% for tag in tags %}
   {% capture tag_name %}{{ tag | first }}{% endcapture %}
   <div class="tag-group" id="{{ tag_name | uri_escape }}">
@@ -27,5 +30,6 @@
     {% endfor %}
   </div>
 {% endfor %}
+</div>
 </div>
 

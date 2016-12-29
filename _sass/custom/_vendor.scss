@@ -11,22 +11,6 @@ body {
     }
 }
 
-footer {
-    margin: 5em 0
-}
-
-footer li {
-    float: left;
-    margin-right: 1.5em;
-    margin-bottom: 1.5em
-}
-
-footer p {
-    clear: left;
-    margin-bottom: 0
-}
-
-
 .navbar-fixed-top {
   border-bottom: 1px solid #001f2c !important;
 }
@@ -69,6 +53,10 @@ footer p {
   margin-top: 0px;
   color: white !important;
   text-shadow: $brand-primary 1px 1px 3px;
+  @media (max-width: $screen-sm-min) {
+    font-size: 2em;
+    letter-spacing: 0 !important;
+  }
 }
 
 .main-header p {
@@ -82,13 +70,12 @@ footer p {
 
 #masthead-row {
   background-color: $brand-success;
-  border-bottom: 1px solid #1f877c;
+  border-bottom: 1px solid darken($brand-success, 12%);
 }
 
 #content-row {
   padding: 20px 0px 60px;
   border-top: 1px solid #fff;
-  @include box-shadow( 0 -1px 3px rgba(0,0,0,.25))
 }
 
 .main-article {
@@ -120,12 +107,6 @@ footer p {
 
 .docs h3  {
   margin-top: 40px;
-}
-
-footer {
-  margin: 0px !important;
-  padding: 20px 0px 0px !important;
-  background-color: $brand-primary !important;
 }
 
 .navbar-brand {
@@ -181,8 +162,5 @@ pre {
 .line {
   border-color: $gray-light;
 }
-// .panel-heading h4 {
-//   text-shadow: $brand-primary 0px 1px 1px;
-// }
 
 /* End Vendor Additions */

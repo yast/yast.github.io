@@ -18,7 +18,3 @@ html, body {
   height: $footer-height;
 }
 
-// override the defaults
-#content-row {
-  @include box-shadow(none);
-}

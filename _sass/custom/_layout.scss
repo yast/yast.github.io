@@ -1,84 +1,10 @@
 
-// smaller page header on mobiles
-.main-header h1 {
-  @media (max-width: $screen-sm-min) {
-    font-size: 2em;
-    letter-spacing: 0 !important;
-  }
-}
-
 /**
  * Page content
  */
 
 .page-content {
   padding: $spacing-unit 0;
-}
-
-.post-list {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
-  > li {
-    margin-bottom: $spacing-unit;
-    > h2 {
-      margin: 5px 0;
-    }
-  }
-}
-
-.post-link {
-  display: block;
-  font-size: 24px;
-}
-
-/**
- * Posts
- */
-
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
-// .post-title {
-//   font-size: 42px;
-//   line-height: 1;
-//   @include media-query($on-laptop) {
-//     font-size: 32px;
-//   }
-// }
-
-.post-content {
-  margin-bottom: $spacing-unit;
-  h2 {
-    font-size: 32px;
-    @media (max-width: $screen-md-min) {
-      font-size: 28px;
-    }
-  }
-  h3 {
-    font-size: 26px;
-    @media (max-width: $screen-md-min) {
-      font-size: 22px;
-    }
-  }
-  h4 {
-    font-size: 20px;
-    @media (max-width: $screen-md-min) {
-      font-size: 18px;
-    }
-  }
-  img {
-    max-width: 100%;
-  }
-}
-
-.post-description {
-  font-style: italic;
-}
-
-.meta-item {
-  margin-right: 10px;
 }
 
 // mark required form fields
@@ -93,10 +19,10 @@ img.thumbnail {
 }
 
 #markdown-toc {
-  border: 1px dotted #aaa;
+  border: 1px dotted $gray-light;
   border-radius: 15px;
   padding: 10px 40px;
-  background-color: #fefefe;
+  background-color: lighten($gray, 70%);
   margin-bottom: 40px;
 }
 
