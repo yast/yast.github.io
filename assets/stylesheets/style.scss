@@ -104,9 +104,9 @@
  */
 
 @import "custom/variables";
-@import "custom/vendor";
 @import "custom/footer";
 @import "custom/sticky_footer";
+@import "custom/header";
 @import "custom/layout";
 @import "custom/pagination";
 @import "custom/sharing";
@@ -115,3 +115,4 @@
 @import "custom/disqus";
 @import "custom/tags";
 @import "custom/syntax-highlighting";
+@import "custom/modules";

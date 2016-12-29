@@ -1,0 +1,21 @@
+
+// Used in modules.html
+
+.panel-default {
+  border: none;
+  background-color: white;
+  dd {
+    color: #666;
+    margin: 0px 20px 20px;
+  }
+}
+
+.label-success a {
+  color: white;
+}
+
+.panel-default > .panel-heading {
+  border-color: $gray;
+  background-color: $gray;
+  color: white;
+}
