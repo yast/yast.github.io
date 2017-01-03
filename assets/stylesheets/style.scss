@@ -5,6 +5,7 @@
 * This is the main stylesheet file, it includes all SCSS parts (bootswatch,
 * bootstrap, fontawesome and the local custom modifications) and builds
 * one merged stylesheet.
+* See _sass/README.md for more details.
 */
 
 /*
@@ -104,6 +105,7 @@
  */
 
 @import "custom/variables";
+
 @import "custom/footer";
 @import "custom/sticky_footer";
 @import "custom/header";
