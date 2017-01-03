@@ -1,0 +1,22 @@
+#! /bin/sh
+
+# This script builds the CSS file with a debugging info for the Chrome/Chromium
+# browser to show the original rule locations in the SASS sources.
+# This makes debugging much easier.
+# 
+# Note: If jekyll is running in the watch mode it will overwrite the CSS
+# file with a version without the debugging info, you need to run this
+# script again after any rebuild :-(
+
+# Build outside the sources, the temporary files would trigger rebuild if
+# jekyll is running in the watch mode resulting in overwriting our work.
+BUILD_DIR=`mktemp -d`
+
+# Skip the YAML front matter in the main SCSS file
+tail -n +3 assets/stylesheets/style.scss > $BUILD_DIR/style.scss
+
+# Build the _site style.css and the style.css.map files
+bundle exec scss -I _sass --cache-location=$BUILD_DIR/.sass-cache $BUILD_DIR/style.scss _site/assets/stylesheets/style.css
+
+# Cleanup
+rm -rf $BUILD_DIR
