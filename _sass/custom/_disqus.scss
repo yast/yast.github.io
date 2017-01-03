@@ -1,0 +1,8 @@
+
+#disqus_thread {
+  margin-top: $spacing-unit;
+  padding: $spacing-unit $spacing-unit*2 0;
+  @media(max-width: $screen-sm-min) {
+    padding: $spacing-unit 0;
+  }
+}

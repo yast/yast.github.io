@@ -1,0 +1,36 @@
+
+// needed to override the defaults...
+#content-row {
+  .pagination-box {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .pagination-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .page-num-current, .page-num-active {
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    font-size:20px;
+    font-weight: bold;
+    line-height:30px;
+    text-align:center;
+    display: inline-block;
+    color: $btn-info-color;
+  }
+
+  .page-num-current {
+    background-color: $brand-primary;
+  }
+
+  .page-num-active {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    text-decoration: none;
+  }
+}

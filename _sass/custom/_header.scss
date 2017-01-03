@@ -1,0 +1,75 @@
+.page-header h1 {
+    font-size: 4em;
+    @media (max-width: $screen-sm-max) {
+      font-size: 3em;
+    }
+}
+
+.navbar-fixed-top {
+  border-bottom: 1px solid #001f2c !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: $brand-success;
+  .icon-bar {background-color: $brand-success;}
+}
+
+.navbar-brand {
+  font-family: "Doppio One";
+  font-size: 24px;
+  line-height: 21px;
+  padding: 20px 15px 20px;
+}
+
+.masthead {
+  text-align: center;
+}
+
+.masthead h1  {
+  letter-spacing: -4px !important;
+  @media (max-width: $screen-sm-max) {
+    letter-spacing: normal;
+  }
+  margin-top: 15px;
+  color: white !important;
+  text-shadow: $brand-primary 1px 1px 3px;
+}
+
+.masthead p {
+  margin: 15px 80px 25px;
+  @media (max-width: $screen-sm-max) {
+    margin: 10px 30px 20px;
+  }
+  color: white;
+  line-height: 1.2;
+  text-shadow: $brand-primary 1px 1px 3px;
+}
+
+.main-header {
+  text-align: left;
+}
+
+.main-header h1  {
+  letter-spacing: -4px !important;
+  margin-top: 0px;
+  color: white !important;
+  text-shadow: $brand-primary 1px 1px 3px;
+  @media (max-width: $screen-sm-min) {
+    font-size: 2em;
+    letter-spacing: 0 !important;
+  }
+}
+
+.main-header p {
+  color: white;
+  text-shadow: $brand-primary 1px 1px 3px;
+}
+
+.lead {
+  margin-bottom: 0px;
+}
+
+#masthead-row {
+  background-color: $brand-success;
+  border-bottom: 1px solid darken($brand-success, 12%);
+}

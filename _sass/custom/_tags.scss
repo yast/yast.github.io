@@ -1,0 +1,16 @@
+/* tag/category cloud */
+.tag-cloud {
+  li {
+    display: inline;
+    list-style: none;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.tag-group {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+

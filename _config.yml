@@ -44,3 +44,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - sass_debug
