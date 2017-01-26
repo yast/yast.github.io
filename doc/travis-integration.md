@@ -6,7 +6,7 @@
 ](https://en.wikipedia.org/wiki/Continuous_integration) (CI) server. It has
 a nice integration with GitHub so it is very easy to use and you can see the
 build results directly at GitHub, no need to check separate
-pages, emails etc...
+pages, emails, etc...
 
 
 ### Advantages
@@ -25,8 +25,8 @@ pages, emails etc...
 ### Disadvantages
 
 - Normally the build runs in Ubuntu 12.04 (or 14.04) LTS workers, but fortunately
-  using the Docker images it allows to use basically any Linux distribution
-  which can be started inside a Docker container.
+  using Docker images allows to use basically any Linux distribution
+  which can be started inside a container.
 
 - The Travis workes and the CI service as a whole are out of our control, we
   cannot change anything there. If the service is down or overloaded we cannot
@@ -49,16 +49,16 @@ which is running an openSUSE distribution and avoid all those Ubuntu workarounds
 and hacks.
 
 Morevover the Docker images allow easily debugging and reproducing of the build
-issues locally, see [below](#).
+issues locally, see [below](#running-the-build-locally).
 
 ## Restarting a Build
 
 It may happen that a Travis build fails because e.g. OBS is down and the
 required packages cannot be downloaded or GitHub times out, etc...
 
-In that case it is possible to manually re-trigger the failed build. Display the
-failed build at Travis, there is a *Restart Build* button in the top right corner
-for restarting the build.
+In that case it is possible to manually re-trigger the failed build. Browse to
+the failed build at Travis and you'll find a *Restart Build* button in the top
+right corner for restarting the build.
 
 Make sure you are logged using your GitHub account, it is not displayed if you
 do not have permissions for the respective GitHub repository.
