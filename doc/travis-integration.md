@@ -28,6 +28,13 @@ pages, emails etc...
   using the Docker images it allows to use basically any Linux distribution
   which can be started inside a Docker container.
 
+- The Travis workes and the CI service as a whole are out of our control, we
+  cannot change anything there. If the service is down or overloaded we cannot
+  do anything about that.
+
+- The workers cannot reach the internal network, e.g. we cannot use the packages
+  from the internal build service.
+
 ## Using Docker at Travis
 
 As mentinoned above, normally Travis runs the builds inside Ubuntu virtual machines
