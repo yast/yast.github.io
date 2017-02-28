@@ -11,7 +11,6 @@ addons:
     packages:
     - libaspell-dev
     - aspell-en
-    - npm
 
 env:
   # nokogiri speed up: use the system libxml2, do not compile the bundled version
