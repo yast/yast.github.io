@@ -98,7 +98,9 @@ for the Jenkins credentials.*
 
 If a Jenkins build fails for some temporary reason (e.g. OBS down, network
 issues, ...) you can restart it by clicking "Retry" button the details of the
-failed build.
+failed build. You need to be logged in, the credentials are stored in the
+[internal wiki
+page](https://wiki.microfocus.net/index.php/YaST/jenkins#openSUSE_.28external.29).
 
 ## SLE12-SP1 Support
 
