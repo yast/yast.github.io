@@ -21,9 +21,8 @@ or other sensitive data should never be logged in to the `y2log`. Although
 reading the `y2log` file requires root access it can be attached to bugzilla
 where everybody could read it.
 
-#### Hints
-
-- Be carefull when logging with `.inspect`, it might contain the internal object data.
+- Be carefull when logging with `.inspect`, the result might contain the internal
+  object data
 - For logging URLs use the [URL.HidePassword()](
   https://github.com/yast/yast-yast2/blob/5762181d62762816a73fc040362c1efb5d97deed/library/types/src/modules/URL.rb#L613)
   method
@@ -36,8 +35,6 @@ Never use fixed or predictable names when writing to the `/tmp` directory
 If you write to a predictable file the attacker could prepare a symlink with
 that name in advance pointing to some other file. Later when the user would
 run the code the other file would be overwritten.
-
-#### Hints
 
 - Use the [Tempfile](
   https://ruby-doc.org/stdlib-2.2.2/libdoc/tempfile/rdoc/Tempfile.html
@@ -58,7 +55,6 @@ If you write anyting to the user's home directory you should check if the
 file already exists and is a symlink. In that case the easiest solution it to
 abort the write operation.
 
-
 ## Downloading
 
 Always prefer HTTPS over HTTP. It ensures you really connect to the intended
@@ -69,22 +65,18 @@ because of a self-signed certificate) always ask the user for confirmation
 and display the certificate details so the user can at least verify the
 certificate fingerprint.
 
-
 ## SSL Certificates
 
 Downloading and importing a SSL certificate from an insecure source (e.g. HTTP)
 does not improve the security, in reality it makes it even worse.
 
-If you need to import a certificate into the system the user should see the
-certificate details (including the fingerprint) and confirm the import.
-
-#### Hints
+If you need to import a certificate into the system the user should *verify* the
+certificate details (including the fingerprint) and *confirm* the import.
 
 - See the registration module for example ([SslCertificate](
   https://github.com/yast/yast-registration/blob/327ab34c020a89f8b7e3f4bff55deea82e457237/src/lib/registration/ssl_certificate.rb#L11)
   or [SslCertificateDetails](
   https://github.com/yast/yast-registration/blob/327ab34c020a89f8b7e3f4bff55deea82e457237/src/lib/registration/ssl_certificate_details.rb#L11))
-
 
 ## Package Download and Installation
 
@@ -92,8 +84,6 @@ Downloading and installing packages requires extra security checks.
 That includes repository meta-data verification and RPM signature verification.
 Fortunately [libzypp](https://github.com/openSUSE/libzypp/) already handles
 that for us.
-
-#### Hints
 
 - Always use libzypp functionality (through [yast2-pkg-bindings](
   https://github.com/yast/yast-pkg-bindings/)), never download or install the
@@ -110,9 +100,6 @@ But usually the problem happens when using a file with spaces in the file name o
 or the user input contains some special characters like `<&%{}>`. Then the module
 probably does not work as expected or can fail.
 
-
-#### Hints
-
 - Use the [Yast::Execute](
   https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
   ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
@@ -121,37 +108,43 @@ probably does not work as expected or can fail.
   http://ruby-doc.org/stdlib-2.2.0/libdoc/shellwords/rdoc/Shellwords.html)
   Ruby method, e.g. `system("ls #{Shellwords.escape(user_input)}")`
 
-
 ## Passing Sensitive Data to External Tools
 
+Sometimes you need to pass sensitive data like password to an external tool.
+
+- Pass the data through a pipe connected to STDIN of the child process if it is
+  possible to provide the data via the standard input.
+  - Use `pipe()` and `fork()` in C++ ([example](
+    https://github.com/openSUSE/libstorage/blob/250089268d1b58da8bbf330e42c3f059986d7b28/storage/Utils/SystemCmd.cc#L226)),
+    [Open3.popen](http://ruby-doc.org/stdlib-2.2.0/libdoc/open3/rdoc/Open3.html#method-c-popen3)
+    or [IO.popen](https://ruby-doc.org/core-2.2.0/IO.html#method-c-popen) in Ruby
+  - Use `/proc/<PID>/fd/0` file
+
+The other options are less secure or even insecure:
+
+- Save the data into a file, let the tool read the file
+  - The file content is kept on the disk even after unlinking the file
+  - Overwriting the file content might not help on some file systems (see `man shred`)
+  - A FS snapshot might be created before removing the file
+- Pass the data on the command line - this is *very insecure* as it can be displayed
+  in the `ps`  output so it could be read by anybody on the local machine.  
+  (But this could possibly be used during the initial installation where only the
+  installer is running and no other user is logged in.)
+
+
+## Executable Path and $PATH
+
 TBD
-
-#### Hints
-
--
-
-
-## Executable Path and $PATH 
-
-TBD
-
-#### Hints
-
--
 
 
 ## Debugging
 
 TBD
 
-#### Hints
-
--
-
 
 ## Random Numbers
 
-Linux has two devices generating random data, `/dev/urandom` (non-blocking) and 
+Linux has two devices generating random data, `/dev/urandom` (non-blocking) and
 [cryptographically secure](
 https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator
 ) `/dev/random` (can block if there is not enough entropy).
@@ -161,8 +154,6 @@ https://ruby-doc.org/core-2.2.0/Random.html#method-c-rand) call and
 [SecureRandom](
 https://ruby-doc.org/stdlib-2.2.0/libdoc/securerandom/rdoc/SecureRandom.html)
 class providing cryptographically secure methods for generating random values.
-
-#### Hints
 
 - Use the simple method when generating non-security related random values,
   e.g. a random host name, random time out, etc...
