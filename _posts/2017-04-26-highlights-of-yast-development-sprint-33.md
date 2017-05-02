@@ -2,16 +2,8 @@
 layout: post
 date: 2017-04-26 10:37:21.000000000 +02:00
 title: Highlights of YaST development sprint 33
-description: It has been a long time since our last status update! The reason is the
-  end of the previous sprint caught quite some of the YaST Team members on vacations
-  and, when the vacation period was over, we were so anxious to jump into development
-  to make YaST another little bit better that the blog [&#8230;]
-category:
-- Distribution
-- Factory
-- Programming
-- Systems Management
-- YaST
+description: It has been a long time since our last status update!
+category: SCRUM
 tags:
 - Distribution
 - Factory
@@ -47,8 +39,9 @@ HackWeek [14][3] and [15][4].
 Now it is officially part of the YaST family and it will be included in
 the upcoming releases.
 
-[![The new module: YaST - Configuration
-Manager](../../../../images/2017-04-26/yast-cm-300x190.jpeg)](../../../../images/2017-04-26/yast-cm.jpeg)
+
+{% include blog_img.md alt="The new module: YaST - Configuration
+Manager" src="yast-cm-300x190.jpeg" full_img="yast-cm.jpeg" %}
 
 ### Extend the YaST Installer Workflow by Add-ons
 
@@ -70,24 +63,22 @@ by any repository type.
 The implementation is [documented][5] and there is the
 [YaST:extension][6] OBS project with a simple example extension.
 
-![The example extension in
-action](../../../../images/2017-04-26/extended-workflow.gif)
+{% include blog_img.md alt="The example extension in action"
+src="extended-workflow.gif" attr=".thumbnail" full_img="extended-workflow.gif" %}
 
 ### YaST pattern definitions
 
 The software pattern definitions have been split and moved to the
 respective OBS devel projects. See more details in [this
 opensuse-factory announcement][7]. That means the YaST patterns are now
-maintained in the  
- [YaST:Head][8] project.
+maintained in the [YaST:Head][8] project.
 
 The project sources have been imported to the [GitHub][9] repository to
 track the history and use the code review workflow. Also and the usual
 [Jenkins][10] and [Travis][11] automation has been set up. For
 contributing your changes in the YaST patterns use the usual GitHub pull
 request workflow as for the other YaST packages. Thank you in advance!
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+:smiley:
 
 ### CaaSP deserves its own YaST package!
 
@@ -114,8 +105,8 @@ module crashed.
 After the fix it now displays details about the problem so the user can
 manually fix the configuration.
 
-[![New YaST-bootloader
-warning](../../../../images/2017-04-26/bootloader-300x220.png)](../../../../images/2017-04-26/bootloader.png)
+{% include blog_img.md alt="New YaST-bootloader warning"
+src="bootloader-300x220.png" full_img="bootloader.png" %}
 
 ### Automatic screenshots in the AutoYaST integration tests
 
@@ -160,9 +151,7 @@ repository.
 Note that we are using the RPM-MD repository at
 `/tumbleweed/repo/oss/suse` instead of `/tumbleweed/repo/oss` as one
 might expect. Of course it is also OK to use the `/tumbleweed/repo/oss`
-repository but we want to be cool.
-![😀](https://s.w.org/images/core/emoji/2.2.1/72x72/1f600.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+repository but we want to be cool. :smiley:
 
 You can put `foo.iso` also on a USB stick
 
@@ -192,8 +181,8 @@ in case of error was not helpful enough. To improve usability, the new
 pop-up is nicer and includes a proper example, as can be seen in the
 following screenshot.
 
-[![More guided serial console setup in
-YaST-Bootloader](../../../../images/2017-04-26/bootloader-srial-300x188.png)](../../../../images/2017-04-26/bootloader-srial.png)
+{% include blog_img.md alt="More guided serial console setup in YaST-Bootloader"
+src="bootloader-srial-300x188.png" full_img="bootloader-srial.png" %}
 
 ### Storage reimplementation: new proposal guided setup
 
@@ -206,8 +195,8 @@ composed by four steps.
 In the first one, a list with the available disks is showed and you can
 select which ones to use for your fresh installation.
 
-[![Guided proposal setup - step
-1](../../../../images/2017-04-26/guided1-300x225.png)](../../../../images/2017-04-26/guided1.png)
+{% include blog_img.md alt="Guided proposal setup - step 1"
+src="guided1-300x225..png" full_img="guided1.png" %}
 
 In the second screen, you can select a specific disk to be used for the
 root partition, and also, you might decide what to do with the existing
@@ -215,22 +204,23 @@ Windows and Linux installed systems. Currently, this last functionality
 is only illustrative, but it will become functional in the upcoming
 sprints.
 
-[![Guided proposal setup - step
-2](../../../../images/2017-04-26/guided2-300x225.png)](../../../../images/2017-04-26/guided2.png)
+{% include blog_img.md alt="Guided proposal setup - step 2"
+src="guided2-300x225.png" full_img="guided2.png" %}
 
 The third step is surely more familiar for you. As in the previous
 sprint, here you can select the LVM usage and encryption. And of course,
 the encryption password will be checked to ensure you use it is strong
 enough.
 
-[![Guided proposal setup - step
-3](../../../../images/2017-04-26/guided3-300x225.png)](../../../../images/2017-04-26/guided3.png)
+{% include blog_img.md alt="Guided proposal setup - step 3"
+src="guided3-300x225.png" full_img="guided3.png" %}
 
 Finally, in the last step the filesystem type for the root partition can
 be selected. Moreover, you can decide whether to use a separate home or
 not. Or you can select another filesystem type for your home.
 
-[![](../../../../images/2017-04-26/guided4-300x225.png)](../../../../images/2017-04-26/guided4.png)
+{% include blog_img.md alt="Guided proposal setup - step 4"
+src="guided4-300x225.png" full_img="guided4.png" %}
 
 As result of the wizard, a new partition schema is automatically created
 taking into account all the options you have selected. And naturally,
@@ -255,8 +245,8 @@ the migration is aborted by user.
 Now the user will be able to decide if the registered but not installed
 products should be deactivated as part of the rollback.
 
-[![Warning for inconsistent online
-migration](../../../../images/2017-04-26/addons-warning-300x171.png)](../../../../images/2017-04-26/addons-warning.png)
+{% include blog_img.md alt="Warning for inconsistent online migration"
+src="addons-warning-300x171.png" full_img="addons-warning.png" %}
 
 ### See you very soon!
 
