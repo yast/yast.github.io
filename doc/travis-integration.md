@@ -28,7 +28,7 @@ pages, emails, etc...
   using Docker images allows to use basically any Linux distribution
   which can be started inside a container.
 
-- The Travis workes and the CI service as a whole are out of our control, we
+- The Travis workers and the CI service as a whole are out of our control, we
   cannot change anything there. If the service is down or overloaded we cannot
   do anything about that.
 
@@ -37,7 +37,7 @@ pages, emails, etc...
 
 ## Using Docker at Travis
 
-As mentinoned above, normally Travis runs the builds inside Ubuntu virtual machines
+As mentioned above, normally Travis runs the builds inside Ubuntu virtual machines
 providing some quite old package versions. That makes troubles as YaST uses newer
 distribution and expects newer GCC compiler, Ruby interpreter, libraries... And
 in some cases the system differences between Ubuntu and (open)SUSE make some
@@ -48,7 +48,7 @@ at the nodes. This greatly helps as we can run the build inside a Docker contain
 which is running an openSUSE distribution and avoid all those Ubuntu workarounds
 and hacks.
 
-Morevover the Docker images allow easily debugging and reproducing of the build
+Moreover the Docker images allow easily debugging and reproducing of the build
 issues locally, see [below](#running-the-build-locally).
 
 ## Restarting a Build
@@ -94,7 +94,7 @@ The Docker images are periodically rebuilt, the rebuild is triggered by the
 Jenkins jobs (e.g. [docker-trigger-yastdevel-ruby](
 https://ci.opensuse.org/view/Yast/job/docker-trigger-yastdevel-ruby/)).
 
-There is also defined an upstream dependedncy to the base `openSUSE` repository,
+There is also defined an upstream dependency to the base `openSUSE` repository,
 the images should be rebuilt whenever the upstream is updated.
 
 It is possible to trigger a rebuild manually - log into the Docker Hub, select the
