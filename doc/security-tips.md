@@ -6,7 +6,7 @@ This is very likely not a full list, feel free to add more tips.
 ## Obtaining the Root Privileges
 
 YaST needs to be already started under the `root` account, there is no switch
-from unprivileged user to previleged one at runtime.
+from unprivileged user to privileged one at runtime.
 
 Some modules can be run under unprivileged user but they do not support switching
 to privileged user later. That means they usually work only in the read-only
@@ -16,12 +16,12 @@ The result is that there should not be any security problem in this area.
 
 ## Sensitive Data
 
-Registration codes, access tokens, private keyss, passwords (in URLs as well!)
+Registration codes, access tokens, private keys, passwords (in URLs as well!)
 or other sensitive data should never be logged in to the `y2log`. Although
 reading the `y2log` file requires root access it can be attached to bugzilla
 where everybody could read it.
 
-- Be carefull when logging with `.inspect`, the result might contain the internal
+- Be careful when logging with `.inspect`, the result might contain the internal
   object data
 - For logging URLs use the [URL.HidePassword()](
   https://github.com/yast/yast-yast2/blob/5762181d62762816a73fc040362c1efb5d97deed/library/types/src/modules/URL.rb#L613)
@@ -51,7 +51,7 @@ run the code the other file would be overwritten.
 This is similar to the temporary files above but it is about the `/home`
 or similar directories.
 
-If you write anyting to the user's home directory you should check if the
+If you write anything to the user's home directory you should check if the
 file already exists and is a symlink. In that case the easiest solution it to
 abort the write operation.
 
@@ -89,7 +89,7 @@ that for us.
   https://github.com/yast/yast-pkg-bindings/)), never download or install the
   packages manually.
 
-## Shell Injection
+## Running External Tools
 
 The [shell injection vulnerability](
 https://en.wikipedia.org/wiki/Code_injection#Shell_injection) is usually not
@@ -100,13 +100,20 @@ But usually the problem happens when using a file with spaces in the file name o
 or the user input contains some special characters like `<&%{}>`. Then the module
 probably does not work as expected or can fail.
 
+Also when executing external tools always use the absolute path to avoid running
+an unexpected binary when `$PATH` variable is not set properly.
+ 
 - Use the [Yast::Execute](
   https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
   ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
   for running the external commands
 - Use the [Shellwords.escape](
   http://ruby-doc.org/stdlib-2.2.0/libdoc/shellwords/rdoc/Shellwords.html)
-  Ruby method, e.g. `system("ls #{Shellwords.escape(user_input)}")`
+  Ruby method, e.g. `/bin/rpm -q #{Shellwords.escape(user_input)}`
+- Use the absolute path, e.g. `/bin/rpm`  
+  *Note: The very old YaST approach was NOT using the absolute path, this has
+  been changed. But it might be still used somewhere, feel free to fix that.*
+
 
 ## Passing Sensitive Data to External Tools
 
@@ -127,19 +134,33 @@ The other options are less secure or even insecure:
   - Overwriting the file content might not help on some file systems (see `man shred`)
   - A FS snapshot might be created before removing the file
 - Pass the data on the command line - this is *very insecure* as it can be displayed
-  in the `ps`  output so it could be read by anybody on the local machine.  
-  (But this could possibly be used during the initial installation where only the
-  installer is running and no other user is logged in.)
-
-
-## Executable Path and $PATH
-
-TBD
+  in the `ps` output so it could be read by anybody on the local machine.  
+  (Exception: This could be possibly used during the initial installation where only the
+  installer is running and no other user is logged in. But make sure this is not
+  used in installed system.)
 
 
 ## Debugging
 
-TBD
+The debugging features might also potentially affect security or leak some
+sensitive data.
+
+- If you need to use a separate log file (not the standard `y2log`) make sure
+  the file has root-only access.
+- Use a directory accessible only to root, otherwise avoid file collisions,
+  see the [temporary files](#temporary-files) section.
+
+When using a debugger (or any other special debugging features) make sure that
+they are disabled by default.
+
+- Enable the debugging features only on user request, use a command line
+  option or an environment variable.
+- If the tool allows remote control then enable the remote access also only
+  on request. And if possible by default allow only the local access via the
+  loopback device (`localhost`/`127.0.0.1`).
+
+See more details in the [debugging](./debugging) document about the integrated
+Ruby debugger support in YaST.
 
 
 ## Random Numbers
