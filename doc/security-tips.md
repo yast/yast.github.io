@@ -100,8 +100,14 @@ But usually the problem happens when using a file with spaces in the file name o
 or the user input contains some special characters like `<&%{}>`. Then the module
 probably does not work as expected or can fail.
 
-Also when executing external tools always use the absolute path to avoid running
-an unexpected binary when `$PATH` variable is not set properly.
+Also when executing external tools always use the absolute path to avoid
+*file not found* error when `$PATH` variable is not set properly or to avoid
+running possibly malicious replacements when the path contains the `.` directory
+(which is not recommended).
+
+Another issue might be with the order of the `$PATH` components, e.g.
+`/usr/local/bin:/usr/bin` prefers the `/usr/local/bin` which might be also
+problematic.
  
 - Use the [Yast::Execute](
   https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
