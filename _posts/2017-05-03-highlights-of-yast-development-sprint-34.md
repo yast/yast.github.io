@@ -48,8 +48,8 @@ configuration and enabling the service).
 If a NTP service is announced through SLP, YaST will propose
 automatically.
 
-[![NTP configuration in
-YaST](../../../../images/2017-05-03/ntp-300x225.png)](../../../../images/2017-05-03/ntp.png)
+{% include blog_img.md alt="NTP configuration in YaST"
+src="ntp-300x225.png" full_img="ntp.png" %}
 
 For worker nodes, YaST will configure the system to keep it synchronized
 with the administration role.
@@ -75,23 +75,21 @@ real and the proposal will honor their values, so the user can easily
 select what to do with previous Windows or Linux partitions. We even
 added a third option for other kind of partitions.
 
-[![New settings in the storage
-proposal](../../../../images/2017-05-03/new_se-300x225.png)](../../../../images/2017-05-03/new_se.png)
+{% include blog_img.md alt="New settings in the storage proposal"
+src="new_se-300x225.png" full_img="new_se.png" %}
 
 Last but not least (regarding the guided setup), the password selection
 for encryption is now more usable, allowing the user to choose a not so
 strong password if really desired.
 
-[![Allowing users to shoot their own
-feet](../../../../images/2017-05-03/bad_password-300x225.png)](../../../../images/2017-05-03/bad_password.png)
+{% include blog_img.md alt="Allowing users to shoot their own feet"
+src="bad_password-300x225.png" full_img="bad_password.png" %}
 
 ### Insserv removal
 
 YaST is a complex and large piece software. It means that time to time
 some pieces that used to be great and shiny become obsolete and end up
-being useless. The cycle of life.
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+being useless. The cycle of life. :smiley:
 
 Some time ago, it was decided it was time for `insserv` to enjoy
 retirement and it was replaced by a stub. But there were still calls to
@@ -109,8 +107,8 @@ So good bye `insserv`, it was a pleasure to work with you.
 When running the installer on a mainframe in a zKVM virtual machine it
 displays a warning about not detected ZFCP controllers:
 
-[![ZFCP warning on
-S/390](../../../../images/2017-05-03/zFCP-300x227.png)](../../../../images/2017-05-03/zFCP.png)
+{% include blog_img.md alt="ZFCP warning on S/390"
+src="zFCP-300x227.png" full_img="zFCP.png" %}
 
 However, when running in a zKVM virtual machine the disk is accessible
 via the *virtio* driver, not through an emulated ZFCP controller. The
@@ -150,11 +148,9 @@ path.
 
 ### More content already in the oven!
 
-As you already know, at least we repeat it quite often,
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"} YaST was converted
-from YCP to Ruby some time ago. However, this conversion was done on
-language basis. Some old design decisions and principles stayed, like
+As you already know, at least we repeat it quite often, :smiley:
+YaST was converted from YCP to Ruby some time ago. However, this conversion was
+done on language basis. Some old design decisions and principles stayed, like
 the usage of [SCR][8] for accessing the underlying system.
 
 Some time ago we introduced [CFA (Config Files Api Gem)][9] as a more
@@ -178,11 +174,11 @@ to work on. See you in three weeks with more news!
 
 
 
-[1]: https://lizards.opensuse.org/2016/05/18/highlights-of-yast-development-sprint-19/
+[1]: {{ site.baseurl }}{% post_url 2016-05-18-highlights-of-yast-development-sprint-19 %}
 [2]: https://github.com/01org/tpm2.0-tools/
 [3]: https://martinfowler.com/bliki/OpportunisticRefactoring.html
 [4]: https://github.com/yast/yast-s390/pull/44
-[5]: https://lizards.opensuse.org/2017/03/07/yast-development-during-hack-week-15/
+[5]: {{ site.baseurl }}{% post_url 2017-03-07-yast-development-during-hack-week-15 %}
 [6]: https://hackweek.suse.com/projects/yast2-storage-ng-as-a-libstorage-ng-wrapper-poc
 [7]: https://github.com/yast/yast-storage-ng/blob/master/README.md
 [8]: https://yastgithubio.readthedocs.io/en/latest/architecture/#system-configuration-repository-scr
