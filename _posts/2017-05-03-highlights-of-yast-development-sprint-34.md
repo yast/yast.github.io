@@ -116,7 +116,7 @@ warning is pointless and confusing.
 
 The fix was basically just an one-liner which skips the warning when the
 zKVM virtualization is detected, but the YaST module for ZFCP doesn’t
-usually receive to much maintenance, so we applied our [boy scout
+usually receive too much maintenance, so we applied our [boy scout
 rule][3] and improved the code a bit.
 
 The improvements include using Rubocop for clean and unified coding
