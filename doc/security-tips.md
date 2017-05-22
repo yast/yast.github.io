@@ -119,7 +119,12 @@ problematic.
 - Use the absolute path, e.g. `/bin/rpm`  
   *Note: The very old YaST approach was NOT using the absolute path, this has
   been changed. But it might be still used somewhere, feel free to fix that.*
+  
+### Special Case for Shell Escape
 
+When escaping special characters for the shell, most developers think of using a backslash everywhere, and that's it. While this is true for most of those characters, there is one pathological case: The single quote: `'Don't do this'` does **NOT** become `'Don\'t do this'`; you cannot escape that quote inside the string with a backslash. Rather, you have to terminate the string at that point, open a new one with the other (the double) quote, terminate that one and restart the old string with the single quote: `'Don'"'"'t do this'`. 
+
+This is so uncommon and unexpected in comparison to normal quoting that we found it worth mentioning here.
 
 ## Passing Sensitive Data to External Tools
 
