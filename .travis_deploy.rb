@@ -96,6 +96,8 @@ def update_config
   conf_file = "_config.yml"
   config = YAML.load_file(conf_file)
   config["url"] = url
+  # allow rendering future posts for non-master branches
+  config["future"] = true if ENV["TRAVIS_BRANCH"] != "master"
   File.write(conf_file, config.to_yaml)
 end
 
