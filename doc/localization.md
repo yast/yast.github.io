@@ -165,11 +165,13 @@ Move the translatable text outside the interpolation so it can be found when
 collecting the translatable strings.
 
 - Use the `+` operator instead of the interpolation
-  ``` ruby
-  "<li>" + _("Item") + "</li>"
-  ```
 - Use a helper variable
-  ``` ruby
-  item = _("Item")
-  "<li>#{item}</li>"
-  ```
+
+##### Examples
+
+``` ruby
+"<li>" + _("Item") + "</li>"
+
+item = _("Item")
+"<li>#{item}</li>"
+```
