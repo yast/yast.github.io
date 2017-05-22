@@ -104,3 +104,72 @@ change_language
 # here it will correctly use the new language
 puts _(Foo::ERROR_MSG)
 ```
+
+## Interpolations
+
+Be careful when mixing translations and string (or regular expression)
+interpolations, this usually does not work.
+
+### Interpolations in Translated Text
+
+#### Example
+
+``` ruby
+_("Current time: #{time}")
+```
+
+#### Problems
+
+This does not work at all. There are two problems:
+
+- Ruby gettext cannot extract the text with interpolations correctly,
+  the generated POT file contains a broken string.
+- At runtime the string will not be found in the translation database as gettext
+  receives the *already expanded* string.
+
+Note: In some cases the text can be included in the generated POT (e.g.
+`_("Current time is #{Time.now}")`) but the POT file will contain the expanded
+string which is very likely useless
+(`msgid "Current time is 2017-05-22 13:28:30 +0200"`) and will never match at
+runtime.
+
+#### Solutions
+
+As already mentioned earlier, use the `%` operator or the `format` method on the
+*translated* string.
+
+``` ruby
+_("Current time is %s") % [ time ]
+format(_("Current time is %s"), time)
+```
+
+### Translated Text in Interpolation
+
+#### Example
+
+``` ruby
+"<li>#{_("Item")}</li>"
+# the same problem exists with regular expression literals
+/#{_("Item")}/
+```
+
+#### Problem
+
+This should work at runtime but the problem is that Ruby gettext cannot extract
+the text into the POT file. That means unless the very same text is used somewhere
+else the translators will not translate it.
+
+#### Solutions
+
+Move the translatable text outside the interpolation so it can be found when
+collecting the translatable strings.
+
+- Use the `+` operator instead of the interpolation
+  ``` ruby
+  "<li>" + _("Item") + "</li>"
+  ```
+- Use a helper variable
+  ``` ruby
+  item = _("Item")
+  "<li>#{item}</li>"
+  ```
