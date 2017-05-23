@@ -51,9 +51,34 @@ run the code the other file would be overwritten.
 This is similar to the temporary files above but it is about the `/home`
 or similar directories.
 
-If you write anything to the user's home directory you should check if the
-file already exists and is a symlink. In that case the easiest solution it to
-abort the write operation.
+To avoid a [possible TOCTOU timing issue](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use)
+([CVE](https://cwe.mitre.org/data/definitions/367.html)) you need to
+atomically check and create the file.
+
+- Use `O_CREAT`, `O_EXCL`, `O_WRONLY` flags when creating the file. In this case
+  write fails if the file already exists. See `man 2 open` for more details.
+- Create an unique file on the same file system and use `link` to set the
+  the final target name. See `man 2 link` and `man 2 open` for more details.
+
+### Examples
+
+#### Ruby
+```ruby
+# raises Errno::EEXIST if the file already exists
+File.open(filename, File::WRONLY | File::CREAT | File::EXCL) do |file|
+  file.write contents
+end
+```
+
+#### C/C++
+```cpp
+int fd = open(file, O_CREAT | O_EXCL | O_WRONLY);
+if ((fd < 0) && (errno == EEXIST))
+{
+    // the file already exists
+}
+```
+
 
 ## Downloading
 
