@@ -74,11 +74,17 @@ The Docker overhead should be very small as it is a container based technology
 (like chroot on steroids) rather than a full virtualization systems like
 KVM, VirtualBox or others.
 
+For different branches is used different tags of docker images. E.g. for master
+is always *latest* or for SLE12 SP2 maintenance branch it is *sle12-sp2*.
+To see all available tags check docker image on dockerhub ( more below ).
+
 ### Open Build Service
 
-The [YaST:Head](https://build.opensuse.org/project/monitor/YaST:Head) OBS project 
+The [YaST:Head](https://build.opensuse.org/project/monitor/YaST:Head) OBS project
 builds the latest YaST packages from Git `master` branch. These packages are
-then used in the Docker images which are then used by the Travis builds.
+then used in the Docker images which are then used by the Travis builds. For
+maintenace branches is used respective branches under
+[YaST](https://build.opensuse.org/project/subprojects/YaST).
 
 ### The Docker Hub
 
@@ -91,8 +97,10 @@ Docker Hub organization.
 #### Image Rebuild
 
 The Docker images are periodically rebuilt, the rebuild is triggered by the
-Jenkins jobs (e.g. [docker-trigger-yastdevel-ruby](
-https://ci.opensuse.org/view/Yast/job/docker-trigger-yastdevel-ruby/)).
+Jenkins jobs (e.g. [docker-trigger-yastdevel-ruby-latest](
+https://ci.opensuse.org/view/Yast/job/docker-trigger-yastdevel-ruby-latest/)).
+Periodicy is diffent for master and for maintenace branches, where master is build
+more often and maintenace ones less often.
 
 There is also defined an upstream dependency to the base `openSUSE` repository,
 the images should be rebuilt whenever the upstream is updated.
