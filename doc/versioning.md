@@ -12,7 +12,7 @@ Now, version numbers are related to the SUSE version. Let's see an example:
 * Minor number is related to the SUSE Service Pack number (0, 1, 2...).
 * Patch number enumerates versions for a given major/minor version.
 
-For instance, `15.2.3` is meant to be the third version of a package for
+For instance, `4.2.3` is meant to be the third version of a package for
 `SLE 15 SP2`.
 
 NOTE: it is perfectly fine if, let's say SLE 15 SP2, contains a package which
