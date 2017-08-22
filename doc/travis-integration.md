@@ -138,3 +138,14 @@ https://docs.docker.com/engine/reference/builder/) for more details.
 - If you need to debug a failure then you can run bash instead of the Travis
   script and run the build steps manually. If you need a text editor or some
   other tools you can install them using `zypper`.
+
+## Coveralls Integration
+
+Most YaST repositories use [Coveralls](https://coveralls.io/) to automatically
+check the code coverage of unit tests in every pull request. When creating a new
+repository or when working with some old repository that has not been touched
+recently, it may be necessary to enable Coveralls reporting for it.
+
+See the [Coveralls integration document](coveralls-integration.md) for detailed
+instructions about configuring a Travis-enabled YaST repository to work with
+Coveralls.
