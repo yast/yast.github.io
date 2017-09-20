@@ -81,6 +81,9 @@ There are several shared bug queries:
 - [yast2-internal bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast2-internal%20bugs&sharer_id=6053) -
   Confirmed YaST bugs which are tracked in Trello. The URL attribute of these
   bugs should point to the relevant Trello card.
+- [yast-team-bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast-team-bugs&sharer_id=6053) -
+  All open bugs assigned to all YaST team members or to the generic YaST team
+  accounts.
 
 You can add these queries to your default Bugzilla footer so they can be easily used.
 Go to to the [Saved Searches](https://bugzilla.suse.com/userprefs.cgi?tab=saved-searches)
@@ -94,3 +97,7 @@ save the changes.
 You can use the [ytrello tool](https://github.com/mvidner/ytrello) for creating
 the Trello cards for bugs automatically. See the [README](
 https://github.com/mvidner/ytrello/blob/master/README.md) how to set it up and use it.
+
+Alternatively you can install the [tampermonkey](https://tampermonkey.net/)
+browser plugin and use [this](https://github.com/lslezak/monkey_scripts#trello-integration)
+user script.
