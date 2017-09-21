@@ -27,9 +27,9 @@ or the latest openSUSE release — differences in the environment
 usually are not big enough to cause trouble.
 
 To prepare the development environment in Factory or Tumbleweed, install the
-yast2-devtools package:
+`devel_yast` pattern:
 
-    sudo zypper in yast2-devtools
+    sudo zypper install -t pattern devel_yast
 
 To prepare the development environment in openSUSE, build and install the
 `yast2-devtools` package yourself from the current source code (the
@@ -42,6 +42,12 @@ version present in the last openSUSE release might be too old):
     make -f Makefile.cvs
     make
     sudo make install
+
+#### Development Dependencies
+
+Some YaST packages require additional development packages (libraries,
+tools...). To get the list of development packages run `rake build_dependencies:list`
+command or `rake build_dependencies:install` to install them.
 
 ### Shared YaST Infrastructure ###
 
