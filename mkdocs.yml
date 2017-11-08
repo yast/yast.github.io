@@ -1,2 +1,3 @@
 site_name: Yast Documentation
 docs_dir: doc
+theme: readthedocs
