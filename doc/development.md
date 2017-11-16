@@ -33,7 +33,10 @@ To prepare the development environment in Factory or Tumbleweed, install the
 
 To prepare the development environment in openSUSE, build and install the
 `yast2-devtools` package yourself from the current source code (the
-version present in the last openSUSE release might be too old):
+version present in the last openSUSE release might be too old).
+You may need to install the [development dependencies](Development-Dependencies) first.
+
+Then, to compile _yast devtools_ from source code, execute these commands:
 
     sudo zypper in git-core ruby gcc-c++ docbook-xsl-stylesheets 
     sudo gem install yast-rake
