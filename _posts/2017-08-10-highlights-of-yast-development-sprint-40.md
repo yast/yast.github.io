@@ -35,8 +35,6 @@ the bootloader.
 {% include blog_img.md alt="BIOS RAID support"
 src="libstorage-ng-md-support-300x290.png" full_img=".png" %}
 
-[![](../../../../images/2017-08-10/.png)](../../../../images/2017-08-10/libstorage-ng-md-support.png)
-
 ### Storage reimplementation: managing BtrFS subvolumes in new Expert Partitioner
 
 The new Expert Partitioner is getting a lot of attention these days and,
