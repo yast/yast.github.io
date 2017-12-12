@@ -33,9 +33,8 @@ installation of open(SUSE) systems on this kind of devices, including
 the bootloader.
 
 {% include blog_img.md alt="BIOS RAID support"
-src="libstorage-ng-md-support-300x290.png" full_img=".png" %}
-
-[![](../../../../images/2017-08-10/.png)](../../../../images/2017-08-10/libstorage-ng-md-support.png)
+src="libstorage-ng-md-support-300x290.png"
+full_img="libstorage-ng-md-support.png" %}
 
 ### Storage reimplementation: managing BtrFS subvolumes in new Expert Partitioner
 

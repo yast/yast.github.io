@@ -196,7 +196,7 @@ In the first one, a list with the available disks is showed and you can
 select which ones to use for your fresh installation.
 
 {% include blog_img.md alt="Guided proposal setup - step 1"
-src="guided1-300x225..png" full_img="guided1.png" %}
+src="guided1-300x225.png" full_img="guided1.png" %}
 
 In the second screen, you can select a specific disk to be used for the
 root partition, and also, you might decide what to do with the existing
