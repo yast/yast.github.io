@@ -111,12 +111,6 @@ yast-core:
   https://github.com/yast/yast-core/issues/20
   Not for general usage!
 
-yast-inetd:
-
-- YAST2_INETD
-
-  Enables expert tools if set to `EXPERT`.
-
 yast-yast2:
 
 - ~~Y2MODETEST~~ *(TEST SUITE)*
