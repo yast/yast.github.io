@@ -129,7 +129,9 @@ https://docs.docker.com/engine/reference/builder/) for more details.
 
 ## Running the Build Locally
 
-- First make sure the Docker is [installed and running](
+- First make sure the Docker is installed and running, which usually means to run
+  `zypper in docker` and `systemctl start docker`. For SUSE Linux Enterprise
+  you can check the [official Docker documentation](
   https://docs.docker.com/engine/installation/linux/suse/).
 
 - Then simply run (as *root*) the `docker` commands from the `.travis.yml` file
