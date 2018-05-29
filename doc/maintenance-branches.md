@@ -16,39 +16,43 @@ of fixes and also to merge fixes in master branch, to avoid forgotten ones.
 Maintenance Work-Flow
 ---------------------
 
-There is difference between older maintenance branches and new ones starting
-from SLE-12-GA.
+Default maintenane workflow is to fix it in the oldest applicable branch and
+then merge to the newer ones.
 
-For older branches fix is created in separated commits. Command git cherry-pick
-can be used, but to apply fix from ycp to ruby code is recommended to write it
-from scratch. Also when backporting fix from ruby to ycp it is recommended to
-write it from scratch as there is no ruby2ycp converter.
+Following rules apply to work with maintenance branches:
 
-Example work-flow for older branch (can vary depending on scenario):
-```
-git checkout Code-11-SP4
-git pull
-git checkout -b my_fix
-...hacking...
-git commit
-git push
-git checkout SLE-12-GA
-git pull
-git checkout -b my_fix_SLE12
-..hacking or git cherry-pick...
-git commit
-git push
-```
+* no `cherry-pick` as part of common work-flow. In a nutshell, cherry-picking
+  changes the SHA because the commit will get a new parent commit. And with
+  different SHAs, it is difficult to find out if all desired commits from the
+  branch are now also in master. For deeper explanation see these articles
+  [1](http://dan.bravender.net/2011/10/20/Why_cherry-picking_should_not_be_part_of_a_normal_git_workflow.html), [2](http://www.draconianoverlord.com/2013/09/07/no-cherry-picking.html) or [reddit](https://www.reddit.com/r/git/comments/3ubuel/merge_vs_rebase_why_not_cherrypick/))
+* merge new maintenance branches to master regularly
+* create fix for the oldest applicable branch first
 
-For new branches fix have to be done in the oldest affected branch and then
-merged to newer branches and master with git merge. There are two reasons for
-such change.
+### Why
+
 The first and main reason is that it allows easy tracking if fix in commit is
 also in newer branches and master. The second reason is that it produces nicer
 git tree structure which allows to see which code stream is affected by which
-fix.
+fix. The easiest way to see if some commits are missing is to use github UI
+and compare branches.
 
-Example work-flow for newer branch:
+It can be done also on command line:
+
+Example how to check what fixes are not merged:
+```
+git pull
+git log origin/master..origin/SLE-12-GA # if nothing appear, then all merged
+```
+
+Examples how to see git tree:
+```
+gitk # to get graphical one
+git log --graph --pretty=oneline --abbrev-commit --decorate --all
+```
+
+### Example Work-Flow
+
 ```
 git checkout SLE-12-GA
 git pull
@@ -62,15 +66,41 @@ git pull
 git checkout -b my_fix_master # branch based on master
 git merge origin/SLE-12-GA # to ensure that we use recent branch on remote
 # fix possible conflicts and git commit if needed...
-# if maintenance branch contain its specific commit,
-# then use git revert <commit number> and next time it will not appear
 git push
 ```
 
+### Branch Specific Commits
+
+Maintenance branch usually contain commits that switch e.g. ci and docker file
+to its own target. If merge contains this commit, simply use
+`git revert <commit>`. This will revert it even for future.
+
+### YCP Branch
+
+When backporting fix from ruby to ycp it is recommended to
+write it from scratch as there is no ruby2ycp converter.
+
+For other way when first fix is in YCP and then needed in ruby then ycp2ruby
+converter can be used, but recommended way is to write it also from scratch
+because result will be nicer ruby code.
+
+### Merge Has More Commits
+
+When merge has more commits then expected, then two situations happen.
+The first one can be that someone before forget to merge. In this case you
+should be hero and also merge it to newer branch, so we do not miss any fix
+from maintenance branch.
+
+The second case is when in past branch we failed and branch start differ too
+much so it is easier to has it as separate branches. In such case it makes
+sense to use cherry-pick, but expect that someone asks for it during code
+review.
+
+### Backporting Fix
+
 When maintenance fix was not requested and made only in master and then
 requested to backport to a maintenance branch, it is still needed to `merge` back
-the `cherry-pick` used for backporting the fix.
-It is valid only for new branches.
+the `cherry-pick` used for backporting the fix so we are still sure that nothing is missing.
 
 Example how to backport fix and then merge branch back
 ```
@@ -89,31 +119,6 @@ git merge origin/SLE-12-GA
 git push
 # wait until a review passes, then merge to master
 ```
-
-Example how to check what fixes are not merged:
-```
-git pull
-git log origin/master..origin/SLE-12-GA # if nothing appear, then all merged
-```
-
-Examples how to see git tree:
-```
-gitk # to get graphical one
-git log --graph --pretty=oneline --abbrev-commit --decorate --all
-```
-
-Maintenance Fixes Rules
------------------------
-
-To get all benefits described above, there are few easy rules.
-
-* no `cherry-pick` as part of common work-flow. In a nutshell, cherry-picking
-  changes the SHA because the commit will get a new parent commit. And with
-  different SHAs, it is difficult to find out if all desired commits from the
-  branch are now also in master. For deeper explanation see these articles
-  [1](http://dan.bravender.net/2011/10/20/Why_cherry-picking_should_not_be_part_of_a_normal_git_workflow.html), [2](http://www.draconianoverlord.com/2013/09/07/no-cherry-picking.html) or [reddit](https://www.reddit.com/r/git/comments/3ubuel/merge_vs_rebase_why_not_cherrypick/))
-* merge new maintenance branches to master regularly
-* create fix for the oldest applicable branch first
 
 How to Submit a Maintenance Request
 -----------------------------------
