@@ -16,10 +16,10 @@ of fixes and also to merge fixes in master branch, to avoid forgotten ones.
 Maintenance Work-Flow
 ---------------------
 
-Default maintenane workflow is to fix it in the oldest applicable branch and
+The default maintenance workflow is to fix it in the oldest applicable branch and
 then merge to the newer ones.
 
-Following rules apply to work with maintenance branches:
+The following rules apply to working with maintenance branches:
 
 * no `cherry-pick` as part of common work-flow. In a nutshell, cherry-picking
   changes the SHA because the commit will get a new parent commit. And with
@@ -31,23 +31,23 @@ Following rules apply to work with maintenance branches:
 
 ### Why
 
-The first and main reason is that it allows easy tracking if fix in commit is
-also in newer branches and master. The second reason is that it produces nicer
+The first and main reason is that it allows easy tracking whether a fix in a commit is
+also in newer branches and master. The second reason is that it produces a nicer
 git tree structure which allows to see which code stream is affected by which
-fix. The easiest way to see if some commits are missing is to use github UI
+fix. The easiest way to see if some commits are missing is to use the GitHub UI
 and compare branches.
 
-It can be done also on command line:
+It can be done also on the command line:
 
 Example how to check what fixes are not merged:
 ```
 git pull
-git log origin/master..origin/SLE-12-GA # if nothing appear, then all merged
+git log origin/master..origin/SLE-12-GA # if nothing appears then all are merged
 ```
 
-Examples how to see git tree:
+Examples how to see the git tree:
 ```
-gitk # to get graphical one
+gitk --all # to get a GUI
 git log --graph --pretty=oneline --abbrev-commit --decorate --all
 ```
 
@@ -71,38 +71,40 @@ git push
 
 ### Branch Specific Commits
 
-Maintenance branch usually contain commits that switch e.g. ci and docker file
-to its own target. If merge contains this commit, simply use
+A maintenance branch usually contains commits that switch e.g. CI and Docker file
+to its own target. If a merge contains this commit, simply use
 `git revert <commit>`. This will revert it even for future.
 
 ### YCP Branch
 
-When backporting fix from ruby to ycp it is recommended to
+When backporting a fix from Ruby to YCP it is recommended to
 write it from scratch as there is no ruby2ycp converter.
 
-For other way when first fix is in YCP and then needed in ruby then ycp2ruby
-converter can be used, but recommended way is to write it also from scratch
-because result will be nicer ruby code.
+For the other way around, when first a fix is in YCP and then needed in Ruby,
+the `ycp2ruby`
+converter *can* be used, but the recommended way is to write it also from scratch
+because the result will be a much nicer Ruby code.
 
 ### Merge Has More Commits
 
-When merge has more commits then expected, then two situations happen.
-The first one can be that someone before forget to merge. In this case you
-should be hero and also merge it to newer branch, so we do not miss any fix
-from maintenance branch.
+When a merge has more commits than expected, there are two possible causes.
 
-The second case is when in past branch we failed and branch start differ too
-much so it is easier to has it as separate branches. In such case it makes
-sense to use cherry-pick, but expect that someone asks for it during code
+The first one can be that someone forgot to merge earlier. In this case you
+should be the hero and also merge it to the newer branch, so that we do not miss any fix
+from the maintenance branch.
+
+The second case is when in the past branch we failed and the branch started to differ too
+much so it is easier to have separate branches. In such case it makes
+sense to use `cherry-pick`, but expect that someone asks about it during code
 review.
 
 ### Backporting Fix
 
-When maintenance fix was not requested and made only in master and then
+When a maintenance fix was not requested and made only in master and then
 requested to backport to a maintenance branch, it is still needed to `merge` back
 the `cherry-pick` used for backporting the fix so we are still sure that nothing is missing.
 
-Example how to backport fix and then merge branch back
+Example how to backport a fix and then merge the branch back
 ```
 git checkout SLE-12-GA
 git pull
