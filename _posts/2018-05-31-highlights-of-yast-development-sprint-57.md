@@ -182,23 +182,23 @@ every Btrfs file system. As shown in the example below, a prefix name
 can be specified for each partition using the `subvolumes_prefix`.
 
 ```xml
-    <partition>
-      <mount>/</mount>
-      <filesystem config:type="symbol">btrfs</filesystem>
-      <size>max</size>
-      <subvolumes_prefix>@</subvolumes_prefix>
-    </partition>
+<partition>
+  <mount>/</mount>
+  <filesystem config:type="symbol">btrfs</filesystem>
+  <size>max</size>
+  <subvolumes_prefix>@</subvolumes_prefix>
+</partition>
 ```
 
 To omit the subvolume prefix, set the `subvolumes_prefix` tag:
 
 ```xml    
-    <partition>
-      <mount>/</mount>
-      <filesystem config:type="symbol">btrfs</filesystem>
-      <size>max</size>
-      <subvolumes_prefix><![CDATA[]]></subvolumes_prefix>
-    </partition>
+<partition>
+  <mount>/</mount>
+  <filesystem config:type="symbol">btrfs</filesystem>
+  <size>max</size>
+  <subvolumes_prefix><![CDATA[]]></subvolumes_prefix>
+</partition>
 ```
 
 As a consequence of the new behaviour, the old
@@ -217,13 +217,13 @@ So from now on, setting `create_subvolumes` to `false` will prevent
 AutoYaST from creating any Btrfs subvolumes in a given partition.
 
 ```xml    
-    <partition>
-      <mount>/</mount>
-      <filesystem config:type="symbol">btrfs</filesystem>
-      <size>max</size>
-      <create_subvolumes config:type="boolean">false</create_subvolumes>
-    </partition>
-```xml
+<partition>
+  <mount>/</mount>
+  <filesystem config:type="symbol">btrfs</filesystem>
+  <size>max</size>
+  <create_subvolumes config:type="boolean">false</create_subvolumes>
+</partition>
+```
 
 ### Keep it rolling!
 
