@@ -27,12 +27,12 @@ sass:
   style: compressed
 
 # pagination config for the blog index page
-paginate: 8
+paginate: 20
 paginate_path: "/blog/page:num/"
 
 # generate sitemap.xml and feed.xml automatically by plugins, enable GFM emoji
 # and pagination
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag
