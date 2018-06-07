@@ -156,5 +156,12 @@ How to find if maintenance branch is still actively maintained
 --------------------------------------------------------------
 NOTE: It uses SUSE internal tools, as it contain non public data about long term support.
 
+Web Way
+=======
+Go to [https://maintenance.suse.de/maintained/](https://maintenance.suse.de/maintained/).
+
+
+CLI Way
+=======
 Connect to DE network and run `/work/src/bin/is_maintained <pkg_name>`. If it failed, then to show
 why osc failed, use `-r` which can indicate e.g. missing .oscrc file with credentials.
