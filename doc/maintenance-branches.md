@@ -152,16 +152,25 @@ branch is used. Leap maintenance branches will be created manually in a case by
 case basis, only when needed and only for repositories that affect openSUSE but
 not SLE.
 
+Working with SLE 10 and SLE 11
+------------------------------
+
+These older code streams do not use the familiar Rake tasks, and the system libraries they
+may expect is probably significantly different from your workstation.
+
+[Maintenance-made-easy](https://github.com/mvidner/maintenance-made-easy)
+is a tool that uses OBS chroots to help you make and submit packages for SLE 10 and SLE 11.
+
 How to find if maintenance branch is still actively maintained
 --------------------------------------------------------------
 NOTE: It uses SUSE internal tools, as it contain non public data about long term support.
 
-Web Way
-=======
+### Web Way
+
 Go to [https://maintenance.suse.de/maintained/](https://maintenance.suse.de/maintained/).
 
 
-CLI Way
-=======
+### CLI Way
+
 Connect to DE network and run `/work/src/bin/is_maintained <pkg_name>`. If it failed, then to show
 why osc failed, use `-r` which can indicate e.g. missing .oscrc file with credentials.
