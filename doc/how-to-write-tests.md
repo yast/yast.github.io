@@ -37,7 +37,42 @@ tests:
 * Uses "allow" for queries, but "expect" commands, see Examples
 * Expectation in "it" block - must be explicit, see Examples
 * Description of a test should describe the behavior - you should get the idea
-  just be reading the "it" / "context", see Examples
+  just by reading the "it" / "context", see Examples
+
+#### Parallel Tests
+
+Adding more and more unit tests obviously means that the time needed for running
+the complete test suite also increases. And at some point it becomes annoying.
+
+Normally the RSpec executes the tests in sequence, one by one. However, using
+the [parallel_tests](https://github.com/grosser/parallel_tests) Ruby gem
+it is possible to run the tests in parallel.
+
+The `rake unit:test` includes support for parallel tests, just create
+a `.rspec_parallel` file in the Git root directory. The suggested content is
+
+```
+--format progress --format ParallelTests::RSpec::RuntimeLogger --out tmp/parallel_runtime_rspec.log
+```
+
+This will use the "dot" progress output and save the runtime statistics for each
+test file to the specified log file. Next time it will be used to split
+the tests into more balanced test groups. That means the very first run will
+be less effective and probably it will take a bit more time.
+
+Obviously there must not be any dependencies or race conditions between the tests
+otherwise it will fail.
+
+You can force running parallel tests using `PARALLEL_TESTS=1 rake test:unit`,
+that is great for checking if the current tests can be run in parallel.
+Or force classic sequential RSpec with `PARALLEL_TESTS=0 rake test:unit`
+to find whether a test failure might be caused by some race condition.
+See the [test:unit description](https://github.com/yast/yast-rake#testunit)
+for more details.
+
+You can check a [full example](https://github.com/yast/yast-storage-ng/pull/663/files)
+in the yast2-storage-ng package.
+
 
 ### Integration tests with openQA
 
