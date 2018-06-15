@@ -151,3 +151,70 @@ recently, it may be necessary to enable Coveralls reporting for it.
 See the [Coveralls integration document](coveralls-integration.md) for detailed
 instructions about configuring a Travis-enabled YaST repository to work with
 Coveralls.
+
+## Parallel Build Jobs
+
+Travis allows using a [build matrix](
+https://docs.travis-ci.com/user/build-stages/matrix-expansion/) which can define
+multiple independent [build environments](
+https://docs.travis-ci.com/user/environment-variables/#Defining-public-variables-in-.travis.yml
+) for each commit. What is good that Travis runs these builds in parallel.
+
+```yaml
+env:
+  - FOO=foo
+  - FOO=bar
+```
+
+This will start two jobs, one with `FOO=foo` environment and `FOO=bar` in the
+other.
+
+This way you can split the Travis work into more smaller parts and run them
+in parallel:
+
+```yaml
+env:
+  - CMD=quality_check
+  - CMD=security_scan
+  - CMD=compile
+script:
+  - $CMD
+```
+
+*Note: The values needs to be quoted when a space is included.*
+
+
+### YaST Example
+
+The YaST Travis script has been adapted to allow running only a subset of the
+tasks and this can be easily used in Travis:
+
+```yaml
+env:
+  # only the unit tests
+  - CMD='yast-travis-ruby -o tests'
+  # only rubocop
+  - CMD='yast-travis-ruby -o rubocop'
+  # the rest (skip unit tests and rubocop),
+  # -y uses more strict "rake check:doc" instead of plain "yardoc"
+  - CMD='yast-travis-ruby -y -x tests -x rubocop'
+script:
+  - docker run -it -e TRAVIS=1 -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID" yast-test-image $CMD
+```
+
+This defines three jobs: unit tests, rubocop and the rest (yardoc, package build,
+...). You can split the work into less or more jobs if needed.
+
+
+### Limitations
+
+Obviously running the jobs in parallel has also some disadvantages.
+
+- Starting a VM, downloading and building the Docker image
+takes some time. That means separating a small task which takes
+just few seconds to run in parallel is usually pointless.
+- If Travis is under heavy load then the jobs might not start at once or there
+even might be delays between the jobs. That means in the edge case running too
+many small parallel jobs might be slower than running one big sequential job.
+
+You need to find the right balance between parallel and sequential approach.
