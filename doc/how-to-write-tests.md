@@ -48,8 +48,13 @@ Normally the RSpec executes the tests in sequence, one by one. However, using
 the [parallel_tests](https://github.com/grosser/parallel_tests) Ruby gem
 it is possible to run the tests in parallel.
 
-The `rake unit:test` includes support for parallel tests, just create
-a `.rspec_parallel` file in the Git root directory. The suggested content is
+The `rake unit:test` includes support for running parallel tests, just make sure
+you have installed the `ruby<version>-rubygem-parallel_tests` package otherwise
+the task will use the standard (sequential) RSpec. Add the gem to
+`BuildRequires` dependency if you want to use it also during the RPM package build.
+
+To activate the parallel tests just create a `.rspec_parallel` file in the Git
+root directory. The suggested content is
 
 ```
 --format progress --format ParallelTests::RSpec::RuntimeLogger --out tmp/parallel_runtime_rspec.log
