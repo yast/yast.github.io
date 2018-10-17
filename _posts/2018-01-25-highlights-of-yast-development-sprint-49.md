@@ -262,7 +262,7 @@ couple of weeks!
 
 
 
-[1]: https://lizards.opensuse.org/2018/01/09/highlights-of-yast-development-sprint-48/
+[1]: {{ site.baseurl }}{% post_url 2018-01-09-highlights-of-yast-development-sprint-48 %}
 [2]: https://en.opensuse.org/SDB:Linuxrc#p_kexec
 [3]: https://news.opensuse.org/2018/01/09/future-tumbleweed-snapshot-to-bring-yast-changes/
 [4]: https://en.wikipedia.org/wiki/Partition_alignment

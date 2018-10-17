@@ -304,7 +304,6 @@ The answers to the initial questions are
 1.  Yes.
 2.  说不定.
 3.  Most of the time.
-{: style="list-style-type: decimal"}
 
 As the SLE release cycle is shifting from the \"all features are
 mandatory\" phase to the \"all bugs are top priority\" phase, expect
@@ -316,5 +315,5 @@ weeks.
 [1]: https://www.suse.com/documentation/sles-12/singlehtml/book_sle_deployment/book_sle_deployment.html#sec.update.sle.methods
 [2]: https://en.opensuse.org/SDB:Linuxrc#p_addon
 [3]: https://github.com/yast/yast-add-on/pull/49
-[4]: https://lizards.opensuse.org/2018/02/09/highlights-of-yast-development-sprint-50/
+[4]: {{ site.baseurl }}{% post_url 2018-02-09-highlights-of-yast-development-sprint-50 %}
 [5]: https://bugzilla.suse.com/show_bug.cgi?id=1078849
