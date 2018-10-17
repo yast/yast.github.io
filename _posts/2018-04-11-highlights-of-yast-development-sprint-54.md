@@ -223,7 +223,7 @@ quite important warning in the future.
 [2]: https://scc.suse.com
 [3]: https://en.wikipedia.org/wiki/Multipath_I/O
 [4]: https://en.opensuse.org/SDB:Linuxrc#Special_parameters_not_handled_by_Linuxrc_itself
-[5]: https://lizards.opensuse.org/2018/03/23/yast-sprint-53/
+[5]: {{ site.baseurl }}{% post_url 2018-03-23-highlights-of-yast-development-sprint-53 %}
 [6]: https://susedoc.github.io/doc-sle/develop/SLES-autoyast/html/appendix.ay_12vs15.html
 [7]: https://susedoc.github.io/doc-sle/develop/SLES-autoyast/html/Profile.html
 [8]: https://en.wikipedia.org/wiki/XSLT

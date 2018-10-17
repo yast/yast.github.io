@@ -259,7 +259,7 @@ updates.
 
 
 [1]: https://en.wikipedia.org/wiki/Partition_type
-[2]: https://lizards.opensuse.org/2018/03/09/highlights-of-yast-development-sprint-52/
+[2]: {{ site.baseurl }}{% post_url 2018-03-09-highlights-of-yast-development-sprint-52 %}
 [3]: https://www.ibm.com/support/knowledgecenter/ssw_aix_61/com.ibm.aix.kernextc/serial_direct_storage.htm
 [4]: https://github.com/yast/yast-packager/blob/master/doc/license_code_cleanup.md
 [5]: https://github.com/yast/yast-installation/blob/master/doc/SELF_UPDATE.md

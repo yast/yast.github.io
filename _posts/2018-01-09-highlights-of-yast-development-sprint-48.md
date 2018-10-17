@@ -190,7 +190,7 @@ Thanks for your support and happy new year!
 [2]: https://github.com/novnc/noVNC
 [3]: https://github.com/yast/yast-yast2/tree/master/library/cwm/examples
 [4]: https://www.suse.com/documentation/sles-12/singlehtml/book_autoyast/book_autoyast.html#pre-install.scripts
-[5]: https://lizards.opensuse.org/2017/12/07/highlights-of-yast-development-sprint-47/
+[5]: {{ site.baseurl }}{% post_url 2017-12-07-highlights-of-yast-development-sprint-47 %}
 [6]: https://bugzilla.suse.com/show_bug.cgi?id=1012047
 [7]: https://bugzilla.suse.com/show_bug.cgi?id=1017166
 [8]: https://docs.travis-ci.com/user/cron-jobs/

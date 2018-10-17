@@ -104,8 +104,7 @@ separate script for that.
 
 You are surely accustomed to remote administration using SSH. And, as
 you may know, the (open)SUSE installation can be done over SSH too. But,
-additionally, YaST also have support for installing over [VNC][1]{:
-rel="nofollow"}.
+additionally, YaST also have support for installing over [VNC][1].
 
 When using VNC for installation, you can choose between using a native
 VNC viewer or a web browser based one. The cool thing about the second
@@ -149,8 +148,8 @@ src="caasp-3-license-confirmation-300x188.png" full_img="caasp-3-license-confirm
 
 ## Improving the `addon` Boot Option Handling
 
-Back in February, we [improved the `addon` boot option][2]{:
-rel="nofollow"} to handle the SUSE Linux Packages DVD properly. However,
+Back in February, we [improved the `addon` boot option][2]
+to handle the SUSE Linux Packages DVD properly. However,
 during testing, we found out that if you are using a system which only
 has one DVD drive, the installation DVD will be automatically used as an
 `addon`.
@@ -160,17 +159,17 @@ Packages DVD are going to use the same drive, YaST will ask the user to
 change the DVD before using it as an addon.
 
 Additionally, we improved the [documentation of the addon boot
-option][3]{: rel="nofollow"} adding new examples to clarify how the
+option][3] adding new examples to clarify how the
 `dvd:///` URLs are handled.
 
 ## Echoes of Winter: White Text on a White Background
 
 These days we fixed a bug that only allowed clairvoyant users to finish
-the installation of [openSUSE Kubic][4]{: rel="nofollow"}.
+the installation of [openSUSE Kubic][4].
 
 The bug is pretty unremarkable but may we draw your attention to the
 related CSS styling engine? It powers the high-contrast color mode that
-you can select with F3 or with [Y2STYLE][5]{: rel="nofollow"}\:
+you can select with F3 or with [Y2STYLE][5]:
 
 {% include blog_img.md alt="Linuxrc Color Mode Selection"
 src="linuxrc-color-mode-selection-150x150.png" full_img="linuxrc-color-mode-selection.png" %}
@@ -194,7 +193,7 @@ Thanks in advance!
 
 
 [1]: https://en.wikipedia.org/wiki/Virtual_Network_Computing
-[2]: https://lizards.opensuse.org/2018/02/22/highlights-of-yast-development-sprint-51/#made-the-addon-linuxrc-option-work-well-with-the-packages-dvd
+[2]: {{ site.baseurl }}{% post_url 2018-02-22-highlights-of-yast-development-sprint-51 %}#made-the-addon-linuxrc-option-work-well-with-the-packages-dvd
 [3]: https://en.opensuse.org/SDB:Linuxrc#p_addon
 [4]: https://en.opensuse.org/Portal:Kubic
 [5]: https://en.opensuse.org/SDB:YaST_tricks

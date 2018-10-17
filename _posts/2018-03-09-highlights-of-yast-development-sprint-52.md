@@ -335,7 +335,7 @@ Thanks!
 
 
 
-[1]: https://lizards.opensuse.org/#offline-upgrade-using-bootable-media-via-scc
+[1]: {{ site.baseurl }}{% post_url 2018-02-22-highlights-of-yast-development-sprint-51 %}#offline-upgrade-using-bootable-media-via-scc
 [2]: https://scc.suse.com
 [3]: https://www.suse.com/betaprogram/
 [4]: https://trello.com/c/cgDMlMWF/283-2-proposal-change-existing-partition-table-to-the-preferred-type
