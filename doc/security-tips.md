@@ -150,26 +150,48 @@ problematic.
 
 Sometimes you need to pass sensitive data like password to an external tool.
 
-- Pass the data through a pipe connected to STDIN of the child process if it is
+* Pass the data through a pipe connected to STDIN of the child process if it is
   possible to provide the data via the standard input.
-  - Use `pipe()` and `fork()` in C++ ([example](
-    https://github.com/openSUSE/libstorage/blob/250089268d1b58da8bbf330e42c3f059986d7b28/storage/Utils/SystemCmd.cc#L226)),
-    [Open3.popen](http://ruby-doc.org/stdlib-2.2.0/libdoc/open3/rdoc/Open3.html#method-c-popen3)
-    or [IO.popen](https://ruby-doc.org/core-2.2.0/IO.html#method-c-popen) in Ruby
-  - Use `/proc/<PID>/fd/0` file
+    - Use `pipe()` and `fork()` in C++ ([example](
+      https://github.com/openSUSE/libstorage/blob/250089268d1b58da8bbf330e42c3f059986d7b28/storage/Utils/SystemCmd.cc#L226)),
+      [Open3.popen](http://ruby-doc.org/stdlib-2.2.0/libdoc/open3/rdoc/Open3.html#method-c-popen3)
+    - Use the [Yast::Execute](
+      https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
+      ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
+      for passing stdin
+    - Use `/proc/<PID>/fd/0` file
 
 The other options are less secure or even insecure:
 
-- Save the data into a file, let the tool read the file
-  - The file content is kept on the disk even after unlinking the file
-  - Overwriting the file content might not help on some file systems (see `man shred`)
-  - A FS snapshot might be created before removing the file
-- Pass the data on the command line - this is *very insecure* as it can be displayed
-  in the `ps` output so it could be read by anybody on the local machine.  
+* Save the data into a file, let the tool read the file
+    - The file content is kept on the disk even after unlinking the file
+    - Overwriting the file content might not help on some file systems (see `man shred`)
+    - A FS snapshot might be created before removing the file
+* Pass the data on the command line - this is *very insecure* as it can be displayed
+  in the `ps` output so it could be read by anybody on the local machine.
   (Exception: This could be possibly used during the initial installation where only the
   installer is running and no other user is logged in. But make sure this is not
   used in installed system.)
 
+### Examples
+
+#### Ruby
+```ruby
+# Real world example from yast2-bootloader when using external utility to get
+# salted hash of password. Utility asks twice for password, so we need to
+# get it twice with newlines.
+
+# old insecure way with password on cmdline. DO NOT USE IT!
+quoted_password = Yast::String.Quote(password)
+result = Yast::WFM.Execute(YAST_BASH_PATH,
+  "echo '#{quoted_password}\n#{quoted_password}\n' | LANG=C grub2-mkpasswd-pbkdf2")
+
+# secure way with Yast::Execute
+result = Yast::Execute.locally("/usr/bin/grub2-mkpasswd-pbkdf2",
+  env:    { "LANG" => "C" },
+  stdin:  "#{password}\n#{password}\n",
+  stdout: :capture)
+```
 
 ## Debugging
 
