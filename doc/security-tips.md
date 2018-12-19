@@ -3,13 +3,13 @@
 Here is a short summary of security recommendations for the YaST developers.
 This is very likely not a full list, feel free to add more tips.
 
-## Obtaining the Root Privileges
+## Obtaining Root Privileges
 
 YaST needs to be already started under the `root` account, there is no switch
-from unprivileged user to privileged one at runtime.
+from an unprivileged user to the privileged one at runtime.
 
-Some modules can be run under unprivileged user but they do not support switching
-to privileged user later. That means they usually work only in the read-only
+Some modules can be run under the unprivileged user, but they do not support switching
+to the privileged user later. That means they usually work only in read-only
 mode and do not allow to change anything.
 
 The result is that there should not be any security problem in this area.
@@ -17,12 +17,12 @@ The result is that there should not be any security problem in this area.
 ## Sensitive Data
 
 Registration codes, access tokens, private keys, passwords (in URLs as well!)
-or other sensitive data should never be logged in to the `y2log`. Although
+or other sensitive data should never be logged to the `y2log`. Although
 reading the `y2log` file requires root access it can be attached to bugzilla
 where everybody could read it.
 
-- Be careful when logging with `.inspect`, the result might contain the internal
-  object data
+- Be careful when logging with `.inspect`: The result might contain confidential internal
+  object data.
 - For logging URLs use the [URL.HidePassword()](
   https://github.com/yast/yast-yast2/blob/5762181d62762816a73fc040362c1efb5d97deed/library/types/src/modules/URL.rb#L613)
   method
@@ -32,7 +32,7 @@ where everybody could read it.
 Never use fixed or predictable names when writing to the `/tmp` directory
 (or in general any world-writable directory).
 
-If you write to a predictable file the attacker could prepare a symlink with
+If you write to a predictable file, the attacker could prepare a symlink with
 that name in advance pointing to some other file. Later when the user would
 run the code the other file would be overwritten.
 
@@ -48,7 +48,7 @@ run the code the other file would be overwritten.
 
 ## Non-root Writable Directories
 
-This is similar to the temporary files above but it is about the `/home`
+This is similar to the temporary files section above but it is about `/home`
 or similar directories.
 
 To avoid a [possible TOCTOU timing issue](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use)
@@ -57,8 +57,8 @@ atomically check and create the file.
 
 - Use `O_CREAT`, `O_EXCL`, `O_WRONLY` flags when creating the file. In this case
   write fails if the file already exists. See `man 2 open` for more details.
-- Create an unique file on the same file system and use `link` to set the
-  the final target name. See `man 2 link` and `man 2 open` for more details.
+- Create a unique file on the same file system and use `link` to set the
+  final target name. See `man 2 link` and `man 2 open` for more details.
 
 ### Examples
 
@@ -85,23 +85,25 @@ if ((fd < 0) && (errno == EEXIST))
 Always prefer HTTPS over HTTP. It ensures you really connect to the intended
 server and the communication is encrypted so nobody can read it or modify it.
 
-Do not disable the peer verification, if you still need to do it (e.g.
-because of a self-signed certificate) always ask the user for confirmation
+Do not disable the peer verification. If you still need to do it (e.g.
+because of a self-signed certificate), always ask the user for confirmation
 and display the certificate details so the user can at least verify the
 certificate fingerprint.
+
 
 ## SSL Certificates
 
 Downloading and importing a SSL certificate from an insecure source (e.g. HTTP)
-does not improve the security, in reality it makes it even worse.
+does not improve security; to the contrary, it makes it even worse.
 
-If you need to import a certificate into the system the user should *verify* the
+If you need to import a certificate into the system, the user should *verify* the
 certificate details (including the fingerprint) and *confirm* the import.
 
 - See the registration module for example ([SslCertificate](
   https://github.com/yast/yast-registration/blob/327ab34c020a89f8b7e3f4bff55deea82e457237/src/lib/registration/ssl_certificate.rb#L11)
   or [SslCertificateDetails](
   https://github.com/yast/yast-registration/blob/327ab34c020a89f8b7e3f4bff55deea82e457237/src/lib/registration/ssl_certificate_details.rb#L11))
+
 
 ## Package Download and Installation
 
@@ -113,6 +115,7 @@ that for us.
 - Always use libzypp functionality (through [yast2-pkg-bindings](
   https://github.com/yast/yast-pkg-bindings/)), never download or install the
   packages manually.
+
 
 ## Running External Tools
 
@@ -131,19 +134,19 @@ running possibly malicious replacements when the path contains the `.` directory
 (which is not recommended).
 
 Another issue might be with the order of the `$PATH` components, e.g.
-`/usr/local/bin:/usr/bin` prefers the `/usr/local/bin` which might be also
+`/usr/local/bin:/usr/bin` prefers `/usr/local/bin` which might also be
 problematic.
- 
+
 - Use the [Yast::Execute](
   https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
   ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
-  for running the external commands
+  for running external commands
 - Use the [Shellwords.escape](
   http://ruby-doc.org/stdlib-2.2.0/libdoc/shellwords/rdoc/Shellwords.html)
   Ruby method, e.g. `/bin/rpm -q #{Shellwords.escape(user_input)}`
-- Use the absolute path, e.g. `/bin/rpm`  
-  *Note: The very old YaST approach was NOT using the absolute path, this has
-  been changed. But it might be still used somewhere, feel free to fix that.*
+- Use the absolute path, e.g. `/bin/rpm`
+  *Note: The very old YaST approach was NOT using the absolute path. This has
+  been changed. But it might be still used in some places; feel free to fix that.*
 
 
 ## Passing Sensitive Data to External Tools
@@ -168,14 +171,16 @@ The other options are less secure or even insecure:
     - Overwriting the file content might not help on some file systems (see `man shred`)
     - A FS snapshot might be created before removing the file
 * Pass the data on the command line - this is *very insecure* as it can be displayed
-  in the `ps` output so it could be read by anybody on the local machine.
+  in the output of the `ps` command, so it could be read by anybody on the local machine.
   (Exception: This could be possibly used during the initial installation where only the
   installer is running and no other user is logged in. But make sure this is not
-  used in installed system.)
+  used in the installed system.)
+
 
 ### Examples
 
 #### Ruby
+
 ```ruby
 # Real world example from yast2-bootloader when using external utility to get
 # salted hash of password. Utility asks twice for password, so we need to
@@ -200,16 +205,16 @@ sensitive data.
 
 - If you need to use a separate log file (not the standard `y2log`) make sure
   the file has root-only access.
-- Use a directory accessible only to root, otherwise avoid file collisions,
+- Use a directory accessible only to root. Otherwise avoid file collisions;
   see the [temporary files](#temporary-files) section.
 
 When using a debugger (or any other special debugging features) make sure that
 they are disabled by default.
 
-- Enable the debugging features only on user request, use a command line
+- Enable the debugging features only on user request; use a command line
   option or an environment variable.
-- If the tool allows remote control then enable the remote access also only
-  on request. And if possible by default allow only the local access via the
+- If the tool allows remote control, then enable the remote access also only
+  on request. And if possible, by default allow only local access via the
   loopback device (`localhost`/`127.0.0.1`).
 
 See more details in the [debugging](./debugging) document about the integrated
@@ -218,7 +223,7 @@ Ruby debugger support in YaST.
 
 ## Random Numbers
 
-Linux has two devices generating random data, `/dev/urandom` (non-blocking) and
+Linux has two devices generating random data: `/dev/urandom` (non-blocking) and
 [cryptographically secure](
 https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator
 ) `/dev/random` (can block if there is not enough entropy).
@@ -230,7 +235,7 @@ https://ruby-doc.org/stdlib-2.2.0/libdoc/securerandom/rdoc/SecureRandom.html)
 class providing cryptographically secure methods for generating random values.
 
 - Use the simple method when generating non-security related random values,
-  e.g. a random host name, random time out, etc...
-- For security related values (access keys, tokens) use the cryptographically
+  e.g. a random host name, random time out, etc.
+- For security related values (access keys, tokens), use the cryptographically
   secure sources.
 
