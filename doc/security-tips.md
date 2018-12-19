@@ -3,6 +3,7 @@
 Here is a short summary of security recommendations for the YaST developers.
 This is very likely not a full list, feel free to add more tips.
 
+
 ## Obtaining Root Privileges
 
 YaST needs to be already started under the `root` account, there is no switch
@@ -13,6 +14,7 @@ to the privileged user later. That means they usually work only in read-only
 mode and do not allow to change anything.
 
 The result is that there should not be any security problem in this area.
+
 
 ## Sensitive Data
 
@@ -26,6 +28,7 @@ where everybody could read it.
 - For logging URLs use the [URL.HidePassword()](
   https://github.com/yast/yast-yast2/blob/5762181d62762816a73fc040362c1efb5d97deed/library/types/src/modules/URL.rb#L613)
   method
+
 
 ## Temporary Files
 
@@ -46,6 +49,7 @@ run the code the other file would be overwritten.
   https://github.com/yast/yast-core/blob/a0f511c66fd64382a1267f8151129d8b3ced7366/doc/systemagent.md#tmpdir
   ) agent
 
+
 ## Non-root Writable Directories
 
 This is similar to the temporary files section above but it is about `/home`
@@ -60,9 +64,11 @@ atomically check and create the file.
 - Create a unique file on the same file system and use `link` to set the
   final target name. See `man 2 link` and `man 2 open` for more details.
 
+
 ### Examples
 
 #### Ruby
+
 ```ruby
 # raises Errno::EEXIST if the file already exists
 File.open(filename, File::WRONLY | File::CREAT | File::EXCL) do |file|
@@ -71,6 +77,7 @@ end
 ```
 
 #### C/C++
+
 ```cpp
 int fd = open(file, O_CREAT | O_EXCL | O_WRONLY);
 if ((fd < 0) && (errno == EEXIST))
@@ -119,6 +126,14 @@ that for us.
 
 ## Running External Tools
 
+If you can avoid it, do not use external commands. In particular, do not use
+external commands that have a good and easy-to-use Ruby counterpart. I.e. don't
+pipe the output of one command to any of `grep`, `sed`, `tr`, `cut`. Simply use
+plain Ruby for those things. Also, don't use `ls` or `find` to find files. Use
+Ruby `Dir` and `Find` instead.
+
+If you really need to use external commands:
+
 The [shell injection vulnerability](
 https://en.wikipedia.org/wiki/Code_injection#Shell_injection) is usually not
 a problem as YaST is already running as root and the input comes from the root
@@ -128,7 +143,7 @@ But usually the problem happens when using a file with spaces in the file name o
 or the user input contains some special characters like `<&%{}>`. Then the module
 probably does not work as expected or can fail.
 
-Also when executing external tools always use the absolute path to avoid
+Also when executing external tools, always use the absolute path to avoid a
 *file not found* error when `$PATH` variable is not set properly or to avoid
 running possibly malicious replacements when the path contains the `.` directory
 (which is not recommended).
@@ -149,6 +164,120 @@ problematic.
   been changed. But it might be still used in some places; feel free to fix that.*
 
 
+## Attack Vectors for External Commands
+
+### Malicious Programs in $PATH
+
+If `$PATH` contains any directory where unprivileged users may have write
+access or where they can mount (!) external media to (USB sticks, NFS / Samba
+shares), they might put malicious programs there that are named just like
+something that is called by YaST; somebody might put their own `grep` or `cp`
+or whatever there that may not only do what the original does, but exploit the
+privileges of the caller (i.e. root).
+
+_**Remember that YaST is always running as root!**_
+
+Whoever can make YaST call his binaries can get root access very easily.
+
+Don't forget shell built-ins like `echo` and `test`, and remember that `[` is
+just an alias for `test`. There is a counterpart for each of them in `/bin` or
+`/usr/bin`.
+
+
+### Malicious Programs Disguised as Plain Files
+
+If you use the content of directories as part of a command line, you need to be
+safe against files that have names that are weird, but legal. In a Linux/Unix
+environment, there are few characters that are explicitly forbidden in file
+names; the slash (`/`) is definitely forbidden, everything else is in most
+cases just weird, but permitted.
+
+A file may also be named something like
+
+`; rm -rf *`    or
+`"; rm -rf *`  or
+`"; chown root rootshell; chmod u+s rootshell`
+
+Of course this will make the original command fail, but the malicious command
+that follows will succeed, so the damage is already done by the time anybody
+notices that something is wrong.
+
+Remember that it only takes one single of those commands to be executed with
+root permissions to cause damage. Somebody might plug his USB stick in with
+whole directories of such commands with various combinations of different types
+of quotes.
+
+So if you read a directory's content with Ruby or with C++ or with one script
+and command and just use those names that we found as they are, you might easily
+build command lines that by accident execute any of those malicious commands.
+
+
+### Malicious Commands in Device Names / Mount Points
+
+Any of the above can also happen with device names (OEM strings!) or mount
+points (volume labels!). A USB stick might contain this.
+
+Just look at `/dev/disk/by-label` and `/dev/disk/by-id` to get an idea.
+
+Volume labels are commonly used in _udev_ rules as mount points.
+
+
+### Malicious Commands Hidden in Other Places
+
+All files that you read, all data that you process that comes from the outside,
+all user input are datea that cannot be trusted, so you need to make sure to
+properly escape all of that. The same attack vectors as with filenames apply to
+all those things.
+
+
+### Special Caveat: Escaping Single Quotes in the Shell
+
+In most programming contexts, when you have a quote inside a quote, it only
+matters if it is the same kind of quote, and then you simply prefix it with a
+backslash:
+
+`"Value: \"#{value}"\" (changed)"`
+
+The shell is weird in that aspect. When you have a quote inside a quote, you
+need to terminate the string, then add the quote escaped with a backslash, then
+start a new string. So the above example would be
+
+`"Value: "\"value\"" (changed)"`
+
+This is very unexpected for most people, and so it is frequently done wrong.
+
+
+### Shell-Escaping vs. Regexp-Escaping
+
+While the shell has special treatment for some types of characters, regular
+expressions have some other types of characters. Sometimes it's hard to get it
+right for both cases.
+
+Fortunately, regexps typically consist of a fixed part (that's where usually
+the characters go that have special meaning for the regexps) and sometimes of a
+variable part.
+
+So, for most `grep` calls (which should be avoided in the first place - see
+above), it should be used something like this:
+
+`/usr/bin/egrep '^[0-9]+\s+'#{foo.shellescape}'bar$'`
+
+So if the `foo` variable contains characters that need to be shell-escaped,
+they are properly escaped, and the `egrep` command receives one single string
+as the argument. Remember that the shell consumes the quotes and any
+backslashes outside of quotes, so even if the complete command expands to
+something like
+
+`/usr/bin/egrep '^[0-9]+\s+'very\ weird\'stuff'bar$'`
+
+the `egrep` command gets
+
+`^[0-9]+\s+very weird'stuffbar$`
+
+which is the expected thing.
+
+
+
 ## Passing Sensitive Data to External Tools
 
 Sometimes you need to pass sensitive data like password to an external tool.
@@ -162,7 +291,7 @@ Sometimes you need to pass sensitive data like password to an external tool.
       https://github.com/yast/yast-yast2/blob/master/library/system/src/lib/yast2/execute.rb
       ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
       for passing stdin
-    - Use `/proc/<PID>/fd/0` file
+    - Use the `/proc/<PID>/fd/0` file
 
 The other options are less secure or even insecure:
 
@@ -183,8 +312,8 @@ The other options are less secure or even insecure:
 
 ```ruby
 # Real world example from yast2-bootloader when using external utility to get
-# salted hash of password. Utility asks twice for password, so we need to
-# get it twice with newlines.
+# the salted hash of a password. The utility asks twice for the password, so we
+# need to get it twice with newlines.
 
 # old insecure way with password on cmdline. DO NOT USE IT!
 quoted_password = Yast::String.Quote(password)
@@ -239,3 +368,7 @@ class providing cryptographically secure methods for generating random values.
 - For security related values (access keys, tokens), use the cryptographically
   secure sources.
 
+
+## Further Reading
+
+[YaST Security Audit Fixes: Lessons Learned and Reminder](https://github.com/yast/yast.github.io/issues/172)
