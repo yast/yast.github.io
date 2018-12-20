@@ -276,6 +276,14 @@ the `egrep` command gets
 
 which is the expected thing.
 
+_Notice that there is also Ruby `Regexp.escape` which can be combined with
+this. The problem is just that there are many different variations of the
+Regexp syntax, and Ruby `Regexp.escape` of course supports Ruby's own
+variation. It's slightly different for `grep`, `egrep`, `sed`, `perl`. This is
+something to watch out for. And this is also another reason to do that inside
+Ruby and not call external tools like `grep` / `egrep` / `sed`; then you can
+safely simply use Ruby `Regexp.escape`._
+
 
 
 ## Passing Sensitive Data to External Tools
