@@ -9,92 +9,66 @@ openSUSE Leap 42.x, have a look at the *Old schema* section of this document.
 
 ## New schema: version numbers are related to SUSE versions
 
-From now on, version numbers will be related to the SUSE version. Let's see an
-example:
+From now on, version numbers will be tied to the SUSE versions:
 
 * Major number is related to the major SUSE version (4 for SLE 15, 5 for
   SLE 16, and so on).
 * Minor number is related to the SUSE Service Pack number (0, 1, 2...).
 * Patch number enumerates versions for a given major/minor version.
 
-For instance, `4.2.3` is meant to be the fourth version which is specific to SLE
-15 SP2.
-
-Note that it is perfectly fine if, let's say SLE 15 SP2, contains a package
-which version is `4.1.1`.  It means that the package has not been changed since
-SLE 15 SP1 times.
+For instance, `4.2.3` would be the fourth version of the package for SLE 15 SP2
+(the first one would be 4.2.0).
 
 ### When to bump each number
 
-Basically, these are the rules when it comes to increase version numbers:
+Basically, these are the rules for increasing version numbers:
 
-* Every fix/change that goes as a *maintenance update* should increment the
-  *patch* number (`4.0.1`, `4.0.2`, etc.).
-* The first commit that introduces a divergence between the `master` and the
-  latest SP branch (for instance `SLE-15-SP2`) should increment the *minor*
-  version.
 * The first commit that introduces a divergence which is meant to be only
   available in the next major SUSE release should increment the *major*
-  version.
+  version (e.g., from `4.3.45` to `5.0.0`).
+* The first commit that introduces a divergence which is meant to be only
+  available in the next Service Pack release should increment the *minor*
+  version (e.g., from `4.3.45` to `4.4.0`).
+* Every fix/change that goes as a *maintenance update* should increment the
+  *patch* number (`4.0.1`, `4.0.2`, etc.).
+
+Note that during the development phase of the next product (either a Service Pack or a major release),
+only the *patch* number is bumped meanwhile there is no code divergence regarding the previous product.
+The *major* and *minor* numbers are properly bumped before the product release in case no divergence has
+been introduced during the development phase.
 
 ### Example
 
-The best way to understand how versioning works is through an example. Let's
-say SLE 15 (SP0) was already released and let's say there is a package
-`yast2-example` which version is `4.0.0`. Moreover, there is a `SLE-15` branch
-in the repository.
+Let's try an example for a better understading about how the new YaST versioning policy works.
 
-1. A regular fix increases the version to `4.0.1`. Of course, that change is
-   merged into `master` but keeping the same number as far as the package has
-   not diverged.
-2. Then a new change which is meant for SLE 15 SP1, but not desired for SLE 15
-   (SP0), is added to the `master` branch. So the package has diverged and the
-   *minor* version should be increased (`4.1.0`).
-3. Another fix for the already released version appears. `SLE-15` version is now
-   `4.0.2` and `master` is `4.1.1`.
-4. Fast forward: SLE 15 SP1 is about to be released and a new `SLE-15-SP1`
-   branch is created (keeping version `4.1.1`).
-5. A fix for `SP1` increases version to `4.1.2`. The change is merged into
-   master.
-6. A fix for `master` (diverging from `SLE-12-SP1` version) increases version to
-   `4.2.0`.
+Scenario: last realesed product was SLE 15 (SP0) and SLE 15 SP1 is currently on its development
+phase. Moreover, there is a package `yast2-example` which version is `4.0.9` and there is a
+`SLE-15-GA` branch in the repository.
 
-The resulting scenario should be:
+### Fix a bug for the latest released Service Pack: SLE 15 SP0
 
-* `SLE-15`: 4.0.2.
-* `SLE-15-SP1`: 4.1.2
-* `master`: 4.2.0
+1. The fix is implemented into the `SLE-15-GA` branch and the *patch* number is increased from
+   `4.0.9` to `4.0.10`.
+2. Then the fix is merged into master (to also include it as part of SP1). If there is no
+   code divergence yet with master branch, then the version is kept as `4.0.10` in master too.
+   But if some changes were included into master previously (e.g., for the implementation
+   of a new feature for SP1, see next example), the version number in master would be bumped from
+   something like `4.1.3` to `4.1.4`.
 
-Fast forward again: SLE 15 SP4 is under development. But `yast2-example` has not
-changed since SP2 times, so its current version is still `4.2.0`.
+### Add new a change for the next Service Pack: SLE 15 SP1
 
-7. Then a fix for `master` comes in. As this fix is intended for SP4 and
-   introduces a divergence with SP2, we should bump minor and patch numbers to
-   `4.4.0`. Note the correspondence between minor number and the SP number.
+1. The feature/fix is implemented into the master branch.
+2. If this is the first divergence with the `SLE-15-GA` branch, the *minor* number is increased
+   from `4.0.9` to `4.1.0`. Otherwise, only the *patch* number is increased, e.g., from
+   `4.1.3` to `4.1.4`.
 
-Of course, when SUSE Linux Enterprise 16 arrives, the first change that
-introduces a divergence with last SLE 15 version should increase version
-number to `5.0.0`.
+### Add a new change for the next SLE major version: SLE 16 SP0
 
-Let's summarize the current situation:
+1. The feature/fix is implemented into the master branch.
+2. If this is the first divergence with the previous product, the *major* number is increased
+   from `4.0.9` to `5.0.0`. Otherwise, only the *patch* number is increased, e.g., from
+   `5.0.3` to `5.0.4`.
 
-* `SLE-15`: 4.0.2.
-* `SLE-15-SP1`: 4.1.2
-* `SLE-15-SP2`: 4.2.0
-* `SLE-15-SP3`: 4.2.0
-* `SLE-15-SP4`: 4.4.0
-* `master` (already targeting SLE 16): 5.0.0
-
-Finally, what happens if a bug is fixed for `SLE-15-SP3` (and newer versions)?
-The change introduces a divergence between `SLE-15-SP2` and `SLE-15-SP3`, so
-minor number should be increased:
-
-* `SLE-15`: 4.0.2.
-* `SLE-15-SP1`: 4.1.2
-* `SLE-15-SP2`: 4.2.0
-* `SLE-15-SP3`: *4.3.0*
-* `SLE-15-SP4`: *4.4.1*
-* `master` (already targeting SLE 16): *5.0.1*
 
 ## Old schema
 
