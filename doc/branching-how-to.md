@@ -21,6 +21,7 @@ build services.
 
 - Create a new `Dockerfile.*` in the respective Git repository (use the previous
   image as a template).
+- Use the new OBS repositories (created above)
 - Adapt also the `.travis.yml` file to build the new image at Travis.
 
 #### Repositories
@@ -33,7 +34,8 @@ build services.
 
 ### Build the new Docker Images
 
-:information_source: You need access permissions to the `yastdevel` organization at the Docker Hub
+:information_source: You need access permissions to the `yastdevel` and `libyui`
+organizations at the Docker Hub.
 
 - Update the Docker Hub configuration to build the new defined images
 
@@ -47,3 +49,6 @@ build services.
 
 
 ## Travis Setup
+
+To use the new Docker images at Travis all `Dockerfile` files need to be adapted
+to use the new base Docker image.
