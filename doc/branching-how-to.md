@@ -16,6 +16,9 @@ build services.
 - The sync job from IBS to OBS has to be added at https://gitlab.suse.de/yast/infra.
 - See the [Jenkins Job Builder documentation](https://docs.openstack.org/infra/jenkins-job-builder/)
 
+- Testing before deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini test jenkins/ci.suse.de/ '*SP5*'`
+- Deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini update jenkins/ci.suse.de/ '*SP5*'`
+
 ## Docker Setup
 
 ### Define the new Docker Images
