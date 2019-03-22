@@ -14,6 +14,7 @@ build services.
 ## Jenkins Setup
 
 - The sync job from IBS to OBS has to be added at https://gitlab.suse.de/yast/infra.
+- See the [Jenkins Job Builder documentation](https://docs.openstack.org/infra/jenkins-job-builder/)
 
 ## Docker Setup
 
