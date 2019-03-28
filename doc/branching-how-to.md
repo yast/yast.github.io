@@ -11,14 +11,6 @@ build services.
 - Add all YaST developers to the new projects, do not forget to add the
   `yast-team` user (used by Jenkins)
 
-## Jenkins Setup
-
-- The sync job from IBS to OBS has to be added at https://gitlab.suse.de/yast/infra.
-- See the [Jenkins Job Builder documentation](https://docs.openstack.org/infra/jenkins-job-builder/)
-
-- Testing before deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini test jenkins/ci.suse.de/ '*SP5*'`
-- Deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini update jenkins/ci.suse.de/ '*SP5*'`
-
 ## Docker Setup
 
 ### Define the new Docker Images
@@ -52,7 +44,32 @@ organizations at the Docker Hub.
 - https://cloud.docker.com/u/libyui/repository/docker/libyui/devel/builds/edit
 
 
-## Travis Setup
+## Creating the Branches
 
-To use the new Docker images at Travis all `Dockerfile` files need to be adapted
-to use the new base Docker image.
+For creating the branch and adapting the `Rakefile` and `Dockerfile` files use the
+[create_maintenance_branch](
+https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch).
+Run it in the Git checkout of the respective package.
+
+Get list of packages from the Jenkins autosubmission jobs:
+
+```shell
+jenkins-jobs --conf jenkins/ci.suse.de.ini test jenkins/ci.suse.de/ '*-master' \
+2> /dev/stdout > /dev/null | sed -e "s/INFO:jenkins_jobs.builder:Job name:  yast-\(.*\)-master/\1/"
+```
+
+(Run in the https://gitlab.suse.de/yast/infra/ checkout.)
+
+### Enabling Branch Protection
+
+The newly added branches should be protected by GitHub (to avoid force pushes, accidental
+branch removal and enforce code reviews). To do this globally use the [protect_branches.rb](
+https://github.com/yast/helper_scripts/blob/master/github/protect_branches/protect_branches.rb)
+helper script.
+
+## Jenkins Setup
+
+- The sync job from IBS to OBS has to be added at https://gitlab.suse.de/yast/infra.
+- See the [Jenkins Job Builder documentation](https://docs.openstack.org/infra/jenkins-job-builder/)
+- Testing before deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini test jenkins/ci.suse.de/ '*SP5*'`
+- Deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini update jenkins/ci.suse.de/ '*SP5*'`
