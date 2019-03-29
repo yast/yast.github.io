@@ -58,7 +58,7 @@ supports --auto-correct" text. Just enable the check and run "rubocop -a".
 
 Then manually fix the remaning issues.
 
-I'd suggest committing each fix separately, see e.g.
+It is recommended to commit each fix separately, see e.g.
 https://github.com/yast/yast-yast2/pull/478/commits, mark the the manual fixes in
 commit message ("Manually fixed" or something like that).
 
