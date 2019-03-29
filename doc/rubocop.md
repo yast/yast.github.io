@@ -8,7 +8,7 @@ setup rubocop for new or existing project to increase its usage.
 
 ### Initial Configuration
 
-Create the initial .rubocop.yml file which inherits the common YaST style:
+Create the initial `.rubocop.yml` file which inherits the common YaST style:
 
 ```
 # use the shared Yast defaults
@@ -19,8 +19,8 @@ inherit_from:
 
 ### First Rubocop Run
 
-Run "rubocop" and see how many issues Rubocop finds. If there are few issues (few
-dozens ;-)) you can run "rubocop -a" to autofix the issues, then run "rubocop" again
+Run `rubocop` and see how many issues Rubocop finds. If there are few issues (few
+dozens ;-)) you can run `rubocop -a` to autofix the issues, then run `rubocop` again
 and fix the remaining issues manually.
 
 For easier code review please separate the automatic changes done by Rubocop and the
@@ -39,22 +39,22 @@ issues. In this case it's better to split the work into smaller parts and maybe 
 disable some checks which would need too much work (long methods/classes) or break
 the API (variable or method names).
 
-Run "rubocop --auto-gen-config", this will generate .rubocop_todo.yml file which
+Run `rubocop --auto-gen-config`, this will generate `.rubocop_todo.yml` file which
 disables all checks which failed. Now you can append that file to the default config:
 
 ```
   cat .rubocop_todo.yml >> .rubocop.yml
 ```
 
-If you run "rubocop" now it should pass.
+If you run `rubocop` now it should pass.
 
 Now you should remove the disabled checks one by one, but it's better first to just
 comment it out and see the result, if you decide to keep it disabled then you can
 just uncomment it back.
 
 You should start with the checks which Rubocop is able to fix automatically, this
-will avoid updating your manual changes later. Such checks are marked with "Cop
-supports --auto-correct" text. Just enable the check and run "rubocop -a".
+will avoid updating your manual changes later. Such checks are marked with `Cop
+supports --auto-correct` text. Just enable the check and run `rubocop -a`.
 
 Then manually fix the remaning issues.
 
@@ -65,7 +65,7 @@ commit message ("Manually fixed" or something like that).
 
 ### Commit Your Hard Work
 
-Do not forget to commit also the new .rubocop.yml ;-)
-At Travis the script runs Rubocop automatically if .rubocop.yml is found, you do not
+Do not forget to commit also the new `.rubocop.yml` ;-)
+At Travis the script runs Rubocop automatically if `.rubocop.yml` is found, you do not
 need to do anything to enable it there.
 
