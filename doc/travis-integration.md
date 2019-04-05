@@ -89,13 +89,13 @@ are used for the maintenance branches.
 
 ### registry.opensuse.org
 
-Since April 2019 Docker images build in the OBS
+Since April 2019 Docker images built in the OBS
 ([ruby](https://build.opensuse.org/package/show/YaST:Head/ci-ruby-container)
 and
 [cpp](https://build.opensuse.org/package/show/YaST:Head/ci-cpp-container))
-are used with Travis for the master branch. The configuration is
-keeped in GitHub ([ruby](https://github.com/yast/ci-ruby-container/)
-and [cpp](https://github.com/yast/ci-cpp-container/)).
+are used with Travis for the master branch. The configuration is kept
+in GitHub ([ruby](https://github.com/yast/ci-ruby-container/) and
+[cpp](https://github.com/yast/ci-cpp-container/)).
 
 #### Image Rebuild
 
