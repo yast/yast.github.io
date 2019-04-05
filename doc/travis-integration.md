@@ -76,7 +76,8 @@ KVM, VirtualBox or others.
 
 For each branch on the git repository a different tag of the docker image is used. E.g. the master
 branch always uses the *latest* tag and the SLE12 SP2 maintenance branch uses the *sle12-sp*
-tag. To see all available tags check docker image on dockerhub (more below).
+tag. To see all available tags check docker image on registry.opensuse.org or
+dockerhub (more below).
 
 ### Open Build Service
 
@@ -86,17 +87,31 @@ then used in the Docker images which are then used by the Travis builds. The cor
 subprojects under [YaST](https://build.opensuse.org/project/subprojects/YaST)
 are used for the maintenance branches.
 
+### registry.opensuse.org
+
+Since April 2019 Docker images build in the OBS
+([ruby](https://build.opensuse.org/package/show/YaST:Head/ci-ruby-container)
+and
+[cpp](https://build.opensuse.org/package/show/YaST:Head/ci-cpp-container))
+are used with Travis for the master branch. The configuration is
+keeped in GitHub ([ruby](https://github.com/yast/ci-ruby-container/)
+and [cpp](https://github.com/yast/ci-cpp-container/)).
+
+#### Image Rebuild
+
+The Docker images in the OBS are rebuild automatically.
+
 ### The Docker Hub
 
 The [Docker Hub](https://hub.docker.com/) provides a central place for publishing
-the Docker images. The Docker images used at Travis are hosted there.
+the Docker images. Some Docker images used at Travis are hosted there.
 
 The YaST images are stored at the [yastdevel](https://hub.docker.com/u/yastdevel/)
 Docker Hub organization.
 
 #### Image Rebuild
 
-The Docker images are periodically rebuilt, the rebuild is triggered by the
+The Docker images on Docker Hub are periodically rebuilt, the rebuild is triggered by the
 Jenkins jobs (e.g. [docker-trigger-yastdevel-ruby-latest](
 https://ci.opensuse.org/view/Yast/job/docker-trigger-yastdevel-ruby-latest/)).
 Images for the master branch are built more often than the ones corresponding
