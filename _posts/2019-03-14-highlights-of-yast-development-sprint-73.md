@@ -162,8 +162,8 @@ When the custom registration server (the new [RMT][2] or the older
 [SMT][3]) use a self-signed certificate, YaST offers to import the
 server certificate and make it known to the system.
 
-[![Self-signed Certificate
-Dialog](../../../../images/2019-03-14/yast-registration-self-signed-certificate-300x225.png)](../../../../images/2019-03-14/yast-registration-self-signed-certificate.png)
+{% include blog_img.md alt="Self-signed Certificate Dialog"
+src="yast-registration-self-signed-certificate-300x225.png" full_img="yast-registration-self-signed-certificate.png" %}
 
 On the other hand, when the server SSL key was signed by an unknown key,
 YaST used to just display an error popup. That was not much helpful as
@@ -172,8 +172,8 @@ about how to import the CA certificate manually is displayed. In this
 case it cannot be imported automatically as YaST does not know where to
 obtain it, it is not present in the server response.
 
-[![Unknown Certificate Authority
-Dialog](../../../../images/2019-03-14/yast-registration-unknown-certificate-authority-300x225.png)](../../../../images/2019-03-14/yast-registration-unknown-certificate-authority.png)
+{% include blog_img.md alt="Unknown Certificate Authority Dialog"
+src="yast-registration-unknown-certificate-authority-300x225.png" full_img="yast-registration-unknown-certificate-authority.png" %}
 
 The work of importing and activating the certificate is now performed by
 a YaST script, preventing the user from having to run some complicated

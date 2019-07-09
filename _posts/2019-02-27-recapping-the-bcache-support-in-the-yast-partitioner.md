@@ -106,8 +106,8 @@ delete the existing Bcache devices. And, of course, it also enables you
 to create new Bcache devices on top of any of your not-so-fast existing
 block devices.
 
-[![Bcache devices in the
-Partitioner](../../../../images/2019-02-27/bcache-devices-300x223.png)](../../../../images/2019-02-27/bcache-devices.png)
+{% include blog_img.md alt="Bcache devices in the Partitioner"
+src="bcache-devices-300x223.png" full_img="bcache-devices.png" %}
 
 All Bcache devices can be formatted, mounted or partitioned with the
 same level of flexibility than other block devices in the system. See
@@ -121,8 +121,8 @@ available cache modes (more on this below). Any available block devices
 backing device or as caching one. But a screenshot is worth a thousand
 words.
 
-[![Screen for creating and editing a
-Bcache](../../../../images/2019-02-27/bcache-create-300x168.png)](../../../../images/2019-02-27/bcache-create.png)
+{% include blog_img.md alt="Screen for creating and editing a Bcache"
+src="bcache-create-300x168.png" full_img="bcache-create.png" %}
 
 The backing device is mandatory. Flash-only Bcaches cannot be created
 and there are no plans to include support for them in the future. But as
@@ -135,8 +135,8 @@ As mentioned, the third field allows to choose one of the cache modes
 offered by Bcache. If you are not sure what a particular cache mode
 means, YaST also provides a quite extensive help text explaining them.
 
-[![Help about
-Bcache](../../../../images/2019-02-27/bcache-help-300x237.png)](../../../../images/2019-02-27/bcache-help.png)
+{% include blog_img.md alt="Help about Bcache"
+src="bcache-help-300x237.png" full_img="bcache-help.png" %}
 
 Moreover, when modifying a device, the Partitioner will limit risky
 combinations, preventing data loss and avoiding operations that can
@@ -146,16 +146,16 @@ because that would require a detaching action. That could take a very
 long time in some situations and interfere with other operations
 performed by the Partitioner.
 
-[![Only safe operations
-allowed](../../../../images/2019-02-27/bcache-detach-warning-300x212.png)](../../../../images/2019-02-27/bcache-detach-warning.png)
+{% include blog_img.md alt="Only safe operations allowed"
+src="bcache-detach-warning-300x212.png" full_img="bcache-detach-warning.png" %}
 
 Of course the operation to delete a Bcache device offers the usual
 checks and information available in other parts of the YaST Partitioner,
 like shown in the following screenshot (this time using the look and
 feel of the SLE installer).
 
-[![Deleting a Bcache
-device](../../../../images/2019-02-27/bcache-delete-300x221.png)](../../../../images/2019-02-27/bcache-delete.png)
+{% include blog_img.md alt="Deleting a Bcache device"
+src="bcache-delete-300x221.png" full_img="bcache-delete.png" %}
 
 ### Bcache for everyone?
 
@@ -181,8 +181,8 @@ found. If that would even happen, YaST will alert the users about the
 dangers of using Bcache in such unsupported scenario and will urge them
 to use manual procedures to modify the existing setup.
 
-[![Warning: Bcache not
-supported!](../../../../images/2019-02-27/bcache-not-supported-warning-300x170.png)](../../../../images/2019-02-27/bcache-not-supported-warning.png)
+{% include blog_img.md alt="Warning: Bcache not supported!"
+src="bcache-not-supported-warning-300x170.png" full_img="bcache-not-supported-warning.png" %}
 
 ### What’s next?
 

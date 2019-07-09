@@ -96,8 +96,8 @@ Btrfs feature. SLE and Leap users will have to wait to the next release
 First of all, the Btrfs section of our beloved Expert Partitioner has
 been revamped as shown in the following picture.
 
-[![New Btrfs section of the
-Partitioner](../../../../images/2019-06-19/btrfs_section-300x157.png)](../../../../images/2019-06-19/btrfs_section.png)
+{% include blog_img.md alt="New Btrfs section of the Partitioner"
+src="btrfs_section-300x157.png" full_img="btrfs_section.png" %}
 
 It lists all the Btrfs file systems, single- and multi-device ones. You
 can distinguish them at first sight by the format of the name. The table
@@ -111,8 +111,8 @@ system label, UUID, data and meta-data RAID levels, etc. The file system
 can be edited to modify some aspects like the mount options or the
 subvolumes.
 
-[![Overview of a Btrfs file
-system](../../../../images/2019-06-19/show-300x157.png)](../../../../images/2019-06-19/show.png)
+{% include blog_img.md alt="Overview of a Btrfs file system"
+src="show-300x157.png" full_img="show.png" %}
 
 In addition, the tab called “Used Devices” contains a detailed list of
 the block devices being used by the file system. That list can also be
@@ -123,16 +123,16 @@ but a balancing operation would be needed after that. Such balancing
 operation could take quite a considerable amount of time. For that
 reason it has been avoided in the Expert Partitioner.
 
-[![Devices of a Btrfs file
-system](../../../../images/2019-06-19/used_devices-300x158.png)](../../../../images/2019-06-19/used_devices.png)
+{% include blog_img.md alt="Devices of a Btrfs file system"
+src="used_devices-300x158.png" full_img="used_devices.png" %}
 
 Of course, you can still format a single device as Btrfs in the
 traditional way (using the “edit” button for such device). But let’s see
 how the new button for adding a Btrfs file system opens new
 possibilities.
 
-[![Adding a Btrfs file
-system](../../../../images/2019-06-19/add_filesystem-300x157.png)](../../../../images/2019-06-19/add_filesystem.png)
+{% include blog_img.md alt="Adding a Btrfs file system"
+src="add_filesystem-300x157.png" full_img="add_filesystem.png" %}
 
 Similar to the RAID dialog, you have the available devices on the left
 and you can select the devices where you want to create the file system,
@@ -142,8 +142,8 @@ devices. You will go to the second step of the Btrfs creation by
 clicking the “Next” button. In this second step, you can select the
 mount options and define the subvolumes, see the next image.
 
-[![Options for a new Btrfs file
-system](../../../../images/2019-06-19/options-300x203.png)](../../../../images/2019-06-19/options.png)
+{% include blog_img.md alt="Options for a new Btrfs file system"
+src="options-300x203.png" full_img="options.png" %}
 
 And apart of all that, the Expert Partitioner has received several small
 improvements after including multi-device Btrfs file systems. Now that
@@ -152,8 +152,8 @@ they are included in the general list of devices. Note the “Type” column
 has also been improved to show more useful information, not only for
 Btrfs but for all kind of devices.
 
-[![Revamped list of
-devices](../../../../images/2019-06-19/devices_list-300x157.png)](../../../../images/2019-06-19/devices_list.png)
+{% include blog_img.md alt="Revamped list of devices"
+src="devices_list-300x157.png" full_img="devices_list.png" %}
 
 ### What else works?
 

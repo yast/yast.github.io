@@ -47,8 +47,8 @@ fixing some bugs and introducing some minor enhancements along the
 process. For instance, version 4.2.2 permits to have multiple default
 routes and does not drop extra options for them.
 
-[![New network routing
-dialog](../../../../images/2019-04-30/RoutingStandalone-300x236.png)](../../../../images/2019-04-30/RoutingStandalone.png)
+{% include blog_img.md alt="New network routing dialog"
+src="RoutingStandalone-300x236.png" full_img="RoutingStandalone.png" %}
 
 If you want to know more details about the process, you might be
 interested in the [kickstart meeting notes][2] that we added to our
@@ -110,24 +110,24 @@ started with Qt 2.x in late 1999 for SuSE Linux 6.3. That was the first
 YaST2. It already came in both a Qt version with a graphical user
 interface and in a text-only (NCurses) version.
 
-[![SuSE Linux 6.3
-Installer](../../../../images/2019-04-30/suse-linux-6.3-300x225.png)](../../../../images/2019-04-30/suse-linux-6.3.png)
+{% include blog_img.md alt="SuSE Linux 6.3 Installer"
+src="suse-linux-6.3-300x225.png" full_img="suse-linux-6.3.png" %}
 
 Back then we were more advanced than the KDE of that time: KDE 1.x was
 still using Qt 1.x, and the first version of YaST2 already used Qt 2.x.
 We kept upgrading throughout all the Qt 2.x versions and in SuSE Linux
 9.0 we jumped to Qt3, which looked like this.
 
-[![SuSE Linux Professional
-9.0](../../../../images/2019-04-30/suse-linux-professional-9.0-300x225.png)](../../../../images/2019-04-30/suse-linux-professional-9.0.png)
+{% include blog_img.md alt="SuSE Linux Professional 9.0"
+src="suse-linux-professional-9.0-300x225.png" full_img="suse-linux-professional-9.0.png" %}
 
 And as you know, that’s not the end of the story. We have kept updating
 through all the Qt 3.x, Qt 4.x and now Qt 5.x versions, as you can see
 in the following screenshot of the upcoming openSUSE Leap 15.1. It’s
 been a while: almost 20 years of happy Qt usage, always up-to-date.
 
-[![openSUSE Leap
-15.1](../../../../images/2019-04-30/opensuse-leap-15.1-300x193.png)](../../../../images/2019-04-30/opensuse-leap-15.1.png)
+{% include blog_img.md alt="openSUSE Leap 15.1"
+src="opensuse-leap-15.1-300x193.png" full_img="opensuse-leap-15.1.png" %}
 
 ### Improving the Partitioner UX   {#improving-the-partitioner-ux}
 
@@ -140,8 +140,8 @@ and items representing devices are collapsed, not displaying, for
 example, the full list of partitions until the user decides to expand
 those.
 
-[![YaST Partitioner
-Screenshot](../../../../images/2019-04-30/partitioner-tree-300x214.png)](../../../../images/2019-04-30/partitioner-tree.png)
+{% include blog_img.md alt="YaST Partitioner Screenshot"
+src="partitioner-tree-300x214.png" full_img="partitioner-tree.png" %}
 
 However, the bad news is that these changes will not be available in
 (open)SUSE 15.1, although you can give it a try as soon as they land in

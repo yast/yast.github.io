@@ -66,8 +66,8 @@ way more complex in other languages). In today’s issue we will take a
 look to one of our favorite translation issues – languages that are
 written from right to left, like Arabic.
 
-[![The installer summary in
-Arabic](../../../../images/2019-04-10/39228769-ae4c125a-4857-11e8-8b3a-649e2b751e15-300x225.png)](../../../../images/2019-04-10/39228769-ae4c125a-4857-11e8-8b3a-649e2b751e15.png)
+{% include blog_img.md alt="The installer summary in Arabic"
+src="39228769-ae4c125a-4857-11e8-8b3a-649e2b751e15-300x225.png" full_img="39228769-ae4c125a-4857-11e8-8b3a-649e2b751e15.png" %}
 
 Dealing with text that is a mixture of Latin and Arabic script is
 complex and sometimes we have to deal with interesting bugs. Fortunately
@@ -84,8 +84,8 @@ Now, even complex interfaces like our Partitioner look correct enough in
 right-to-left languages, so we will not have to send mirrors to all our
 Arabic users.
 
-[![The YaST Partitioner in
-Arabic](../../../../images/2019-04-10/ar-partitioner-installed-system-300x227.png)](../../../../images/2019-04-10/ar-partitioner-installed-system.png)
+{% include blog_img.md alt="The YaST Partitioner in Arabic"
+src="ar-partitioner-installed-system-300x227.png" full_img="ar-partitioner-installed-system.png" %}
 
 If you want to know more about this exciting but very complex problem of
 bidirectional texts, you can start with the following documents.
@@ -95,15 +95,15 @@ bidirectional texts, you can start with the following documents.
 * [Wikipedia: Bi-directional text][6], an overview of the concepts
 * Unicode Standard Annex #9: [Unicode Bidirectional Algorithm][7], the
   gory details, 50 pages of them
-[![More Arabic
-YaST](../../../../images/2019-04-10/bidi-989383-hack-300x185.png)](../../../../images/2019-04-10/bidi-989383-hack.png)
+{% include blog_img.md alt="More Arabic YaST"
+src="bidi-989383-hack-300x185.png" full_img="bidi-989383-hack.png" %}
 
 On related news, we got also some reports about some problems
 visualizing bullet-points in Korean with the beta versions of the future
 SLE-15-SP1. But as we could verify, all those problems are gone now.
 
-[![SLES installer in
-Korean](../../../../images/2019-04-10/korean-bullets-sles15sp1-300x194.png)](../../../../images/2019-04-10/korean-bullets-sles15sp1.png)
+{% include blog_img.md alt="SLES installer in Korean"
+src="korean-bullets-sles15sp1-300x194.png" full_img="korean-bullets-sles15sp1.png" %}
 
 ### Storage Fixes
 
@@ -197,8 +197,8 @@ It’s still not available in openSUSE Tumbleweed. But for those who can’t
 wait, here you can see the first screenshot. All based in new and clean
 code backed by automated tests.
 
-[![New network routing
-dialog](../../../../images/2019-04-10/RoutingStandalone-300x236.png)](../../../../images/2019-04-10/RoutingStandalone.png)
+{% include blog_img.md alt="New network routing dialog"
+src="RoutingStandalone-300x236.png" full_img="RoutingStandalone.png" %}
 
 ###  Activating Online Repositories in openSUSE Leap 15.1
 
@@ -220,8 +220,8 @@ turned out that the `control.xml` file which drives the installer did
 not contain this step. After adding few lines into the file you can now
 enjoy the online repositories also in Leap 15.1!
 
-[![Online repositories in Leap
-15.1](../../../../images/2019-04-10/55151188-f23e1f80-514d-11e9-8dc3-8fe5ab2f93df-300x225.png)](../../../../images/2019-04-10/55151188-f23e1f80-514d-11e9-8dc3-8fe5ab2f93df.png)
+{% include blog_img.md alt="Online repositories in Leap 15.1"
+src="55151188-f23e1f80-514d-11e9-8dc3-8fe5ab2f93df-300x225.png" full_img="55151188-f23e1f80-514d-11e9-8dc3-8fe5ab2f93df.png" %}
 
 Why are we writing about this? The reason for the missing step in the
 Leap 15.1 was a bit surprising. Normally all YaST packages are developed

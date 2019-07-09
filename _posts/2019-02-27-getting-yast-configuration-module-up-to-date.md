@@ -52,8 +52,8 @@ in YaST, we must take 80×24 interfaces into account and the support for
 scrolling in our libraries is quite limited. So we needed to organize
 the information minimizing the chance of getting out of space.
 
-[![Configuring the dhcpd
-formula](../../../../images/2019-02-27/yast2-configuration-management-dhcpd-300x238.png)](../../../../images/2019-02-27/yast2-configuration-management-dhcpd.png)
+{% include blog_img.md alt="Configuring the dhcpd formula"
+src="yast2-configuration-management-dhcpd-300x238.png" full_img="yast2-configuration-management-dhcpd.png" %}
 
 The screenshot above belongs to a fairly complex `dhcp` formula. At the
 left side, there is a tree that you can use to browse through the
@@ -63,8 +63,8 @@ will use to enter the formula parameters.
 When dealing with collections, YaST displays the information in pop-up
 dialogs as you can see below.
 
-[![Managing
-collections](../../../../images/2019-02-27/yast2-configuration-management-collection-popup-300x238.png)](../../../../images/2019-02-27/yast2-configuration-management-collection-popup.png)
+{% include blog_img.md alt="Managing collections"
+src="yast2-configuration-management-collection-popup-300x238.png" full_img="yast2-configuration-management-collection-popup.png" %}
 
 Do you want to try it by yourself? No problem, but bear in mind that *it
 may modify your system configuration*, so it would be wiser to do such

@@ -59,15 +59,15 @@ caching devices later. That is now possible by selecting the new option
 labeled “without caching” during creation, as shown in the following
 screenshot.
 
-[![No caching device in
-Bcache](../../../../images/2019-02-27/no-caching-300x168.png)](../../../../images/2019-02-27/no-caching.png)
+{% include blog_img.md alt="No caching device in Bcache"
+src="no-caching-300x168.png" full_img="no-caching.png" %}
 
 Of course, that’s not much useful without the possibility of modifying a
 Bcache device. So in the latest sprints we also added a new “Change
 Caching” button.
 
-[![New option to modify a
-bcache](../../../../images/2019-02-27/modify-bcache-300x223.png)](../../../../images/2019-02-27/modify-bcache.png)
+{% include blog_img.md alt="New option to modify a bcache"
+src="modify-bcache-300x223.png" full_img="modify-bcache.png" %}
 
 This option will only work for bcaches that do not exist in your system
 yet (e.g., a bcache that you are creating right now). For existing
@@ -75,8 +75,8 @@ bcache devices, this option is only available when the bcache has no
 associated caching device yet. Otherwise, a detaching action would be
 required, and that could take very long time in some situations.
 
-[![Avoiding detach operations in
-bcache](../../../../images/2019-02-27/no-modify-bcache-300x212.png)](../../../../images/2019-02-27/no-modify-bcache.png)
+{% include blog_img.md alt="Avoiding detach operations in bcache"
+src="no-modify-bcache-300x212.png" full_img="no-modify-bcache.png" %}
 
 And last but not least (regarding Bcache), now the Expert Partitioner
 also shows the list of all caching sets in a separate tab
@@ -84,8 +84,8 @@ also shows the list of all caching sets in a separate tab
 tab, but thanks to it you will be able to check all devices currently
 used for caching at a quick glance.
 
-[![List of caching
-sets](../../../../images/2019-02-27/csets-300x223.png)](../../../../images/2019-02-27/csets.png)
+{% include blog_img.md alt="List of caching sets"
+src="csets-300x223.png" full_img="csets.png" %}
 
 ### Create the User’s Home as a Btrfs Subvolume   {#create-user-home-btrfs-subvolume}
 
@@ -100,8 +100,8 @@ file-system could be found in the system, of course. As simple as
 checking the “Create as Btrfs Subvolume” option that you will find just
 below the “Home Directory” field.
 
-[![Using a Btrfs subvolume as
-home](../../../../images/2019-02-27/subvolume-home-qt-300x226.png)](../../../../images/2019-02-27/subvolume-home-qt.png)
+{% include blog_img.md alt="Using a Btrfs subvolume as home"
+src="subvolume-home-qt-300x226.png" full_img="subvolume-home-qt.png" %}
 
 In a multi-user system, using Btrfs subvolumes for the home paths of the
 users can open a world of possibilities. The system administrator can
@@ -139,8 +139,8 @@ quite long and the support for scrolling in YaST2 is quite limited. In
 order to workaround this problem, YaST2 will display a tree at the left
 side outlining the structure of the form.
 
-[![Tree view of long salt
-formulas](../../../../images/2019-02-27/yast-cm-300x197.png)](../../../../images/2019-02-27/yast-cm.png)
+{% include blog_img.md alt="Tree view of long salt formulas"
+src="yast-cm-300x197.png" full_img="yast-cm.png" %}
 
 Apart from that, we have solved some known problems, like exporting
 date/time and numeric values in a correct way or handling missing and
@@ -193,8 +193,8 @@ Partitioner. But, what if someone tries to use the partitioning Guided
 Setup in a system with 30 disks? In SLE-15 (or Leap 15.0, in the case of
 this concrete screenshot) they will see a screen as unusable as this.
 
-[![Broken Guided Setup
-screen](../../../../images/2019-02-27/old-qt-30-300x176.png)](../../../../images/2019-02-27/old-qt-30.png)
+{% include blog_img.md alt="Broken Guided Setup screen"
+src="old-qt-30-300x176.png" full_img="old-qt-30.png" %}
 
 Of course, it only gets worse if the number of disks increases or if the
 text-mode interface is used. So we improved the disk selection screen,
@@ -203,16 +203,16 @@ easier to identify removable devices like USB and IEEE 1394 ones. In
 future releases, the screen will normally look pretty much as it looks
 in the previous version, just with the extra information about USB.
 
-[![Normal Guided Setup
-screen](../../../../images/2019-02-27/new-qt-10-300x174.png)](../../../../images/2019-02-27/new-qt-10.png)
+{% include blog_img.md alt="Normal Guided Setup screen"
+src="new-qt-10-300x174.png" full_img="new-qt-10.png" %}
 
 But if the system contains more than 10 disks to choose from, then a
 different widget that makes scrolling possible will be used, ensuring
 the user interface remains usable enough in both graphical and
 text-based modes.
 
-[![Guided Setup screen with more than 10
-disks](../../../../images/2019-02-27/new-qt-30-300x175.png)](../../../../images/2019-02-27/new-qt-30.png)
+{% include blog_img.md alt="Guided Setup screen with more than 10 disks"
+src="new-qt-30-300x175.png" full_img="new-qt-30.png" %}
 
 ### YaST Bootloader Becomes Less Whinny
 
@@ -274,14 +274,14 @@ button, but with two small changes compared to its historical behavior.
 * It refreshes all the Partitioner information, reading again the status
   of all the storage devices.
 
-[![Provide Crypt Passwords
-button](../../../../images/2019-02-27/crypt-button-300x193.png)](../../../../images/2019-02-27/crypt-button.png)
+{% include blog_img.md alt="Provide Crypt Passwords button"
+src="crypt-button-300x193.png" full_img="crypt-button.png" %}
 
 Of course, any change in behavior is a nice opportunity to revisit and
 expand the help texts.
 
-[![The button
-explained](../../../../images/2019-02-27/crypt-button-help-300x202.png)](../../../../images/2019-02-27/crypt-button-help.png)
+{% include blog_img.md alt="The button explained"
+src="crypt-button-help-300x202.png" full_img="crypt-button-help.png" %}
 
 Another change that was intentionally introduced in the first versions
 of the rewritten Partitioner was the fact that new file-systems always

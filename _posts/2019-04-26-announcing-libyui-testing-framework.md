@@ -42,8 +42,8 @@ As cool as it sounds, it is even better when you see it in action. In
 the screencast below you can see how the user can interact with YaST
 Host module using *cURL* from the command line.
 
-[![LibYUI Testing Framework in
-Action](../../../../images/2019-04-26/libyui-testing-framework-in-action-300x274.gif)](../../../../images/2019-04-26/libyui-testing-framework-in-action.gif)
+{% include blog_img.md alt="LibYUI Testing Framework in Action"
+src="libyui-testing-framework-in-action-300x274.gif" full_img="libyui-testing-framework-in-action.gif" %}
 
 ### How to Test the New Packages   {#how-to-test-the-new-packages}
 
@@ -79,8 +79,8 @@ default.
 Now you should be able to see something like the screenshot below by
 navigating with your browser to `http://localhost:9999`.
 
-[![LibYUI Testing Framework
-Browser](../../../../images/2019-04-26/libyui-testing-framework-browser-300x300.png)](../../../../images/2019-04-26/libyui-testing-framework-browser.png)
+{% include blog_img.md alt="LibYUI Testing Framework Browser"
+src="libyui-testing-framework-browser-300x300.png" full_img="libyui-testing-framework-browser.png" %}
 
 ### Further steps   {#further-steps}
 

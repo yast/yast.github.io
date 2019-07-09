@@ -58,16 +58,16 @@ to understand. Moreover, quite often the important information (like the
 relationship between a partition and its RAID or LVM) was simply missing
 in those tables.
 
-[![Traditional devices table in the
-Partitioner](../../../../images/2019-06-25/old_partitioner_table-300x214.png)](../../../../images/2019-06-25/old_partitioner_table.png)
+{% include blog_img.md alt="Traditional devices table in the Partitioner"
+src="old_partitioner_table-300x214.png" full_img="old_partitioner_table.png" %}
 
 We have merged those columns into a more informative one that identifies
 the devices and also gives an overview of the relationship between them
 at first glance. In addition, the table displaying all the system
 devices now includes multi-device file systems.
 
-[![Revamped table of
-devices](../../../../images/2019-06-25/new_partitioner_table-300x215.png)](../../../../images/2019-06-25/new_partitioner_table.png)
+{% include blog_img.md alt="Revamped table of devices"
+src="new_partitioner_table-300x215.png" full_img="new_partitioner_table.png" %}
 
 ### Mitigating CPU vulnerabilities from YaST
 
@@ -95,7 +95,8 @@ the screenshot below, we have included extensive documentation in the
 help dialog, so you will not need to search for this blog post in the
 future.
 
-[![](../../../../images/2019-06-25/bootloader_mitigations-300x225.png)](../../../../images/2019-06-25/bootloader_mitigations.png)
+{% include blog_img.md alt=""
+src="bootloader_mitigations-300x225.png" full_img="bootloader_mitigations.png" %}
 
 It is also possible to modify this option directly from the installation
 summary. For that purpose, the “Firewall” section was renamed to
@@ -103,8 +104,8 @@ summary. For that purpose, the “Firewall” section was renamed to
 mitigation options, alongside the traditional settings for firewall and
 opening the SSH port.
 
-[![CPU mitigations in the installation
-summary](../../../../images/2019-06-25/summary_mitigations-300x225.png)](../../../../images/2019-06-25/summary_mitigations.png)
+{% include blog_img.md alt="CPU mitigations in the installation summary"
+src="summary_mitigations-300x225.png" full_img="summary_mitigations.png" %}
 
 Another success story of (open)SUSE offering a promptly solution for our
 users to easily adapt their systems to ever-changing complex needs.
@@ -185,8 +186,8 @@ follow these steps.
     the Leap installation, with the command `zypper packages --orphaned`
     and possibly remove them.)
 
-[![From Leap to SLES via
-YaST](../../../../images/2019-06-25/leap_sles_migration-300x207.png)](../../../../images/2019-06-25/leap_sles_migration.png)
+{% include blog_img.md alt="From Leap to SLES via YaST"
+src="leap_sles_migration-300x207.png" full_img="leap_sles_migration.png" %}
 
 Please note that only minimal server installations of Leap are supported
 for upgrade, full installations especially with third party packages
@@ -211,14 +212,14 @@ to protected information.
 This is how the new more explanatory message looks in the “System Log”
 module.
 
-[![Explanatory pop-up for log
-viewer](../../../../images/2019-06-25/view_anymsg-1-300x235.png)](../../../../images/2019-06-25/view_anymsg-1.png)
+{% include blog_img.md alt="Explanatory pop-up for log viewer"
+src="view_anymsg-1-300x235.png" full_img="view_anymsg-1.png" %}
 
 And this is the extended message for “Systemd Journal”, that now
 mentions the `systemd-journal` user’s group.
 
-[![Improved message in the journal
-viewer](../../../../images/2019-06-25/journal-300x158.png)](../../../../images/2019-06-25/journal.png)
+{% include blog_img.md alt="Improved message in the journal viewer"
+src="journal-300x158.png" full_img="journal.png" %}
 
 ### Another Day at the YaST Office: Adapting to Changes
 
@@ -287,8 +288,8 @@ trying to create its home directory as a Btrfs subvolume. Even in cases
 in which that was impossible. For example, if the directory to be
 created was not in a Btrfs file system.
 
-[![Writing user
-error](../../../../images/2019-06-25/Writing_user_error-300x224.png)](../../../../images/2019-06-25/Writing_user_error.png)
+{% include blog_img.md alt="Writing user error"
+src="Writing_user_error-300x224.png" full_img="Writing_user_error.png" %}
 
 Fortunately, the bug didn’t affect the installation process or AutoYaST.
 We created a fix that was quickly available as a maintenance update. So
@@ -312,8 +313,8 @@ we have fixed some bugs (many of them related to validations),
 simplified the process of adding new devices and reorganized the
 hardware tab.
 
-[![New hardware tab in YaST
-Network](../../../../images/2019-06-25/network_new_hardware-300x239.png)](../../../../images/2019-06-25/network_new_hardware.png)
+{% include blog_img.md alt="New hardware tab in YaST Network"
+src="network_new_hardware-300x239.png" full_img="network_new_hardware.png" %}
 
 Regarding the internal data model, we have been thinking about the best
 way to represent network configuration in an agnostic way so, in the
@@ -327,8 +328,8 @@ configuration. So if you are using Tumbleweed you have been already
 using the new network code for some weeks, including the UI enhancements
 presented in our [latest post][13].
 
-[![New network routing
-dialog](../../../../images/2019-06-25/RoutingStandalone-300x236.png)](../../../../images/2019-06-25/RoutingStandalone.png)
+{% include blog_img.md alt="New network routing dialog"
+src="RoutingStandalone-300x236.png" full_img="RoutingStandalone.png" %}
 
 Although the data model is so far only used in the mentioned parts, the
 plan is to submit to Tumbleweed a heavily refactored UI layer during
@@ -366,15 +367,15 @@ those application managers and decided to fix it. So he created an XML
 generator which collects the data from YaST packages and automagically
 generates the metainfo XML file needed by the other software managers.
 
-[![YaST in GNOME
-Software](../../../../images/2019-06-25/yast-in-gnome-300x271.png)](../../../../images/2019-06-25/yast-in-gnome.png)
+{% include blog_img.md alt="YaST in GNOME Software"
+src="yast-in-gnome-300x271.png" full_img="yast-in-gnome.png" %}
 
 As a result, the Gnome Software Manager, Discover and other software
 managers will offer YaST in Tumbleweed just as any user-oriented
 application. Thanks lcp!
 
-[![YaST in
-Discover](../../../../images/2019-06-25/yast-in-discover-300x244.png)](../../../../images/2019-06-25/yast-in-discover.png)
+{% include blog_img.md alt="YaST in Discover"
+src="yast-in-discover-300x244.png" full_img="yast-in-discover.png" %}
 
 ### AutoYaST Pre-install Scripts &amp; Storage
 
@@ -428,8 +429,8 @@ labeled as “*temporary change*” but the graphical mode didn’t have any
 indication about it. As you can see in the following screenshot, that’s
 fixed now.
 
-[![Temporary options in YaST
-Software](../../../../images/2019-06-25/sw_single-300x192.png)](../../../../images/2019-06-25/sw_single.png)
+{% include blog_img.md alt="Temporary options in YaST Software"
+src="sw_single-300x192.png" full_img="sw_single.png" %}
 
 ### Product License Hard to Understand? Try Another Language!
 
