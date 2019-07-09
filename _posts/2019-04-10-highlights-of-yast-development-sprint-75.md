@@ -4,9 +4,7 @@ date: 2019-04-10 11:18:24.000000000 +00:00
 title: Highlights of YaST Development Sprint 75
 description: With the upcoming releases of openSUSE Leap 15.1 and SLE-15-SP1 approaching,
   the YaST Team at SUSE is investing a quite significant time in polishing details
-  and fixing small (and not so small) bugs. But fortunately, that still leaves us
-  enough time to also work in our mid term goals. So welcome to our usual selection
-  [&#8230;]
+  and fixing small (and not so small) bugs.
 category: SCRUM
 tags:
 - Distribution
@@ -54,9 +52,7 @@ Many of the YaST users and of our blog readers are not native English
 speakers that surely appreciate the fact that YaST and (open)SUSE in
 general can be used in several languages. But have you ever thought
 about the implications of developing a multi-language software? Sure? In
-all of them?
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+all of them? :wink:
 
 Human languages are so diverse as the human cultures and there are many
 details to take into account, from the usage of different alphabets to
@@ -312,7 +308,7 @@ a lot of fun!
 [7]: http://www.unicode.org/reports/tr9/
 [8]: https://github.com/yast/skelcd-control-openSUSE/pull/180/files
 [9]: https://help.github.com/en/articles/creating-a-pull-request-template-for-your-repository
-[10]: https://lizards.opensuse.org/2017/02/03/highlights-of-yast-development-sprint-30/
+[10]: {{ site.baseurl }}{% post_url 2017-02-03-highlights-of-yast-development-sprint-30 %}
 [11]: https://build.opensuse.org/image_templates
 [12]: https://registry.opensuse.org
 [13]: https://github.com/yast/ci-ruby-container

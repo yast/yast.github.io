@@ -16,7 +16,7 @@ tags:
 ---
 
 Almost two months has passed since our
-[last sprint report](https://lizards.opensuse.org/2018/12/04/highlights-of-yast-development-sprint-68/)
+[last sprint report][11]
 but, except during the Christmas break, the team has been quite busy
 working on some features and bugfixes for the upcoming (open)SUSE releases.
 
@@ -38,7 +38,7 @@ let’s try to highlight a few of them.
   greatly improved.
 * CD/DVD sources are always disabled after installation.
 
-## YaST Security Hardening   {#yast-security-hardening}
+## YaST Security Hardening
 
 Our SUSE security team did a security audit for YaST. The good news is
 that there were no real security problems that you should be concerned
@@ -57,7 +57,7 @@ problems with it, please write bug reports.
 What exactly we did and how we did it is summarized here: [YaST Security
 Audit Fixes: Lessons Learned and Reminder][2]
 
-## Installing via PXE Boot without any Installation Repository   {#installing-via-pxe-boot-without-any-installation-repository}
+## Installing via PXE Boot without any Installation Repository
 
 In data centers and other big-scale enterprise environments,
 administrators rarely install new software via removable media such as
@@ -103,7 +103,7 @@ allows to add more repositories.
 Another step (and certainly not an easy one) to improve the installation
 experience for our users. Data center administrators, enjoy! 🙂
 
-## Revamping SUSE Manager Salt Formulas Support   {#revamping-salt-formulas-forms-support}
+## Revamping SUSE Manager Salt Formulas Support
 
 Back in 2017, the [YaST Configuration Management][5] module got support
 to handle SUSE Manager Salt Formulas as part of [a Hack Week
@@ -121,7 +121,7 @@ this powerful feature.
 {% include blog_img.md alt="Screenshot of how the dhcpd formula looks like"
 src="yast2-configuration-management-300x225.png" full_img="yast2-configuration-management.png" %}
 
-## Managing Custom Zones Definitions in YaST Firewall   {#managing-custom-zones-definitions-in-yast-firewall}
+## Managing Custom Zones Definitions in YaST Firewall
 
 The new YaST UI for configuring `firewalld` was announced in [the report
 of the sprint #63][9] (four months ago… time flies!) and, since then, we
@@ -138,7 +138,7 @@ src="yast2-firewall-custom-zones-300x266.png" full_img="yast2-firewall-custom-zo
 During the development process some problems detected in the **AutoYaST
 configuration** were addressed too.
 
-## Updated YaST Branding and Icon Handling   {#updated-yast-branding-and-icon-handling}
+## Updated YaST Branding and Icon Handling
 
 In the past the YaST icons were included in the
 `yast2-branding-openSUSE` (openSUSE) and `yast2-theme-SLE` (SUSE Linux
@@ -168,7 +168,7 @@ A big thank you goes to Stasiek Michalski and Noah Davis from the
 community who did the changes in the YaST code, designed the new icons
 and did a lot of cleanup!
 
-## Improving Performance when Loading Huge `/etc/hosts` Files   {#improving-performance-when-loading-huge-etchosts}
+## Improving Performance when Loading Huge `/etc/hosts` Files
 
 It might happen that you need to maintain a huge `/etc/hosts` file,
 especially when dealing with ads blockers. Such file with thousands of
@@ -179,7 +179,7 @@ refactoring in YaST2 Host module, the performance has been significantly
 improved and loading a file with 10.000 lines now takes approximately
 30s on the same configuration where it crashed before.
 
-## Disabling CD/DVD Repositories After Installation   {#disabling-cd-dvd-repositories-after-installation}
+## Disabling CD/DVD Repositories After Installation
 
 If you install your system from a CD/DVD source it usually happens that
 this repository was not available for whole live of the system. In some
@@ -191,7 +191,7 @@ In the past, under some circumstances, those repositories were already
 disabled. But, from now on, they will be disabled always in order to
 avoid unwanted side effects.
 
-## Closing Thoughts   {#closing-thoughs}
+## Closing Thoughts
 
 That’s all for the first report of 2019. In case you are wondering, the
 plan is to stick to the plan of publishing a report after each sprint,
@@ -213,5 +213,6 @@ Stay tuned!
 [6]: https://hackweek.suse.com/15/projects/yast-module-for-suse-manager-salt-parametrizable-formulas
 [7]: https://www.suse.com/communities/blog/forms-formula-success/
 [8]: https://imobachgs.github.io/yast/2017/03/01/yast2-cm-gets-support-for-salt-parametrizable-formulas.html
-[9]: https://lizards.opensuse.org/2018/10/01/yast-sprint-63/
+[9]: {{ site.baseurl }}{% post_url 2018-10-01-yast-squad-sprint-63 %}
 [10]: https://firewalld.org/documentation/man-pages/firewalld.zones.html
+[11]: {{ site.baseurl }}{% post_url 2018-12-04-highlights-of-yast-development-sprint-68 %}

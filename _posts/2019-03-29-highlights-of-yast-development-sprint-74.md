@@ -4,8 +4,7 @@ date: 2019-03-29 14:50:11.000000000 +00:00
 title: Highlights of YaST Development Sprint 74
 description: It took only 73 sprints to complete all YaST features, and there are
   none left to do. That&#8217;s what you might think after reading this article, because
-  we worked on no features, just bug fixes. It might be related to an upcoming release
-  of SLE 15 SP1. For its openSUSE sibling we have put together [&#8230;]
+  we worked on no features, just bug fixes.
 category: SCRUM
 tags:
 - Systems Management
@@ -44,8 +43,7 @@ needs it.
 So, from now on you can go through the installation of Kubic in your
 preferred language without those errors in the final system and, of
 course, **preserving the selected keyboard layout**. Not bad, huh?
-![😎](https://s.w.org/images/core/emoji/2.2.1/72x72/1f60e.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+:sunglasses:
 
 ### Various Fixes   {#various-fixes}
 

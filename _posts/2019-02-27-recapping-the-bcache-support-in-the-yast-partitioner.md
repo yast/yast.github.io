@@ -4,8 +4,7 @@ date: 2019-02-27 16:12:14.000000000 +00:00
 title: Recapping the Bcache support in the YaST Partitioner
 description: Usual readers of the YaST Team development sprint reports on this blog
   already know we have been working steadily on adding support for the Bcache technology
-  to the YaST Partitioner. We have already reached a point in which we consider such
-  feature to be ready to be shipped with openSUSE Leap 15.1 and SUSE Linux [&#8230;]
+  to the YaST Partitioner.
 category: SCRUM
 tags:
 - Distribution
@@ -91,9 +90,7 @@ in some very specific use cases.
 
 You may be thinking: “*hmm, all that sounds interesting and daunting at
 the same time… how can I get started with it in an easy way?*“. And sure
-you are already figuring the answer.
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+you are already figuring the answer. :wink:
 
 ### Bcache in the YaST Partitioner
 
@@ -168,8 +165,7 @@ architectures supported by our beloved distributions.
 Bcache is only considered stable and mature enough in x86\_64 systems
 (i.e. x86 architecture of 64 bits). If you don’t know whether your
 computer fits into that description, then almost for sure it does.
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"} We have no evidence of
+:wink: We have no evidence of
 anyone using Bcache successfully in 32 bits systems or in any ARM
 platform. Moreover, we know for sure the technology is unreliable in the
 PPC64LE and S390x architectures.

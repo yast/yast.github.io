@@ -65,7 +65,7 @@ Slezak for taking care!
 
 
 
-[1]: https://lizards.opensuse.org/2019/01/31/highlights-of-yast-development-sprint-6970/#closing-thoughts
+[1]: {{ site.baseurl }}{% post_url 2019-01-31-highlights-of-yast-development-sprint-69-70 %}
 [2]: https://travis-ci.org/
 [3]: https://weblate.org
 [4]: https://l10n.opensuse.org/

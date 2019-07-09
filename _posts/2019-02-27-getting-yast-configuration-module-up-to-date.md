@@ -2,11 +2,9 @@
 layout: post
 date: 2019-02-27 16:13:35.000000000 +00:00
 title: Getting YaST Configuration Module up-to-date
-description: An Introduction to the YaST Configuration Management Module YaST Configuration
-  Management is a relatively unknown module that was born back in 2016 during a workshop
-  and was developed further during Hack Week 14. The idea was to enable AutoYaST to
-  delegate part of its duties to a configuration management system like Salt or Puppet.
-  Therefore, [&#8230;]
+description: The YaST Configuration Management module is a relatively unknown
+  module that was born back in 2016 during a workshop and was developed further
+  during Hack Week 14.
 category: SCRUM
 tags:
 - Systems Management
@@ -96,21 +94,23 @@ use, among other settings. So if you want to use the YaST Configuration
 Management module, you only need to add the
 `firstboot_configuration_management` client to the workflow.
 
-    <workflows config:type="list">
-      <workflow>
-        <stage>firstboot</stage>
-        <label>Configuration</label>
-        <mode>installation</mode>
-        <modules  config:type="list">
-          <!-- other modules -->
-          <module>
-            <label>Finish Setup</label>
-            <name>firstboot_configuration_management</name>
-          </module>
-        </modules>
-        <!-- and more modules -->
-      </workflow>
-    </workflows>
+```xml
+<workflows config:type="list">
+  <workflow>
+    <stage>firstboot</stage>
+    <label>Configuration</label>
+    <mode>installation</mode>
+    <modules  config:type="list">
+      <!-- other modules -->
+      <module>
+        <label>Finish Setup</label>
+        <name>firstboot_configuration_management</name>
+      </module>
+    </modules>
+    <!-- and more modules -->
+  </workflow>
+</workflows>
+```
 
 Additionally, you might be interested in modifying the
 `firstboot_configuration_management` behaviour. In that case, you can
@@ -118,24 +118,28 @@ add a `<configuration_management/>` section with the relevant settings.
 The nice thing is that it uses the same options that are supported by
 AutoYaST. Let’s say that we want to run some Salt formulas:
 
-    <configuration_management>
-      <type>salt</type>
-      <!-- Default Salt Formulas root directories -->
-      <formulas_roots config:type="list">
-        <formulas_root>/usr/share/susemanager/formulas/metadata</formulas_root>
-        <formulas_root>/srv/formula_metadata</formulas_root>
-      </formulas_roots>
-    </configuration_management>
+```xml
+<configuration_management>
+  <type>salt</type>
+  <!-- Default Salt Formulas root directories -->
+  <formulas_roots config:type="list">
+    <formulas_root>/usr/share/susemanager/formulas/metadata</formulas_root>
+    <formulas_root>/srv/formula_metadata</formulas_root>
+  </formulas_roots>
+</configuration_management>
+```
 
 Or do you prefer to run Salt against a master server?
 
-    <configuration_management>
-      <type>salt</type>
-      <master>linux-addc</master>
-      <auth_attempts config:type="integer">5</auth_attempts>
-      <auth_time_out config:type="integer">10</auth_time_out>
-      <keys_url>http://keys.example.de/keys</keys_url>
-    </configuration_management>
+```xml
+<configuration_management>
+  <type>salt</type>
+  <master>linux-addc</master>
+  <auth_attempts config:type="integer">5</auth_attempts>
+  <auth_time_out config:type="integer">10</auth_time_out>
+  <keys_url>http://keys.example.de/keys</keys_url>
+</configuration_management>
+```
 
 ### Asking for Help   {#asking-for-help}
 

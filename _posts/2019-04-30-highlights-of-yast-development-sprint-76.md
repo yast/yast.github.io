@@ -4,9 +4,7 @@ date: 2019-04-30 09:00:20.000000000 +00:00
 title: Highlights of YaST Development Sprint 76
 description: 'While the openSUSE Conference 2019 is approaching, the YaST team is
   still busy not only fixing small bugs for the upcoming (open)SUSE releases but working
-  on features and changes for later versions. Although there is much more work behind
-  this sprint, we will have a look at these changes in this report: The first bits
-  [&#8230;]'
+  on features and changes for later versions.'
 category: SCRUM
 tags:
 - Uncategorized
@@ -68,20 +66,21 @@ non-validating AutoYaST profile. For that reason, we have redesigned how
 NFS drives are described in the AutoYaST profile. With the new format,
 we have a drive section per each NFS share, for example,
 
-    
-    <partitioning config:type="list">
-      <drive>
-        <device>192.168.1.1:/exports/root_fs</device>
-        <type config:type="symbol">CT_NFS</type>
-        <use>all</use>
-        <partitions config:type="list">
-          <partition>
-            <mount>/</mount>
-            <fstopt>nolock</fstopt>
-          </partition>
-        </partitions>
-      </drive>
-    </partitioning>
+```xml
+<partitioning config:type="list">
+  <drive>
+    <device>192.168.1.1:/exports/root_fs</device>
+    <type config:type="symbol">CT_NFS</type>
+    <use>all</use>
+    <partitions config:type="list">
+      <partition>
+        <mount>/</mount>
+        <fstopt>nolock</fstopt>
+      </partition>
+    </partitions>
+  </drive>
+</partitioning>
+```
 
 Although the old format is still supported to keep backward
 compatibility, we encourage you to use the new one for now on. And of

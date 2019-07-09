@@ -4,9 +4,7 @@ date: 2019-03-14 09:10:57.000000000 +00:00
 title: Highlights of YaST Development Sprint 73
 description: 'As (open)SUSE releases are approaching, the YaST team is basically in
   bug squashing mode. However, we are still adding some missing bits, like the bcache
-  support for AutoYaST. Additionally, there are some interesting improvements we would
-  like to let you know about: AutoYaST support for using Btrfs subvolumes as user
-  home directories. Improved Certificates management [&#8230;]'
+  support for AutoYaST.'
 category: SCRUM
 tags:
 - Systems Management
@@ -47,58 +45,59 @@ it as a filesystem.
 The example below creates a bcache device (called `/dev/bcache0`) using
 `/dev/sda` to speed up the access to `/dev/sdb`.
 
-    
-    <partitioning config:type="list">
-        <drive>
-          <type config:type="symbol">CT_DISK</type>
-          <device>/dev/sda</device>
-          <disklabel>msdos</disklabel>
-          <use>all</use>
-          <partitions config:type="list">
-            <partition>
-              <!-- It can serve as caching device for several bcaches -->
-              <bcache_caching_for config:type="list">
-                <listentry>/dev/bcache0</listentry>
-              </bcache_caching_for>
-              <size>max</size>
-            </partition>
-          </partitions>
-        </drive>
-    
-        <drive>
-          <type config:type="symbol">CT_DISK</type>
-          <device>/dev/sdb</device>
-          <use>all</use>
-          <!-- <disklabel>none</disklabel> -->
-          <disklabel>msdos</disklabel>
-          <partitions config:type="list">
-            <partition>
-              <!-- It can serve as backing device just for one bcache -->
-              <bcache_backing_for>/dev/bcache0</bcache_backing_for>
-            </partition>
-          </partitions>
-        </drive>
-    
-        <drive>
-          <type config:type="symbol">CT_BCACHE</type>
-          <device>/dev/bcache0</device>
-          <bcache_options>
-            <cache_mode>writethrough</cache_mode>
-          </bcache_options>
-          <use>all</use>
-          <partitions config:type="list">
-            <partition>
-              <mount>/data</mount>
-              <size>20GiB</size>
-            </partition>
-            <partition>
-              <mount>swap</mount>
-              <filesystem config:type="symbol">swap</filesystem>
-              <size>1GiB</size>
-            </partition>
-          </partitions>
-        </drive>
-      </partitioning>
+```xml
+<partitioning config:type="list">
+  <drive>
+    <type config:type="symbol">CT_DISK</type>
+    <device>/dev/sda</device>
+    <disklabel>msdos</disklabel>
+    <use>all</use>
+    <partitions config:type="list">
+      <partition>
+        <!-- It can serve as caching device for several bcaches -->
+        <bcache_caching_for config:type="list">
+          <listentry>/dev/bcache0</listentry>
+        </bcache_caching_for>
+        <size>max</size>
+      </partition>
+    </partitions>
+  </drive>
+
+  <drive>
+    <type config:type="symbol">CT_DISK</type>
+    <device>/dev/sdb</device>
+    <use>all</use>
+    <!-- <disklabel>none</disklabel> -->
+    <disklabel>msdos</disklabel>
+    <partitions config:type="list">
+      <partition>
+        <!-- It can serve as backing device just for one bcache -->
+        <bcache_backing_for>/dev/bcache0</bcache_backing_for>
+      </partition>
+    </partitions>
+  </drive>
+
+  <drive>
+    <type config:type="symbol">CT_BCACHE</type>
+    <device>/dev/bcache0</device>
+    <bcache_options>
+      <cache_mode>writethrough</cache_mode>
+    </bcache_options>
+    <use>all</use>
+    <partitions config:type="list">
+      <partition>
+        <mount>/data</mount>
+        <size>20GiB</size>
+      </partition>
+      <partition>
+        <mount>swap</mount>
+        <filesystem config:type="symbol">swap</filesystem>
+        <size>1GiB</size>
+      </partition>
+    </partitions>
+  </drive>
+</partitioning>
+```
 
 ### Using Btrfs Subvolumes as User Home Directories in AutoYaST 
 
@@ -109,18 +108,19 @@ that feature was simply missing.
 Now you can use the `home_btrfs_subvolume` to control whether a Btrfs
 should be used as home directory.
 
-    
-    <user>
-       <encrypted config:type="boolean">false</encrypted>
-       <home_btrfs_subvolume config:type="boolean">true</home_btrfs_subvolume>
-       <fullname>test user</fullname>
-       <gid>100</gid>
-       <home>/home/test</home>
-       <shell>/bin/bash</shell>
-       <uid>1003</uid>
-       <user_password>test</user_password>
-       <username>test</username>
-    </user>
+```xml
+<user>
+   <encrypted config:type="boolean">false</encrypted>
+   <home_btrfs_subvolume config:type="boolean">true</home_btrfs_subvolume>
+   <fullname>test user</fullname>
+   <gid>100</gid>
+   <home>/home/test</home>
+   <shell>/bin/bash</shell>
+   <uid>1003</uid>
+   <user_password>test</user_password>
+   <username>test</username>
+</user>
+```
 
 ### Tuning the Bootloader’s `resume` parameter   {#tuning-the-bootloaders-resume-parameter}
 
@@ -237,9 +237,7 @@ gracefully.
 
 Unfortunately, there is nothing that we can do about this from the YaST
 side, even though we are aware that this might become reported as a YaST
-bug again in the future
-![🙂](https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+bug again in the future. :smiley:
 
 ### Closing Thoughs
 
@@ -251,7 +249,7 @@ Thanks!
 
 
 
-[1]: https://lizards.opensuse.org/2019/02/27/yast-sprint-71-72/create-user-home-btrfs-subvolume
+[1]: {{ site.baseurl }}{% post_url 2019-02-27-highlights-of-yast-development-sprint-71-72 %}#create-user-home-btrfs-subvolume
 [2]: https://www.suse.com/documentation/sles-15/book_rmt/data/book_rmt.html
 [3]: https://www.suse.com/documentation/sles-12/book_smt/data/book_smt.html
 [4]: https://github.com/yast/yast-registration/wiki/OpenSSL-Certificates

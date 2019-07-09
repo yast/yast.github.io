@@ -4,9 +4,7 @@ date: 2019-06-25 09:33:05.000000000 +00:00
 title: Highlights of the Latest YaST Development Sprints
 description: May and June have been, so far, interesting months for the YaST Team.
   We worked hard to polish the last details of the recently released openSUSE Leap
-  15.1, we attended the openSUSE Conference 2019 (with many fruitful conversations),
-  we shared quite some time together around a table without computers (most of the
-  time, we are [&#8230;]
+  15.1, we attended the openSUSE Conference 2019...
 category: SCRUM
 tags:
 - Distribution
@@ -179,9 +177,7 @@ follow these steps.
 6.  Start the migration, the SLES packages will be downloaded and
     installed
 7.  At the end the system will be rebooted to start the freshly
-    installed SLES, enjoy!
-    ![🙂](https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png){:
-    .wp-smiley style="height: 1em; max-height: 1em;"}
+    installed SLES, enjoy! :smiley:
 8.  (It is recommended to review the orphaned packages, leftovers from
     the Leap installation, with the command `zypper packages --orphaned`
     and possibly remove them.)
@@ -279,9 +275,7 @@ done by coding.
 As all openSUSE users should know, for every Leap release a page is
 created in the openSUSE wiki listing the so-called Most Annoying Bugs.
 Leap 15.1 was a very smooth release and this time [the corresponding
-list][10] contains only one bug… and it’s a YaST one.
-![🙁](https://s.w.org/images/core/emoji/2.2.1/72x72/1f641.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+list][10] contains only one bug… and it’s a YaST one. :worried:
 
 In an installed system, when YaST was creating a new user it was always
 trying to create its home directory as a Btrfs subvolume. Even in cases
@@ -443,10 +437,8 @@ The point is that such behavior was not exactly a bug. It was in fact
 done on purpose. We decided to prevent such language change some time
 ago because on the Linux console we’re not able to display the
 characters of many languages. Hopefully some of our usual reader have
-just shout “that’s not true!”
-![😉](https://s.w.org/images/core/emoji/2.2.1/72x72/1f609.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"} Those users remember
-that in the [report of our 67th sprint][21] we explained that now we
+just shout “that’s not true!” :wink: Those users remember that in
+the [report of our 67th sprint][21] we explained that now we
 always use `fbiterm` when installing in text mode in order to be able to
 display characters of almost every language.
 
@@ -470,9 +462,7 @@ internationalization. To reduce the effect of those problems on our
 final users, we also added some extra mechanisms to detect
 internationalization errors introduced during development. Hopefully
 that will mean that in future reports the space dedicated to comment
-language-related problems gets shorter and shorter.
-![🙂](https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+language-related problems gets shorter and shorter. :smiley:
 
 ### And that was just a summary!
 
@@ -490,7 +480,7 @@ expect a new blog post in three weeks. See you then!
 
 
 [1]: https://lists.opensuse.org/opensuse-marketing/2019-06/msg00002.html
-[2]: https://lizards.opensuse.org/?p=13814
+[2]: {{ site.baseurl }}{% post_url 2019-06-19-getting-further-with-btrfs-in-yast %}
 [3]: https://www.suse.com/support/kb/doc/?id=7023836
 [4]: https://bugzilla.suse.com/show_bug.cgi?id=1136051
 [5]: https://github.com/openSUSE/libzypp
@@ -501,7 +491,7 @@ expect a new blog post in three weeks. See you then!
 [10]: https://en.opensuse.org/openSUSE:Most_annoying_bugs_15.1
 [11]: https://en.opensuse.org/Portal:Wicked
 [12]: https://github.com/yast/yast-network/blob/network-ng/doc/network-ng.md
-[13]: https://lizards.opensuse.org/2019/04/30/highlights-of-yast-development-sprint-76/
+[13]: {{ site.baseurl }}{% post_url 2019-04-30-highlights-of-yast-development-sprint-76 %}
 [14]: https://software.opensuse.org/appstore
 [15]: https://www.freedesktop.org/wiki/Distributions/AppStream/
 [16]: https://github.com/hellcp
@@ -509,5 +499,5 @@ expect a new blog post in three weeks. See you then!
 [18]: https://www.suse.com/documentation/sles-15/singlehtml/book_autoyast/book_autoyast.html#createprofile.scripts
 [19]: https://www.suse.com/documentation/sles-15/singlehtml/book_autoyast/book_autoyast.html#pre-install.scripts
 [20]: https://en.wikipedia.org/wiki/Linux_DM_Multipath
-[21]: https://lizards.opensuse.org/2018/11/20/yast-sprint-67/
+[21]: {{ site.baseurl }}{% post_url 2018-11-20-highlights-of-yast-development-sprint-67 %}
 [22]: https://hackweek.suse.com/

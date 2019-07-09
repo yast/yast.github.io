@@ -3,9 +3,7 @@ layout: post
 date: 2019-02-27 16:39:45.000000000 +00:00
 title: Highlights of YaST Development Sprint 71 & 72
 description: We know we owe you a report for the previous development sprint (namely
-  the 71th). But we also know how to compensate that. This week we have not only one,
-  but up to three blog posts to keep you tuned to the YaST evolution. So let&#8217;s
-  start with the summary of what have been implemented [&#8230;]
+  the 71th). But we also know how to compensate that.
 category: SCRUM
 tags:
 - Distribution
@@ -307,9 +305,9 @@ Have a lot of fun reading!
 
 
 
-[1]: https://lizards.opensuse.org/?p=13596
+[1]: {{ site.baseurl }}{% post_url 2019-02-27-recapping-the-bcache-support-in-the-yast-partitioner %}
 [2]: https://btrfs.wiki.kernel.org
-[3]: https://lizards.opensuse.org/2019/01/31/highlights-of-yast-development-sprint-6970/#revamping-salt-formulas-forms-support
+[3]: {{ site.baseurl }}{% post_url 2019-01-31-highlights-of-yast-development-sprint-69-70 %}#revamping-salt-formulas-forms-support
 [4]: https://github.com/yast/yast-configuration-management/
 [5]: https://lizards.opensuse.org/2019/02/27/getting-yast-cm-up-to-date/
 [6]: https://github.com/opensuse/libsolv

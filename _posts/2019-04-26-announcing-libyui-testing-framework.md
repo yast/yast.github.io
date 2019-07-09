@@ -5,8 +5,7 @@ title: Announcing LibYUI Testing Framework
 description: The LibYUI framework brings enormous advantage when you need an application
   which can be used with X and ncurses. But while for Qt, integration testing is a
   solved problem, meaning there are multiple tools available, the situation is not
-  that rose-colored in case of ncurses. On top, using different tooling would require
-  additional efforts for [&#8230;]
+  that rose-colored in case of ncurses.
 category: SCRUM
 tags:
 - Hackweek
@@ -50,8 +49,7 @@ src="libyui-testing-framework-in-action-300x274.gif" full_img="libyui-testing-fr
 If you want to give it a try, you can use the packages we have prepared
 for you. However, it is recommended to use a virtual machine to not
 pollute (or accidentally break) your system. You have been warned.
-![🙂](https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png){:
-.wp-smiley style="height: 1em; max-height: 1em;"}
+:smiley:
 
 First of all, you need to get new packages, which are currently
 available in [YaST:Head project in OBS][3]. Navigate to [Repositories
@@ -101,8 +99,7 @@ Other things which are coming:
   via SSL][6].
 * Add support for the Gtk based UI.
 * Add IPv6 support ([example][7]). After all, we are already in 2019.
-  ![🙂](https://s.w.org/images/core/emoji/2.2.1/72x72/1f642.png){:
-  .wp-smiley style="height: 1em; max-height: 1em;"}
+  :smiley:
 
 ### Security Notice   {#security-notice}
 

@@ -6,7 +6,6 @@ description: Since the YaST team rewrote the software stack for managing the sto
   devices, we have been adding and presenting new capabilities in that area regularly.
   That includes, among other features, the unpaired ability to format and partition
   all kind of devices and the possibility of creating and managing Bcache devices.
-  Time has come to present [&#8230;]
 category: SCRUM
 tags:
 - Distribution
@@ -46,7 +45,7 @@ create a Btrfs file system over some devices at the same time, e.g.,
 over `/dev/sda2` and `/dev/sdb`, so you will have a configuration that
 looks like this.
 
-    
+
             /dev/sda                /dev/sdb
                 |                       |   
                 |                       |   
@@ -186,7 +185,7 @@ forget to have a lot of fun!
 
 
 
-[1]: http://yast.opensuse.org/blog/2018/10/09/highlights-of-yast-development-sprint-64/#changes-in-the-partitioner-ui-to-unleash-the-storage-ng-power
-[2]: https://lizards.opensuse.org/2019/02/27/recap-bcache-in-yast/
+[1]: {{ site.baseurl }}{% post_url 2018-10-09-highlights-of-yast-development-sprint-64 %}#changes-in-the-partitioner-ui-to-unleash-the-storage-ng-power
+[2]: {{ site.baseurl }}{% post_url 2019-02-27-recapping-the-bcache-support-in-the-yast-partitioner %}
 [3]: https://www.suse.com/documentation/sles-15/singlehtml/book_autoyast/book_autoyast.htmlhttps://www.suse.com/documentation/sles-15/singlehtml/book_autoyast/book_autoyast.html
 [4]: https://bugzilla.suse.com/show_bug.cgi?id=1137997
