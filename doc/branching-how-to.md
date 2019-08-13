@@ -1,6 +1,6 @@
 # How to Create New Branches
 
-This is a short document how to create a new maintenance branche for a released
+This is a short document how to create a new maintenance branch for a released
 product.
 
 ## OBS/IBS Setup
@@ -111,6 +111,9 @@ For creating the branch and adapting the `Rakefile` and `Dockerfile` files use t
 https://github.com/yast/yast-devtools/blob/master/ytools/yast2/create_maintenance_branch) script.
 Run it in the Git checkout of the respective package.
 
+Some packages might need a special adaptation for a new release, check the affected packages
+[below](#modifying-specific-packages).
+
 To get the list of the packages packages which needs to be branched you might query the IBS
 like this:
 
@@ -138,3 +141,13 @@ helper script.
   to install it
 - Testing before deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini test jenkins/ci.suse.de/ '*SP5*'`
 - Deploying: `jenkins-jobs --conf jenkins/ci.suse.de.ini update jenkins/ci.suse.de/ '*SP5*'`
+
+## Modifying Specific Packages
+
+Some packages might contain a release specific data. Ideally we should avoid that but here are listed some
+exceptions which need a special care:
+
+- The `skelcd-control-leanos` package contains the SP release version in the `<full_system_media_name>` tag
+  in the [control.leanos.xml](
+  https://github.com/yast/skelcd-control-leanos/blob/master/control/control.leanos.xml) file. Also check
+  whether the `<full_system_download_url>` value is correct.
