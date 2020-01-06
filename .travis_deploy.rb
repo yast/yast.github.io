@@ -85,7 +85,7 @@ def report_success
 end
 
 # report failure at GitHub and exit
-def report_failure_end_exit
+def report_failure_and_exit
   set_status("failure", "Preview failed!")
   exit 1
 end
