@@ -219,6 +219,7 @@ dictionary:
 - nfs
 - Nfs
 - NfsAutoClient
+- ng
 - NG
 - nis
 - ntp
