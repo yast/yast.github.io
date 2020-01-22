@@ -151,3 +151,8 @@ exceptions which need a special care:
   in the [control.leanos.xml](
   https://github.com/yast/skelcd-control-leanos/blob/master/control/control.leanos.xml) file. Also check
   whether the `<full_system_download_url>` value is correct.
+
+## Translations
+
+For new branches where translations are required the SUSE Localization
+Team has to be informed.
