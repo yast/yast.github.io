@@ -20,6 +20,7 @@ before_install:
   - npm install surge
 
 script:
+  - bundle install --deployment
   - bundle exec rake
   - bundle exec jekyll build
   - bundle exec ./.travis_deploy.rb
