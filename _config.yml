@@ -45,3 +45,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - sass_debug
+  - vendor
