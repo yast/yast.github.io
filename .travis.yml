@@ -20,6 +20,7 @@ before_install:
   - npm install surge
 
 script:
+  # Checks for the `bundled with:` lines in Gemfile.lock, if this fails, remove those lines
   - bundle install --deployment
   - bundle exec rake
   - bundle exec jekyll build
