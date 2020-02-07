@@ -1,48 +1,56 @@
 ## General info
 
-General info about WSL can be found on its wiki page: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
-Ther is also openSUSE specific information about WSL: opensuse specific: https://en.opensuse.org/openSUSE:WSL
-In short WSL1 is like "wine" as it emulates linux kernel and behave kind of docker. WSL2 is not stable yet, but
-looks like something between docker and full VM. Need closer look when it will be more stable.
+General info about WSL can be found on its [Wikipedia
+page](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux). There is also openSUSE specific
+information about WSL in the [openSUSE Wiki](https://en.opensuse.org/openSUSE:WSL). In short, WSL1
+is like [Wine](https://www.winehq.org/) as it emulates Linux kernel and behaves similar to a
+container. However, WSL2 looks like something between a container and a full virtual machine (VM),
+but it is not stable yet. We will have a closer look once is stabilized.
 
-Current differences in WSL1 compared to common x86_64 run on VM.
-- Systemd is installed, but does not run. Instead process 1 is windows proprietary init.
-- Currently no X by default as it depends on running X server in windows. So YaST runs by default in ncurses.
-- Timezone and locale injected by windows. But it is not big issue as YaST module for it is useless as it use timedatectl and
-  localectl which depends on systemd.
-- Booted via windows, so linux bootloader is useless here. Similar like docker.
-- There are always windows mounted under /mnt from start.
-- /dev is really limited e.g. no block device seen. Tested only in VM, so not sure about USB or other disks not recognized by windows.
+These are the current differences between WSL1 and a common x86_64 VM:
+
+- [Systemd](https://systemd.io/) is installed, but does not run. Process 1 is windows
+  proprietary init instead.
+- Currently, no X by default as it depends on running an X server in windows. So YaST runs by default in ncurses.
+- Timezone and locale settings are injected by Windows. Anyway, the yast2-country model is useless
+  in this context because it uses `timedatectl` and `localectl` which are part of Systemd.
+- Booted via Windows, so Linux bootloader is useless here. Similar to a container.
+- Windows is always mounted under /mnt.
+- `/dev` is really limited, e.g. no block devices. Tested only in VM, so not sure about USB or other
+  disks which are not recognized by Windows.
 
 ## Development Tips
 
-For development usually the manual installation have to be done as described at https://en.opensuse.org/WSL/Manual_Installation
-If your console stuck for whatever reason closing WSL and reopening fix it or
-opening another wsl app as they share namespace and kill process from it.
-For nicer access it is possible to run sshd there, but need to be start manually as systemd does not run.
-(Internal only) On pong server runs VM with windows configured to run WSL.
+For development, the manual installation has to be done as described at
+https://en.opensuse.org/WSL/Manual_Installation. If your console stuck for whatever reason, closing
+and reopening WSL should fix the problem. Alternatively, you can open another WSL application and
+kill the process from it because they share the same namespace. For better access, it is possible to
+run `sshd` there, but you need to start the service manually because Systemd is not running.
 
 ## Requirements for YaST
 
-It runs yast2-firstboot after initial installation. It sets user via yast2-users.
-For SLE images it should also register via yast2-registration.
-Another useful module is yast2 packager as WSL allows to install anything user has in mind.
-As list of modules is limited, for WSL new whitelist flag in desktop file is created
-called `X-SuSE-YaST-WSL` which has to be set to `true` for modules
-that should be offered in control center.
+- `yast2-firstboot` should run after the initial installation, setting the users via the
+  `yast2-users` module.
+- For SLE images, it should be able to register the system.
+- `yast2-packager` should work as WSL allows installing anything the user has in mind.
+- Modules that does not work should not be listed. YaST offers a mechanism to whitelist working
+  modules by setting the `X-SuSE-YaST-WSL` keyword in the desktop file.
 
-## Known Issues in YaST:
+## Known Issues in YaST
 
-- systemctl slowly failing, which cause slowdown. General slowdown is solved in https://github.com/yast/yast-yast2/pull/1018
-  which reduce list of units to query. But can still be problem in other cases.
-- language module does not work at all, as localectl is systemd dependent and failing.
-- services module is empty because systemd does not run
-- network as without systemd it cannot run. But probably need not to be fixed
-  as networking is provided by windows.
-- bootloader does not work because storage does not detect root partition.
-  Also there is no configuration as system is booted via windows.
-  We need not care as user does not need to configure bootloader.
-- partitioner shows nothing, writting not tested. Possible use cases can be mounting NFS?
-- *-server because it cannot start service without systemd
-- system_settings as it depends on bootloader which failing. Also useless in WSL1 as it is not real kernel.
-- journal as it does not run.
+Many YaST modules rely on Systemd, so it is expected that many of them do not work.
+
+- `systemctl` slow failing causes a significant slowdown. This problem was mitigated in [yast2
+  4.2.61](https://github.com/yast/yast-yast2/blob/bf215ca2ca3c0beb39bfb9571a300f4e763c70c2/package/yast2.changes#L25),
+  which reduce list of units to query. However, it still can be a problem in other cases.
+- Language, timezone, and services related modules do not work as they rely on Systemd. It includes
+  many `*-server` modules.
+- Network cannot run without Systemd. Probably we do not need to fix it because networking is
+  provided by Windows.
+- The bootloader module does not work because the storage layer does not detect the root partition.
+  Anyway, we do not care as users do not need to configure the bootloader.
+- The partitioner shows nothing, and writing changes is not tested. Mounting NFS could be a possible
+  use case?
+- `system_settings` does not work because it depends on the bootloader module. However, it is
+  useless in WSL1 because it does not use a real Linux kernel.
+- The journal module does not run.
