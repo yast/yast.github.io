@@ -243,6 +243,7 @@ dictionary:
 - PARSECOMMENTS
 - partitioner
 - perl
+- permalink
 - plugin
 - png
 - pos
