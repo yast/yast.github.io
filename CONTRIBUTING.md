@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /CONTRIBUTING/
 title: YaST Contribution Guidelines
 description: How to Contribute
 ---

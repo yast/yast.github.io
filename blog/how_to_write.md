@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /blog/how_to_write/
 title: "How to Write a New Post"
 description: "A short introduction about writing new blog posts"
 sitemap: false

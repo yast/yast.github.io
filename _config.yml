@@ -46,3 +46,5 @@ exclude:
   - README.md
   - sass_debug
   - vendor
+  - Rakefile
+  - mkdocs.yml
