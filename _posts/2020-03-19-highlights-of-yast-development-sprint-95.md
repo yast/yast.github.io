@@ -14,6 +14,8 @@ tags:
 - YaST
 ---
 
+## Contents
+
 Due to recent events, many companies all over the world are switching to a
 remote working model, and SUSE is not an exception. The YaST team is distributed
 so, for many members, it is not a big deal because they are already used to work
@@ -27,13 +29,15 @@ focused on fixing bugs to make the upcoming (open)SUSE releases shine. However,
 we still have time to introduce some important improvements. Among all the
 changes, we will have a look at the following ones:
 
-* New possibilities for pervasive encryption.
-* Improvements in the mechanism to install missing packages during storage
-  system analysis.
-* Better handling of some conflicting attributes in AutoYaST.
-* Several usability improvements in the iSCSI LIO Server module.
+* [New possibilities for pervasive encryption.](#pervasive-encryption)
+* [Improvements in the mechanism to install missing packages during storage
+  system analysis.](#install-missing-packages)
+* [Better handling of some conflicting attributes in
+  AutoYaST.](#autoyast-conflicting-attrs)
+* [Several usability improvements in the iSCSI LIO Server
+  module.](#iscsi-lio-server-usability)
 
-## Expanding the Possibilities of Pervasive Encryption
+## Expanding the Possibilities of Pervasive Encryption {#pervasive-encryption}
 
 Some months ago, in this [dedicated blog post][adv-enc-blog], we
 introduced the joys and benefits of the so-called pervasive encryption available
@@ -67,7 +71,7 @@ src="secure-key-error-300x142.png" full_img="secure-key-error.png" %}
 
 [adv-enc-blog]: https://lizards.opensuse.org/2019/10/09/advanced-encryption-yast
 
-## Install Missing Packages during Storage System Analysis
+## Install Missing Packages during Storage System Analysis {#install-missing-packages}
 
 As our reader surely knows, YaST always ensures the presence of all the needed
 utilities when performing any operation in the storage devices, like formatting
@@ -106,7 +110,7 @@ reporting when the YaST Partitioner fails to install some package, a more
 up-to-date list of possibly relevant packages per technology, and improvements
 in the source code organization and the automated tests.
 
-## Reporting Conflicting Storage Attributes in AutoYaST Profiles
+## Reporting Conflicting Storage Attributes in AutoYaST Profiles {#autoyast-conflicting-attrs}
 
 If you are an AutoYaST user, you undoubtely know that it is often too quiet and
 offers little information about inconsistencies or potential problems in the
@@ -140,7 +144,7 @@ to extend this check in the future.
 
 [bsc#1165907]: https://bugzilla.suse.com/show_bug.cgi?id=1165907
 
-## Usability Improvements in iSCSI-LIO-server Module
+## Usability Improvements in iSCSI-LIO-server Module {#iscsi-lio-server-usability}
 
 Recently, one of our developers detected several usability problems in the
 *iSCSI LIO Server* module, and he summarized them in [a bug
