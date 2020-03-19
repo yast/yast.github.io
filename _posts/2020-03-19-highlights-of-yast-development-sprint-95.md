@@ -69,7 +69,7 @@ corresponding information.
 {% include blog_img.md alt=""
 src="secure-key-error-300x142.png" full_img="secure-key-error.png" %}
 
-[adv-enc-blog]: https://lizards.opensuse.org/2019/10/09/advanced-encryption-yast
+[adv-enc-blog]: {{ site.baseurl }}{% post_url 2019-10-09-advanced-encryption-options-land-in-the-yast-partitioner %}
 
 ## Install Missing Packages during Storage System Analysis {#install-missing-packages}
 
