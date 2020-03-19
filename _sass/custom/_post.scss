@@ -46,6 +46,9 @@
   img.thumbnail {
     max-width: 300px;
   }
+  table {
+    @extend .table;
+  }
 }
 
 .post-description {
