@@ -48,6 +48,9 @@
   }
   table {
     @extend .table;
+    @extend .table-bordered;
+    @extend .table-responsive;
+    @extend .table-striped;
   }
 }
 
