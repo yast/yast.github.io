@@ -5,6 +5,7 @@ title: Highlights of YaST Development Sprint 95
 description: Although SUSE has changed to remote working mode, the YaST team
   has remained focused and delivered some interesting stuff during this sprint.
 category: SCRUM
+permalink: blog/2020-03-19/sprint-95
 tags:
 - Distribution
 - Factory
