@@ -166,3 +166,11 @@ src="iscsi-lio-server-new-ui-300x211.png" full_img="iscsi-lio-server-new-ui.png"
 
 ## Conclusion
 
+It is possible that, during the upcoming weeks, we need to make some further
+adjustments to our workflow, especially when it comes to video meetings. But, at
+this point, everything is working quite well, and we are pretty sure that we
+will keep delivering at a good pace.
+
+So, take care, and stay tuned!
+
+
