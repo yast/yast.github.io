@@ -24,10 +24,16 @@ supporting us in this endeavor, so the YaST team has been able to deliver quite
 some stuff during this sprint, and we will keep doing our best in the weeks to
 come.
 
-Now, let's talk only about software development. These days we are mainly
-focused on fixing bugs to make the upcoming (open)SUSE releases shine. However,
-we still have time to introduce some important improvements. Among all the
-changes, we will have a look at the following ones:
+Before jumping into what the team has recently done, we would also like to bring
+your attention to the migration of our blog from the good old *openSUSE Lizards
+blog platform* to the [YaST website][yast-blog]. So, please, if you use some
+feeds reader, update the YaST blog URL to [the new
+one](https://yast.opensuse.org/feed.xml).
+
+Now, as promised, let's talk only about software development. These days we are
+mainly focused on fixing bugs to make the upcoming (open)SUSE releases shine.
+However, we still have time to introduce some important improvements. Among all
+the changes, we will have a look at the following ones:
 
 * [New possibilities for pervasive encryption.](#pervasive-encryption)
 * [Improvements in the mechanism to install missing packages during storage
@@ -36,6 +42,10 @@ changes, we will have a look at the following ones:
   AutoYaST.](#autoyast-conflicting-attrs)
 * [Several usability improvements in the iSCSI LIO Server
   module.](#iscsi-lio-server-usability)
+
+[yast-blog]: https://yast.opensuse.org/blog/
+[yast-feed]: https://yast.opensuse.org/feed.xml
+
 
 ## Expanding the Possibilities of Pervasive Encryption {#pervasive-encryption}
 
