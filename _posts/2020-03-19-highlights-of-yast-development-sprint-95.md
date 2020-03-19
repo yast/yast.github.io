@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-03-19 17:00:00
+date: 2020-03-19 16:00:00 +00:00
 title: Highlights of YaST Development Sprint 95
 description: Although SUSE has changed to remote working mode, the YaST team
   has remained focused and delivered some interesting stuff during this sprint.
