@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /contact/
 title: Contact
 description: Contacting the YaST Team
 ---
