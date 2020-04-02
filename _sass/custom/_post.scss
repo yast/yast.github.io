@@ -48,6 +48,12 @@
   img.thumbnail {
     max-width: 300px;
   }
+  table {
+    @extend .table;
+    @extend .table-bordered;
+    @extend .table-responsive;
+    @extend .table-striped;
+  }
 }
 
 .post-description {
