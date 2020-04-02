@@ -48,6 +48,9 @@
   img.thumbnail {
     max-width: 300px;
   }
+  img.emoji {
+    display: inline;
+  }
   table {
     @extend .table;
     @extend .table-bordered;
