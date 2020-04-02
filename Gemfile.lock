@@ -255,6 +255,3 @@ DEPENDENCIES
   rake
   raspell
   yast-rake (>= 0.2.1)
-
-BUNDLED WITH
-   2.0.2
