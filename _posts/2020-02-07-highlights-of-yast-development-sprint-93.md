@@ -5,6 +5,7 @@ title: Highlights of YaST Development Sprint 93
 description: 'Lately, the YaST team has been quite busy fixing bugs and finishing
   some features for the upcoming (open)SUSE releases.'
 category: SCRUM
+permalink: blog/2020-02-07/sprint-93
 tags:
 - Base System
 - Distribution
