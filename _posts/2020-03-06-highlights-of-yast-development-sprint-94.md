@@ -6,6 +6,7 @@ description: 'After some time of silent work (our previous blog post was publish
   a month ago), the YaST Team is back with some news about the latest development
   sprint and some Hack Week experiments.'
 category: SCRUM
+permalink: blog/2020-03-06/sprint-94
 tags:
 - Distribution
 - Factory

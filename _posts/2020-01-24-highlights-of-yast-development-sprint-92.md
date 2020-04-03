@@ -5,6 +5,7 @@ title: Highlights of YaST Development Sprint 92
 description: This print we were focused mainly on the storage and package
   related improvements and fixes.
 category: SCRUM
+permalink: blog/2020-01-24/sprint-92
 tags:
 - Systems Management
 - Uncategorized
