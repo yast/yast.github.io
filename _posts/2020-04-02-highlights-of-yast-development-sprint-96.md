@@ -126,7 +126,7 @@ have added a new check for multi-devices technologies. Thus in case you are sett
 volume group, a RAID, a Bcache or a multi-device Btrfs filesystem, AutoYaST makes sure that their
 components are also properly defined in the AutoYaST profile.
 
-For instance, let's say you want to setup a new LVM volume group but you forget to define which
+For instance, let's say you want to set up a new LVM volume group but you forget to define which
 devices are going to act as physical volumes for it. In such a case, the new version of AutoYaST
 informs about the missing definitions and stops the installation.
 
