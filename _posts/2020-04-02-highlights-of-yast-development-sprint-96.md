@@ -36,8 +36,8 @@ So let's start!
 
 This is not the first time our loyal readers learn about the YaST feature to search online for
 packages within SLE modules and extensions. We initially presented it [three reports
-ago]({{site.baseurl}}/blog/2020-02-07/yast-sprint-93#the-online-search-feature-comes-to-yast),
-followed by [a review]({{site.baseurl}}/blog/2020-03-06/yast-sprint-94#online-search) of
+ago]({{site.baseurl}}/blog/2020-02-07/sprint-93#the-online-search-feature-comes-to-yast),
+followed by [a review]({{site.baseurl}}/blog/2020-03-06/sprint-94#online-search) of
 several usability improvements we had decided to implement on top of that
 initial version.
 
@@ -96,7 +96,7 @@ src="ntp-running-multi-300x224.png" full_img="ntp-running-multi.png" %}
 ## Secure Boot in zSeries Mainframes - Second Round {#secure-boot}
 
 A couple of reports ago, we presented the [initial support for zSeries Secure
-boot]({{site.baseurl}}/blog/2020-03-06/yast-sprint-94#secure-boot). We have continued
+boot]({{site.baseurl}}/blog/2020-03-06/sprint-94#secure-boot). We have continued
 improving that feature based on the feedback received from early testers and mainframe specialists.
 
 Now, YaST behavior is better adapted to the characteristics of the system in which it's been
