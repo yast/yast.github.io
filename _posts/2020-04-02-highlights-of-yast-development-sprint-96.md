@@ -96,7 +96,7 @@ src="ntp-running-multi-300x224.png" full_img="ntp-running-multi.png" %}
 ## Secure Boot in zSeries Mainframes - Second Round {#secure-boot}
 
 A couple of reports ago, we presented the [initial support for zSeries Secure
-boot](https://lizards.opensuse.org/2020/03/06/yast-sprint-94/#secure-boot). We have continued
+boot]({{site.baseurl}}/blog/2020-03-06/yast-sprint-94#secure-boot). We have continued
 improving that feature based on the feedback received from early testers and mainframe specialists.
 
 Now, YaST behavior is better adapted to the characteristics of the system in which it's been
