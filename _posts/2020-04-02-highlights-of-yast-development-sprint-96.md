@@ -23,7 +23,7 @@ The releases of openSUSE Leap 15.2 and SUSE Linux Enterprise 15 SP2 are approach
 invest quite some time fixing bugs found by the testers. Many of them are not specially exciting
 but we still have enough interesting topics to report about:
 
-  * More news about the new Online Search module
+  * More news about the new Online Search functionality
   * Improvements in the user interface to configure NTP
   * Progress in the support of Secure Boot for s390 mainframes
   * Better reporting in AutoYaST
@@ -52,7 +52,7 @@ the SUSE Customer Center. Moreover, scrolling through the results was rather slo
 those problems are gone now: most of the time is spent in network communication and scrolling works
 smoothly.
 
-{% include blog_img.md alt="Graphical Online Search module"
+{% include blog_img.md alt="Graphical Online Search screen"
 src="online-search-300x225.png" full_img="online-search.png" %}
 
 Regarding the UX, we introduced a few changes:
@@ -63,10 +63,10 @@ Regarding the UX, we introduced a few changes:
   * We have added some information about how many packages were found.
   * The help texts were extended and improved.
 
-{% include blog_img.md alt="Online Search module (text mode)"
+{% include blog_img.md alt="Online Search screen (text mode)"
 src="online-search-ncurses-300x220.png" full_img="online-search-ncurses.png" %}
 
-But the Online Search module is not the only interface that received some love...
+But the Online Search UI is not the only interface that received some love...
 
 ## The Strange Case of the Multiple NTP Servers {#ntp-servers}
 
@@ -126,16 +126,16 @@ have added a new check for multi-devices technologies. Thus in case you are sett
 volume group, a RAID, a Bcache or a multi-device Btrfs filesystem, AutoYaST makes sure that their
 components are also properly defined in the AutoYaST profile.
 
-For instance, let's say you want to set up a multi-device Btrfs file system but you forget to define
-which disks or partitions are part of this file system. In such a case, the new version of AutoYaST
+For instance, let's say you want to setup a new LVM volume group but you forget to define which
+devices are going to act as physical volumes for it. In such a case, the new version of AutoYaST
 informs about the missing definitions and stops the installation.
 
-In the image below, you can see how the error reporting mechanism looks. In this example, it reports
-the AutoYaST the profile contains a new LVM volume group but does not specify which devices should
-act as physical volumes for it.
+In the image below you can see how the error reporting mechanism looks. In this example, it reports
+the AutoYaST profile contains a new multi-device Btrfs file system, but it does not specify which
+disks or partitions should be part of that file system.
 
-{% include blog_img.md alt="AutoYaST reporting missing LVM PVs"
-src="autoyast-no-pvs-300x225.png" full_img="autoyast-no-pvs.png" %}
+{% include blog_img.md alt="AutoYaST reporting missing devices for Btrfs"
+src="autoyast-no-components-300x225.png" full_img="autoyast-no-components.png" %}
 
 ## It's all About Blocks {#storage-blocks}
 
