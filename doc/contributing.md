@@ -11,7 +11,8 @@ changes.
 Bug Reports
 -----------
 
-:warning: *For reporting security issues read the [Security](SECURITY.md)
+:warning: *For reporting security issues read the
+[Security](https://github.com/yast/.github/blob/master/SECURITY.md)
 documentation, the security related bugs need a special handling.*
 
 If you find a problem, please report it either using
@@ -34,8 +35,9 @@ non-trivial contribution, get in touch with us first — this can prevent wasted
 effort on both sides. Also, have a look at our [development
 documentation](http://en.opensuse.org/openSUSE:YaST_development).
 
-:warning: *For sending security related fixes read the [Security](
-SECURITY.md) documentation.*
+:warning: *For sending security related fixes read the
+[Security](https://github.com/yast/.github/blob/master/SECURITY.md)
+documentation.*
 
 To send us your code change, use GitHub pull requests. The workflow is as
 follows:
