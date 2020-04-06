@@ -30,7 +30,7 @@ But that’s not all. We have some pretty exciting news regarding the
 *LibYUI Testing Framework* which, hopefully, will reduce the hassle of
 maintaining YaST openQA tests in the future. If you are interested, we
 published a [separate post a few days
-ago](//lizards.opensuse.org/2019/04/26/announcing-libyu%E2%80%A6esting-framework/)
+ago](//lizards.opensuse.org/2019/04/26/announcing-libyui-testing-framework/)
 with all the details about this topic.
 
 ### Submitting First Bits of the YaST Network Refactoring to Factory   {#first-bits-of-yast-network-refactoring-submitted-into-factory}

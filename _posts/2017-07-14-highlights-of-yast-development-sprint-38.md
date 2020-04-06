@@ -102,7 +102,7 @@ improved in relation to the Expert Partitioner currently available in
 compared to the rest of the installation process.
 
 <video preload="metadata" controls="controls">
-  <source type="video/webm" src="/assets/images/blog/{{ page.date | date: "%Y-%m-%d" }}/expert_partitioner_next.webm"/>
+  <source type="video/webm" src="/assets/images/blog/{{ page.date | date: "%Y-%m-%d" }}/expert_partitioner_next.webm">
 </video>
 
 ### Fixed Automatic Patch Installation
