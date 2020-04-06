@@ -3,7 +3,7 @@ YaST Contribution Guidelines
 
 YaST is an open source project and as such it welcomes all kinds of
 contributions. If you decide to contribute, please follow these guidelines to
-ensure the process is effective and pleasant both for you and YaST maintainers.
+ensure the process is effective and pleasant both for you and the YaST maintainers.
 
 There are two main forms of contribution: reporting bugs and performing code
 changes.
@@ -11,19 +11,20 @@ changes.
 Bug Reports
 -----------
 
+:warning: *For reporting security issues read the
+[Security](https://github.com/yast/.github/blob/master/SECURITY.md)
+documentation, the security related bugs need a special handling.*
+
 If you find a problem, please report it either using
-[Bugzilla](https://bugzilla.suse.com/enter_bug.cgi?format=guided&product=openSUSE+Factory&component=YaST2)
-or via the [GitHub issues](https://guides.github.com/features/issues/) for the
-specific YaST repository. (For Bugzilla, use the [simplified
+[Bugzilla](https://bugzilla.suse.com/enter_bug.cgi?format=guided&product=openSUSE+Tumbleweed&component=YaST2)
+or [GitHub issues](../../issues). (For Bugzilla, use the [simplified
 registration](https://secure-www.novell.com/selfreg/jsp/createSimpleAccount.jsp)
 if you don't have an account yet.)
 
-If you find a problem, please report it either using
-[Bugzilla](https://bugzilla.suse.com/) or GitHub issues. We can't guarantee
-that every bug will be fixed, but we'll try.
-
 When creating a bug report, please follow our [bug reporting
 guidelines](http://en.opensuse.org/openSUSE:Report_a_YaST_bug).
+
+We can't guarantee that every bug will be fixed, but we'll try.
 
 Code Changes
 ------------
@@ -33,6 +34,10 @@ refactorings and implementation of new features. However, before making any
 non-trivial contribution, get in touch with us first — this can prevent wasted
 effort on both sides. Also, have a look at our [development
 documentation](http://en.opensuse.org/openSUSE:YaST_development).
+
+:warning: *For sending security related fixes read the
+[Security](https://github.com/yast/.github/blob/master/SECURITY.md)
+documentation.*
 
 To send us your code change, use GitHub pull requests. The workflow is as
 follows:
@@ -45,24 +50,28 @@ follows:
      to the [Ruby style
      guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md).
 
-  4. Make sure your change didn't break anything by building the RPM package
+  4. Update the package version (in `packages/*.spec`, usually by
+     `rake version:bump`) and add a new entry to the `package/*.changes` file
+     (by `osc vc package`).
+     For bigger changes or changes which need longer discussion it is advised to
+     add this as a separate last commit so it can be easily updated when another
+     change is merged in the meantime.
+
+  5. Make sure your change didn't break anything by building the RPM package
      (`rake osc:build`). The build process includes running the full testsuite.
 
-  5. Publish the branch and create a pull request.
+  6. Publish the branch and create a pull request.
 
-  6. YaST developers will review your change and possibly point out issues.
+  7. YaST developers will review your change and possibly point out issues.
      Adapt the code under their guidance until they are all resolved.
 
-  7. Finally, the pull request will get merged or rejected.
+  8. Finally, the pull request will get merged or rejected.
 
 See also [GitHub's guide on
 contributing](https://help.github.com/articles/fork-a-repo).
 
 If you want to do multiple unrelated changes, use separate branches and pull
 requests.
-
-Do not change the `VERSION` and `*.changes` files as this could lead to
-conflicts.
 
 ### Commits
 

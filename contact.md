@@ -28,8 +28,8 @@ or public holidays most of the team members are away.
 
 ### Reporting Bugs
 
-If you want to report a bug use the [Bugzilla](
-https://bugzilla.suse.com/enter_bug.cgi?format=guided&product=openSUSE+Factory&component=YaST2)
+If you want to report a bug use the
+[Bugzilla](https://bugzilla.suse.com/enter_bug.cgi?format=guided&product=openSUSE+Tumbleweed&component=YaST2)
 bug tracking system.
 
 
@@ -41,6 +41,6 @@ bug tracking system.
   use a paid support.
 
 - For contribution guidelines see the [contributing page](
-  {{ "/contributing" | relative_url }}) or the [CONTRIBUTING.md](
-  {{ "/CONTRIBUTING" | relative_url }}) file in the respective Git repository.
+  {{ "/contributing" | relative_url }}) or the [YaST `CONTRIBUTING.md`
+file](https://github.com/yast/.github/blob/master/CONTRIBUTING.md).
 
