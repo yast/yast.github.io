@@ -132,7 +132,7 @@ src="missing-root-mount-point-error-300x222.png" full_img="missing-root-mount-po
 
 Fortunately, those scenarios are reduced now to the very minimum thanks
 to all the adaptations and fixes introduced during this sprint regarding
-[mount points detection](#improving-detection-of-mount-points). But
+[mount points detection](#improving-the-detection-of-mount-points). But
 there is still a possibility in extreme cases like unfinished rollback
 procedures or very unusual subvolumes organization.
 

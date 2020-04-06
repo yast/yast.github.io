@@ -116,9 +116,9 @@ snapshots and quotas can also be useful for some special system users
 And all that, as always in YaST, equally easy to configure with the
 graphical interface and with the text-based one.
 
-[![Moreover, using subvolumes as homes can also be useful to implement
-per user quotas, ncurses
-version](../../../../images/2019-02-27/subvolume-home-ncurses-300x192.png)](../../../../images/2019-02-27/subvolume-home-ncurses.png)
+{% include blog_img.md alt="Moreover, using subvolumes as homes can also be
+useful to implement per user quotas, ncurses version"
+src="subvolume-home-ncurses-300x192.png" full_img="subvolume-home-ncurses.png" %}
 
 ### Better Visualization of SUSE Manager Salt Formulas
 
@@ -307,7 +307,7 @@ Have a lot of fun reading!
 
 [1]: {{ site.baseurl }}{% post_url 2019-02-27-recapping-the-bcache-support-in-the-yast-partitioner %}
 [2]: https://btrfs.wiki.kernel.org
-[3]: {{ site.baseurl }}{% post_url 2019-01-31-highlights-of-yast-development-sprint-69-70 %}#revamping-salt-formulas-forms-support
+[3]: {{ site.baseurl }}{% post_url 2019-01-31-highlights-of-yast-development-sprint-69-70 %}#revamping-suse-manager-salt-formulas-support
 [4]: https://github.com/yast/yast-configuration-management/
 [5]: https://lizards.opensuse.org/2019/02/27/getting-yast-cm-up-to-date/
 [6]: https://github.com/opensuse/libsolv

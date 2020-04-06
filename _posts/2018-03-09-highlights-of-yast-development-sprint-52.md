@@ -22,7 +22,7 @@ So let’s have a look at the most relevant changes:
   process](#offline-upgrade) in order to offer a smooth transition.
 * The Expert Partitioner got back the [settings
   dialog](#configuring-expert-partitioner) and the [ability to clone
-  disks](#cloning-disks).
+  disks](#cloning-partitions-layout).
 * Regarding the new storage layer,
   [subvolumes](#taking-btrfs-subvolume-hierarchy-right),
   [resizing](#temporary-mount-and-umount) and [support for unformatted
@@ -32,9 +32,9 @@ So let’s have a look at the most relevant changes:
 
 In addition to that, we have fixed some issues like [package
 installation from NFS/Samba/CIFS
-repositories](#package-installation-from-nfs-samba-cifs), [a problem
+repositories](#installing-packages-from-nfs-samba-cifs), [a problem
 preserving the DHCP client-id](#preserving-dhcp-client-id) and a bunch
-of [translations issues](#fixing-translation-issues).
+of [translations issues](#fixing-text-domains).
 
 ## Offline Upgrade from SLE11   {#offline-upgrade}
 
