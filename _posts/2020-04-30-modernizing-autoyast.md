@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-04-30 09:00:00 +00:00
+date: 2020-04-30 12:00:00 +00:00
 title: Modernizing AutoYaST
 description: AutoYaST has been around for more than 20 years and, at some extent, it is showing its age. But we have a plan!
 category: Development
@@ -167,3 +167,10 @@ we would love to hear from you! So you can reach the YaST team through the
 [yast-devel](https://lists.opensuse.org/yast-devel/) or
 [opensuse-autoinstall](https://lists.opensuse.org/opensuse-autoinstall/) mailing lists or, if you
 prefer, we are usually at #YaST in [Freenode](https://freenode.net/).
+
+Finally, we would like to thank everyone that got involved in the discussions (e.g., [The (near)
+future of AutoYaST][1] and [AutoYaST tools: feedback wanted][2]) and our colleagues at SUSE for
+providing feedback and ideas.
+
+[1]: https://lists.opensuse.org/opensuse-factory/2020-04/msg00402.html
+[2]: https://lists.opensuse.org/opensuse-factory/2020-04/msg00291.html
