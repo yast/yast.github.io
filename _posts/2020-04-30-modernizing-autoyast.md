@@ -61,7 +61,7 @@ comes to deal with profiles. We are considering a few options:
   (selecting the product, the list of add-ons, the filesystem type, etc.). It could also offer a
   CLI:
 
-```
+```console
 $ yast2 autoyast_profile --product SLES-15.2 \
   --addons sle-module-basesystem,sle-module-development-tools \
   --regcode XXXX \
@@ -139,22 +139,22 @@ However, we have been thinking about making things even easier by allowing to em
 AutoYaST profiles:
 
 ```rhtml
-    <?xml version="1.0" encoding="utf-8"?>
-    <partitioning config:type="list">
-      <drive>
-        <!-- vda, sda, ... -->
-        <device><%= script("find_root_device.sh") %></device>
-        <use>all</use>
-      </drive>
-    </partitioning>
+<?xml version="1.0" encoding="utf-8"?>
+<partitioning config:type="list">
+  <drive>
+    <!-- vda, sda, ... -->
+    <device><%= script("find_root_device.sh") -%></device>
+    <use>all</use>
+  </drive>
+</partitioning>
+
+<%= include_file("https://example.net/profiles/software-#{node["mac"]}.xml") %>
     
-    <%= include_file("https://example.net/profiles/software-#{node["mac"]}.xml") %>
-    
-    <% if arch?("s390x") -%>
-    <dasd>
-      <!-- dasd configuration -->
-    </dasd>
-    <% end -%>
+<% if arch?("s390x") -%>
+<dasd>
+  <!-- dasd configuration -->
+</dasd>
+<% end -%>
 ```
 
 Please, bear in mind that it is just an example, and we do not even know whether this feature makes
@@ -166,7 +166,8 @@ After reading this document, there is a chance that you have comments or new ide
 we would love to hear from you! So you can reach the YaST team through the
 [yast-devel](https://lists.opensuse.org/yast-devel/) or
 [opensuse-autoinstall](https://lists.opensuse.org/opensuse-autoinstall/) mailing lists or, if you
-prefer, we are usually at #YaST in [Freenode](https://freenode.net/).
+prefer, we are usually at [#yast channel](http://webchat.freenode.net/?channels=%23yast) at
+[Freenode](https://freenode.net/).
 
 Finally, we would like to thank everyone that got involved in the discussions (e.g., [The (near)
 future of AutoYaST][1] and [AutoYaST tools: feedback wanted][2]) and our colleagues at SUSE for
