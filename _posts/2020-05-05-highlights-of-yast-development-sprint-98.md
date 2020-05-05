@@ -157,7 +157,7 @@ that led to avoiding `iocharset=utf8` for EFI system partitions (because
 `iocharset=utf8`implies that filenames are case-sensitive).
 
 We took the opportunity to do some experiments and even look at the source code
-of the Linux kernel to find out what's really going on. Why is utf8 so special
+of the Linux kernel to find out what's really going on. Why is `utf8` so special
 and what can go wrong?
 
 If you ever wondered what these VFAT charset related options mean and whether
