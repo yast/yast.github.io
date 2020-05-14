@@ -176,7 +176,7 @@ item = _("Item")
 "<li>#{item}</li>"
 ```
 
-## Gettext Language Tags
+## Gettext Format Tags
 
 The GNU Gettext supports several [language format tags](
 https://www.gnu.org/software/gettext/manual/gettext.html#Translators-for-other-Languages
@@ -195,7 +195,7 @@ in Ruby (Perl uses simpler `"{foo}"` format without the percent sign at the
 beginning) but is close enough and should avoid most of the usual translation
 bugs.
 
-Ruby supports additional format with angled braces (`"%<foo>s"`) but because
+Ruby supports an additional format with angled braces (`"%<foo>s"`) but because
 there is no suitable equivalent in any Gettext format this should not be used
 in the YaST code.
 
