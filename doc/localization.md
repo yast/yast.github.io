@@ -175,3 +175,30 @@ collecting the translatable strings.
 item = _("Item")
 "<li>#{item}</li>"
 ```
+
+## Gettext Language Tags
+
+The GNU Gettext supports several [language format tags](
+https://www.gnu.org/software/gettext/manual/gettext.html#Translators-for-other-Languages
+) which describe the format for the positional arguments. This enures that the
+translated strings contain the same placeholders as the original
+string.
+
+In the YaST Ruby code we basically use two kinds of formats, the old YCP format
+(`"%1"`) and new Ruby variants (`"%s"` and `"%{foo}"`). The YCP format is
+natively supported by Gettext, it works out of box. Unfortunately the Ruby
+format is not supported at all.
+
+But for the `"%s"` style we can use the `c-format` and for the `"%{foo}"`
+format we can use the `perl-brace-format`. That is not exactly the same as
+in Ruby (Perl uses simpler `"{foo}"` format without the percent sign at the
+beginning) but is close enough and should avoid most of the usual translation
+bugs.
+
+Ruby supports additional format with angled braces (`"%<foo>s"`) but because
+there is no suitable equivalent in any Gettext format this should not be used
+in the YaST code.
+
+The Gettext language format tags are added by a [post-processing script](
+https://github.com/yast/yast-devtools/blob/master/build-tools/scripts/po_add_format_hints
+), after creating the POT file.
