@@ -168,7 +168,7 @@ is run once a week automatically [at
 Travis](https://travis-ci.com/yast/usr-etc-test). It downloads the repository
 metadata file which contains a list of files from all packages. It also contains
 files which are marked as "ghost", these files are not part of the package but
-might be create by RPM post-install script or by user. We just compare the found
+might be created by RPM post-install script or by user. We just compare the found
 files with a known list.
 
 Some implementation details of that script may be interesting for our more
