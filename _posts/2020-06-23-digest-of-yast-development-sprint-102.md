@@ -52,6 +52,8 @@ The next development sprint has already started, so we hope to see you again in 
 weeks with more news about (Auto)YaST... unless you are too busy celebrating the release of openSUSE
 Leap 15.2, expected for July 2nd!
 
+## YaST Blog Poll
+
 But before you leave, we would appreciate your feedback about this blog. As you may know, this is the
 second post we do with the new digest format, in which we basically collect links to several
 self-descriptive pull requests. We abandoned our traditional format (a consistent and self-contained
@@ -59,8 +61,6 @@ story illustrated with screenshots) because it implied too much work. But we are
 real impact of the change and of our blog in general. So we would like to kindly ask you to answer
 the following three questions (questionnaire hosted by [Formspree](https://formspree.io/), an
 open-source backed service).
-
-## YaST Blog Poll
 
 {::nomarkdown}
 <form name="input" method="POST" action="https://formspree.io/ancor@suse.de"
