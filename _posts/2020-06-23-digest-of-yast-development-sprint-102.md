@@ -15,11 +15,13 @@ tags:
 ---
 
 It's time for another development digest from The YaST team. As you can see in the following list
-of highlights, the range of topics is as broad as usual. 
+of highlights, the range of topics is as broad as usual.
+
+## Summary of the (Auto)YaST Changes
 
 - [Validation of the AutoYaST profile at the beginning of the
   installation](https://github.com/yast/yast-autoinstallation/pull/624) (see
-  screnshot below).
+  screenshot below).
 - [More robust and complete support for AutoYaST's user
   scripts](https://github.com/yast/yast-autoinstallation/pull/612).
 - Improvements in AutoYaST error handling and reporting. See the [documentation pull
@@ -58,9 +60,13 @@ real impact of the change and of our blog in general. So we would like to kindly
 the following three questions (questionnaire hosted by [Formspree](https://formspree.io/), an
 open-source backed service).
 
+## YaST Blog Poll
+
 {::nomarkdown}
-<form name="input" method="POST" action="https://formspree.io/ancor@suse.de">
+<form name="input" method="POST" action="https://formspree.io/ancor@suse.de"
+style="border: 1px solid #BBB; border-radius: 8px; padding: 10px; margin: 10px">
   <p>How often do you read the YaST Team reports?
+  <br/>
   <select name="frequency">
     <option value="never">This is my first time</option>
     <option value="depends">When I find something interesting in the summary</option>
@@ -68,6 +74,7 @@ open-source backed service).
   </select>
   </p>
   <p>How do you value the new digest format compared to our traditional blog posts?
+  <br/>
   <select name="format">
     <option value="1">1 - The new format is basically useless</option>
     <option value="2">2 - I prefer the previous format</option>
@@ -76,8 +83,10 @@ open-source backed service).
     <option value="5">5 - The new digest is the only useful format</option>
   </select>
   </p>
-  <p>What's your relationship with (open)SUSE? <input type="text" name="role"><br/>
-  <i>eg. openSUSE user, SUSE partner, QA Engineer...</i>
+
+  <p>What's your relationship with (open)SUSE? <i>e.g. openSUSE user, SUSE partner, QA Engineer...</i><br/>
+  <input type="text" name="role"><br/>
+
   </p>
   <center><input type="submit" value="Submit form" /></center>
   <input type="hidden" name="_subject" value="Formspree test" />
