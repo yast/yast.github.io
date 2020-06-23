@@ -49,3 +49,37 @@ list.
 The next development sprint has already started, so we hope to see you again in approximately two
 weeks with more news about (Auto)YaST... unless you are too busy celebrating the release of openSUSE
 Leap 15.2, expected for July 2nd!
+
+But before you leave, we would appreciate your feedback about this blog. As you may know, this is the
+second post we do with the new digest format, in which we basically collect links to several
+self-descriptive pull requests. We abandoned our traditional format (a consistent and self-contained
+story illustrated with screenshots) because it implied too much work. But we are curious about the
+real impact of the change and of our blog in general. So we would like to kindly ask you to answer
+the following three questions (questionnaire hosted by [Formspree](https://formspree.io/), an
+open-source backed service).
+
+{::nomarkdown}
+<form name="input" method="POST" action="https://formspree.io/ancor@suse.de">
+  <p>How often do you read the YaST Team reports?
+  <select name="frequency">
+    <option value="never">This is my first time</option>
+    <option value="depends">When I find something interesting in the summary</option>
+    <option value="often">Regularly</option>
+  </select>
+  </p>
+  <p>How do you value the new digest format compared to our traditional blog posts?
+  <select name="format">
+    <option value="1">1 - The new format is basically useless</option>
+    <option value="2">2 - I prefer the previous format</option>
+    <option value="3" selected="selected">3 - Both are equally valuable to me</option>
+    <option value="4">4 - I prefer the new digest format</option>
+    <option value="5">5 - The new digest is the only useful format</option>
+  </select>
+  </p>
+  <p>What's your relationship with (open)SUSE? <input type="text" name="role"><br/>
+  <i>eg. openSUSE user, SUSE partner, QA Engineer...</i>
+  </p>
+  <center><input type="submit" value="Submit form" /></center>
+  <input type="hidden" name="_subject" value="Formspree test" />
+</form>
+{:/nomarkdown}
