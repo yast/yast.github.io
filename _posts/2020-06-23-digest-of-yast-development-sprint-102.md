@@ -40,12 +40,12 @@ of highlights, the range of topics is as broad as usual.
 {% include blog_img.md alt="AutoYaST profile validation"
 src="autoyast-validation-300x225.png" full_img="autoyast-validation.png" %}
 
-As you can see, we have invested quite some effort improving some areas of AutoYaST. In the process,
+As you can see, we invested quite some effort improving some areas of AutoYaST. In the process,
 we found ourselves over and over typing complicated URLs in the boot parameters of the installer to
 access some manually crafted AutoYaST profile. To avoid the same pain in the future to other testers
-or to anyone interested in taking a quick look to AutoYaST, we are working in an easy-to-type
+or to anyone interested in taking a quick look to AutoYaST, we are working on an easy-to-type
 repository of generic AutoYaST profiles. See more details in [this
-announcement](https://lists.opensuse.org/yast-devel/2020-06/msg00027.html) in the yast-devel mailing
+announcement](https://lists.opensuse.org/yast-devel/2020-06/msg00027.html) on the yast-devel mailing
 list.
 
 The next development sprint has already started, so we hope to see you again in approximately two
@@ -58,9 +58,9 @@ But before you leave, we would appreciate your feedback about this blog. As you 
 second post we do with the new digest format, in which we basically collect links to several
 self-descriptive pull requests. We abandoned our traditional format (a consistent and self-contained
 story illustrated with screenshots) because it implied too much work. But we are curious about the
-real impact of the change and of our blog in general. So we would like to kindly ask you to answer
-the following three questions (questionnaire hosted by [Formspree](https://formspree.io/), an
-open-source backed service).
+real impact of the change and of our blog in general. So we kindly ask you to answer the following
+three questions (questionnaire hosted by [Formspree](https://formspree.io/), an open-source backed
+service).
 
 {::nomarkdown}
 <form name="input" method="POST" action="https://formspree.io/ancor@suse.de"
