@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-07-08 14:00:00 +00:00
+date: 2020-07-09 08:00:00 +00:00
 title: Digest of YaST Development Sprint 103
 description: Apart from the ongoing effort to modernize AutoYaST, the YaST team has been doing some
   research in the storage area and closed a few bugs in the installer.
