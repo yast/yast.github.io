@@ -5,7 +5,7 @@ title: Digest of YaST Development Sprint 103
 description: Apart from the ongoing effort to modernize AutoYaST, the YaST team has been doing some
   research in the storage area and closed a few bugs in the installer.
 category: SCRUM
-permalink: blog/2020-07-08/sprint-103
+permalink: blog/2020-07-09/sprint-103
 tags:
 - Distribution
 - Factory
