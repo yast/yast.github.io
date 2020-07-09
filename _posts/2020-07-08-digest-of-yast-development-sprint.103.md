@@ -31,9 +31,9 @@ Having said that, let's focus on what the team has achieved during the past spri
   [yast2-users](https://github.com/yast/yast-users/pull/232) module supports such a mechanism.
 - Publish [our conclusions](https://lists.opensuse.org/yast-devel/2020-07/msg00001.html) about the
   usage of wizards in the Expert Partitioner.
-- Study the impact of adding support for new types of LVM logical volumes types in our storage
-  layer. We will use the outcome of such research to plan future work in this area. If you are
-  curious, you can start by having a look at [LVM features and YaST
+- Study the impact of adding support for new types of LVM logical volumes in our storage layer. We
+  will use the outcome of such research to plan future work in this area. If you are curious, you
+  can start by having a look at [LVM features and YaST
   document](https://github.com/yast/yast-storage-ng/blob/master/doc/lvm.md).
 - [Use the REMOVE libstorage-ng view when deleting
   devices](https://github.com/yast/yast-storage-ng/pull/1106). You can check
@@ -47,7 +47,7 @@ Having said that, let's focus on what the team has achieved during the past spri
 - [Add support to collect memory usage data during
   installation](https://github.com/yast/yast-installation/pull/864). If you are interested, check
   the [follow-up document](https://gist.github.com/mvidner/9d959eb91190bce35e0d190324a80fb8), which
-  contains some interesting ideas for the near future.
+  contains some nice ideas for the near future.
 - [Backport to SLE 12 SP4 some fixes related to Ruby gems
   loading](https://github.com/yast/yast-ruby-bindings/pull/244) in order to solve a problem some
   appliances were having after a Ruby security update.
