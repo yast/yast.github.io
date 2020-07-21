@@ -47,7 +47,7 @@ from the latest two weeks.
 - Adapted YaST to handle the new location of the `krb5` files, both in
   [yast2-auth-server](https://github.com/yast/yast-auth-server/pull/65) and
   [yast2-users](https://github.com/yast/yast-users/pull/233).
-- Many internal improvements regarding AutoYaST
+- Many internal improvements regarding AutoYaST.
 
 ## Our readers has spoken
 
