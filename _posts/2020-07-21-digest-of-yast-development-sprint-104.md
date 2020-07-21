@@ -49,7 +49,7 @@ from the latest two weeks.
   [yast2-users](https://github.com/yast/yast-users/pull/233).
 - Many internal improvements regarding AutoYaST.
 
-## Our readers has spoken
+## Our readers have spoken
 
 But the previous list of improvements is not the only news we have for you. We got 31 answers to our
 survey about how our readers use the YaST blog post and we want to share the results with you.
