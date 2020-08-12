@@ -25,10 +25,10 @@ two files and RPM dependencies:
 
         AutoYaST has an own module with which the user can configure an installation workflow. For that the <YaST module name\>_auto.rb is needed for.
 
-* The RPM *Supplements* autoyast() describes which package supports a defined AutoYaST section.
+* The RPM *Supplements* `autoyast()` describes which package supports a defined AutoYaST section.
 
-     E.G. the Supplements *autoyast(host,networking)* of the package *yast2-network* says that this package is needed for handling these
-     two sections while an installation.
+     E.G. the `Supplements: autoyast(host,networking)` in the package *yast2-network* says that this package is needed for handling these
+     two sections in an installation.
 
 ## AutoYaST Control File <YaST module name\>_auto.rb
 
