@@ -3,7 +3,7 @@
 ## Introduction
 
 Each YaST module can be supported by AutoYaST by adapting/adding the following
-two files:
+two files and RPM dependencies:
 
 * [Desktop file](https://github.com/yast/yast-yast2/blob/master/doc/desktop_file.md)
 
@@ -25,7 +25,10 @@ two files:
 
         AutoYaST has an own module with which the user can configure an installation workflow. For that the <YaST module name\>_auto.rb is needed for.
 
+* The RPM *Supplements* `autoyast()` describes which package supports a defined AutoYaST section.
 
+     E.G. the `Supplements: autoyast(host,networking)` in the package *yast2-network* says that this package is needed for handling these
+     two sections in an installation.
 
 ## AutoYaST Control File <YaST module name\>_auto.rb
 
