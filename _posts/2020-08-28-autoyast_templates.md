@@ -24,8 +24,8 @@ And how this ERB template can look like? Here is one example that we use for tes
 
 ```erb
 <profile xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
-<%# example how to dynamic force multipath. Here it use storage model and if
-    it contain case insensitive word multipath %>
+  <%# example how to dynamic force multipath. Here it use storage model and if
+      it contain case insensitive word multipath %>
   <% if hardware["storage"].any? { |s| s["model"] =~ /multipath/i } %>
     <general>
       <storage>
@@ -38,36 +38,36 @@ And how this ERB template can look like? Here is one example that we use for tes
       <product>openSUSE</product>
     </products>
   </software>
-  <%# for details about values see libhd %>
-  <% disks = hardware["disk"].sort_by { |d| s = d["resource"]["size"].first; s["x"]*s["y"] }.map { |d| d["dev_name"] }.reverse %>
+  <%# first lets create list of disk names according to its size %>
+  <% sorted_disks = disks.sort_by { |d| d[:size] }.map { |d| d[:device] }.reverse %>
   <partitioning t="list">
-    <% disks[0..1].each do |name| %>
+    <% sorted_disks[0..1].each do |name| %>
       <drive>
-        <device>
-          <%= name %>
-        </device>
-        <initialize t="boolean">
-          true
-        </initialize>
-      </drive>
+         <device>
+           <%= name %>
+         </device>
+         <initialize t="boolean">
+           true
+         </initialize>
+       </drive>
     <% end %>
   </partitioning>
   <%# situation: machine has two network catds. One leads to intranet and other to internet, so here we create udev
-    rules to have internet one as eth0 and intranet as eth1. To distinguish in this example intranet one is not active %>
+      rules to have internet one as eth0 and intranet as eth1. To distinguish in this example if use active flag for intranet %>
   <networking>
     <net-udev t="list">
       <rule>
         <name>eth0</name>
         <rule>ATTR{address}</rule>
         <value>
-          <%= hardware["netcard"].find { |c| c["resource"]["link"].first["state"] }["resource"]["phwaddr"].first["addr"] %>
+  	<%= network_cards.find { |c| c[:link] }[:mac] %>
         </value>
       </rule>
       <rule>
         <name>eth1</name>
         <rule>ATTR{address}</rule>
         <value>
-          <%= hardware["netcard"].find { |c| !c["resource"]["link"].first["state"] }["resource"]["phwaddr"].first["addr"] %>
+  	<%= network_cards.find { |c| !c[:link] }[:mac] %>
         </value>
       </rule>
     </net-udev>
