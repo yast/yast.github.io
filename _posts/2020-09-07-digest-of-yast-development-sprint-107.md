@@ -20,8 +20,8 @@ to start working on some mid-term goals in the area of AutoYaST and storage mana
 summary of the most interesting stuff addressed during the sprint finished a week ago (sorry for the
 delay).
 
-- Making the AutoYaST profiles more flexible [by means of Erb
-  templates](https://github.com/yast/yast-autoinstallation/pull/667). That's still a work in
+- Making the [AutoYaST profiles more flexible](https://github.com/yast/yast-autoinstallation/pull/667)
+  by means of [Embedded Ruby (ERB)](https://en.wikipedia.org/wiki/ERuby). That's still a work in
   progress and we will publish a separate blog post with more details and examples soon.
 - When reporting errors in a certain element of an AutoYaST profile to the user, do it with the
   [same syntax](https://github.com/yast/yast-storage-ng/pull/1121) that is used when specifying
