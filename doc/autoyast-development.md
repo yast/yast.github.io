@@ -27,7 +27,7 @@ two files and RPM dependencies:
 
 * The RPM *Supplements* `autoyast()` describes which package supports a defined AutoYaST section.
 
-     E.G. the `Supplements: autoyast(host,networking)` in the package *yast2-network* says that this package is needed for handling these
+     E.G. the `Supplements: autoyast(host:networking)` in the package *yast2-network* says that this package is needed for handling these
      two sections in an installation.
 
 ## AutoYaST Control File <YaST module name\>_auto.rb
