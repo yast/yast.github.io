@@ -156,6 +156,6 @@ exceptions which need a special care:
 
 For new branches where translations are required the SUSE Localization
 Team has to be informed. Also when branching cause that master is no longer
-in sync with the last SLE SP, jenkins job syncing translations needs to be
-modified at https://gitlab.suse.de/yast/infra/-/blob/master/jenkins/ci.suse.de/yast-pot-package-update.sh#L31
+in sync with the last SLE SP, Jenkins job syncing translations needs to be
+modified at https://gitlab.suse.de/yast/infra/-/merge_requests/74/diffs#432aa131b22a799c7a568113cf2ce645b0930a75_29_31
 (internal link only).
