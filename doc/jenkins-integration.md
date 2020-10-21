@@ -34,7 +34,7 @@ For more details, see [automatic package submission](auto-pkg-submission.md).
 If a Jenkins build fails for some temporary reason (e.g. OBS down, network
 issues, ...) you can restart it by clicking the "Retry" button in the job details.
 You need to be logged in, the credentials are stored in the [internal wiki
-page](https://wiki.microfocus.net/index.php/YaST/jenkins#openSUSE_.28external.29).
+page](https://wiki.suse.net/index.php?title=YaST/jenkins#SUSE_.28internal.29).
 
 ### No Space Left at the Worker
 
@@ -50,5 +50,5 @@ https://ci.opensuse.org/view/Yast/job/yast-jenkins-worker-cleanup/) job.
 - You can run the clean up job manually, just log into Jenkins and trigger the job.
   The disk space should be freed by deleting some caches.
 - If that does not help you can use the [SSH access](
-  https://wiki.microfocus.net/index.php?title=YaST/jenkins#Jenkins) and check
+  https://wiki.suse.net/index.php?title=YaST/jenkins#Jenkins_Instances) and check
   the details.
