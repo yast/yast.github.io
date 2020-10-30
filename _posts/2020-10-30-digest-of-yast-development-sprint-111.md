@@ -15,13 +15,13 @@ tags:
 
 Another development sprint ended for the YaST Team this week. This time we have fewer news than
 usual about new features in YaST... and the reason for that may surprise you. Turns out a
-significant part of the YaST Team has been working in studying the internals of
+significant part of the YaST Team has been studying the internals of
 [Cockpit](https://cockpit-project.org/) in an attempt to use our systems management knowledge to
-help those who want to improve the Cockpit support for (open)SUSE.
+help to improve the Cockpit support for (open)SUSE.
 
 But that doesn't mean we have fully stopped the development of YaST and other parts of the
-installation process. Apart from working in several unfinished improvements that will be presented
-in our next blog post, we have:
+installation process. Apart from working in several not yet finished improvements that will be
+presented in our next blog post, we have:
 
 - Started to [add unit tests](https://github.com/openSUSE/installation-images/pull/434) to the
   ancient Perl libraries that generate the system image used to run the installer.
@@ -36,4 +36,4 @@ Conference](https://events.opensuse.org/conferences/oSLO/), with the self-explan
 "Top 25 New Features in (Auto)YaST". We are not fully sure whether a recording of the talk will be
 uploaded by the organizers at some point, but we will keep you informed if that happens.
 
-See you again in (hopefully less than) two weeks!
+That's all folks! See you again in (hopefully less than) two weeks.
