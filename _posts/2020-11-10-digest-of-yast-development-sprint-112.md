@@ -38,11 +38,11 @@ It's pretty functional already, including:
     [bridges](https://github.com/dgdavid/cockpit-wicked/pull/9)
 
 We don't have a clear release date for this new module yet, since we have to coordinate with the
-team that packages Cockpit for (open)SUSE and we still want to improve validation and error
-handling. That includes deciding how to inform the user if something goes wrong, something most
-Cockpit modules don't seem to care much about. And we also want to improve the DNS settings and to
-extend the support for wireless technologies. Meanwhile, if you are hungry for screenshots you can
-check the links to the pull requests in the list of features above.
+team that will take care of packaging Cockpit for (open)SUSE and we still want to improve validation
+and error handling. That includes deciding how to inform the user if something goes wrong, since
+there is no unified way to do that across the different Cockpit modules. And we also want to
+improve the DNS settings and to extend the support for wireless technologies. Meanwhile, if you are
+hungry for screenshots you can check the links to the pull requests in the list of features above.
 
 We have also being working in a Cockpit module to manage transactional updates. But that one is still
 in research phase and we have very little to show at this point.
@@ -72,7 +72,7 @@ some corner cases and allowing to easily tweak that configuration. On the other 
 [much more informative](https://github.com/yast/yast-ruby-bindings/pull/253) message when there is
 an error parsing some configuration file.
 
-### Look Ma! That's me at TV!
+### Look Ma! That's me on TV!
 
 We also found out the recording of our talk presenting the "Top 25 New Features in (Auto)YaST" at
 the openSUSE + LibreOffice Virtual Conference is finally available at the openSUSE TV channel.
