@@ -13,7 +13,7 @@ tags:
 ---
 
 Time flies and it has been already two weeks since our previous development report. On these special
-days, we keep being the YaST + Cockpit Team and we have news in both fronts. So let's do a quick
+days, we keep being the YaST + Cockpit Team and we have news on both fronts. So let's do a quick
 recap.
 
 ### Cockpit Modules
@@ -22,7 +22,7 @@ Our [Cockpit module to manage `wicked`](https://github.com/openSUSE/cockpit-wick
 Apart from several small enhancements, the module has now better error reporting and correctly
 manages those asynchronous operations that `wicked` takes some time to perform. In addition, we have
 improved the integration with a default Cockpit installation, ensuring the new module replaces the
-default network one (which relies in Network Manager) if both are installed. In the following days
+default network one (which relies on Network Manager) if both are installed. In the following days
 we will release RPM packages and a separate blog post to definitely present Cockpit Wicked to the
 world.
 
@@ -41,11 +41,11 @@ the attention they deserve in the user interface of the YaST Partitioner, becomi
 citizens (like partitions or LVM logical volumes) instead of an obscure feature hidden in the screen
 for editing a file system.
 
-As part of such effort, we have improved the existing mechanism to suggest a given list of
+As part of that effort, we improved the existing mechanism to suggest a given list of
 subvolumes, based on the selected product and system role. See more details and screenshots at
 [the corresponding pull request](https://github.com/yast/yast-storage-ng/pull/1164).
 
-We have also added some support for Btrfs quotas, a mechanism that can be used to improve space 
+We also added some support for Btrfs quotas, a mechanism that can be used to improve space 
 accounting and to ensure a given subvolume (eg. `/var` or `/tmp`) does not grow too much and ends
 up filling up all the space in the root file system. [This pull
 request](https://github.com/yast/yast-storage-ng/pull/1165) explains the new feature with several
@@ -57,7 +57,7 @@ in the following days.
 ### More YaST enhancements
 
 Talking about the YaST Partitioner, you may know that we recently added a menu bar to its interface.
-During this sprint we have improved the YaST UI toolkit to ensure the keyboard shortcuts for such
+During this sprint we improved the YaST UI toolkit to ensure the keyboard shortcuts for such
 menu bar stay as stable as possible. Check the details at [this pull
 request](https://github.com/libyui/libyui/pull/175).
 
