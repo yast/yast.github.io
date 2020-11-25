@@ -110,5 +110,5 @@ and you are interested, give the module a try and tell us what you think.
 
 ## Additional Links
 
-* GitHub repository: https://github.com/openSUSE/cockpit-wicked
-* Development tips: https://github.com/openSUSE/cockpit-wicked/blob/master/DEVELOPMENT.md
+* GitHub repository: [https://github.com/openSUSE/cockpit-wicked](https://github.com/openSUSE/cockpit-wicked)
+* Development tips: [https://github.com/openSUSE/cockpit-wicked/blob/master/DEVELOPMENT.md](https://github.com/openSUSE/cockpit-wicked/blob/master/DEVELOPMENT.md)
