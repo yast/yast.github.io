@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2020-11-25 07:00:00 +00:00
+date: 2020-11-25 09:00:00 +00:00
 title: Presenting Cockpit Wicked
 description: A module to manage Wicked configuration through Cockpit
 category: Releases
