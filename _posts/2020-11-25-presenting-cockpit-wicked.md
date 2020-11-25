@@ -79,6 +79,9 @@ src="cockpit-wicked-add-bridge-mini.png" full_img="cockpit-wicked-add-bridge.png
 And last but not least, support for routes management or DNS configuration is rather simple but
 already functional.
 
+{% include blog_img.md alt="Inspecting DNS Settings"
+src="cockpit-wicked-dns-mini.png" full_img="cockpit-wicked-dns.png" %}
+
 ## Installation
 
 The module [has started its way](https://build.opensuse.org/request/show/850538) to Tumbleweed. But,
