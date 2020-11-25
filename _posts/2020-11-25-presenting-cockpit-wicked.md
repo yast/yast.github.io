@@ -16,7 +16,7 @@ tags:
 
 If you are into systems management, you most likely have heard about
 [Cockpit](https://cockpit-project.org/) at some point. In a nutshell, it offers a good looking
-web-based interface to perform system tasks, like inspecting the logs, applying system updates,
+web-based interface to perform system tasks like inspecting the logs, applying system updates,
 configuring the network, managing services, and so on. If you want to give it a try, you can install
 Cockpit in openSUSE Tumbleweed just by typing `zypper in cockpit`.
 
@@ -28,9 +28,9 @@ support for [Wicked](https://en.opensuse.org/Portal:Wicked), a network configura
 included in SUSE-based distributions.
 
 As we are experts in systems management, we were given the task of building a Cockpit module to
-handle network configuration using Wicked instead of NetworkManager. And today, we are presenting
-the first version of such a module. It is still a work in progress, but it already supports some
-basic use cases:
+handle network configuration using Wicked instead of NetworkManager. And today we are presenting the
+first version of such a module. It is still a work in progress, but it already supports some basic
+use cases:
 
 * Inspect interfaces configuration.
 * Configure common IPv4/IPv6 settings.
@@ -71,7 +71,7 @@ expand the support for the same mechanisms that are already supported by YaST.
 {% include blog_img.md alt="Configuring a Wireless Device"
 src="cockpit-wicked-wifi-scanning-mini.png" full_img="cockpit-wicked-wifi-scanning.png" %}
 
-Another interesting feature is the support for some virtual devices, like bridges, bonding and VLAN.
+Another interesting feature is the support for some virtual devices like bridges, bonding and VLAN.
 
 {% include blog_img.md alt="Setting Up a Bridge"
 src="cockpit-wicked-add-bridge-mini.png" full_img="cockpit-wicked-add-bridge.png" %}
@@ -89,9 +89,9 @@ if you are interested in giving it a try, you can grab the RPM from the [GitHub 
 page](https://github.com/openSUSE/cockpit-wicked/releases/tag/1).
 
 If you are already using Wicked, we recommend you to take a backup of your network configuration
-just in case something goes wrong. Just copying the `/etc/sysconfig/network` directory is enough.
-In case you are using NetworkManager but you are curious enough to give this try this module, you
-can easily switch to Wicked using the YaST2 network module.`YaST2 Network`
+just in case something goes wrong. Just copying the `/etc/sysconfig/network` directory is enough. In
+case you are using NetworkManager but you are curious enough to give this module a try, you can
+easily switch to Wicked using the YaST2 network module.`YaST2 Network`
 
 Bear in mind that this module will replace the one included by default in Cockpit. If you want the
 original module back, you need to uninstall the `cockpit-wicked` package.
