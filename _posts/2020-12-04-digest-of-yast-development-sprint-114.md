@@ -13,8 +13,8 @@ tags:
 ---
 
 Fortunately, Christmas is around the corner and the year 2020 is coming to an end. But the YaST team
-is not thinking of holidays yet. Quite the contrary, we have been working on a broad range of topics
-as usual. So let's have a look at some of them.
+is not thinking about going on holidays yet. Quite the contrary, we have been working on a broad
+range of topics as usual. So let's have a look at some of them.
 
 ### Polishing the Cockpit Wicked Module
 
@@ -72,7 +72,8 @@ As usual, we have been working on many more things. So let's select a few of the
   progress, but the most relevant repositories have already been adapted. Check the [yast2
   repository](https://github.com/yast/yast-yast2/commit/54fb57cb742a01267ed00c91f25fdf9b618d7ec7) if
   you want to see an example.
-* Better detection of Btrfs subvolumes prefix detection ([yast-storage-ng#1168](https://github.com/yast/yast-storage-ng/pull/1168)).
+* Better detection of Btrfs subvolumes prefix
+  ([yast-storage-ng#1168](https://github.com/yast/yast-storage-ng/pull/1168)).
 
 ### What's next?
 
