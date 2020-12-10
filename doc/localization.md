@@ -202,3 +202,15 @@ in the YaST code.
 The Gettext language format tags are added by a [post-processing script](
 https://github.com/yast/yast-devtools/blob/master/build-tools/scripts/po_add_format_hints
 ), after creating the POT file.
+
+## YaST Pot File Auto-Generation
+
+To automate the task of updating POT files on code changes, there is a script that is run as a Jenkins task
+called [yast-POT-updater](https://ci.suse.de/job/yast-POT-updater) (internal link only).
+
+It runs every day at midnight a script called `update-tool-cron.sh` which is [documented at yast-translations github page]
+(https://github.com/yast/yast-translations/blob/master/tools/README.md). Since the full checkout of all yast repositories
+is really time consuming, we reuse the checkout. That means, it can only be run on a specific worker.
+We are using the label `yast-pot` for them.
+
+A collection of ideas, how this could be improved is collected in a [TODO list](https://github.com/yast/yast-translations/blob/master/tools/TODO.md).
