@@ -230,5 +230,14 @@ For more details, see [automatic YaST package submission](auto-pkg-submission.md
 Manual Submission
 -----------------
 
-First build the package as described above. Then copy the content of `package/`
-directory to the OBS project (replace the old files).
+### Maintenance Branch
+
+In maintenance branch automatic submissions are disabled and manual request is needed.
+It can be done by simple running of `rake osc:sr` in respective maintenance branch.
+
+### Custom Build Service Repository
+
+There are two ways. The first one is usable if it needs more often submissions.
+In such case configure it in Rakefile as documented in [yast-rake](https://github.com/yast/yast-rake#customizing).
+The second one is good for one time try. In such case use osc commands and to get sources
+run `rake package` and use result of package directory as sources for package build.
