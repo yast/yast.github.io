@@ -237,7 +237,7 @@ It can be done by simply running of `rake osc:sr` in respective maintenance bran
 
 ### Custom Build Service Repository
 
-There are two ways. The first one is usable if it needs more often submissions.
+There are two ways. The first one is useful if it needs more often submissions.
 In such case configure it in Rakefile as documented in [yast-rake](https://github.com/yast/yast-rake#customizing).
 The second one is good for one time try. In such case use osc commands and to get sources
 run `rake package` and use result of package directory as sources for package build.
