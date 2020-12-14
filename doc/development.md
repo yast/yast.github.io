@@ -230,10 +230,10 @@ For more details, see [automatic YaST package submission](auto-pkg-submission.md
 Manual Submission
 -----------------
 
-### Maintenance Branch
+### Maintenance Branches
 
-In maintenance branch automatic submissions are disabled and manual request is needed.
-It can be done by simple running of `rake osc:sr` in respective maintenance branch.
+In maintenance branches the automatic submissions are disabled by default and a manual request is needed.
+It can be done by simply running of `rake osc:sr` in respective maintenance branch.
 
 ### Custom Build Service Repository
 
