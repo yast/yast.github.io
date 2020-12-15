@@ -233,7 +233,7 @@ Manual Submission
 ### Maintenance Branches
 
 In maintenance branches the automatic submissions are disabled by default and a manual request is needed.
-It can be done by simply running of `rake osc:sr` in respective maintenance branch.
+It can be done by simply running `rake osc:sr` in the respective maintenance branch.
 
 ### Custom Build Service Repository
 
