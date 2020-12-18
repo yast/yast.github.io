@@ -12,7 +12,7 @@ tags:
 - YaST
 ---
 
-The YaST Team has just finished the last sprint before the Christmas break of this convulted 2020.
+The YaST Team just finished the last sprint before the Christmas break of this convulted 2020.
 So let's start the festivities by celebrating what we have achieved in the latest two weeks. That
 includes:
 
@@ -51,7 +51,7 @@ been working in a couple of fronts:
   regarding the layout of the registration screen.
 
 In a more general scope, we removed some bits of code in YaST that were still trying to modify
-the obsolete `/etc/inittab`. file. See [the
+the obsolete `/etc/inittab` file. See [the
 announcement](https://lists.opensuse.org/archives/list/yast-devel@lists.opensuse.org/thread/Z7UEPCVAIKI6XCDWKCT3QX675UIUQZ7L/)
 in the yast-devel mailing list about the definitve drop of support for SysVinit.
 
