@@ -80,7 +80,7 @@ location? At some extent, it could replace the classes and rules feature.
 
 ```erb
 <bootloader>
-  <% require "open-uri">
+  <% require "open-uri" %>
   <%= URI.open("http://192.168.1.1/profiles/bootloader-common.xml").read %>
 </bootloader>
 ```
