@@ -91,16 +91,16 @@ upcoming weeks.
 
 ## Improved scripting support
 
-Apart from introducing support for ERB, as described in the previous section, we have improved
-script handling. Until now, Shell, Perl and Python were the only supported scripting languages. We
-have removed this limitation and now you can use any interpreter available at installation time.
-Moreover, it is possible to pass custom options to the interpreter.
+Apart from introducing support for ERB, as described in the previous section, we improved script
+handling. Until now, Shell, Perl and Python were the only supported scripting languages. We removed
+this limitation and now you can use any interpreter available at installation time. Moreover, it is
+possible to pass custom options to the interpreter.
 
 ```xml
 <intepreter>/usr/bin/bash -x</interpreter>
 ```
 
-Additionally, we have fixed a few issues and extended the error handling to inform the user when the
+Additionally, we fixed a few issues and extended the error handling to inform the user when the
 script did not run successfully.
 
 
@@ -117,8 +117,8 @@ To make your life easier, we introduced these new features to leverage profile v
 
 When AutoYaST fetches the profile, it automatically performs the XML-based validation, reporting any
 error found. It works even if you are using features like *Rules and classes* or *Dynamic profiles*.
-However, it can be easily disabled by setting the `YAST_SKIP_XML_VALIDATION` to `1` when booting the
-installer.
+However, it can be easily disabled by setting the `YAST_SKIP_XML_VALIDATION` parameter to `1` when
+booting the installer.
 
 Regarding the `check-profile`, it basically uses part of the code that runs during
 AutoYaST initialization. It includes:
@@ -141,13 +141,13 @@ installation, network configuration, etc. Depending on the content of the profil
 stage comes into play after the first reboot. It takes care of additional configuration processes,
 like setting the firewall rules, enabling/disabling services, etc.
 
-To reduce the need for a *second stage*, we have been moved the processing of several
-sections to the *first stage*. At this point, these sections are processed during this stage:
-`bootloader`, `configuration_management`, `files`, `firewall`, `host`, `kdump`, `keyboard`,
-`language`, `networking`, `partitioning`, `runlevel`, `scripts` (except `post-scripts` and
-`init-scripts`, which are processed during the *second stage*), `security`, `services-manager`,
-`software`, `ssh_import`, `suse_register`, `timezone` and `users`. Thus if your profile does not
-contain any other section, you can happily disable the *second stage*.
+To reduce the need for a *second stage*, we moved the processing of several sections to the *first
+stage*. At this point, these sections are processed during this stage: `bootloader`,
+`configuration_management`, `files`, `firewall`, `host`, `kdump`, `keyboard`, `language`,
+`networking`, `partitioning`, `runlevel`, `scripts` (except `post-scripts` and `init-scripts`, which
+are processed during the *second stage*), `security`, `services-manager`, `software`, `ssh_import`,
+`suse_register`, `timezone` and `users`. Thus if your profile does not contain any other section,
+you can happily disable the *second stage*.
 
 ```xml
 <general>
@@ -167,14 +167,14 @@ src="autoyast-storage-ui-mini.png" full_img="autoyast-storage-ui.png" %}
 
 It is still a work in progress, but it is already much better than the old one. For
 instance, in addition to disks and LVM, it supports defining sections for RAID, bcache and
-multi-Btrfs file systems.
+multi-device Btrfs file systems.
 
 It should be noted that these changes are already available in openSUSE 15.2 and SUSE Linux
-Enterprise 15 SP2, so you do not need to wait until 15.2 or SP3 to enjoy them.
+Enterprise 15 SP2, so you do not need to wait until 15.3 or SP3 to enjoy them.
 
 ## Conclusion
 
-New features and bug fixes are the most visible changes. However, as part of this process, we have
+New features and bug fixes are the most visible changes. However, as part of this process, we
 refactored a lot of code, improved code coverage, extended the documentation, etc. In general, we
-feel that we have improved AutoYaST quality in a sensible way. And we hope you have that impression
-too in the future.
+feel that we improved AutoYaST quality in a sensible way. And we hope you have that impression too
+in the future.
