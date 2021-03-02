@@ -22,15 +22,15 @@ workshop. But fear no more, we are back and loaded with news as usual. This time
   - Usability improvements in several areas
   - A new "hidden level" in the installer with advanced tools ;-)
 
-You may know that both the SUSE and openSUSE families of operating systems include
-some container-oriented members, known as MicroOS. In order to make them even more awesome, we got
+You may know that both the SUSE and openSUSE families of operating systems include container-oriented
+members, namely openSUSE MicroOS and SLE Micro. In order to make them even more awesome, we got
 the request to make possible to propose and configure the usage of [Security-Enhanced
 Linux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux), more widely known as SELinux, during the
 (auto)installation. This is a complex change affecting several parts of YaST and various versions
 of (open)SUSE, but you can get a good overview in the description of [this pull
 request](https://github.com/yast/yast-installation/pull/906) which includes some screenshots that
 may be worth a thousand words. Right now, the feature may look different on each one of the
-distributions due to the different state of SELinux on them. While in SLE MicroOS the new setting is
+distributions due to the different state of SELinux on them. While in SLE Micro the new setting is
 visible during installation and activated at its more restrictive level, in others it may look more
 permisive or even not be presented at all. We expect things to consolidate during the upcoming
 weeks.
