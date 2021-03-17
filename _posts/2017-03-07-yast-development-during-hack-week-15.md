@@ -150,7 +150,7 @@ Stay tunned!
 
 
 [1]: https://letsencrypt.org/
-[2]: http://yast.github.io/yast-journalctl-tutorial/
+[2]: https://ancorgs.github.io/yast-journalctl-tutorial/
 [3]: https://daniel.molkentin.net/2017/02/28/letsencrypt-support-for-opensuse/
 [4]: https://hackweek.suse.com/projects/get-rid-of-perl-apparmor
 [5]: https://github.com/goldwynr/yast-apparmor

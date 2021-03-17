@@ -28,7 +28,7 @@ actually YaST offer to the community? Here is the summary:
   ([#yast at irc.freenode.org](https://webchat.freenode.net/?channels=%23yast)).
 
 - [The developer's documentation](http://yastgithubio.readthedocs.org/en/latest/)
-  and a [tutorial](http://yast.github.io/yast-journalctl-tutorial/) describing
+  and a [tutorial](https://ancorgs.github.io/yast-journalctl-tutorial/) describing
   step-by-step how to create a new YaST module from scratch for easy start with
   YaST development.
 
