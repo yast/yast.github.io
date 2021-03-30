@@ -148,7 +148,8 @@ interesting DSL framework for writing GUI applications in Ruby.
 We are sure that this Hack Week was rather challenging for the organizers, as they needed to
 work-around the limitations imposed by the COVID-19 mess. But we think they did a great job! We had
 a lot of fun meeting our colleagues in [Work Adventure][workadventure], we enjoyed the *social
-hours*, learned a lot with the [Rust Bootcamp][rust-bootcamp] and we managed to share our projects and collaborate with each other.
+hours*, learned a lot with the [Rust Bootcamp][rust-bootcamp] and we managed to share our projects
+and collaborate with each other.
 
 So thanks a lot to everyone involved!
 
