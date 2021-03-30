@@ -84,14 +84,14 @@ information and a cat picture. :smiley:
 
 ## UCMT: Unified Config Management Tool
 
-Josef Reidinger has been exploring an interesting concept: a Unified Config Management Tool. The
-idea is that a user can write a YAML file describing the local configuration and, when it is ready,
-apply it to multiple systems easily.
+Josef Reidinger has been exploring an interesting concept: the Unified Config Management Tool. The
+idea is that you configure your system using any tool you like and, after that, you can easily
+export, adapt and apply the configuration locally or on several machines.
 
-Wait a minute... it sounds like another [configuration management][scm] tool, isn't it? Well, not
-really.  *UCMT* sits on top of those tools, making easy to apply your local configuration to
-multiple nodes.  Moreover, the plan is to offer additional features like a good looking user
-interface and a plugins system.
+Wait a minute, it sounds like another [configuration management][scm] tool, isn't it? Well, not
+really. *UCMT* sits on top of those tools, and it is able to write the configuration in a way that
+can be used by [Salt][salt], [Ansible][ansible], and so on. Moreover, the plan is to provide
+additional features like a good-looking user interface and a plugins system.
 
 Do you want to know more? Then, check the [project's repository][ucmt] because it contains many
 ideas, use cases and even a screencast. You know, a picture is worth a thousand words.
@@ -100,6 +100,8 @@ ideas, use cases and even a screencast. You know, a picture is worth a thousand 
 
 [scm]: https://en.wikipedia.org/wiki/Software_configuration_management "Software Configuration Management"
 [ucmt]: https://github.com/jreidinger/ucmt "UCMT Repository"
+[salt]: https://saltproject.io/ "Salt Project"
+[ansible]: https://www.ansible.com/ "Ansible"
 
 ## Tracking Horses
 
