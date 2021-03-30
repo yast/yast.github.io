@@ -84,9 +84,8 @@ information and a cat picture. :smiley:
 
 ## UCMT: Unified Config Management Tool
 
-Josef Reidinger has been exploring an interesting concept: the Unified Config Management Tool. The
-idea is that you configure your system using any tool you like and, after that, you can easily
-export, adapt and apply the configuration locally or on several machines.
+Josef Reidinger has been exploring an interesting concept: the Unified Config Management Tool. This
+tool allows you to configure your local system and export such a configuration to multiple machines.
 
 Wait a minute, it sounds like another [configuration management][scm] tool, isn't it? Well, not
 really. *UCMT* sits on top of those tools, and it is able to write the configuration in a way that
