@@ -116,7 +116,8 @@ adding a GPS or GPRS chip. Even an Android application is on his roadmap!
 Even if most of us do not own any horse :smiley:, we cannot wait to see how this project evolves in
 the future.
 
-[horses-tracker]: https://mchf.github.io/slides/public/animal-tracked.md "Animals GPS tracker notes""
+[horses-tracker]: https://github.com/mchf/slides/blob/master/public/animal-tracked.md
+                  "Animals GPS tracker notes"
 
 ## Playing with WebAssembly
 
