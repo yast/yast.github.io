@@ -48,7 +48,7 @@ project, do not hesitate to have a look at the [project's page'][sorbet-yast].
 [sorbet]: https://sorbet.org/ "Sorbet"
 [sorbet-yast]: https://hackweek.suse.com/20/projects/type-check-yast-with-sorbet "Type Check YaST with Sorbet"
 
-## QDirStat: Finding Files that are Shadowd by a Mount
+## QDirStat: Finding Files that are Shadowed by a Mount
 
 [QDirStat][qdirstat] is a pretty neat application that helps you to know how your disk space is
 used, so you can keep your file system clean and tidy. Stefan Hundhammer, author and maintainer of
