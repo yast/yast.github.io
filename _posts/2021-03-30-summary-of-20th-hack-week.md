@@ -43,7 +43,7 @@ of Ruby, we routinely get bug reports caused by typos, wrong method names, and s
 
 At this point, we can check a big part of `yast2-ruby-bindings.rpm` and a small portion of
 `yast2.rpm`, which is a significant step forward. But if you want to know more about this promising
-project, do not hesitate to have a look at the [project's page'][sorbet-yast].
+project, do not hesitate to have a look at the [project's page][sorbet-yast].
 
 [sorbet]: https://sorbet.org/ "Sorbet"
 [sorbet-yast]: https://hackweek.suse.com/20/projects/type-check-yast-with-sorbet "Type Check YaST with Sorbet"
