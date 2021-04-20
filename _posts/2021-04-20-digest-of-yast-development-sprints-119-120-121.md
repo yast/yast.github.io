@@ -23,7 +23,7 @@ let's do a quick recap.
 - Reduction of the memory consumption during installation.
 - New option to enable installation in systems with small RAM.
 - Improvements in the NetworkManager support.
-- Polishing of the upcoming releases, specially AutoYaST and hardware enablement.
+- Polishing of the upcoming releases, especially AutoYaST and hardware enablement.
 - A new `extend` parameter in `linuxrc` to help openQA.
 - More consistent and polished LibYUI development.
 - Research and open discussion about the current state and future of:
@@ -34,7 +34,7 @@ let's do a quick recap.
 So let's go by parts. As you may know, libzypp was recently updated in all SLE and openSUSE
 distributions to bring some cool new features.  Unfortunately that came with a small increase in
 memory consumption. That was enough to exceed the current installation requirements, so we had to
-find some way to save memory in the installer. We adjusted several things, specially the installer
+find some way to save memory in the installer. We adjusted several things, especially the installer
 self-update mechanism. See [this pull request](https://github.com/yast/yast-installation/pull/926)
 to know how we managed to fit again into the requirements. As a nice side effect, we improved the
 handling of the `memsample` script we use to track memory usage during installation.
@@ -54,7 +54,7 @@ integration](https://github.com/yast/yast-network/pull/1187). For Tumbleweed it 
 installer's summary screen.
 
 We also invested quite some time polishing the upcoming releases of openSUSE Leap 15.3 and
-SLES-15-SP3. Specially improving the handling of AutoYaST profiles, extending the support for some
+SLES-15-SP3. Especially improving the handling of AutoYaST profiles, extending the support for some
 storage technologies like NVMe and adjusting the boot loader configuration for a wide range of
 hardware.
 
