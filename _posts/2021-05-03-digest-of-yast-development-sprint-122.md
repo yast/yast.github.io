@@ -42,7 +42,7 @@ package. So we took the opportunity to seek and destroy all usage of the old com
 YaST, replacing the calls to it with the equivalent ones in the new infrastructure. Less code to
 maintain in parallel, less room for bugs.
 
-That was not the only occassion during this sprint in which we turned a bug into an opportunity to
+That was not the only occasion during this sprint in which we turned a bug into an opportunity to
 improve YaST internals. It was also reported that using an invalid value for the `bootmode` or
 `startmode` fields of a network configuration file could produce a crash in YaST. In addition to
 fixing that problem, we took the opportunity to [introduce a whole new general
