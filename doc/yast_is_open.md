@@ -25,7 +25,7 @@ actually YaST offer to the community? Here is the summary:
 - Open communication - we have a public mailing list
   (yast-devel(at)opensuse.org, with on-line
   [archive](http://lists.opensuse.org/yast-devel)), we use a public IRC channel
-  ([#yast at irc.freenode.org](https://webchat.freenode.net/?channels=%23yast)).
+  ([#yast at irc.opensuse.org](https://web.libera.chat/#yast)).
 
 - [The developer's documentation](http://yastgithubio.readthedocs.org/en/latest/)
   and a [tutorial](https://ancorgs.github.io/yast-journalctl-tutorial/) describing
