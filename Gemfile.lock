@@ -276,6 +276,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  octokit
   rainbow
   rake
   raspell

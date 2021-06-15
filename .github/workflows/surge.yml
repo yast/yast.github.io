@@ -1,0 +1,35 @@
+
+# See https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Surge
+
+on: [push, pull_request]
+
+jobs:
+  Publish:
+    runs-on: ubuntu-latest
+    container: registry.opensuse.org/yast/head/containers/yast-cpp:latest
+
+    steps:
+
+    - name: Git Checkout
+      uses: actions/checkout@v2
+
+    - name: Env
+      run:  env | sort
+
+    - name: Prepare
+      run: |
+        zypper --non-interactive install --no-recommends aspell-devel npm
+        npm install surge
+        bundle install --path vendor/bundle || (echo "Gem installation failed, ensure 'bundled with:' is not present in Gemfile.lock"; false)
+
+    - name: Spell Check
+      run:  bundle exec rake
+
+    - name: Deploy
+      run:  bundle exec .github/workflows/deploy.rb
+      env:
+        GH_STATUS_TOKEN: ${{ secrets.GH_STATUS_TOKEN }}
+        SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+        SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
