@@ -25,7 +25,7 @@ def client
 end
 
 def pull_request?
-  ENV["GITHUB_EVENT_NAME"] == "pull"
+  ENV["GITHUB_EVENT_NAME"] == "pull_request"
 end
 
 # make an unique domain name for the preview, based on the branch name or
@@ -42,12 +42,14 @@ def domain
     repo_user << "-"
   end
 
-  branch = (ENV["GITHUB_REF"] || "").split("/").last
+  refs = (ENV["GITHUB_REF"] || "").split("/")
 
   if pull_request?
-    domain_id = "pull-#{branch}"
+    # for pull requests the ref is "refs/pull/<pr_number>/merge"
+    domain_id = "pull-#{refs[-2]}"
   else
-    domain_id = "#{repo_user}branch-#{branch}"
+    # for pushes the ref is "refs/heads/<branch_name>"
+    domain_id = "#{repo_user}branch-#{refs.last}"
   end
 
   # make a valid domain name
@@ -74,14 +76,14 @@ def set_status(status, description)
   opts[:target_url] = url if status == "success"
   opts[:context] = pull_request? ? "site-preview-pr" : "site-preview"
 
-  puts "Setting GitHub status, repo: #{repo}, sha: #{sha}, status: #{status}"
+  puts "Setting GitHub status, repo: #{repo}, sha: #{sha}, status: #{status}, opts: #{opts.inspect}"
 
   client.create_status(repo, sha, status, opts)
 end
 
 # report success at GitHub
 def report_success
-  set_status("success", "Preview available")
+  set_status("success", pull_request? ? "PR Preview" : "Branch Preview")
 end
 
 # report failure at GitHub and exit
