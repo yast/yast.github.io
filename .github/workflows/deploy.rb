@@ -9,8 +9,8 @@
 require "octokit"
 require "yaml"
 
-# secure variables not present, cannot deploy
-if ENV["TRAVIS_SECURE_ENV_VARS"] != "true"
+# secure variable not present, cannot deploy
+if ENV["SURGE_TOKEN"].to_s.empty?
   puts "Cannot deploy a preview, required credentials not available!"
   puts "You still might want to build and publish the preview manually,"
   puts "see https://surge.sh/help/getting-started-with-surge."
@@ -20,13 +20,12 @@ end
 # create an Octokit client for communication with GitHub
 def client
   return @client if @client
-  @client = Octokit::Client.new(:access_token => ENV["GITHUB_ACCESS_TOKEN"])
-  @client.user.login
+  @client = Octokit::Client.new(:access_token => ENV["GH_STATUS_TOKEN"])
   @client
 end
 
 def pull_request?
-  ENV["TRAVIS_PULL_REQUEST"] != "false"
+  ENV["GITHUB_EVENT_NAME"] == "pull_request"
 end
 
 # make an unique domain name for the preview, based on the branch name or
@@ -34,7 +33,7 @@ end
 def domain
   return @domain if @domain
 
-  repo_user = ENV["TRAVIS_REPO_SLUG"].split("/", 2).first
+  repo_user = ENV["GITHUB_REPOSITORY"].split("/", 2).first
 
   # use a repo user prefix if this is a fork
   if repo_user == "yast"
@@ -43,10 +42,14 @@ def domain
     repo_user << "-"
   end
 
+  refs = (ENV["GITHUB_REF"] || "").split("/")
+
   if pull_request?
-    domain_id = "pull-#{ENV["TRAVIS_PULL_REQUEST"]}"
+    # for pull requests the ref is "refs/pull/<pr_number>/merge"
+    domain_id = "pull-#{refs[-2]}"
   else
-    domain_id = "#{repo_user}branch-#{ENV["TRAVIS_BRANCH"]}"
+    # for pushes the ref is "refs/heads/<branch_name>"
+    domain_id = "#{repo_user}branch-#{refs.last}"
   end
 
   # make a valid domain name
@@ -64,9 +67,8 @@ end
 
 # set GitHub status
 def set_status(status, description)
-  sha = ENV["TRAVIS_PULL_REQUEST_SHA"]
-  sha = ENV["TRAVIS_COMMIT"] if sha.empty?
-  repo = ENV["TRAVIS_REPO_SLUG"]
+  sha = ENV["GITHUB_SHA"]
+  repo = ENV["GITHUB_REPOSITORY"]
 
   opts = {
     description: description
@@ -74,14 +76,14 @@ def set_status(status, description)
   opts[:target_url] = url if status == "success"
   opts[:context] = pull_request? ? "site-preview-pr" : "site-preview"
 
-  puts "Setting GitHub status, repo: #{repo}, sha: #{sha}, status: #{status}"
+  puts "Setting GitHub status, repo: #{repo}, sha: #{sha}, status: #{status}, opts: #{opts.inspect}"
 
   client.create_status(repo, sha, status, opts)
 end
 
 # report success at GitHub
 def report_success
-  set_status("success", "Preview available")
+  set_status("success", pull_request? ? "PR Preview" : "Branch Preview")
 end
 
 # report failure at GitHub and exit

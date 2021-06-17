@@ -6,3 +6,6 @@ gem "raspell"
 # coloring misspelled words
 gem "rainbow"
 gem "github-pages"
+
+# used by the publishing script to report the commit status to GitHub
+gem "octokit"
