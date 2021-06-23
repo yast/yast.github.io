@@ -77,7 +77,7 @@ research on the current state of three areas we would like to improve in the mid
 - YaST Users. We are considering to refactor this module to improve the management of local users
   and to reduce the risk introduced by its current complexity. As a first step, we created a new
   repository that, so far, contains [several
-  documents](https://github.com/yast/yast-users-ng/tree/master/doc) describing the _status quo_.
+  documents](https://github.com/yast/yast-users/tree/master/doc) describing the _status quo_.
 
 As you can see, we may have been a bit absent but definitely we have not been idle. And the best
 news is that we are back to our usual biweely schedule, so we will have more to share soon.
