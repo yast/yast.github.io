@@ -66,6 +66,4 @@ commit message ("Manually fixed" or something like that).
 ### Commit Your Hard Work
 
 Do not forget to commit also the new `.rubocop.yml` ;-)
-At Travis the script runs Rubocop automatically if `.rubocop.yml` is found, you do not
-need to do anything to enable it there.
-
+Enable running Rubocop as a part of the continuos integration.

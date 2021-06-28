@@ -2,7 +2,8 @@
 
 # Publish the page preview at surge.sh using the "surge" tool
 # See https://surge.sh/help/getting-started-with-surge
-# The access tokens are set at https://travis-ci.org/yast/yast.github.io/settings
+# The access tokens are set at
+# https://github.com/yast/yast.github.io/settings/secrets/actions
 # For security reasons this does not work across forks.
 # Additionally it reports the status and the target URL back to GitHub.
 

@@ -12,25 +12,38 @@ repository and to check the impact of every pull request in that regard.
 
 ## Prerequisites
 
-Coveralls integration is based on Travis CI. Check the [Travis integration
-document](travis-integration.md) if the continuous integration in Travis is
-still not enabled for the repository.
+Coveralls is directly used from CI. Check the [CI document](ci-integration.md)
+if the continuous integration is still not enabled for your repository.
 
 This document explains how to enable coverage reporting for YaST repositories
 using RSpec. If the repository doesn't include RSpec unit tests, please check
 the [How to Write Tests document](how-to-write-tests.md).
 
-## Coveralls Configuration
-
-First of all, the repository must be registered in Coveralls. That's as easy as:
-
-1. Log into [Coveralls.io](https://coveralls.io) using your Github account.
-2. Go to "add repos" and search for the repository you want to enable.
-3. Enable it with a single click.
-
 ## Repository Configuration
 
-In the repository side, the configuration is also rather simple.
+The Coveralls authors provide the [Coveralls GitHub Action](
+https://github.com/marketplace/actions/coveralls-github-action) which can be
+easily integrated info the GitHub Action workflow.
+
+Just run these two steps in the workflow:
+
+```yaml
+- name: Unit Tests
+  run: rake test:unit
+  # enable code coverage reporting
+  env:
+    COVERAGE: 1
+
+# send the coverage report to coveralls.io
+- name: Coveralls Report
+  uses: coverallsapp/github-action@master
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+```
+
+The first step runs the unit tests with enabled code coverage reporting,
+the second step sends the coverage result to the coveralls.io server.
+
 
 First of all, RSpec should be configured to report the test coverage. All YaST
 repositories using RSpec contain a file called `test/test_helper.rb` or
@@ -40,25 +53,48 @@ should be added to that file.
 ```ruby
 if ENV["COVERAGE"]
   require "simplecov"
+  # start measuring the code coverage
   SimpleCov.start do
-    # Don't measure coverage of the tests themselves.
+    # don't measure coverage of the tests themselves
     add_filter "/test/"
   end
 
-  # track all ruby files under src
-  src_location = File.expand_path("../../src", __FILE__)
-  SimpleCov.track_files("#{src_location}/**/*.rb")
+  srcdir = File.expand_path("../src", __dir__)
 
-  # use coveralls for on-line code coverage reporting at Travis CI
-  if ENV["TRAVIS"]
-    require "coveralls"
+  # track all ruby files under src
+  SimpleCov.track_files("#{srcdir}/**/*.rb")
+
+  # additionally use the LCOV format for on-line code coverage reporting at CI
+  if ENV["CI"] || ENV["COVERAGE_LCOV"]
+    require "simplecov-lcov"
+
+    SimpleCov::Formatter::LcovFormatter.config do |c|
+      c.report_with_single_file = true
+      # this is the default Coveralls GitHub Action location
+      # https://github.com/marketplace/actions/coveralls-github-action
+      c.single_report_path = "coverage/lcov.info"
+    end
+
+    # generate both HTML and LCOV reports
     SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
       SimpleCov::Formatter::HTMLFormatter,
-      Coveralls::SimpleCov::Formatter
+      SimpleCov::Formatter::LcovFormatter
     ]
   end
 end
 ```
+
+The code above enables code coverage tracking and reporting when `COVERAGE` environment
+variable is set. The Coveralls GitHub Action expects the coverage data in
+LCOV format stored in `coverage/lcov.info` file so we use the `simplecov-lcov`
+and configure it as required.
+
+## Running Code Coverage Locally
+
+Run the `COVERAGE=1 rake test:unit` command, this will generate a HTML
+report in the `coverage/index.html` file, just open it in a web browser.
+
+## Notes
 
 Since the calculation of the test coverage will generate a directory with the
 corresponding report, this line should be added to the `.gitignore` file.
