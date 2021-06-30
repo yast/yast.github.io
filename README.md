@@ -1,7 +1,7 @@
 yast.github.io
 ==============
 
-[![Build Status](https://travis-ci.org/yast/yast.github.io.svg?branch=master)](https://travis-ci.org/yast/yast.github.io)
+[![CI](https://github.com/yast/yast.github.io/actions/workflows/surge.yml/badge.svg)](https://github.com/yast/yast.github.io/actions/workflows/surge.yml)
 [![Documentation Status](https://readthedocs.org/projects/yastgithubio/badge/?version=latest)](https://readthedocs.org/projects/yastgithubio/?badge=latest)
 
 
@@ -29,8 +29,8 @@ repositories.
 Updating this Documentation
 ---------------------------
 
-There is an automatic spell check run at Travis. If you want to run it locally
-you need to install ```aspell``` first:
+There is an automatic spell check run for each pull request or commit. If you
+want to run it locally you need to install ```aspell``` first:
 
     $ sudo zypper install aspell aspell-en aspell-devel
 
@@ -48,7 +48,6 @@ File `.spell.dict` contains a custom dictionary (one word per line)
 with project specific words and abbreviations. If a correct word is reported
 as misspelled you can add it to the list.
 
-*Note: The installed default English dictionary at Travis might be different than
-in your system, the check may pass locally, but can fail at Travis. In that case
+*Note: The installed default English dictionary used in CI might be different than
+in your system, the check may pass locally, but can fail at CI. In that case
 add the missing word to the custom dictionary.*
-

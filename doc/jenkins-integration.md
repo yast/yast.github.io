@@ -2,11 +2,11 @@
 
 ## Description
 
-Currently we use both [Travis](https://travis-ci.org/) and
-[Jenkins](http://jenkins-ci.org/) for CI. Travis builds the pushed
-commits and Pull Requests at GitHub. It runs some additional checks
+Currently we use [GitHub Actions](https://docs.github.com/en/actions) and
+[Jenkins](https://ci.opensuse.org/view/Yast/) for CI. The GitHub Actions build
+the pushed commits and Pull Requests at GitHub. They also run some additional checks
 like Rubocop or sends the code coverage to [coveralls.io](https://coveralls.io/).
-Jenkins builds the `master` packages and submits them to YaST:Head OBS project
+Jenkins jobs build the `master` packages and submits them to YaST:Head OBS project
 and optionally creates SR to Factory.
 
 ## OBS Setup
