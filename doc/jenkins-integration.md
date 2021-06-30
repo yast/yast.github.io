@@ -3,8 +3,8 @@
 ## Description
 
 Currently we use [GitHub Actions](https://docs.github.com/en/actions) and
-[Jenkins](http://jenkins-ci.org/) for CI. The GitHub Actions build the pushed
-commits and Pull Requests at GitHub. They also run some additional checks
+[Jenkins](https://ci.opensuse.org/view/Yast/) for CI. The GitHub Actions build
+the pushed commits and Pull Requests at GitHub. They also run some additional checks
 like Rubocop or sends the code coverage to [coveralls.io](https://coveralls.io/).
 Jenkins jobs build the `master` packages and submits them to YaST:Head OBS project
 and optionally creates SR to Factory.

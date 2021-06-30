@@ -66,4 +66,5 @@ commit message ("Manually fixed" or something like that).
 ### Commit Your Hard Work
 
 Do not forget to commit also the new `.rubocop.yml` ;-)
-Enable running Rubocop as a part of the continuos integration.
+Then add a Rubocop job or step into the GitHub Actions to run it for every commit
+and pull request.
