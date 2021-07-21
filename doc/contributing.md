@@ -93,5 +93,5 @@ Additional Information
 
 If you have any question, feel free to ask at the [development mailing
 list](http://lists.opensuse.org/yast-devel/) or at the
-[#yast](http://webchat.freenode.net/?channels=%23yast) IRC channel on freenode.
+[#yast](https://web.libera.chat/#yast) IRC channel.
 We'll do our best to provide a timely and accurate answer.

@@ -20,8 +20,8 @@ can be used to look up the older posts.
 
 ### The YaST IRC Channel
 
-Use the `#yast` channel at the `freenode.net` server. You can also join via
-the [web interface](http://webchat.freenode.net/?channels=%23yast).
+Use the `#yast` channel at the `irc.libera.chat` server. You can also join via
+the [web interface](https://web.libera.chat/#yast).
 
 The best time to use IRC is usually between 9-18 hours CET. During weekends
 or public holidays most of the team members are away.
