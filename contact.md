@@ -20,7 +20,7 @@ can be used to look up the older posts.
 
 ### The YaST IRC Channel
 
-Use the `#yast` channel at the `irc.opensuse.org` server. You can also join via
+Use the `#yast` channel at the `irc.libera.chat` server. You can also join via
 the [web interface](https://web.libera.chat/#yast).
 
 The best time to use IRC is usually between 9-18 hours CET. During weekends
