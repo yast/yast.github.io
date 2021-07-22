@@ -53,6 +53,8 @@ git log --graph --pretty=oneline --abbrev-commit --decorate --all
 
 ### Example Work-Flow
 
+Let's say we have *SLE-12-GA*, *SLE-12-SP1* and *master* branches:
+
 ```
 git checkout SLE-12-GA
 git pull
@@ -61,10 +63,20 @@ git checkout -b my_fix_SLE12 # branch based on SLE-12-GA
 git commit
 git push
 # wait for review and merge
+
+# Merge SLE-12-GA into SLE-12-SP1
+git checkout SLE-12-SP1
+git pull
+git checkout -b my_fix_sp1 # branch based on SLE-12-SP1
+git merge origin/SLE-12-GA # to ensure that we use recent branch on remote
+# fix possible conflicts and git commit if needed...
+git push
+
+# And now merge SLE-12-SP1 into master
 git checkout master
 git pull
 git checkout -b my_fix_master # branch based on master
-git merge origin/SLE-12-GA # to ensure that we use recent branch on remote
+git merge origin/SLE-12-SP1 # to ensure that we use recent branch on remote
 # fix possible conflicts and git commit if needed...
 git push
 ```
@@ -87,16 +99,17 @@ because the result will be a much nicer Ruby code.
 
 ### Merge Has More Commits
 
-When a merge has more commits than expected, there are two possible causes.
+While merging, sometimes we see more commits than expected. This can happen if someone
+forgot to merge earlier. In this case, you should be the hero and also merge all the pending
+commits into the newer branches. If there are conflicts, you should follow these strategies
+in order to fix them (in that order):
 
-The first one can be that someone forgot to merge earlier. In this case you
-should be the hero and also merge it to the newer branch, so that we do not miss any fix
-from the maintenance branch.
+* Resolve conflicts manually.
+* Merge using `git merge -s ours`.
 
-The second case is when in the past branch we failed and the branch started to differ too
-much so it is easier to have separate branches. In such case it makes
-sense to use `cherry-pick`, but expect that someone asks about it during code
-review.
+The option `-s ours` should be applied as a last resort. That option would join the branch
+histories but apply no code from the older branch. This would be necessary in special repos
+in which there is a big divergence between products (e.g., from *SLE-12* to *SLE-15*).
 
 ### Backporting Fix
 
