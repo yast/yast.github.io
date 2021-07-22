@@ -100,9 +100,9 @@ because the result will be a much nicer Ruby code.
 ### Merge Has More Commits
 
 While merging, sometimes we see more commits than expected. This can happen if someone
-forgot to merge earlier. In this case you should be the hero and also merge it to the
-newer branches. If there are conflicts, you should follow these strategies in order to
-fix them (in that order):
+forgot to merge earlier. In this case, you should be the hero and also merge all the pending
+commits into the newer branches. If there are conflicts, you should follow these strategies
+in order to fix them (in that order):
 
 * Resolve conflicts manually.
 * Merge using `git merge -s ours`.
