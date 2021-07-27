@@ -13,6 +13,8 @@ require "yaml"
 # secure variable not present, cannot deploy
 if ENV["SURGE_TOKEN"].to_s.empty?
   puts "Cannot deploy a preview, required credentials not available!"
+  puts "The credentials are not available in GitHub forks!"
+  puts
   puts "You still might want to build and publish the preview manually,"
   puts "see https://surge.sh/help/getting-started-with-surge."
   exit 0
