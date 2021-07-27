@@ -39,7 +39,7 @@ necessarily bad, some sustained and directed development is needed to solve some
 we have ahead of us and to fix some pitfalls in the current development process of the openSUSE and
 SUSE products and distributions.
 
-The YaST Team was chosen for such task, so we will steadily take over development and maintenance
+The YaST Team was chosen for such a task, so we will steadily take over development and maintenance
 of the tools in that repository. As first steps, we improved a lot the documenation. That includes
 extending the [README
 file](https://github.com/openSUSE/openSUSE-release-tools/blob/master/README.md) and adding new
