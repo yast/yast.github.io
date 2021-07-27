@@ -13,7 +13,7 @@ tags:
 ---
 
 It's summer in Europe and that means vacations for most members of the YaST Team at SUSE. Although
-that may imply less frecuent blogging, we have some news to share with you today, like:
+that may imply less frequent blogging, we have some news to share with you today, like:
 
 - Taking over the development of the (open)SUSE Release Tools
 - Improvements in the new `check-profile` command
@@ -57,7 +57,7 @@ in that repository every day.
 As you may know, we recently [introduced]({{site.baseurl}}/blog/2021-06-01/sprint-124) a YaST client
 to validate complex profiles that include Embedded Ruby, rules and classes and/or scripts.
 Generally, such a validation could be done without root permissions, but there are some situations
-where superuser priviledges are required.
+where superuser privileges are required.
 
 To mitigate the implications, we introduced several improvements in the `check-profile` tool. You
 can see the details in the description of the [corresponding pull
