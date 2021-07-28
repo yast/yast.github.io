@@ -63,7 +63,7 @@ To mitigate the implications, we introduced several improvements in the `check-p
 can see the details in the description of the [corresponding pull
 request](https://github.com/yast/yast-autoinstallation/pull/773).
 
-## From Travis CI to GitHub Actions - Migration Completed #{gh-actions}
+## From Travis CI to GitHub Actions - Migration Completed {#gh-actions}
 
 Some months ago, we started switching the continuous integration on all YaST repositories from using
 [Travis CI](https://travis-ci.com/) to [GitHub Actions](https://github.com/features/actions). The
