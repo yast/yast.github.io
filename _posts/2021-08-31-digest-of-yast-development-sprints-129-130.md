@@ -59,7 +59,7 @@ contribution](https://github.com/yast/yast-country/pull/273) currently under rev
 
 ## Release Tools: We Keep Learning {#osrt}
 
-And talking about colaboration, in our [previous
+And talking about collaboration, in our [previous
 post]({{site.baseurl}}/blog/2021-07-27/sprint-127-128) we told you about our new mission of helping
 with the development and maintenance of the (open)SUSE Release Tools. We keep working on that front,
 although progress can only be slow when most of the people we have to interact with (and a big part
