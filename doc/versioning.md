@@ -11,13 +11,13 @@ openSUSE Leap 42.x, have a look at the *Old schema* section of this document.
 
 From now on, version numbers will be tied to the SUSE versions:
 
-* Major number is related to the major SUSE version (4 for SLE 15, 5 for
-  SLE 16, and so on).
-* Minor number is related to the SUSE Service Pack number (0 for SP0, 1 for SP1, etc).
+* Major number is related to the major SUSE version (*4* for *SLE 15*, *5* for
+  *SLE 16*, and so on).
+* Minor number is related to the SUSE Service Pack number (*0* for *SP0*, *1* for *SP1*, etc).
 * Patch number enumerates versions for a given major/minor version.
 
-For instance, *4.2.3* would be the fourth version of the package for SLE 15 SP2
-(the first one would be 4.2.0).
+For instance, *4.2.3* would be the fourth version of the package for *SLE 15 SP2*
+(the first one would be *4.2.0*).
 
 ### When to bump each number
 
@@ -37,17 +37,17 @@ Basically, these are the rules for increasing version numbers:
 
 ### Example
 
-Let's try an example for a better understanding about how the new YaST versioning policy works.
+Let's try an example to illustrate how the new YaST versioning policy works.
 
 Scenario: last released product was *SLE 15 SP0* (a.k.a. *SLE 15 GA*) and *SLE 15 SP1* is starting
-its development phase. Moreover, there is a package *yast2-example* which version is *4.0.9*.
+its development phase. Moreover, there is a package *yast2-example* with version *4.0.9*.
 A *SLE-15-GA* branch was created after releasing *SLE 15 SP0*.
 
 ### Fix a bug for the latest released Service Pack: *SLE 15 SP0*
 
 1. The fix is implemented into the *SLE-15-GA* branch and the *patch* number is increased from
    *4.0.9* to *4.0.10*.
-2. Then the fix is merged into master in order to also include it as part of SP1. In this case, the
+2. Then the fix is merged into *master* in order to also include it as part of SP1. In this case, the
    version for *master* would be *4.1.X* because *master* is now tracking the development of
    *SLE 15 SP1* (and *Factory*). Note that the *patch* number will be *0* or the next corresponding
    number if *master* already contains a *4.1.X* version.
