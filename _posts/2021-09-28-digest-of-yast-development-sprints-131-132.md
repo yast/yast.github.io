@@ -25,7 +25,7 @@ on improvements to the existing codebase rather than on new shiny features. That
 ## Diving into our own history {#internals}
 
 After 22 years of constant development of the same codebase, it's not surprising that some parts of
-YaST2 are a bit intricate. As you know, we are lately investing time in an attempt to shred some
+YaST2 are a bit intricate. As you know, we are lately investing time in an attempt to shed some
 light on some of those internals. During these latest sprints it was time for checking the
 configuration of the NTP client, the behavior of the keyboard layouts, the way we manage software
 and the administration of users and groups in already installed systems.
