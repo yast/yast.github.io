@@ -14,7 +14,7 @@ tags:
 ---
 
 After almost a month of radio silence, the YaST Team is back with another development report. The
-two latest sprints has brought:
+two latest sprints brought:
 
 - New features like:
   - More general LUKS2 support in the Partitioner
@@ -31,7 +31,7 @@ So let's dive into the details.
 
 As already explained in this same blog [quite some time
 ago](https://yast.opensuse.org/blog/2019/10/09/advanced-encryption-options-land-in-the-yast-partitioner/)
-the YaST Partitioner can be used to setup several kinds of encryption, but "Regular LUKS2" was not
+the YaST Partitioner can be used to set up several kinds of encryption, but "Regular LUKS2" was not
 one of those. That was intentional because using LUKS2 comes with many challenges, as summarized in
 [this Bugzilla comment](https://bugzilla.suse.com/show_bug.cgi?id=1185291#c1). But now the time has
 come to start introducing experimental support for general LUKS2 encryption.  Initially it will be
@@ -47,9 +47,9 @@ and see some examples in the [description of the corresponding pull
 request](https://github.com/yast/yast-autoinstallation/pull/808).
 
 The last feature for Tumbleweed and the upcoming 15.4 that we want to highlight in this report is
-the brand new support for NTLM authentication in linuxrc. The authentication process is actually delegated to
-`curl`. Passing credentials to `curl` through the linuxrc parameters is as easy as you can see in
-the following examples:
+the brand new support for [NTLM authentication](https://en.wikipedia.org/wiki/NT_LAN_Manager) in
+linuxrc. The authentication process is actually delegated to `curl`. Passing credentials to `curl`
+through the linuxrc parameters is as easy as you can see in the following examples:
 
 ```
   install=https://user:password@example.com/the_repo
@@ -59,10 +59,10 @@ the following examples:
 ## Usability Improvements {#usability}
 
 Sometimes, you don't need to introduce a whole new shiny functionality to enhance the life of the
-final users. Small improvements can also have a big impact... although "small" doesn't always mean
+end users. Small improvements can also have a big impact... although "small" doesn't always mean
 "easy to implement".  In that regard we would like to highlight that:
 
- - We have improved filtering and sorting in the list of DASD devices in s390 mainframes
+ - We improved filtering and sorting in the list of DASD devices in s390 mainframes
  - The installation on that architecture will run in graphical mode if executed in QEMU and a Virtio GPU is detected
  - Configuring the custom boot partition in YaST2 Bootloader is now more [robust and
    intuitive](https://github.com/yast/yast-bootloader/pull/654)
@@ -85,7 +85,7 @@ fix](https://github.com/yast/yast-storage-ng/pull/1247) for the detection of dup
 structures and [this improvement](https://github.com/yast/yast-yast2/pull/1204) in the way YaST
 manages the initialization of its user interface.
 
-Talking about internals, we have mentioned several times our ongoing effort to restructure how
+Talking about internals, we mentioned several times our ongoing effort to restructure how
 software management works in YaST. You can see some more technical details in [this
 gist](https://gist.github.com/imobachgs/30942b4b89f4b33125ca9d1f6b1476b1) if you have an interest in
 the design of computer programs and APIs.
@@ -94,4 +94,4 @@ the design of computer programs and APIs.
 
 It's less than one month to the official start of winter in the Northern Hemisphere. We keep working
 hard and we hope to give you at least another update of the YaST status before that date. Meanwhile
-we can only remember you, no matter in which part of the world you are, to have a lot of fun!
+we can only remind you, no matter in which part of the world you are, to have a lot of fun!
