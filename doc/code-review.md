@@ -4,7 +4,7 @@ First of all, thank you for contributing to YaST! Anyway, there are some rules
 that anyone needs to follow while doing so...
 
 Every single change in code (including bug fix, new feature, etc.) needs to go
-through a code [review](http://en.wikipedia.org/wiki/Code_review) using
+through a code [review](https://en.wikipedia.org/wiki/Code_review) using
 a [Pull Request](https://help.github.com/articles/using-pull-requests).
 
 *Note: The security issues need be to handled a bit differently, see [how to handle
@@ -62,7 +62,7 @@ on the code robustness.
 * All tests have to be green (`rake osc:build` before submitting)
 * No Builtins.* or Ops.* unless really necessary in new code
 * Function documentation (function description, arguments, return values)
-* Following the [Ruby style guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md)
+* Following the [Ruby style guide](https://github.com/SUSE/scc-codestyle)
 * Understandable variable names
 * Good test quality
 * Build has to be green (`rake osc:build` before submitting)

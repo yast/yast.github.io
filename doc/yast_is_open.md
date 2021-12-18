@@ -10,7 +10,7 @@ actually YaST offer to the community? Here is the summary:
 - [The YaST portal](https://en.opensuse.org/Portal:YaST) at openSUSE Wiki - the
   perfect starting point for users, with lots of information and documentation.
 
-- [The YaST home page](http://yast.github.io/) - the starting point for YaST
+- [The YaST home page](https://yast.opensuse.org/) - the starting point for YaST
   developers and contributors.
 
 - Open development - the source code repositories are hosted at
@@ -24,20 +24,19 @@ actually YaST offer to the community? Here is the summary:
 
 - Open communication - we have a public mailing list
   (yast-devel(at)opensuse.org, with on-line
-  [archive](http://lists.opensuse.org/yast-devel)), we use a public IRC channel
+  [archive](https://lists.opensuse.org/archives/list/yast-devel@lists.opensuse.org/)), we use a public IRC channel
   ([#yast at irc.libera.chat](https://web.libera.chat/#yast)).
 
-- [The developer's documentation](http://yastgithubio.readthedocs.org/en/latest/)
+- [The developer's documentation](https://yastgithubio.readthedocs.org/en/latest/)
   and a [tutorial](https://ancorgs.github.io/yast-journalctl-tutorial/) describing
   step-by-step how to create a new YaST module from scratch for easy start with
   YaST development.
 
-- Open [bug](https://bugzilla.suse.com) and
-  [feature](https://fate.opensuse.org) tracking for reporting errors and
+- Open [bug](https://bugzilla.suse.com) tracking for reporting errors and
   suggesting improvements.
 
 - Public [Continuous Integration service](https://ci.opensuse.org/view/Yast/)
-  (a [Jenkins](http://jenkins-ci.org/) instance) for testing the latest code.
+  (a [Jenkins](https://jenkins-ci.org/) instance) for testing the latest code.
 
 - The latest bleeding edge YaST RPM packages built from Git sources are
   available in [YaST:Head](https://build.opensuse.org/project/show/YaST:Head)

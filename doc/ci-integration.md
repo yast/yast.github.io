@@ -147,7 +147,7 @@ packages.
 - First make sure the Docker is installed and running, which usually means to run
   `zypper in docker` and `systemctl start docker`. For SUSE Linux Enterprise
   you can check the [official Docker documentation](
-  https://docs.docker.com/engine/installation/linux/suse/).
+  https://docs.docker.com/engine/install/sles/).
 
 - Then use the [`rake actions:run`](https://github.com/yast/yast-rake#actionsrunjob)
   Rake task.

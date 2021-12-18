@@ -5,7 +5,7 @@ view on how the YaST world is structured. The goal of this document is to
 provide that view in a concise way, mentioning all the pieces and exposing how
 they fit together. For a more detailed view about any of the technologies or
 components, refer to the corresponding documentation linked from the central
-documentation page for YaST at [http://yast.github.io](http://yast.github.io).
+documentation page for YaST at [https://yast.opensuse.org/](https://yast.opensuse.org/).
 
 ## Overview
 
@@ -158,4 +158,4 @@ The goal of this document is just to provide a high level view of the YaST
 development ecosystem. More detailed documentation about the involved
 technologies, tools and procedures can always be found in the central
 documentation page for YaST, available at
-[http://yast.github.io](http://yast.github.io).
+[https://yast.opensuse.org/](https://yast.opensuse.org/).

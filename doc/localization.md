@@ -71,7 +71,7 @@ n_("one package from %{repo}", "%{size} packages from %{repo}", packages.size) %
 ```
 
 See the [GNU gettext manual](
-http://www.gnu.org/savannah-checkouts/gnu/gettext/manual/html_node/Plural-forms.html)
+https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/html_node/Plural-forms.html)
 for more details about plural forms.
 
 ## Using Named Parameters

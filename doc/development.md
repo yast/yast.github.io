@@ -5,8 +5,9 @@ YaST Development Documentation
 Documentation Links
 -------------------
 
-- [YaST development documentation](http://yast.github.io/documentation.html)
-- [Contribution Guidelines](http://yast.github.io/guidelines.html)
+- [YaST development overview](https://yast.opensuse.org/documentation)
+- [YaST development documentation](development.md)
+- [Contribution Guidelines](contributing.md)
 - [YaST architecture](architecture.md)
 
 
@@ -34,7 +35,7 @@ To prepare the development environment in Factory or Tumbleweed, install the
 To prepare the development environment in openSUSE, build and install the
 `yast2-devtools` package yourself from the current source code (the
 version present in the last openSUSE release might be too old).
-You may need to install the [development dependencies](Development-Dependencies) first.
+You may need to install the [development dependencies](#development-dependencies) first.
 
 Then, to compile _yast devtools_ from source code, execute these commands:
 
@@ -61,7 +62,7 @@ available from outside.
 
 * Creating new repository under the [yast](https://github.com/yast/) path
   at GitHub
-* Adjusting [RuboCop rules](http://lslezak.blogspot.cz/2014/11/using-rubocop.html)
+* Adjusting [RuboCop rules](https://lslezak.blogspot.cz/2014/11/using-rubocop.html)
 * Creating the package in OBS at [YaST:Head](https://build.opensuse.org/project/show/YaST:Head)
   project and in IBS at [Devel:YaST:Head](https://build.suse.de/project/show/Devel:YaST:Head)
   project (if you plan to have it in SLE)
