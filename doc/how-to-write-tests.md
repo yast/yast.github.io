@@ -126,4 +126,3 @@ must be explicitly included in `yast2_cmdline.pm`.
   * [The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
   * [YaST RSpec helpers](https://github.com/yast/yast-ruby-bindings#testing)
   * [openQA](https://open.qa/)
-  * [yast-modules branch of the opensuse distri](https://github.com/os-autoinst/os-autoinst-distri-opensuse/tree/master/tests/yast2_cmd)
