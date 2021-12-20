@@ -5,10 +5,9 @@ YaST Development Documentation
 Documentation Links
 -------------------
 
-- [YaST development overview](https://yast.opensuse.org/documentation)
-- [YaST development documentation](development.md)
-- [Contribution Guidelines](contributing.md)
+- [YaST overview](https://yast.opensuse.org/documentation)
 - [YaST architecture](architecture.md)
+- [Contribution Guidelines](https://github.com/yast/.github/blob/master/CONTRIBUTING.md)
 
 
 Development Environment

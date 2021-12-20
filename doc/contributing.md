@@ -44,9 +44,7 @@ follows:
 
   2. Create a topic branch based on `master`.
 
-  3. Implement your change, including tests (if possible). Make sure you adhere
-     to the [Ruby style
-     guide](https://github.com/SUSE/scc-codestyle).
+  3. Implement your change, including tests (if possible). Make sure you adhere to the Ruby style guide by using [rubocop](https://github.com/rubocop/rubocop): `rake check:rubocop`.
 
   4. Update the package version (in `packages/*.spec`, usually by
      `rake version:bump`) and add a new entry to the `package/*.changes` file

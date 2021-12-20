@@ -62,7 +62,7 @@ on the code robustness.
 * All tests have to be green (`rake osc:build` before submitting)
 * No Builtins.* or Ops.* unless really necessary in new code
 * Function documentation (function description, arguments, return values)
-* Following the [Ruby style guide](https://github.com/SUSE/scc-codestyle)
+* Following the Ruby style guide by using [rubocop](https://github.com/rubocop/rubocop): `rake check:rubocop`.
 * Understandable variable names
 * Good test quality
 * Build has to be green (`rake osc:build` before submitting)
