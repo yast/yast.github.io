@@ -17,12 +17,10 @@ documentation, the security related bugs need a special handling.*
 
 If you find a problem, please report it either using
 [Bugzilla](https://bugzilla.suse.com/enter_bug.cgi?format=guided&product=openSUSE+Tumbleweed&component=YaST2)
-or [GitHub issues](../../issues). (For Bugzilla, use the [simplified
-registration](https://secure-www.novell.com/selfreg/jsp/createSimpleAccount.jsp)
-if you don't have an account yet.)
+or GitHub issues (in the respective repository).
 
 When creating a bug report, please follow our [bug reporting
-guidelines](http://en.opensuse.org/openSUSE:Report_a_YaST_bug).
+guidelines](https://en.opensuse.org/openSUSE:Report_a_YaST_bug).
 
 We can't guarantee that every bug will be fixed, but we'll try.
 
@@ -46,9 +44,7 @@ follows:
 
   2. Create a topic branch based on `master`.
 
-  3. Implement your change, including tests (if possible). Make sure you adhere
-     to the [Ruby style
-     guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md).
+  3. Implement your change, including tests (if possible). Make sure you adhere to the Ruby style guide by using [rubocop](https://github.com/rubocop/rubocop): `rake check:rubocop`.
 
   4. Update the package version (in `packages/*.spec`, usually by
      `rake version:bump`) and add a new entry to the `package/*.changes` file
@@ -92,6 +88,6 @@ Additional Information
 ----------------------
 
 If you have any question, feel free to ask at the [development mailing
-list](http://lists.opensuse.org/yast-devel/) or at the
+list](https://lists.opensuse.org/archives/list/yast-devel@lists.opensuse.org/) or at the
 [#yast](https://web.libera.chat/#yast) IRC channel.
 We'll do our best to provide a timely and accurate answer.

@@ -157,7 +157,7 @@ problematic.
   ) module or the [cheetah](https://github.com/openSUSE/cheetah) gem directly
   for running external commands
 - Use the [Shellwords.escape](
-  http://ruby-doc.org/stdlib-2.2.0/libdoc/shellwords/rdoc/Shellwords.html)
+  https://ruby-doc.org/stdlib-2.2.0/libdoc/shellwords/rdoc/Shellwords.html)
   Ruby method, e.g. `/bin/rpm -q #{Shellwords.escape(user_input)}`
 - Use the absolute path, e.g. `/bin/rpm`
   *Note: The very old YaST approach was NOT using the absolute path. This has
@@ -354,7 +354,7 @@ they are disabled by default.
   on request. And if possible, by default allow only local access via the
   loopback device (`localhost`/`127.0.0.1`).
 
-See more details in the [debugging](./debugging) document about the integrated
+See more details in the [debugging](debugging.md) document about the integrated
 Ruby debugger support in YaST.
 
 

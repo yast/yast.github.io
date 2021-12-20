@@ -18,9 +18,9 @@ sudo zypper in 'rubygem(byebug)'
 ```
 
 If the package is not available in your repositories you can install it from
-[YaST:Head]( http://download.opensuse.org/repositories/YaST:/Head/) or
+[YaST:Head](https://download.opensuse.org/repositories/YaST:/Head/) or
 [devel:languages:ruby:extensions](
-http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/)
+https://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/)
 repositories.
 
 ## Starting the Debugger in Installed System

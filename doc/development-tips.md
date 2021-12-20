@@ -31,12 +31,12 @@ Driver updates are a mechanism that allows to modify the system before starting
 the installation by providing a set of rpm packages. A driver update can be
 triggered by the ```dud``` option in the Linuxrc command line. More information
 about this approach can be found in the
-[corresponding section](http://en.opensuse.org/Linuxrc#p_driverupdate) of
+[corresponding section](https://en.opensuse.org/Linuxrc#p_driverupdate) of
 the Linuxrc documentation.
 
 When using this method with many RPM packages, it's usually convenient to use a
 [Linuxrc control
-file](http://doc.opensuse.org/projects/autoyast/appendix.linuxrc.html)
+file](https://doc.opensuse.org/projects/autoyast/#ay-cmd-parameters)
 containing ```insecure=1``` and several ```dud``` options.
 
 ### Using a YaST update medium
@@ -46,7 +46,7 @@ also triggered by the ```dud``` Linuxrc option and they also
 allow to modify the system before the installation, but they only affect the
 files located under ```/usr/share/YaST2```. More information can be found
 in the [corresponding
-section](http://ftp.sunet.se/pub/Linux/distributions/suse/people/hvogel/Update-Media-HOWTO/html/id_yud.html)
+section](ftp://ftp.suse.de/pub/people/hvogel/Update-Media-HOWTO/html/id_yud.html)
 of the Update Media HOWTO.
 
 ### Running a shell before the installation
@@ -57,7 +57,7 @@ itself. In this way it's not only possible to modify any YaST file in advance
 but also to configure the network or any other aspect of the system. More
 information can be found in
 [this Kobliha's blog
-post](http://kobliha-suse.blogspot.cz/2009/10/easiest-way-how-to-modify-installation.html).
+post](https://kobliha-suse.blogspot.cz/2009/10/easiest-way-how-to-modify-installation.html).
 
 ## Add a new package to the installation system
 
@@ -77,4 +77,4 @@ systems, already released product or the rescue image then you need to modify
 the ```installation-images``` package and then remaster the installation medium
 (or update the boot server, depending how you boot the system). But there are
 some tricky parts that are explained in depth in [this Ladislav's blog
-post](http://lslezak.blogspot.cz/2013/10/adding-new-package-to-opensuse.html).
+post](https://lslezak.blogspot.cz/2013/10/adding-new-package-to-opensuse.html).

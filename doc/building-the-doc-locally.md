@@ -1,7 +1,7 @@
 # Building this Documentation Locally
 
 This documentation is also built at
-[http://yastgithubio.readthedocs.org](http://yastgithubio.readthedocs.org) server.
+[http://yastgithubio.readthedocs.org](https://yastgithubio.readthedocs.org) server.
 
 The problem is that Markdown rendering is not standardized and each renderer
 can produce a slightly different output. That means the HTML version might be displayed
