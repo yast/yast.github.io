@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-01-18 14:50:00 +00:00
+date: 2022-01-18 15:15:00 +00:00
 title: Announcing the D-Installer Project
 description: Building a web-based installer on top of YaST
 permalink: blog/2022-01-18/announcing-the-d-installer-project
@@ -11,7 +11,7 @@ tags:
 - YaST
 ---
 
-# Modernizing YaST
+# Rethinking the Installer
 
 As you may know, YaST is not only a control center for (open)SUSE Linux
 distributions, but it is also the installer. And, in that regard, we think it
@@ -66,7 +66,7 @@ name a few:
 * **Reusability:** YaST contains a lot of helpful logic that would be available
   to other tools.
 * **Better integration:** It should be easier to integrate pieces of YaST in your
-  own workflows by providing a D-Bus interface, 
+  own workflows by providing a D-Bus interface.
 * **Multi-language:** Eventually, using D-Bus might allow us to use other
   programming languages.
 * **Contributors:** We expect more people to contribute to the project by
@@ -97,11 +97,11 @@ your AutoYaST profiles with no significant issues.
 
 No. We just thought that, in the future, it might be possible to reimplement
 parts of YaST (or write new pieces) in a different language. But we do not plan
-to replace Ruby.
+to replace Ruby in the short term.
 
 ### When will it be released?
 
-We do not know.
+We do not know yet.
 
 ### Isn't precisely that what Anaconda developers are doing?
 
