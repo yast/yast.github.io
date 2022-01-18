@@ -215,6 +215,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
+    webrick (1.7.0)
     yast-rake (0.2.41)
       packaging_rake_tasks (>= 1.1.4)
       rake
@@ -229,4 +230,8 @@ DEPENDENCIES
   rainbow
   rake
   raspell
+  webrick
   yast-rake (>= 0.2.1)
+
+BUNDLED WITH
+   2.2.27
