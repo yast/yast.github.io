@@ -9,3 +9,6 @@ gem "github-pages"
 
 # used by the publishing script to report the commit status to GitHub
 gem "octokit"
+
+# not included in Ruby 3 standard library
+gem "webrick"
