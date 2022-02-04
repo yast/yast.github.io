@@ -103,8 +103,7 @@ using the `byebug -R 3344` command.
 local machine and byebug does not use any sort of authentication. That means it
 is a potential security issue, use this feature with caution!*
 
-<img src="https://assets-cdn.github.com/images/icons/emoji/unicode/2139.png"
-width="32"></img>
+![&#2139;](images/info.svg)
 Note: For a real remote debugging replace `localhost` by
 `0.0.0.0`, the debugger will be accessible from the network (if not blocked
 by the firewall). Then run `byebug -R <host>:3344` from another machine to
