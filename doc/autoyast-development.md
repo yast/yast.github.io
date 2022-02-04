@@ -518,7 +518,7 @@ AutoYaST Configuration Module has the following components:
 
       A button which starts the module UI. (function *change* in <module name\>_auto.rb)
 
-      <img src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" width="32"></img>
+  ![&#26a0;](images/warning.svg)
   During starting the module you have to provide valid default entries as you can edit entries which are
   completely independent from the running system. One possibility would be to call the *read*
   function in <module name\>_auto.rb during module initialization.
