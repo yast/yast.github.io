@@ -55,7 +55,7 @@ previous section, there are mainly two kind of components:
 
 Most communication with the underlying system being installed or configured is
 handled by a component called SCR (for System Configuration Repository). Apart
-from some well-known exceptions, components are discouraged to access directly
+from some well-known exceptions, components are discouraged from direct access
 to system files (or any other system resources, for that matter) and encouraged
 to use SCR instead.
 
@@ -66,12 +66,12 @@ just four operations: read, write, dir and execute.
 ### Work-flow manager (WFM)
 
 The YaST work-flow manager (implemented in the WFM namespace) is a special
-component which takes care of executing clients and providing to them the
-interface with the other components. It's also responsible of handling one
-SCR instance per every system that is being managed by YaST.
+component which takes care of executing clients and providing them with an
+interface to other components. It's also responsible for handling one
+SCR instance per every system managed by YaST.
 
-To some extend, WFM can be considered as the "bootloader" of YaST, since
-every YaST execution starts with WFM handing the control over a client after
+To some extent, WFM can be considered to be the "bootloader" of YaST, since
+every YaST execution starts with WFM handing control over to a client after
 having connected it to the user interface and a SCR instance.
 
 ### User Interface
@@ -93,13 +93,13 @@ even something else not implemented yet, as shown in the following diagram.
 ### Modules
 
 Apart from the already mentioned few components with very special roles and the
-clients, YaST also consists on a huge amount of other components called modules
+clients, YaST also consists of many other components called modules
 and used to encapsulate functionality related to different areas. Examples of
 available modules are Network, Service, FileSystem or PulseAudio.
 
 ### Functional diagram
 
-As already mentioned, the YaST execution starts with WFM setting up SCR and
+As already mentioned, YaST execution starts with WFM setting up SCR and
 running a client. But that's only the start, the following diagram shows how
 the different pieces interact which each other in order to get the job done.
 
