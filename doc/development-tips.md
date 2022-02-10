@@ -78,3 +78,26 @@ the ```installation-images``` package and then remaster the installation medium
 (or update the boot server, depending how you boot the system). But there are
 some tricky parts that are explained in depth in [this Ladislav's blog
 post](https://lslezak.blogspot.cz/2013/10/adding-new-package-to-opensuse.html).
+
+## Running yast2-storage-ng with test data
+
+Both for development purposes and to investigate reported bugs, it's often
+useful to run some YaST components with test data, without really interacting
+with the underlying system. The yast2-storage-ng package provides the
+`storage_testing` YaST client which takes as input a file containing a
+devicegraph in XML or Yaml format. A devicegraph is a description of the storage
+devices and file-systems available on a given system. Files containing
+devicegraphs can be found in the yast2-storage-ng repository and also as part
+of the YaST logs of any system.
+
+The `storage_testing` client can be used:
+
+  - to test the Partitioner
+    - `yast2 storage_testing partitioner /path/to/devicegraph.xml`
+  - to test the regular proposal
+    - `yast2 storage_testing proposal /the/devicegraph.xml [/the/control_file.xml]`
+    - (the [control file](https://github.com/yast/yast-installation-control) should contain a
+      `<partitioning>` section, the specification on the the current system will be used if
+      no file is given)
+  - to test the AutoYaST proposal
+    - `yast2 storage_testing autoinst /the/devicegraph.xml /the/profile.xml`

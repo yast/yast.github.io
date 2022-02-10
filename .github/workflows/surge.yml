@@ -21,7 +21,7 @@ jobs:
 
     - name: Prepare
       run: |
-        zypper --non-interactive install --no-recommends aspell-devel npm
+        zypper --non-interactive install --no-recommends aspell-devel npm zlib-devel
         npm install surge
         bundle install --path vendor/bundle || (echo "Gem installation failed, ensure 'bundled with:' is not present in Gemfile.lock"; false)
 
