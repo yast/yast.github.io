@@ -96,5 +96,8 @@ The `storage_testing` client can be used:
     - `yast2 storage_testing partitioner /path/to/devicegraph.xml`
   - to test the regular proposal
     - `yast2 storage_testing proposal /the/devicegraph.xml [/the/control_file.xml]`
+    - (the [control file](https://github.com/yast/yast-installation-control) should contain a
+      `<partitioning>` section, the specification on the the current system will be used if
+      no file is given)
   - to test the AutoYaST proposal
     - `yast2 storage_testing autoinst /the/devicegraph.xml /the/profile.xml`
