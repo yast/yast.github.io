@@ -74,7 +74,7 @@ debug or develop YaST:
 
 ## Progress on D-Installer {#dinstaller}
 
-As you all know from our previous blog post mentioned above, we are also working in a side project
+As you all know from our previous blog post mentioned above, we are also working on a side project
 codenamed D-Installer, as our main YaST duties permit. We want to turn our initial proof of concept
 into something that you can actually try, so the team is working on a few topics at the same time.
 
@@ -91,6 +91,6 @@ design, you can see the approach we would like to follow in our mock-ups. :-)
 ## More to Come {#closing}
 
 As you can see, we have been quite busy lately and we plan to remain so. The bright side is that
-both YaST and D-Installer will keep evolving at good pace. The not-so-bright one is that we are not
+both YaST and D-Installer will keep evolving at a good pace. The not-so-bright one is that we are not
 sure when we will be able to blog again. But we promise we will try to recover the biweekly cadence.
 Meanwhile do as we do and have a lot of fun!
