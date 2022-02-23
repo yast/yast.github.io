@@ -58,7 +58,7 @@ new features in YaST. Let's quickly go through a summary.
   transactional systems like MicroOS.
 - New capability for roles and products to [specify a default
   timeout](https://github.com/yast/yast-bootloader/pull/665) for the boot-loader configuration.
-- Support for [switching themes](https://github.com/libyui/libyui/pull/64).
+- Support for [switching themes](https://github.com/libyui/libyui/pull/65).
 - Adapted [handling of network configuration](https://github.com/yast/yast-network/pull/1282) if
   iBFT (iSCSI Boot Firmware Table) is used during installation.
 
