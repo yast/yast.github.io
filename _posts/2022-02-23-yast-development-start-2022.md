@@ -14,7 +14,7 @@ tags:
 ---
 
 We realized that, apart from the [blog post presenting our D-Installer
-project](({{site.baseurl}}/blog/2022-01-18/announcing-the-d-installer-project)), we have not
+project]({{site.baseurl}}/blog/2022-01-18/announcing-the-d-installer-project), we have not
 reported any YaST activity during 2022 here in our blog. Since we are in the Beta phase of the
 development of SUSE Linux Enterprise 15-SP4 (which will also be the base for openSUSE Leap 15.4)
 we are quite focused on helping to diagnose and fix the problems found by the intensive and
