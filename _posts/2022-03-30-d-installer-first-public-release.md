@@ -12,23 +12,22 @@ tags:
 - YaST
 ---
 
-It is our pleasure to announce the availability of the first installation image based
-on D-Installer. Please, bear in mind that it is still an experimental project, so better use a
-virtual machine to give it a try.
+It is our pleasure to announce the availability of the first installation image based on
+D-Installer. Since [our initial announcement in
+January](https://yast.opensuse.org/blog/2022-01-18/announcing-the-d-installer-project), we have been
+working on going from a non-working proof-of-concept to something that you can actually use.
 
 ## D-Installer (kind of) works
 
-Since our announcement in January, we have been working on going from a non-working proof-of-concept
-to something that you can actually use. Now D-Installer can install openSUSE Tumbleweed in simple
-scenarios. But, please, bear in mind that it is still an experimental project, so it is better to
-use a virtual machine if you decide to give it a try. After all, we do not want to be responsible
-for any data loss. :-)
+D-Installer can install openSUSE Tumbleweed in simple scenarios. But, please, bear in mind that it
+is still an experimental project, so it is better to use a virtual machine if you decide to give it
+a try. After all, we do not want to be responsible for any data loss. :wink:
 
-If you want to give D-Installer a try, just grab the [Live ISO from
-OBS](https://build.opensuse.org/package/binaries/YaST:Head:D-Installer/live/images). We will refresh
-the image as often as possible to include the latest D-Installer changes. Once the ISO boots, log
-into the installer using "root" as user and "linux" as password and you should see the "Installation
-Summary" page.
+If you want to give it a try, just grab the [Live ISO from
+OBS](https://build.opensuse.org/package/binaries/YaST:Head:D-Installer/d-installer-live/images). We
+will refresh the image as often as possible to include the latest D-Installer changes. Once the ISO
+boots, log into the installer using "root" as user and "linux" as password and you should see the
+"Installation Summary" page.
 
 {% include blog_img.md alt="Installation summary"
 src="installation-summary-mini.png" full_img="installation-summary.png" %}
@@ -64,7 +63,7 @@ the settings that YaST offers in the guided partitioning (using multiple disks, 
 system type, etc.).
 
 {% include blog_img.md alt="Target selection"
-src="target-selection" full_img="target-selection-mini.png" %}
+src="target-selection.png" full_img="target-selection-mini.png" %}
 
 Last but not least, D-Installer allows setting the root authentication (password or SSH public key)
 and/or create a first user to log into the installed system, similar to what YaST supports.
@@ -84,11 +83,11 @@ is composed of three different parts: a system service, a D-Bus interface and a 
 The core is the D-Installer system service, which uses YaST libraries to inspect (probe) and install
 the system. We are reusing as much YaST code as possible, but at the same time we are trying to use
 only the bits that we need. This service provides a D-Bus interface, so the user interface can
-interact with it. We are trying keep the D-Bus interface decoupled from the businesse logic,
+interact with it. We are trying to keep the D-Bus interface decoupled from the business logic,
 although we do not plan to replace it for anything else.
 
 Regarding the user interface, we decided to build a [React](https://reactjs.org/) application using
-[Patternfly](https://www.patternfly.org/) components. Why Patternfly? You will understand the reason
+[PatternFly](https://www.patternfly.org/) components. Why PatternFly? You will understand the reason
 in a minute if you keep reading. :-)
 
 How do the components we have described talk to each other? That's an interesting question. Instead
@@ -143,7 +142,7 @@ We consider the user interface good enough for a first iteration but, given that
 support for more features, we need to work with our UX experts to improve the overall approach. For
 instance, using pop-ups all over the place is far from ideal.
 
-Not to mention that, although we are using Patternfly, we try to stick to [EOS Design
+Not to mention that, although we are using PatternFly, we try to stick to [EOS Design
 System](https://www.eosdesignsystem.com/) principles, so we might need some help. 
 
 ## Asking for feedback
