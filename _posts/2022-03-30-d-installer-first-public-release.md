@@ -19,16 +19,16 @@ virtual machine to give it a try.
 ## D-Installer (kind of) works
 
 Since our announcement in January, we have been working on going from a non-working proof-of-concept
-to something that you can actually use. Now D-Installer can install openSUSE Tumbleweed in
-simple scenarios. But, please, bear in mind that it is still an experimental project, so it is
-better to use a virtual machine if you decide to give it a try. After all, we do not want to be
-responsible for any data loss. :-)
+to something that you can actually use. Now D-Installer can install openSUSE Tumbleweed in simple
+scenarios. But, please, bear in mind that it is still an experimental project, so it is better to
+use a virtual machine if you decide to give it a try. After all, we do not want to be responsible
+for any data loss. :-)
 
 If you want to give D-Installer a try, just grab the [Live ISO from
-OBS](https://build.opensuse.org/package/binaries/YaST:Head:D-Installer/live/images). We will
-refresh the image as often as possible to include the latest D-Installer changes. Once the ISO
-boots, log into the installer using "root" as user and "linux" as password and you should see
-the "Installation Summary" page.
+OBS](https://build.opensuse.org/package/binaries/YaST:Head:D-Installer/live/images). We will refresh
+the image as often as possible to include the latest D-Installer changes. Once the ISO boots, log
+into the installer using "root" as user and "linux" as password and you should see the "Installation
+Summary" page.
 
 {% include blog_img.md alt="Installation summary"
 src="installation-summary-mini.png" full_img="installation-summary.png" %}
