@@ -3,7 +3,7 @@ layout: post
 date: 2022-03-31 06:00:00 +00:00
 title: D-Installer First Public Release
 description: Announcing the first release of an installation image based on D-Installer
-permalink: blog/2022-03-30/d-installer-first-public-release
+permalink: blog/2022-03-31/d-installer-first-public-release
 tags:
 - D-Installer
 - Experiments
@@ -14,8 +14,8 @@ tags:
 
 It is our pleasure to announce the availability of the first installation image based on
 D-Installer. Since [our initial announcement in
-January](https://yast.opensuse.org/blog/2022-01-18/announcing-the-d-installer-project), we have been
-working on going from a non-working proof-of-concept to something that you can actually use.
+January]({{site.baseurl}}/blog/2022-01-18/announcing-the-d-installer-project), we have been working
+on going from a non-working proof-of-concept to something that you can actually use.
 
 This article aims to summarize project's current status and what you can expect from the near
 future. Additionally, we will dig a bit into some internal details so you have a better overview of
