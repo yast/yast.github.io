@@ -135,7 +135,7 @@ packages? Too many open questions yet.
 
 We do not plan to bring the partitioner to the web interface anytime soon. Instead, our plan is to
 support all the guided partitioning options, so you can select multiple devices, choose a different
-file system, enable LVM, use encryption, etc. So, at the medium term, it looks like a fair trade.
+file system, enable LVM, use encryption, etc. So, in the medium term, it looks like a fair trade.
 
 ### The User Interface
 
@@ -146,11 +146,12 @@ For instance, using pop-ups all over the place is far from ideal.
 Not to mention that, although we are using PatternFly, we try to stick to [EOS Design
 System](https://www.eosdesignsystem.com/) principles, so we might need some help. 
 
-## Asking for feedback
+## Tell us what you think
 
-Now that you have something to try, it would be great if you share your opinion with us. You can
-contact us through the [GitHub project's page](https://github.com/yast/d-installer) or, as usual, in our
-`#yast` channel at [Libera.chat](https://libera.chat/).
+Now that you have something to try, it would be great if you shared your opinion. You can contact us
+through the [GitHub project's page](https://github.com/yast/d-installer) or, as usual, in our
+`#yast` channel at [Libera.chat](https://libera.chat/) or the [YaST Development mailing
+list](https://lists.opensuse.org/archives/list/yast-devel@lists.opensuse.org/).
 
 {% include blog_img.md alt="Installation finished"
 src="congratulations-mini.png" full_img="congratulations.png" %}
