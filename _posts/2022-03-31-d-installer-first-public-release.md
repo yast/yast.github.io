@@ -3,7 +3,7 @@ layout: post
 date: 2022-03-31 06:00:00 +00:00
 title: D-Installer First Public Release
 description: Announcing the first release of an installation image based on D-Installer
-permalink: blog/2022-03-30/d-installer-first-public-release
+permalink: blog/2022-03-31/d-installer-first-public-release
 tags:
 - D-Installer
 - Experiments
