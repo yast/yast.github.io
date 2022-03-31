@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-03-30 11:00:00 +00:00
+date: 2022-03-31 06:00:00 +00:00
 title: D-Installer First Public Release
 description: Announcing the first release of an installation image based on D-Installer
 permalink: blog/2022-03-30/d-installer-first-public-release
