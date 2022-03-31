@@ -65,7 +65,7 @@ selecting a device to install the system on. We plan to offer most of YaST's gui
 settings (using multiple disks, choosing a file system type, etc.).
 
 {% include blog_img.md alt="Target selection"
-src="target-selection.png" full_img="target-selection-mini.png" %}
+src="target-selection-mini.png" full_img="target-selection.png" %}
 
 Last but not least, D-Installer allows configuring the root's authentication (password or SSH
 public key) and/or creating a first user to log into the installed system, similar to what YaST
@@ -146,14 +146,14 @@ For instance, using pop-ups all over the place is far from ideal.
 Not to mention that, although we are using PatternFly, we try to stick to [EOS Design
 System](https://www.eosdesignsystem.com/) principles, so we might need some help. 
 
-## Tell us what you think
+## Share your opinion
 
 Now that you have something to try, it would be great if you shared your opinion. You can contact us
 through the [GitHub project's page](https://github.com/yast/d-installer) or, as usual, in our
 `#yast` channel at [Libera.chat](https://libera.chat/) or the [YaST Development mailing
 list](https://lists.opensuse.org/archives/list/yast-devel@lists.opensuse.org/).
 
+Have a lot of fun!
+
 {% include blog_img.md alt="Installation finished"
 src="congratulations-mini.png" full_img="congratulations.png" %}
-
-Have a lot of fun!
