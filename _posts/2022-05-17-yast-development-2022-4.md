@@ -33,7 +33,7 @@ the installation progress screen that we recently simplified.
 So the present of YaST is in good hands... but we also want to make sure YaST keeps being useful in
 the future. And the future of Linux seems to be containerized applications and workloads. So we
 decided to investigate a bit whether it would be possible to configure a system using YaST... but
-with YaST running into a container instead of directly on the system being configured.
+with YaST running in a container instead of directly on the system being configured.
 
 And turns out it's possible and we actually managed to run several YaST modules with different
 levels of success. Take a look to [this repository at
