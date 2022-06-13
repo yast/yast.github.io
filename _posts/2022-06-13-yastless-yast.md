@@ -24,7 +24,7 @@ We all know how awesome YaST can be for administering your (open)SUSE system. Fr
 software repositories and the installed software to adjusting the systemd services and sockets. From
 creating LVM logical volumes to configuring Kdump (or `fadump`). From inspecting the systemd journal
 to fine-tuning the boot loader. From configuring network interfaces to adjusting the mitigations for
-CPU vulnerabilities. From setting the firewall configuration to managing your subscritions to the
+CPU vulnerabilities. From setting the firewall configuration to managing your subscriptions to the
 different SUSE products... and so much more!
 
 But all that comes with a pretty obvious price. You must install YaST and all its dependencies in
@@ -57,7 +57,7 @@ $ yast2_container repositories
 
 As you would expect, if the commands are executed without specifying any argument they will open the
 corresponding version of the YaST control center, displaying only the modules that are currently
-adapted to work flawlessly in a container (more about that below).
+expected to work in a container (more about that below).
 
 Let's imagine a pretty extreme example:
 
@@ -121,5 +121,12 @@ that's not the only plan we have to move this nice project forward. We also want
 of the images downloaded and used by the containers, improve how VNC is used internally to provide
 the web access, rely on [SLE BCI](https://www.suse.com/products/base-container-images/) to build the
 whole system... there is plenty of room to keep having fun!
+
+In addition, we have mentioned the MicroOS variants as possible candidates to make use of a
+containerized version of YaST. But the transactional nature of such distributions may challenge how
+some YaST modules work, no matter whether they run containerized or directly in the system.
+For example, the way to install software packages is completely different. So, in addition to the
+mentioned improvements to our containerized YaST, we are considering to adapt some parts of YaST
+as a whole to better handle the administration of transactional systems.
 
 And, of course, we will keep you updated on all the steps through our usual channels. So stay tuned!
