@@ -2,7 +2,7 @@
 layout: post
 date: 2022-06-23T13:23:51.461Z
 title: Slow YaST in Container or How to Run Programs from Ruby?
-description: There are several ways how to run external commands in Ruby, some of them fast, some are slower...
+description: There are several ways how to run external commands in Ruby, some of them are fast, some are slower...
 comments: false
 category: Programming
 tags: 
