@@ -144,8 +144,12 @@ And if you compare Cheetah with SCR in container then Cheetah is more than
 10x faster! Wow!
 
 So in this case the SCR calls are the bottleneck, the container environment
-should affect the speed in general only slightly. Switching to Cheetah
-should improve the situation a lot in this case.
+should affect the speed in general only slightly. We actually do not know what
+is the exact reason for this slowdown, probably the extra chrooting... :thinking:
+
+But as we should switch to Cheetah anyway (because it is a clean native Ruby
+solution) we are not interested in researching this, this slow functionality
+caused troubles only in one specific case so far.
 
 *Notes: It was tested in an openSUSE Leap 15.4 system, it also heavily depends
 on the hardware, you might get very different numbers for your system.*
