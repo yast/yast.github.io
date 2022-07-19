@@ -54,6 +54,9 @@ steps to definitely solve that problem and also other interesting features you c
 [release announcement](https://github.com/yast/d-installer/pull/223). There are even a couple of
 videos to see it in action without risking your systems!
 
+As you can see in the first of those videos, we improved the product selection screen and now
+D-Installer can download and install Tumbleweed, Leap 15.4 or Leap Micro 5.2.
+
 But a new YaST-related piece of software cannot be really considered as fully released until it is
 submitted to openSUSE Tumbleweed. We plan to do that in the upcoming days, to ensure future
 development of D-Installer remains fully integrated with our beloved rolling distribution.
