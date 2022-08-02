@@ -31,7 +31,7 @@ Work Group. Since clear documentation is key, we created [this wiki
 page](https://en.opensuse.org/openSUSE:ALP/Workgroups/SysMngmnt/Cockpit#Cockpit_at_ALP) explaining
 how to setup and start using Cockpit on ALP.
 
-The document includes several so-called "development notes" presentings aspects we want to work on
+The document includes several so-called "development notes" presenting aspects we want to work on
 in order to improve the user experience and make the process even more straightforward. So stay
 tuned for more news in that regard.
 
