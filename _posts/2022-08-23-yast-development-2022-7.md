@@ -81,7 +81,7 @@ at the archive of the `yast-devel` mailing list.
 
 Additionally, we are also proud of remarking that those container images include the YaST Kdump and
 YaST Bootloader modules. We recently adapted them to work containerized, which we consider an
-important milestone because is implies libstorage-ng is now able to perform a system analysis of the
+important milestone because it implies libstorage-ng is now able to perform a system analysis of the
 running host system from a container.
 
 ## YaST on ALP {#yast}
