@@ -55,7 +55,7 @@ the managed system will look after the reboot.
 
 Finally we implemented the solution that is shown in the screenshot below. For the time being, if
 YaST detects it's running in a transactional system so it cannot install the missing packages and
-continue, it will simply ask the user to install the packages and reboot.
+continue, then it will simply ask the user to install the packages and reboot.
 
 {% include blog_img.md alt="YaST requesting Bind to be installed" src="bind.png" %}
 
