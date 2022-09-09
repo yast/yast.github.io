@@ -260,17 +260,17 @@ variable part.
 So, for most `grep` calls (which should be avoided in the first place - see
 above), it should be used something like this:
 
-`/usr/bin/egrep '^[0-9]+\s+'#{foo.shellescape}'bar$'`
+`/usr/bin/grep -E '^[0-9]+\s+'#{foo.shellescape}'bar$'`
 
 So if the `foo` variable contains characters that need to be shell-escaped,
-they are properly escaped, and the `egrep` command receives one single string
+they are properly escaped, and the `grep -E` command receives one single string
 as the argument. Remember that the shell consumes the quotes and any
 backslashes outside of quotes, so even if the complete command expands to
 something like
 
-`/usr/bin/egrep '^[0-9]+\s+'very\ weird\'stuff'bar$'`
+`/usr/bin/grep -E '^[0-9]+\s+'very\ weird\'stuff'bar$'`
 
-the `egrep` command gets
+the `grep -E` command gets
 
 `^[0-9]+\s+very weird'stuffbar$`
 
@@ -279,9 +279,9 @@ which is the expected thing.
 _Notice that there is also Ruby `Regexp.escape` which can be combined with
 this. The problem is just that there are many different variations of the
 Regexp syntax, and Ruby `Regexp.escape` of course supports Ruby's own
-variation. It's slightly different for `grep`, `egrep`, `sed`, `perl`. This is
+variation. It's slightly different for `grep`, `grep -E`, `sed`, `perl`. This is
 something to watch out for. And this is also another reason to do that inside
-Ruby and not call external tools like `grep` / `egrep` / `sed`; then you can
+Ruby and not call external tools like `grep` / `grep -E` / `sed`; then you can
 safely simply use Ruby `Regexp.escape`._
 
 
