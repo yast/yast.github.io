@@ -95,7 +95,7 @@ now access all this functionality:
 - Printers configuration
 - Administration of DNS server
 
-We are working on adapting more YaST modules as we write this. We hope to soon add boot-loader or
+We are working on adapting more YaST modules as we write this. We hope to soon add boot loader or
 Kdump configuration to the portfolio. Maybe even the YaST Partitioner if everything goes fine.
 
 On the other hand, we restructured the container images to rely on [SLE

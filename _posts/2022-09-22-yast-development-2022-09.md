@@ -31,7 +31,7 @@ the package `yast-in-container` since it's not longer needed to enjoy the benefi
 containerized variant of YaST.
 
 But you may be wondering what those recent improvements are. First of all, now the respective YaST
-modules for configuring both Kdump and the boot-loader can handle transactional systems like ALP or
+modules for configuring both Kdump and the boot loader can handle transactional systems like ALP or
 MicroOS. On the other hand, the graphical Qt container was fixed to allow remote execution via SSH
 X11 forwarding. Again, that is useful in the context of ALP but not only there. That simple fix
 actually opens the door to full graphical administration of systems in which there is no graphical
