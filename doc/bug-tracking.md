@@ -78,9 +78,16 @@ There are several shared bug queries:
 - [yast2-maintainers not needinfo bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast2-maintainers%20not%20needinfo%20bugs&sharer_id=6053) -
   Similar to the previous one, but the bugs in NEEDINFO state are not displayed.
   This is useful when you want to see bugs which have not been checked yet.
-- [yast2-internal bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast2-internal%20bugs&sharer_id=6053) -
+- [yast-internal bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast2-internal%20bugs&sharer_id=6053) -
   Confirmed YaST bugs which are tracked in Trello. The URL attribute of these
   bugs should point to the relevant Trello card.
+- [yast-internal reopen bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&list_id=13741375&namedcmd=YaST%20reopen&remaction=run&sharer_id=78979) -
+  Similar to the previous one, but with reopen bugs only. Note that reopen bugs keep assigned
+  to *yast-internal@suse.de*, so they are easily overlooked because they are not listed in
+  *yast2-maintainers* searches.
+- [needinfo from yast](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=Needinfo%20from%20yast&sharer_id=78979) -
+  All bugs with needinfo from *yast\** (e.g., *yast-internal*, *yast2-maintainers*,
+  *autoyast-maintainers*, etc).
 - [yast-team-bugs](https://bugzilla.suse.com/buglist.cgi?cmdtype=dorem&remaction=run&namedcmd=yast-team-bugs&sharer_id=6053) -
   All open bugs assigned to all YaST team members or to the generic YaST team
   accounts.
