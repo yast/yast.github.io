@@ -142,8 +142,7 @@ yast-ruby-bindings:
 
   Starts the Ruby profiler if set to `1` or `true`.
 
-  _Dropped for distributions using Ruby 2.7 or newer.
-  Notice that SLE-15 SP4 / Leap 15.4 still use Ruby 2.5._
+  _Dropped from SLE-15 SP5 / Leap 15.5 on._
 
 - Y2DEBUGGER
 
