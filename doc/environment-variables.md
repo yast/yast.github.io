@@ -138,7 +138,7 @@ yast-support:
 
 yast-ruby-bindings:
 
-- Y2PROFILER
+- ~~Y2PROFILER~~
 
   Starts the Ruby profiler if set to `1` or `true`.
 
