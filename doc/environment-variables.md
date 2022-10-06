@@ -138,9 +138,11 @@ yast-support:
 
 yast-ruby-bindings:
 
-- Y2PROFILER
+- ~~Y2PROFILER~~
 
   Starts the Ruby profiler if set to `1` or `true`.
+
+  _Dropped from SLE-15 SP5 / Leap 15.5 on._
 
 - Y2DEBUGGER
 
