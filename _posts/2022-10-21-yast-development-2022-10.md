@@ -89,7 +89,7 @@ have a more maintainable and standardized YaST iSCSI Client and a smaller YaST c
 Talking about system management tools, you already know our team is lately looking beyond YaST and
 trying to help with the maintenance and integration of Cockpit. As a consequence of that continuous
 effort, we realized the functionality for creating checkpoints for Podman containers was not working
-as expected in openSUSE Tumbleweed nor in the ALP prototypes due to some problem in the package
+as expected neither in openSUSE Tumbleweed nor in the ALP prototypes due to some problem in the package
 `criu`. Fortunately we are surrounded by people smarter than us, so we contacted Takashi Iwai and
 helped him to diagnose the problem. As a result, `criu` and Podman checkpoints are now working again
 in both Tumbleweed and the ALP prototypes. But don't ask us for technical details, it's all
