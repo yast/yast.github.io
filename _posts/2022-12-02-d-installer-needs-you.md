@@ -40,7 +40,7 @@ ago. Functionality-wise it brings the ability to install the system using LVM ([
 Manager](https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux))) and/or full-disk
 encryption. The exact type of encryption depends on the operating system being installed. For the
 prototype of ALP ContainerHost, D-Installer will use LUKS2 adjusting some settings to ensure
-everything works with the provided version of Grub. The usage of LUKS2 opens the door for future
+everything works with the provided version of GRUB. The usage of LUKS2 opens the door for future
 possibilities, like unlocking the encrypted devices on boot using the system's TPM ([Trusted Platform
 Module](https://en.wikipedia.org/wiki/Trusted_Platform_Module)) instead of entering a passphrase.
 
@@ -54,7 +54,7 @@ what to delete, keep or resize. But in the meantime **D-Installer will go full t
 all previous content in the chosen disk**. You have been warned. :wink:
 
 Another relevant improvement is the ability to properly configure the boot loader on AArch64
-systems. Previous prototypes messed up the selection of Grub-related packages on non-x86 systems,
+systems. Previous prototypes messed up the selection of GRUB-related packages on non-x86 systems,
 but now D-Installer is more capable of handling different hardware architectures. At the YaST Team
 we don't have that many different Aarch64 systems at hand, so we would really appreciate any help
 testing whether this works consistently. You can do it by grabbing the `aarch64` version of the
