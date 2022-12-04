@@ -68,7 +68,7 @@ constantly build with the latest development version of D-Installer. But, to be 
 have that much time (or knowledge) to invest on those images and there is a lot of room for
 improvement.
 
-First of all, almost 600 MiB is clearly too much for an image that doesn't even include the
+First of all, almost 1 GiB is clearly too much for an image that doesn't even include the
 packages of the operating systems to be installed (everything is fetched from online repositories).
 Beyond the size of the ISO, running X11 and Firefox may not be the most memory-efficient way to
 connect to a local web interface. There is already an [open
