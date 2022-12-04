@@ -12,6 +12,12 @@ tags:
 - YaST
 ---
 
+**This blog post titled 'D-Installer needs your help' was scheduled for Friday Dec. 2nd. The plan
+was (still is) to give diffusion to it in several mailing list (and/or Slack channel) right after
+publishing it. But we postponed it due to [this
+issue](https://github.com/yast/d-installer/issues/350). We want to fix that before making too much
+noise.**
+
 Now that the headline got your attention, let's start with the good news - D-Installer development
 is progressing just fine. What's the matter then? To answer that question is important to make a
 difference between D-Installer itself and the live ISO image we provide for everyone to test it.
