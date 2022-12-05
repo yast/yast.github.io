@@ -1,9 +1,9 @@
 ---
 layout: post
-date: 2022-12-02 06:00:00 +00:00
+date: 2022-12-05 06:00:00 +00:00
 title: D-Installer needs your help
 description: D-Installer development moves forward... but some things could be better
-permalink: blog/2022-12-02/d-installer-needs-you
+permalink: blog/2022-12-05/d-installer-needs-you
 tags:
 - Distribution
 - Factory
