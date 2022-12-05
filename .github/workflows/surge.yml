@@ -9,7 +9,7 @@ jobs:
   Publish:
     runs-on: ubuntu-latest
     container:
-      image: registry.opensuse.org/yast/head/containers/yast-cpp:latest
+      image: registry.opensuse.org/yast/head/containers_leap_latest/yast-ruby
 
     steps:
 
@@ -21,7 +21,7 @@ jobs:
 
     - name: Prepare
       run: |
-        zypper --non-interactive install --no-recommends aspell-devel npm zlib-devel
+        zypper --non-interactive install --no-recommends aspell-devel npm zlib-devel gcc-c++ ruby-devel "rubygem(bundler)"
         npm install surge
         bundle install --path vendor/bundle || (echo "Gem installation failed, ensure 'bundled with:' is not present in Gemfile.lock"; false)
 
