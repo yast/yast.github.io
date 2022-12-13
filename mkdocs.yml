@@ -1,3 +1,31 @@
 site_name: Yast Documentation
 docs_dir: doc
 theme: readthedocs
+nav:
+  - README.md
+  - architecture.md
+  - auto-pkg-submission.md
+  - autoyast-development.md
+  - branching-how-to.md
+  - bug-tracking.md
+  - building-the-doc-locally.md
+  - ci-integration.md
+  - code-review.md
+  - contributing.md
+  - coveralls-integration.md
+  - debugging.md
+  - development.md
+  - development-tips.md
+  - environment-variables.md
+  - how-to-write-tests.md
+  - jenkins-integration.md
+  - localization.md
+  - maintenance-branches.md
+  - rubocop.md
+  - security-tips.md
+  - translation.md
+  - ui_inspector.md
+  - versioning.md
+  - WSL.md
+  - yast_is_open.md
+  - yast_team.md

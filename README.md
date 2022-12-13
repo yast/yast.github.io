@@ -51,3 +51,41 @@ as misspelled you can add it to the list.
 *Note: The installed default English dictionary used in CI might be different than
 in your system, the check may pass locally, but can fail at CI. In that case
 add the missing word to the custom dictionary.*
+
+Building the Documentation Locally
+----------------------------------
+
+\[Here I pretend to know how MkDocs and Jekyll play together].
+
+### MkDocs
+
+One engine used is [MkDocs][].
+
+Its main file is `mkdocs.yml`.
+
+[MkDocs]: https://www.mkdocs.org/
+
+```sh
+python3 -m venv myvenv # set up an empty virtual environment
+. myvenv/bin/activate  # activate it, running a new shell; use 'exit' when done
+pip install mkdocs
+
+mkdocs build           # -> site/
+mkdocs serve           # xdg-open http://127.0.0.1:8000/
+```
+
+### Jekyll
+
+Another engine that we use is [Jekyll][]. It [plays][] nicely with GitHub Pages.
+
+Its main file is `_config.yml`.
+
+[Jekyll]: https://jekyllrb.com/
+[plays]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+```sh
+bundle install --path vendor/bundle
+bundle exec jekyll                  # pulled in by github-pages in Gemfile
+bundle exec jekyll build            # -> _site/
+bundle exec jekyll serve            # xdg-open http://127.0.0.1:4000/
+```
