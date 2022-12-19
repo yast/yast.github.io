@@ -63,6 +63,8 @@ One engine used is [MkDocs][].
 
 Its main file is `mkdocs.yml`.
 
+See also [building-the-doc-locally.md](doc/building-the-doc-locally.md).
+
 [MkDocs]: https://www.mkdocs.org/
 
 ```sh
