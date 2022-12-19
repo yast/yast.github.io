@@ -55,17 +55,19 @@ add the missing word to the custom dictionary.*
 Building the Documentation Locally
 ----------------------------------
 
-\[Here I pretend to know how MkDocs and Jekyll play together].
+We're using two engines: started with MkDocs but then we needed to import many
+blog posts from another site, and used Jekyll for that.
 
 ### MkDocs
 
-One engine used is [MkDocs][].
+One engine used is [MkDocs][]. It plays well with [Read the Docs][].
 
 Its main file is `mkdocs.yml`.
 
 See also [building-the-doc-locally.md](doc/building-the-doc-locally.md).
 
 [MkDocs]: https://www.mkdocs.org/
+[Read the Docs]: https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html
 
 ```sh
 python3 -m venv myvenv # set up an empty virtual environment
