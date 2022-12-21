@@ -51,3 +51,45 @@ as misspelled you can add it to the list.
 *Note: The installed default English dictionary used in CI might be different than
 in your system, the check may pass locally, but can fail at CI. In that case
 add the missing word to the custom dictionary.*
+
+Building the Documentation Locally
+----------------------------------
+
+We're using two engines: started with MkDocs but then we needed to import many
+blog posts from another site, and used Jekyll for that.
+
+### MkDocs
+
+One engine used is [MkDocs][]. It plays well with [Read the Docs][].
+
+Its main file is `mkdocs.yml`.
+
+See also [building-the-doc-locally.md](doc/building-the-doc-locally.md).
+
+[MkDocs]: https://www.mkdocs.org/
+[Read the Docs]: https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html
+
+```sh
+python3 -m venv myvenv # set up an empty virtual environment
+. myvenv/bin/activate  # activate it, running a new shell; use 'exit' when done
+pip install mkdocs
+
+mkdocs build           # -> site/
+mkdocs serve           # xdg-open http://127.0.0.1:8000/
+```
+
+### Jekyll
+
+Another engine that we use is [Jekyll][]. It [plays][] nicely with GitHub Pages.
+
+Its main file is `_config.yml`.
+
+[Jekyll]: https://jekyllrb.com/
+[plays]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll
+
+```sh
+bundle install --path vendor/bundle
+bundle exec jekyll                  # pulled in by github-pages in Gemfile
+bundle exec jekyll build            # -> _site/
+bundle exec jekyll serve            # xdg-open http://127.0.0.1:4000/
+```

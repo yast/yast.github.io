@@ -1,3 +1,40 @@
 site_name: Yast Documentation
 docs_dir: doc
 theme: readthedocs
+# Introductory: you might want to read these first
+nav:
+  - README.md
+  - About:
+      - "This team": yast_team.md
+      - "This docs": building-the-doc-locally.md
+  # Is it useful for a casual contributor?
+  - Introductory:
+      - yast_is_open.md
+      - architecture.md
+      - bug-tracking.md
+      - code-review.md
+      - contributing.md
+      - debugging.md
+      - development.md
+      - how-to-write-tests.md
+      - localization.md
+      # TODO: merge into localization.md
+      - translation.md
+      - versioning.md
+  # If you've been in the team for several years and still have to look this up,
+  # it means it's Advanced
+  - Advanced:
+      - auto-pkg-submission.md
+      - autoyast-development.md
+      - branching-how-to.md
+      - coveralls-integration.md
+      - ci-integration.md
+      - development-tips.md
+      - environment-variables.md
+      - jenkins-integration.md
+      - maintenance-branches.md
+      # Coding style is Introductory, but this one is for *adding* RuboCop
+      - rubocop.md
+      - security-tips.md
+      - ui_inspector.md
+      - WSL.md
