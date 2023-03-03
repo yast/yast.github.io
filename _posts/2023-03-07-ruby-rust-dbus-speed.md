@@ -33,7 +33,7 @@ from the libraries like creating objects/proxies, but simple direct calls.
 
 ### Ruby Code
 
-```
+```rb
 require "dbus"
 
 sysbus = DBus.system_bus
@@ -46,7 +46,7 @@ puts "output: #{products.inspect}"
 
 ### Rust Code
 
-```
+```rs
 use zbus::blocking::{Connection, Proxy};
 
 fn main() {
@@ -109,7 +109,7 @@ times during a single run.
 
 ### Ruby Code
 
-```
+```rb
 require "dbus"
 
 sysbus = DBus.system_bus
@@ -124,7 +124,7 @@ end
 
 ### Rust Code
 
-```
+```rs
 use zbus::blocking::{Connection, Proxy};
 
 fn main() {
@@ -168,7 +168,7 @@ correctly detects when a property is changed (in other words, when it sends obse
 
 For this reason we create a simple rust program with sleep and use `d-feet` to change property.
 
-```
+```rs
 use zbus::blocking::{Connection, Proxy};
 use std::{thread, time};
 
