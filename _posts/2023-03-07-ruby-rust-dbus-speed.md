@@ -13,22 +13,22 @@ tags:
 - D-Installer
 ---
 
-For D-Installer we have already ruby CLI that was created as Proof of Concept. Then as part
-of hackweek we create another one in rust to learn a bit about rust and gets hands dirty.
-Now when we are familiar with both we would like to measure overhead of callind D-Bus methods
-in rust and in ruby to be sure that if we continue with rust we won't be surprised by its
-speed ( hint: we do not expect it, but expactations and facts can be different ).
+For D-Installer we already have a Ruby CLI that was created as a proof of concept. Then as part of
+of the hackweek we created another one in Rust to learn a bit about Rust and get our hands dirty.
+Now that we are familiar with both, we want to measure the overhead of calling D-Bus methods
+in Rust and Ruby, to make sure that if we continue with Rust, we won't be surprised by its speed.
+speed (hint: we do not expect it, but expectations and facts may be different).
 
 ## Scenario
 
-As we want to measure mainly overhead, we use for that purpose simple program that reads one
-property from D-Bus and print it to stdout. The property data structure is not trivial, so
-effectivity of data marshaling is also tested. We use dbus interface we have in D-Installer
-and property was list of available base products.
+Since we want to measure mainly overhead, we use a simple program that reads a
+property from the d-bus and print it to stdout. The data structure of the property is not trivial, so the efficiency of
+so the efficiency of the data marshalling is also tested. We use the D-Bus interface we have in D-Installer
+and the property was a list of available base products.
 
-The libraries used for communication with D-Bus is well known ones. For D-Bus we use 
-[rubygem-dbus](https://github.com/mvidner/ruby-dbus) and for rust we use [zbus]
-(https://docs.rs/zbus/latest/zbus/). To make code simple we do not use advanced stuff from
+The libraries used for communication with D-Bus are well known. For D-Bus we use
+[rubygem-dbus] (https://github.com/mvidner/ruby-dbus) and for rust we use [zbus]
+(https://docs.rs/zbus/latest/zbus/). To keep the code simple, we do not use advanced stuff from the
 libraries like creating objects/proxies, but simple direct calls.
 
 ### Ruby Code
@@ -63,10 +63,9 @@ fn main() {
 
 ## Results
 
-To get some reasonable numbers we run it hundred times and measure it with time utility.
+To get some reasonable numbers, we run it a hundred times and measure it with the time utility.
 
-So here is result for ruby:
-
+So here is the result for ruby:
 ```
 time for i in {1..100}; do ruby dbus_measure.rb &> /dev/null; done
 
@@ -85,6 +84,6 @@ user	0m0.254s
 sys	0m0.188s
 ```
 
-So as can be seen rust looks significantly faster. It is probably caused by ruby search for dbus
-and other rubygems in its paths or maybe by ineffeciency in dbus communication. In general it
-looks like with rust we definitively won't have any performance regressions.
+As you can see, rust looks much faster. This is probably caused by Ruby's search for dbus
+and other rubygems in its paths, or perhaps inefficiencies in dbus communication. In general, it
+looks like we're definitely not going to have any performance regressions with rust.
