@@ -16,9 +16,9 @@ tags:
 AutoYaST is a crucial tool for our users, including customers and partners. So it was clear from the
 beginning that D-Installer should be able to install a system in an unattended manner.
 
-This article gives describes the status of this feature and gives some hints about our plans. But we
-want to emphasize that nothing is set in stone (yet), so constructive comments and suggestions are
-more than welcome.
+This article describes the status of this feature and gives some hints about our plans. But we want
+to emphasize that nothing is set in stone (yet), so constructive comments and suggestions are more
+than welcome.
 
 ## The architecture
 
