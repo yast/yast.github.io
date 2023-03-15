@@ -2,8 +2,8 @@
 layout: post
 date: 2023-03-14 11:00:00 +00:00
 title: Adding auto-installation support to D-Installer
-description: Although it was in our minds from the beginning, we have been postpoining the support
-  for auto-installation for several reason. Now the time has come and we have a plan.
+description: Although it was in our minds from the beginning, we have been postponing the support
+  for auto-installation for several reasons. Now the time has come and we have a plan.
 permalink: blog/2023-03-14/auto-installation-support-in-d-installer
 tags:
 - Project
