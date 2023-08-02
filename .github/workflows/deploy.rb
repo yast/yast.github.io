@@ -109,7 +109,7 @@ update_config
 report_failure_and_exit unless system("bundle exec jekyll build")
 
 puts "Publishing the pages..."
-report_failure_and_exit unless system("`npm bin`/surge --project ./_site --domain #{domain}")
+report_failure_and_exit unless system("npx surge --project ./_site --domain #{domain}")
 
 report_success
 puts "\nFinished, see the #{url} page for the site preview."
