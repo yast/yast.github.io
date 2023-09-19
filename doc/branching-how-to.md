@@ -3,6 +3,10 @@
 This is a short document how to create a new maintenance branch for a released
 product.
 
+FIXME: a more up to date information has meanwhile appeared
+in https://github.com/yast/helper_scripts/blob/master/github/maintenance_branch/README.md
+We must merge the info and keep it in one place.
+
 ## OBS/IBS Setup
 
 First we need to create a new development projects in the internal and external
