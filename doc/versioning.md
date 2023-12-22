@@ -21,49 +21,56 @@ For instance, *4.2.3* would be the fourth version of the package for *SLE 15 SP2
 
 ### When to bump each number
 
-YaST repositories keep a git branch for every released (open)SUSE product. For example, a
+YaST repositories keep a git branch for every (open)SUSE product. For example, a
 *SLE-15-SP1* branch is used for the development of *SLE 15 SP1* and *openSUSE Leap 15.1* products,
 *SLE-15-SP2* for *SLE 15 SP2* and *openSUSE Leap 15.2*, etc. The *master* branch is used for
-*Factory* and also for the service pack (or major release) that is currently in development phase.
+*Factory* and consequently for *openSUSE Tumbleweed*.
+
 As described above, each YaST version corresponds to a specific product. So, when a change is
 introduced in a branch, the next version would be defined by the product that branch is tracking.
 For example, the first change in the *SLE-15-SP2* branch would have the version *4.2.0*.
 
-Basically, these are the rules for increasing version numbers:
+### Examples
 
-* The first commit to a branch will use the version for the tracked product, with *patch* number *0*
-  (e.g., *4.3.0* for *SLE-15-SP3*, *5.0.0* for *SLE-16-GA*, etc).
-* Next changes in a branch will increment the *patch* number (*4.3.1*, *4.3.2*, etc.).
+Let's try some examples to illustrate how the new YaST versioning policy works.
 
-### Example
+Scenario: there is a repository for a package named *yast2-package* which has three branches. The
+*SLE-15-GA* branch for tracking the code of *SLE 15 GA* and *openSUSE Leap 15* products, the
+*SLE-15-SP1* branch for *SLE-15-SP1* and *openSUSE Leap 15.1*, and finally the *master* branch for
+tracking the development of *openSUSE Tumbleweed*.
 
-Let's try an example to illustrate how the new YaST versioning policy works.
+The current versions are *4.0.58* for *SLE-15-GA*, *4.1.9* for *SLE-15-SP1* and version *5.0.32* for
+master.
 
-Scenario: last released product was *SLE 15 SP0* (a.k.a. *SLE 15 GA*) and *SLE 15 SP1* is starting
-its development phase. Moreover, there is a package *yast2-example* with version *4.0.9*.
-A *SLE-15-GA* branch was created after releasing *SLE 15 SP0*.
-
-### Fix a bug for the latest released Service Pack: *SLE 15 SP0*
+### Example1: fix a bug for GA
 
 1. The fix is implemented into the *SLE-15-GA* branch and the *patch* number is increased from
-   *4.0.9* to *4.0.10*.
-2. Then the fix is merged into *master* in order to also include it as part of SP1. In this case, the
-   version for *master* would be *4.1.X* because *master* is now tracking the development of
-   *SLE 15 SP1* (and *Factory*). Note that the *patch* number will be *0* or the next corresponding
-   number if *master* already contains a *4.1.X* version.
+   *4.0.58* to *4.0.59*.
+2. The fix is merged into *SLE-15-SP1* and the version is bumped from *4.1.9* to *4.1.10*.
+2. And then the fix is merged into *master* too in order to submit to *Factory*. The patch number is
+bumped in *master* to *5.0.33*.
 
-### Add new a change for the next Service Pack: *SLE 15 SP1*
+### Example 2: fix a bug for SP1
 
-1. The feature/fix is implemented into the *master* branch.
-2. Again, the version would be *4.1.X* because *master* is tracking the development of *SLE 15 SP1*
-   (and *Factory*).
+1. The fix is implemented into the *SLE-15-SP1* branch and the *patch* number is increased from
+   *4.1.9* to *4.1.10*.
+2. The fix is merged into *master* and the version is bumped from *5.0.32* to *5.0.33*.
 
-### Add a new change for the next SLE major version: *SLE 16 SP0*
+### Example 3: add a new change for Tumbleweed
 
-1. The feature/fix is implemented into the *master* branch.
-2. And the version in this case would be *5.0.X* (the *major* number for *SLE 16* is *5* and the
-  *minor* number for *SP0* is *0*).
+1. The feature/fix is implemented into the *master* branch and the patch version is increased to
+*5.0.33*.
 
+### Example 4: add a new service pack
+
+1. A new branch *SLE-15-SP2* is created from *SLE-15-SP1*.
+2. The first version in this new branch will be *4.2.0*.
+
+### Example 5: a new major version (e.g., SLE 16)
+
+1. A new branch *SLE-16-GA* is created from *master*. This new branch will continue with versions
+*5.0.X*. Its first change will have version *5.0.33*.
+2. Major version is bumped in *master* from *5.0.32* to *6.0.0*.
 
 ## Old schema
 
