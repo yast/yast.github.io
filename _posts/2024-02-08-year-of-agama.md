@@ -12,7 +12,7 @@ tags:
 - Agama
 ---
 
-At the end of 2023 we announced Agama 7 stating that version is the first protype we could consider
+At the end of 2023 we announced Agama 7 stating that version is the first prototype we could consider
 to be (quoting ourselves) "functional enough", covering areas such as localization, network
 configuration, storage setup, authentication basis and some software selection. Now it's time to go
 deeper into every area... and we have a plan for that.
@@ -36,7 +36,7 @@ unattended installation, turning Agama into a worthy contender to AutoYaST.
 
 Let's dive into the improvements expected for the first milestone.
 
-## Arquitectural Changes {#architecture}
+## Architectural Changes {#architecture}
 
 So far, we have built Agama on top of the infrastructure provided by the
 [Cockpit project](https://cockpit-project.org/). That allowed us to bootstrap the project quickly
