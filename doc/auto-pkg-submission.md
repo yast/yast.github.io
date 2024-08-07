@@ -8,9 +8,12 @@ automatically submitted to the openSUSE Build Service (OBS):
 
 - YaST:Head for the OBS (the external OBS instance, build.opensuse.org)
 
-This is done via one of the Jenkins workers (external: ci.opensuse.org;
-internal: ci.suse.de) that are configured to poll the GitHub repositories.
-When a new Git checkin is detected, Jenkins executes
+This is done via the Jenkins workers (internal ci.suse.de) or GitHub Action.
+
+The Jenkins is configured to poll the GitHub repositories, the GitHub Action is
+triggered on a push to the `master` branch.
+
+When a new Git checkin is detected, both Jenkins and the GitHub Action execute
 
     rake osc:sr
 
@@ -95,3 +98,17 @@ version number was increased, the created RPMs are simply deleted (the purpose
 was just to check if building and tests were successful), and the tarball,
 .spec file etc. generated from the last Git checkin are checked in to OBS.
 
+## The GitHub Action
+
+The GitHub Action which submits the package to OBS is defined in the
+[submit](https://github.com/yast/actions/tree/master/submit) directory in the
+[actions](https://github.com/yast/actions) GitHub repository.
+
+The action is reused in all relevant YaST repositories which are submitted to
+Factory.
+
+The OBS credentials are defined in the `yast` organization and shared in
+selected repositories. If a new repository is added then it must be explicitly
+added to the allowed list. See the
+[actions](https://github.com/organizations/yast/settings/secrets/actions) GitHub
+page (requires administration permissions).
