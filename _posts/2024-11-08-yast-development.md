@@ -29,7 +29,7 @@ It's time for another update on the ongoing development of YaST, your favorite s
   * **Fixing anchor link scrolling:** Addressed an issue where headings were hidden behind the floating title bar when using anchor links on the YaST blog. This improvement enhances navigation and readability ([pull request](https://github.com/yast/yast.github.io/pull/372)). You can see the improvement in action by comparing the following screenshots:
     * Before: <img src="https://github.com/user-attachments/assets/702b0bfd-e567-4ee9-a176-b8ad20baee70" alt="yast_blog_broken">
     * After: <img src="https://github.com/user-attachments/assets/2e277f9a-d7fa-494e-b448-4f6fe73c5bd3" alt="yast_blog_fixed">.
-  * **Improved WSL testing documentation:** We've updated our documentation for testing YaST in the Windows Subsystem for Linux (WSL). This includes information on installing WSL, testing firstboot, creating a testing APPX, and more. You can find the updated documentation here: [https://github.com/yast/yast-firstboot/blob/master/doc/testing_wsl.md]
+  * **Improved WSL testing documentation:** We've updated our documentation for testing YaST in the Windows Subsystem for Linux (WSL). This includes information on installing WSL, testing firstboot, creating a testing APPX, and more. You can find the updated documentation here: [https://github.com/yast/yast-firstboot/blob/master/doc/testing_wsl.md](https://github.com/yast/yast-firstboot/blob/master/doc/testing_wsl.md)
 
 **Agama News**
 
