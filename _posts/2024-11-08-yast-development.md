@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  YaST Development Update: Bug Fixes and Improvements
+title:  YaST Development Update - Bug Fixes and Improvements
 date:   2024-11-08 7:00:00 +0000
 description: Time for another regular status update from the YaST team with news about YaST itself.
 tags:
