@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  YaST Development Update: Bug Fixes and Improvements
-date:   2024-11-08 15:46:46 +0100
+date:   2024-11-08 7:00:00 +0000
 description: Time for another regular status update from the YaST team with news about YaST itself.
-categories: yast development
-permalink: blog/2024-11-08/yast-report-2022-2
 tags:
 - Distribution
 - Factory
