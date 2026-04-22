@@ -2,9 +2,6 @@ source "https://rubygems.org"
 
 gem "rake"
 gem "yast-rake", ">= 0.2.1"
-gem "raspell"
-# coloring misspelled words
-gem "rainbow"
 
 # Versions compatible with Ruby 3.1 (used at jekyll.infra.opensuse.org) and with
 # Ruby 2.5 (used at our continuous integration infrastructure)

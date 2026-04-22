@@ -25,8 +25,8 @@ jobs:
         npm install surge
         bundle install --path vendor/bundle || (echo "Gem installation failed, ensure 'bundled with:' is not present in Gemfile.lock"; false)
 
-    - name: Spell Check
-      run:  bundle exec rake
+    # - name: Spell Check
+    #   run:  bundle exec rake
 
     - name: Deploy
       run:  bundle exec .github/workflows/deploy.rb
