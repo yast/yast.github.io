@@ -164,6 +164,7 @@ Already known names for branches:
 - `SLE-*-SP*`: SLE 12 and later Service packs
 - `openSUSE-1*`: respective openSUSE release
 - `openSUSE-4*`: openSUSE leap releases (see below)
+- `SLE-16.*`: SLE16 and Leap16 releases matching agama naming
 
 Maintenance branches for Leap only make sense for a few repositories.
 For most YaST packages, openSUSE Leap and SLE share the same code and
@@ -171,6 +172,9 @@ maintenance updates and, thus, only the corresponding `SLE-*` maintenance
 branch is used. Leap maintenance branches will be created manually in a case by
 case basis, only when needed and only for repositories that affect openSUSE but
 not SLE.
+For SLE-16.*, the situation is different as YaST transitions into a backend-only state for Agama,
+which causes branches to be created only on demand when a backport of a fix is needed.
+A Leap 16 branch is not planned as product-specific settings are kept in agama-products.
 
 Working with SLE 10 and SLE 11
 ------------------------------
