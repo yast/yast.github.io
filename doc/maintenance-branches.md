@@ -160,8 +160,8 @@ Already known names for branches:
 - `SLE-10-SP*`: SLE 10 Service packs
 - `Code-11`: SLE 11 GA
 - `Code-11-SP*`: SLE 11 Service packs
-- `SLE-*-GA`: SLE 12 and later GAs
-- `SLE-*-SP*`: SLE 12 and later Service packs
+- `SLE-*-GA`: SLE 12 and 15 GAs
+- `SLE-*-SP*`: SLE 12 and 15 Service packs
 - `openSUSE-1*`: respective openSUSE release
 - `openSUSE-4*`: openSUSE leap releases (see below)
 - `SLE-16.*`: SLE16 and Leap16 releases matching agama naming
